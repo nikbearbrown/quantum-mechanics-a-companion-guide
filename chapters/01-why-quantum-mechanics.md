@@ -1,262 +1,234 @@
-# Unit 1 — Why Quantum Mechanics?
-
-> Five experiments killed classical physics between 1900 and 1927. This unit shows you the math each one forced.
+# Chapter 1 — Why Quantum Mechanics?
+*The Theory a Universe Built by Breaking Every Prediction Classical Physics Made.*
 
 ---
 
-## 1. What this chapter is doing
+Here is a remarkable thing. By 1900, the best physicists in the world believed the subject was essentially finished. Newton had mechanics. Maxwell had electrodynamics. Boltzmann had statistical mechanics. Clausius had thermodynamics. The laws were known; what remained was filling in decimal places.
 
-Five experimental results — Planck's blackbody fit, the photoelectric threshold, Compton scattering, electron diffraction, and the Franck–Hertz current curve — broke classical physics one at a time over roughly a quarter century. The pop-sci companion ([Quantum Physics for Beginners, 2021]) covers four of these well as history (its Ch. 3, 4, 5, 6, 10, 11), but it does no math. Griffiths covers the same material in his introduction to Ch. 1 of *Introduction to Quantum Mechanics* (1st ed. 1994; 3rd ed. 2018), but compresses it because his real interest is the formalism in Ch. 2 onward. This companion unit does the math each experiment forces — the algebra a student needs to compute a threshold wavelength, a Compton shift, a de Broglie wavelength — so the rest of the course can stand on quantitative ground. The pop-sci book is your motivation reading; Griffiths is your formal reference; this unit is the calculator the other two leave out.
+The decimal places turned out to be a different universe.
 
-## 2. Learning objectives
+The trouble was not philosophical. It was quantitative. Classical physics — those four pillars together — made specific, testable predictions about how matter and light should behave. When experimentalists pushed into new regimes — very short wavelengths, very weak beams, very precise spectroscopy — the predictions didn't just fail a little. They gave infinities where experiments gave finite peaks. They gave continuous threshold behavior where experiments gave sharp cutoffs. They had no language at all for results that were reproducible, sharp, and wholly unlike anything the theory anticipated.
 
-By the end of this unit, you should be able to:
+Five experiments, spread across roughly a quarter century, did the damage. I want to walk through each one and show you the math it forced — not as history, but as a series of confrontations between a beautiful theory and an unwilling universe.
 
-- **State** Planck's distribution, the photoelectric equation, the Compton wavelength-shift formula, the de Broglie relation, and the Franck–Hertz threshold condition. (Bloom L1)
-- **Explain** in plain language *which classical prediction* each of the five experiments contradicts. (L2)
-- **Compute** threshold wavelengths and photoelectron kinetic energies from a given work function and incident wavelength. (L3)
-- **Derive** the Compton shift from energy–momentum conservation for a photon scattering off a free electron. (L4)
-- **Predict** electron diffraction angles from the de Broglie relation plus the Bragg condition. (L4)
-- **Distinguish** Planck's 1900 quantization of oscillators in the cavity walls from Einstein's 1905 quantization of the radiation field itself. (L5)
+---
 
-## 3. The motivating problem
+## The first confrontation: infinite energy in a box
 
-On 27 April 1900, Lord Kelvin gave a Royal Institution address in which he is widely remembered for saying that nineteenth-century physics was a finished theory with "two small clouds" remaining on the horizon — one about the luminiferous ether (the Michelson–Morley result), the other about the equipartition of energy in blackbody radiation. The exact wording of Kelvin's talk has been the subject of historiographical argument [verify — the popular quotation comes from the printed version "Nineteenth-Century Clouds Over the Dynamical Theory of Heat and Light," *Philosophical Magazine* 6th series, vol. 2 (1901), pp. 1–40]. What is not in dispute: a generation of physicists in 1900 believed the basic laws were known. Mechanics from Newton, electrodynamics from Maxwell, statistical mechanics from Boltzmann, thermodynamics from Clausius. The rest was decimal places.
+Start with something simple: a metal box, hollow, walls held at a fixed temperature. The walls glow. They emit electromagnetic radiation, and that radiation bounces around inside, reaching thermal equilibrium with the walls. The question is: how is the energy distributed among the different frequencies?
 
-The decimal places turned out to be a different physics.
+Classical statistical mechanics has a clean answer. Each electromagnetic mode in the cavity — and there are infinitely many, because you can have modes of arbitrarily high frequency — gets, on average, energy $k_B T$ by the equipartition theorem. Count the modes in a frequency interval $[\nu, \nu + d\nu]$. There are $8\pi\nu^2/c^3$ of them per unit volume. Multiply by $k_B T$:
 
-The trouble was that classical physics — Newton plus Maxwell plus Boltzmann — gave specific quantitative predictions about how matter and light should behave. When experimentalists pushed those predictions into new regimes (very short wavelengths, very weak light, very small particles, very precise spectroscopy), the predictions failed. Not as small corrections. As infinities, qualitative reversals, threshold effects classical physics had no language for. The five experiments below are the ones that, between them, made the failure unsurvivable.
+$$\rho_{\text{RJ}}(\nu, T) = \frac{8\pi \nu^2}{c^3} k_B T.$$
 
-You don't need quantum mechanics to read this unit. You need calculus, vectors, special relativity at the level of $E^2 = (pc)^2 + (mc^2)^2$, and the willingness to watch classical physics fail five times in a row and ask what replaces it.
+<!-- → [CHART: side-by-side plot of Rayleigh–Jeans vs. Planck distribution at a fixed temperature — x-axis frequency, y-axis spectral energy density — student should see the RJ curve diverging upward at high frequency while Planck peaks and falls; annotate the "ultraviolet catastrophe" region and the region where the two curves agree (low frequency)] -->
 
-## 4. Five experiments and the math they forced
+This rises without bound as frequency increases. The total energy, $\int_0^\infty \rho_{\text{RJ}} \, d\nu$, diverges. A box at room temperature should contain infinite energy in its short-wavelength modes. This is what Paul Ehrenfest later called the "ultraviolet catastrophe."
 
-### 4.1 Blackbody radiation and Planck's law
+Experimentalists at the Physikalisch-Technische Reichsanstalt in Berlin — Otto Lummer and Ernst Pringsheim — were measuring blackbody spectra with extraordinary precision through the late 1890s. Their measurements showed a finite peak at a characteristic frequency, followed by an exponential fall-off at high frequencies. There was no catastrophe in nature. There was just a shape, and the shape needed explaining.
 
-A blackbody is an idealization of a perfect absorber and emitter — a hot cavity with a tiny hole, in practice. Classical statistical mechanics, applied to the electromagnetic modes inside the cavity, gives a clean prediction. Each mode has on average $k_B T$ of energy by the equipartition theorem (half each for kinetic and potential). Count the modes in a frequency interval $[\nu, \nu+d\nu]$, multiply by $k_B T$, and you get the Rayleigh–Jeans spectral energy density:
+Max Planck presented his fit on 14 December 1900. The Planck distribution is:
 
-$$ \rho_{\text{RJ}}(\nu, T) = \frac{8\pi \nu^2}{c^3} k_B T. $$
+$$\rho(\nu, T) = \frac{8\pi h \nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_B T} - 1}.$$
 
-This rises without bound as $\nu \to \infty$. The total energy in the cavity, $\int_0^\infty \rho_{\text{RJ}}(\nu, T)\, d\nu$, diverges. Paul Ehrenfest, writing in 1911, called this the "ultraviolet catastrophe." A finite cavity at finite temperature should — according to classical physics — contain infinite energy in its short-wavelength modes. It doesn't. Otto Lummer and Ernst Pringsheim, working at the Physikalisch-Technische Reichsanstalt in Berlin (a national metrology lab, of all places), had been measuring blackbody spectra to high accuracy through the late 1890s. The measurements peaked at a finite frequency and fell off exponentially at high frequency. There was no catastrophe in nature.
+The constant $h$ he fitted to the data: $6.55 \times 10^{-27}$ erg·s, within 1% of today's value $h = 6.626 \times 10^{-34}$ J·s.
 
-Max Planck presented his fit to the data on 14 December 1900 — the date traditionally marked as the birth of quantum theory. The Planck distribution is
+Here is how he got it. Suppose the oscillators in the cavity walls — the atoms that are absorbing and re-emitting radiation — cannot exchange energy continuously with the field. Suppose instead they can only exchange energy in discrete chunks of size $h\nu$: multiples of a quantum of energy. Then the average thermal energy of an oscillator at frequency $\nu$ is not $k_B T$ (equipartition) but:
 
-$$ \rho(\nu, T) = \frac{8\pi h \nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_B T} - 1}. $$
+$$\langle E \rangle = \frac{\sum_{n=0}^{\infty} n h\nu \, e^{-n h\nu/k_B T}}{\sum_{n=0}^{\infty} e^{-n h\nu/k_B T}}.$$
 
-The constant $h$ Planck fitted to Lummer and Pringsheim's measurements as $6.55 \times 10^{-27}$ erg·s, within 1% of today's defined value $h = 6.62607015 \times 10^{-34}$ J·s (exact since the 2019 SI redefinition, per the [BIPM]).
+Let $x = e^{-h\nu/k_B T}$. The numerator is $h\nu \sum n x^n = h\nu \cdot x/(1-x)^2$; the denominator is $\sum x^n = 1/(1-x)$. Dividing:
 
-**The mechanism.** Planck's derivation went as follows. Consider an oscillator in the cavity wall at frequency $\nu$. Classically, this oscillator can exchange energy with the radiation field continuously, in any amount. Planck postulated instead that energy exchange happens only in discrete units of $E = h\nu$ — that the oscillator can emit or absorb energy only in integer multiples of $h\nu$. With this restriction, the average thermal energy of an oscillator at temperature $T$ is no longer $k_B T$ (equipartition); it's
+$$\langle E \rangle = \frac{h\nu}{e^{h\nu/k_B T} - 1}.$$
 
-$$ \langle E \rangle = \frac{\sum_{n=0}^{\infty} n h\nu \, e^{-n h\nu/k_B T}}{\sum_{n=0}^{\infty} e^{-n h\nu/k_B T}} = \frac{h\nu}{e^{h\nu/k_B T} - 1}. $$
+At low frequencies, $h\nu \ll k_B T$, and $e^{h\nu/k_B T} - 1 \approx h\nu/k_B T$, so $\langle E \rangle \to k_B T$ — equipartition is recovered. At high frequencies, $h\nu \gg k_B T$, and $\langle E \rangle \to h\nu \, e^{-h\nu/k_B T}$ — exponentially suppressed. The catastrophe is gone. Multiply by the mode-counting density $8\pi\nu^2/c^3$ (classical, unchanged) and you get Planck's distribution.
 
-The second equality is the standard geometric-series computation: let $x = e^{-h\nu/k_B T}$, and use $\sum n x^n = x/(1-x)^2$ and $\sum x^n = 1/(1-x)$. At low frequency ($h\nu \ll k_B T$), $\langle E \rangle \to k_B T$ — equipartition is recovered. At high frequency ($h\nu \gg k_B T$), $\langle E \rangle \to h\nu \, e^{-h\nu/k_B T}$ — exponentially suppressed. The catastrophe is gone, replaced by a quiet exponential fall-off.
+One thing to get right before moving on: Planck did not quantize light. He quantized the energy *exchange* between the cavity walls and the radiation field. The radiation itself, in his 1900 picture, was still a continuous electromagnetic wave. The discrete packets lived in the walls, not in the field. Einstein's paper five years later is what put the packets in the field.
 
-Multiply $\langle E \rangle$ by the mode-counting density $8\pi\nu^2/c^3$ (which is purely classical mode-counting, unchanged) and you get the Planck distribution above.
+---
 
-**The misconception.** "Planck quantized light." He did not. He quantized the energy exchange between oscillators in the cavity walls and the radiation field. The radiation itself, in Planck's 1900 picture, was still a continuous electromagnetic wave. The discrete packets lived in the walls, not in the field. This was a defensible move at the time — it preserved Maxwell's equations and asked only for a strange property of matter. Einstein's 1905 photoelectric paper is what quantized the field.
+## The second confrontation: a threshold that shouldn't exist
 
-**Worked example: photon energy from a 500 nm line.** A green photon at $\lambda = 500$ nm has frequency $\nu = c/\lambda = (3.00 \times 10^8\ \text{m/s})/(5.00 \times 10^{-7}\ \text{m}) = 6.00 \times 10^{14}$ Hz, and energy $E = h\nu = (6.626 \times 10^{-34}\ \text{J·s})(6.00 \times 10^{14}\ \text{Hz}) = 3.97 \times 10^{-19}\ \text{J} = 2.48$ eV. Use this often. Photon energies in eV and wavelengths in nm satisfy $E[\text{eV}] \cdot \lambda[\text{nm}] = 1240$, a number worth memorizing.
+Shine light on a clean metal surface. Electrons come off. This was known. What Philipp Lenard reported in 1902 was the part that shouldn't happen: the kinetic energy of the ejected electrons depended on the *frequency* of the light, not on its *intensity*. A very bright red beam — enormous power delivered per unit area — produced no electrons at all from certain metals. A dim ultraviolet beam produced electrons immediately.
 
-*The lesson:* the discreteness of energy exchange — not of the radiation field, yet — is enough to fix the spectrum.
+Classical wave theory says intensity should matter. A brighter wave delivers more energy per unit time. An electron tied to the metal surface should be able to accumulate enough energy to escape, given a long enough wait. The wait never comes. The threshold is sharp. The classical picture fails on three counts simultaneously: wrong variable (frequency, not intensity), wrong threshold behavior (sharp cutoff, not gradual), wrong scaling (kinetic energy linear in frequency above threshold, not in intensity).
 
-*The limit:* Planck himself did not believe in light quanta. The next experiment is the one that pushed the quantization into the field.
+Einstein's 1905 paper proposed that light itself arrives in indivisible energy packets — photons — each carrying energy $E = h\nu$. An electron bound to the metal with binding energy $\phi$ (the work function, a property of the metal) absorbs one photon. If $h\nu > \phi$, the electron escapes with kinetic energy:
 
-### 4.2 The photoelectric effect
+$$K_{\max} = h\nu - \phi.$$
 
-Philipp Lenard in 1902 reported the experimental anomaly that broke the classical picture of light–matter interaction. Shine ultraviolet light on a clean metal surface; electrons come off. Reasonable. But the *kinetic energy of the ejected electrons depended on the frequency of the light, not on the intensity.* A very bright red beam (high intensity, low frequency) produced no electrons at all from certain metals. A dim ultraviolet beam (low intensity, high frequency) produced electrons immediately. Classically, intensity should matter — a brighter wave delivers more energy per unit time per unit area, and an electron tied to the surface should eventually accumulate enough energy to escape, given a long enough wait.
+Below the threshold frequency $\nu_0 = \phi/h$, no electrons emerge regardless of intensity. Above it, intensity controls how many electrons emerge per second; frequency controls how much energy each one has.
 
-The wait does not come. The threshold is sharp. The kinetic energy scales with frequency above threshold, linearly. The classical picture fails on three counts simultaneously.
+<!-- → [CHART: stopping potential V_s vs. incident frequency ν for two metals with different work functions — student should see two parallel straight lines with slope h/e, y-intercepts at −φ₁/e and −φ₂/e; annotate the threshold frequency for each and the universal slope] -->
 
-Einstein's 1905 paper [Einstein 1905, *Annalen der Physik* 17, 132–148](https://doi.org/10.1002/andp.19053220607) proposed that light itself is delivered in discrete energy packets — light quanta, later called photons — of energy $E = h\nu$. An electron bound to the metal with binding energy $\phi$ (the work function) absorbs one quantum, escapes if $h\nu > \phi$, and emerges with kinetic energy
+Robert Millikan spent four years (1912–1916) trying to disprove this. He measured the stopping potential $V_s$ — the retarding voltage that just halts the most energetic electrons, so $eV_s = K_{\max}$ — as a function of frequency. The slope, by Einstein's equation, is $h/e$. Millikan measured $h = 6.57 \times 10^{-27}$ erg·s. That's within 0.5% of Planck's blackbody value from a completely different experiment. He published his result with the concession that the photoelectric equation worked despite his conviction that the underlying hypothesis was "untenable."
 
-$$ K_{\max} = h\nu - \phi. $$
+**A worked example.** Sodium has work function $\phi \approx 2.28$ eV. The threshold wavelength is:
 
-That is the photoelectric equation. Below the threshold frequency $\nu_0 = \phi/h$ no electrons emerge, regardless of intensity. Above it, intensity controls *how many* electrons emerge per second (one per absorbed photon), and frequency controls *how much energy* each one has. The classical prediction — that more intensity buys more energy per electron — is wrong because each electron interacts with one photon, not with the average field.
+$$\lambda_0 = \frac{hc}{\phi} = \frac{1240 \, \text{eV·nm}}{2.28 \, \text{eV}} \approx 544 \, \text{nm}.$$
 
-Robert Millikan spent four years (1912–1916) trying to disprove Einstein's hypothesis with the most careful photoelectric measurements ever performed. He measured the stopping potential $V_s$ (the retarding voltage that just stops the most energetic electrons; $eV_s = K_{\max}$) as a function of incident frequency. The slope, by Einstein's equation, should be $h/e$. Millikan got $h = 6.57 \times 10^{-27}$ erg·s, within 0.5% of Planck's blackbody value [Millikan 1916, *Physical Review* 7, 355–388](https://doi.org/10.1103/PhysRev.7.355). He published the result with the now-famous concession that the photoelectric equation worked despite his belief that the underlying photon hypothesis was "untenable." The experiment confirmed Einstein; Einstein won the 1921 Nobel Prize specifically for this — *not* for relativity, which was still considered speculative.
+That's green light. Illuminate with $\lambda = 400$ nm (violet). Photon energy $h\nu = 1240/400 = 3.10$ eV. The most energetic photoelectron leaves with:
 
-**The misconception.** "The photoelectric effect proves light is particles." More precisely: it shows that the energy delivered to a single bound electron arrives in indivisible packets of $h\nu$, and the *rate* of ejection (not the energy per ejection) scales with intensity. Light is neither a classical wave nor a classical particle. Unit 2 and Unit 3 of this companion are about what it actually is.
+$$K_{\max} = 3.10 \, \text{eV} - 2.28 \, \text{eV} = 0.82 \, \text{eV}.$$
 
-**Worked example: sodium.** Sodium has work function $\phi \approx 2.28$ eV [CRC Handbook value; *verify*]. The threshold wavelength is
+A retarding voltage of 0.82 V stops it exactly.
 
-$$ \lambda_0 = \frac{hc}{\phi} = \frac{1240\ \text{eV·nm}}{2.28\ \text{eV}} \approx 544\ \text{nm}. $$
+The lesson: one photon, one electron. Energy arrives in indivisible packets, the threshold is sharp because a packet either has enough or it doesn't, and intensity controls rate, not energy per electron.
 
-That's green light. Below 544 nm — blue, violet, UV — sodium emits photoelectrons. Above 544 nm — yellow, orange, red — it doesn't, regardless of how intense the beam is.
+---
 
-Now illuminate sodium with $\lambda = 400$ nm (violet). Photon energy $h\nu = 1240/400 = 3.10$ eV. Kinetic energy of the most energetic photoelectron:
+## The third confrontation: the wrong color comes back
 
-$$ K_{\max} = h\nu - \phi = 3.10\ \text{eV} - 2.28\ \text{eV} = 0.82\ \text{eV}. $$
+In 1923, Arthur Holly Compton at Washington University scattered X-rays off graphite and measured the wavelength of the scattered radiation as a function of angle. The classical prediction — Thomson scattering — says the electron oscillates at the driving frequency and re-radiates at the *same* frequency. No wavelength shift. Just a redistribution in angle.
 
-If you set up a stopping voltage of $V_s = 0.82$ V, you stop these electrons exactly.
+Compton found a shift. The scattered X-rays came out longer in wavelength than the incident X-rays, by an amount that depended only on the angle $\theta$:
 
-*The lesson:* one photon, one electron. Energy comes in packets, the packets are delivered indivisibly, and the threshold is sharp.
+$$\Delta\lambda = \lambda' - \lambda = \frac{h}{m_e c}(1 - \cos\theta).$$
 
-*The limit:* this experiment quantizes the field but does not yet pin down the photon's momentum.
+The combination $h/m_e c = 2.426 \times 10^{-12}$ m is called the Compton wavelength of the electron. The shifts are small — picometers — but unmistakable and perfectly reproducible.
 
-### 4.3 Compton scattering
+The derivation is the cleanest piece of math in this chapter. Treat the photon as a relativistic particle with energy $E_\gamma = h\nu$ and momentum $p_\gamma = h/\lambda$. The electron is initially at rest. Write conservation of energy and conservation of momentum (two components), then eliminate the electron's recoil angle.
 
-In 1923 Arthur Holly Compton at Washington University in St. Louis scattered X-rays off graphite and measured the scattered wavelength as a function of angle [Compton 1923, *Physical Review* 21, 483–502](https://doi.org/10.1103/PhysRev.21.483). The classical picture (Thomson scattering) predicts that the electrons in the target oscillate at the driving frequency and re-radiate at the same frequency — no wavelength shift, just a redistribution in angle. Compton found a shift. The scattered light came out *redder* (longer wavelength) than the incident light, by an amount that depended only on the scattering angle:
-
-$$ \Delta\lambda = \lambda' - \lambda = \frac{h}{m_e c}(1 - \cos\theta). $$
-
-The combination $h/m_e c = 2.426 \times 10^{-12}$ m is called the Compton wavelength of the electron. The shift is small (picometers) but unmistakable.
-
-The derivation is the cleanest piece of math in this unit. We use special relativity: the photon has energy $E_\gamma = h\nu$ and momentum $p_\gamma = h\nu/c = h/\lambda$ (these are the two relations $E = h\nu$ and $\lambda = h/p$ specialized to a massless particle). The electron is initially at rest, with energy $m_e c^2$ and zero momentum. After the collision, the photon has energy $E_\gamma' = hc/\lambda'$ and momentum $h/\lambda'$ in a new direction; the electron has some energy $E_e$ and momentum $p_e$.
+<!-- → [DIAGRAM: Compton scattering geometry — incident photon moving horizontally, electron at rest, scattered photon at angle θ above the axis, recoiling electron at angle φ below; label all four momentum vectors with their magnitudes h/λ, h/λ', p_e; this is the diagram the derivation below requires] -->
 
 *Conservation of energy:*
+$$h\nu + m_e c^2 = h\nu' + E_e.$$
 
-$$ h\nu + m_e c^2 = h\nu' + E_e. $$
-
-*Conservation of momentum* (two components, with $\theta$ the photon scattering angle and $\phi$ the electron recoil angle):
-
-$$ \frac{h\nu}{c} = \frac{h\nu'}{c}\cos\theta + p_e \cos\phi, $$
-$$ 0 = \frac{h\nu'}{c}\sin\theta - p_e \sin\phi. $$
+*Conservation of momentum:*
+$$\frac{h\nu}{c} = \frac{h\nu'}{c}\cos\theta + p_e \cos\phi, \qquad 0 = \frac{h\nu'}{c}\sin\theta - p_e \sin\phi.$$
 
 Solve for $p_e \cos\phi$ and $p_e \sin\phi$, square and add to eliminate $\phi$:
 
-$$ p_e^2 c^2 = (h\nu)^2 - 2(h\nu)(h\nu')\cos\theta + (h\nu')^2. $$
+$$p_e^2 c^2 = (h\nu)^2 - 2(h\nu)(h\nu')\cos\theta + (h\nu')^2.$$
 
-From energy conservation, $E_e = h(\nu - \nu') + m_e c^2$, so
+From energy conservation, $E_e = h(\nu - \nu') + m_e c^2$, and the relativistic relation $E_e^2 = p_e^2 c^2 + (m_e c^2)^2$ gives:
 
-$$ E_e^2 = h^2(\nu - \nu')^2 + 2 m_e c^2 h(\nu - \nu') + (m_e c^2)^2. $$
+$$p_e^2 c^2 = h^2(\nu - \nu')^2 + 2m_e c^2 h(\nu - \nu').$$
 
-Use the relativistic energy-momentum relation $E_e^2 = p_e^2 c^2 + (m_e c^2)^2$:
+Set equal and expand $(h\nu - h\nu')^2$ on the left, cancel common terms, divide by $2(h\nu)(h\nu')$:
 
-$$ p_e^2 c^2 = h^2(\nu - \nu')^2 + 2 m_e c^2 h(\nu - \nu'). $$
+$$\frac{m_e c^2(\nu - \nu')}{\nu\nu'} = 1 - \cos\theta.$$
 
-Set the two expressions for $p_e^2 c^2$ equal:
+Since $(\nu - \nu')/(\nu\nu') = (\lambda' - \lambda)/c$:
 
-$$ h^2(\nu - \nu')^2 + 2 m_e c^2 h(\nu - \nu') = (h\nu)^2 - 2(h\nu)(h\nu')\cos\theta + (h\nu')^2. $$
+$$\Delta\lambda = \frac{h}{m_e c}(1 - \cos\theta).$$
 
-Expand $(h\nu - h\nu')^2 = (h\nu)^2 - 2(h\nu)(h\nu') + (h\nu')^2$ on the left and cancel:
+Half a page of algebra. No quantum mechanics beyond treating the photon as a relativistic particle with $E = h\nu$ and $p = h/\lambda$.
 
-$$ -2(h\nu)(h\nu') + 2 m_e c^2 h(\nu - \nu') = -2(h\nu)(h\nu')\cos\theta. $$
+**In Compton's original experiment** he used molybdenum Kα X-rays at $\lambda = 0.0711$ nm. At $\theta = 90°$, $\cos\theta = 0$, so $\Delta\lambda = h/m_e c = 2.43$ pm. He measured 2.23 pm. The agreement was the moment the photon picture became unavoidable.
 
-Divide by $2(h\nu)(h\nu')$:
+The lesson: the photon carries momentum $h/\lambda$. Planck had quantized energy exchange. Einstein had quantized the field. Compton quantized the momentum, completing the photon as a relativistic particle.
 
-$$ \frac{m_e c^2 (\nu - \nu')}{\nu \nu'} = 1 - \cos\theta. $$
+---
 
-Use $\nu = c/\lambda$ so that $(\nu - \nu')/(\nu\nu') = (\lambda' - \lambda)/c$:
+## The fourth confrontation: the electron as a wave
 
-$$ \frac{m_e c (\lambda' - \lambda)}{1} = h(1 - \cos\theta) \cdot \frac{c}{c} \implies \Delta\lambda = \frac{h}{m_e c}(1 - \cos\theta). $$
+If light, conventionally a wave, turned out to behave like a particle, the symmetric question presents itself: does matter, conventionally made of particles, behave like a wave?
 
-Half a page of algebra and the answer drops out, no quantum mechanics required beyond treating the photon as a relativistic particle with $E = h\nu$ and $p = h/\lambda$.
+Louis de Broglie's 1924 doctoral thesis at the University of Paris said yes. He proposed that a particle with momentum $p$ has an associated wavelength:
 
-**The misconception.** The pop-sci book mentions the Klein–Nishina formula in this context. Klein and Nishina (1929) computed the *differential cross section* for photon–electron scattering using Dirac's relativistic electron theory — it tells you the angular distribution of scattering events. The wavelength shift above is purely kinematic and was derived by Compton in 1923 (and independently by Debye the same year, in *Physikalische Zeitschrift* — [verify exact citation]). Klein–Nishina answers "how often does scattering happen at angle $\theta$"; Compton answers "what wavelength does the scattered photon have." Two different formulas, frequently confused.
+$$\lambda = \frac{h}{p}.$$
 
-**Worked example: Compton's Mo Kα experiment.** Compton used molybdenum Kα X-rays at $\lambda = 0.0711$ nm. At $\theta = 90°$, $\cos\theta = 0$, so $\Delta\lambda = h/m_e c = 2.43$ pm = 0.00243 nm. Scattered wavelength: $\lambda' = 0.0735$ nm. Compton measured (after careful angular discrimination) 0.0734 nm. The agreement was the moment the photon picture became unavoidable.
+The same relation as for the photon, now applied to matter.
 
-*The lesson:* the photon carries momentum $h/\lambda$. The two earlier experiments quantized energy in the field; this one quantized momentum, and so completed the photon as a relativistic particle.
+The numerical consequences are instructive. A 1 kg cricket ball at 1 m/s has $\lambda = 6.6 \times 10^{-34}$ m — twenty orders of magnitude smaller than a proton. No experiment in the universe could detect this. An electron accelerated through 54 V, on the other hand, has a kinetic energy of 54 eV and a de Broglie wavelength of roughly 0.17 nm, comparable to the spacing between planes in a crystal lattice. So an electron beam aimed at a crystal should diffract, just as X-rays do.
 
-*The limit:* the photon is still being treated like a billiard ball with definite energy and momentum. Unit 3 will show this is a calculational idealization — physical photons live in normalizable wave packets, not as pure plane waves.
+Clinton Davisson and Lester Germer at Bell Labs found this in 1927. They scattered 54 eV electrons off a nickel crystal and saw a sharp diffraction peak at the angle Bragg's condition predicts.
 
-### 4.4 The de Broglie hypothesis
+**The calculation.** An electron through $V = 54$ V has kinetic energy $K = 54$ eV $= 8.65 \times 10^{-18}$ J. Its momentum:
 
-Louis de Broglie's 1924 doctoral thesis at the University of Paris took the symmetric move. Einstein had given light, conventionally a wave, a particle nature. De Broglie proposed that particles, conventionally points, should have a wave nature. Specifically:
-
-$$ \lambda = \frac{h}{p}. $$
-
-Same relation as for the photon, applied to matter. A particle with momentum $p$ has an associated wavelength $\lambda$.
-
-The numerical consequence is the reason you don't notice this in daily life. A 1 kg cricket ball moving at 1 m/s has $\lambda = (6.6 \times 10^{-34}\ \text{J·s})/(1\ \text{kg·m/s}) = 6.6 \times 10^{-34}\ \text{m}$ — twenty orders of magnitude smaller than a proton. No interference experiment in the universe could detect that wavelength. An electron, on the other hand, accelerated through 54 V (kinetic energy 54 eV), has $\lambda$ of order 0.17 nm — comparable to atomic spacings in a crystal. So an electron should diffract off a crystal lattice the way X-rays do.
-
-Clinton Davisson and Lester Germer at Bell Labs found this in 1927, three years after de Broglie's prediction [Davisson & Germer 1927, *Physical Review* 30, 705–740](https://doi.org/10.1103/PhysRev.30.705). They scattered 54 eV electrons off a nickel crystal and saw a sharp diffraction peak at the angle Bragg's condition predicts for $\lambda = 0.167$ nm. George Paget Thomson, independently, confirmed it with thin metal foils the same year and shared the 1937 Nobel for the work. (G. P. Thomson's father, J. J. Thomson, had won the 1906 Nobel for showing the electron was a particle. The history of physics has a sense of humor.)
-
-**The misconception.** "The de Broglie wavelength is the size of the particle." It is not — it is the wavelength of the *amplitude* associated with motion at momentum $p$, and you don't have the language yet for what that amplitude is (Unit 3 supplies it). When the particle is detected, it registers as a point in a detector. The wavelength shows up in interference patterns built from many detections.
-
-**Worked example: Davisson–Germer.** Electrons accelerated through $V = 54$ V have kinetic energy $K = 54$ eV $= 8.65 \times 10^{-18}$ J. Their momentum is
-
-$$ p = \sqrt{2 m_e K} = \sqrt{2 (9.11 \times 10^{-31}\ \text{kg})(8.65 \times 10^{-18}\ \text{J})} \approx 3.97 \times 10^{-24}\ \text{kg·m/s}. $$
+$$p = \sqrt{2m_e K} = \sqrt{2(9.11 \times 10^{-31})(8.65 \times 10^{-18})} \approx 3.97 \times 10^{-24} \, \text{kg·m/s}.$$
 
 De Broglie wavelength:
 
-$$ \lambda = \frac{h}{p} = \frac{6.626 \times 10^{-34}}{3.97 \times 10^{-24}} \approx 1.67 \times 10^{-10}\ \text{m} = 0.167\ \text{nm}. $$
+$$\lambda = \frac{h}{p} = \frac{6.626 \times 10^{-34}}{3.97 \times 10^{-24}} \approx 1.67 \times 10^{-10} \, \text{m} = 0.167 \, \text{nm}.$$
 
-Nickel has surface (111) plane spacing $d = 0.215$ nm. The Bragg condition for first-order constructive interference is $n\lambda = 2 d \sin\theta_B$, with $\theta_B$ measured from the surface. But the Davisson–Germer geometry is back-scattering, and the angle they reported is $\phi = 50°$ from the incident direction. Translating, the Bragg condition for surface diffraction gives $\lambda = d \sin\phi$, so $\sin\phi = 0.167/0.215 = 0.777$, $\phi = 51°$. They measured 50°. Agreement to within a degree.
+Nickel's (111) surface plane spacing is $d = 0.215$ nm. The surface diffraction condition gives $\lambda = d\sin\phi$, so $\sin\phi = 0.167/0.215 = 0.777$, $\phi = 51°$. They measured 50°. Agreement to within one degree.
 
-The single-electron version of this experiment was first done as a continuous-buildup video by Akira Tonomura's group at Hitachi in 1989 ([Tonomura et al., *American Journal of Physics* 57(2), 117–120](https://doi.org/10.1119/1.16104), [verify pagination]). Electrons arrive one at a time, each as a point on the detector. The pattern of points, accumulated over hours, is a diffraction pattern. There is no classical reading of this — a single particle "interferes with itself" in a way that has no analog in Newtonian language.
+The single-electron version was done as a continuous buildup by Akira Tonomura's group at Hitachi in 1989. Electrons arrived one at a time, each registering as a point on the detector. Accumulated over hours, the points formed a diffraction pattern. A single electron, with no other electrons present to interact with, produced interference. There is no classical reading of this. The electron "interferes with itself" in a way that has no analog in Newtonian language.
 
-*The lesson:* matter has wave properties, and the wave properties are encoded in an amplitude whose squared modulus gives detection probability.
+<!-- → [IMAGE: Tonomura buildup sequence — four panels showing the detector at 10, 100, 1000, and 10000 electrons; the point-by-point accumulation resolving into a diffraction pattern is the visual argument that the wave is not a collective property of many electrons but a property of each one individually] -->
 
-*The limit:* this is a relation, not a wave equation. You can compute wavelengths from momenta; you cannot yet propagate a wave function in time. Unit 3 supplies the equation.
+The lesson: matter has wave properties, and those properties are not about the particle's *size* — the wavelength is a property of the associated amplitude, not a physical extent. When the electron is detected, it appears as a point. The wave shows up only in the statistical pattern built from many detections.
 
-### 4.5 Franck–Hertz: discrete atomic energy levels
+---
 
-In 1914 James Franck and Gustav Hertz reported the experiment that, in retrospect, was the cleanest direct evidence for discrete atomic energy levels [Franck & Hertz 1914, *Verhandlungen der Deutschen Physikalischen Gesellschaft* 16, 457–467]. They accelerated electrons through a vapor of mercury atoms and measured the current reaching a collector as a function of the accelerating voltage. The current rose, then dipped sharply at 4.9 V, then rose again, then dipped at 9.8 V (twice 4.9), then dipped at 14.7 V (three times). The dips were periodic, with spacing 4.9 V.
+## The fifth confrontation: energy levels are real
 
-The interpretation: an electron with kinetic energy below 4.9 eV scatters elastically off a mercury atom — bouncing around like a marble — and continues to gain energy from the accelerating field. At 4.9 eV the electron can lose exactly that amount to excite the mercury atom from its ground state to its first excited state, an *inelastic* collision. After the inelastic collision the electron is too slow to reach the collector against the retarding field, hence the dip. With more accelerating voltage the electron regains enough energy to reach the collector — until 9.8 V, at which point it can excite *two* mercury atoms inelastically, and so on.
+In 1914, James Franck and Gustav Hertz accelerated electrons through mercury vapor and measured the current reaching a collector as a function of accelerating voltage. The current rose steadily, then dropped sharply at 4.9 V. It rose again, then dropped at 9.8 V. And again at 14.7 V. Regular dips, spaced exactly 4.9 V apart.
 
-The 4.9 eV value corresponds to the $6\,{}^1S_0 \to 6\,{}^3P_1$ transition in mercury. If the interpretation is right, the excited mercury atoms should emit photons when they decay back to the ground state, and those photons should have energy 4.9 eV. Wavelength:
+The interpretation: an electron with kinetic energy below 4.9 eV bounces off mercury atoms elastically, losing no energy, and reaches the collector. At 4.9 eV the electron can give that exact amount to the mercury atom, exciting it from its ground state to its first excited state. The electron then lacks enough energy to reach the collector against the retarding field — hence the drop. More voltage, and the electron regains enough energy to reach the collector, until it has 9.8 eV and can excite two mercury atoms in succession.
 
-$$ \lambda = \frac{hc}{E} = \frac{1240\ \text{eV·nm}}{4.9\ \text{eV}} \approx 253\ \text{nm}. $$
+<!-- → [CHART: Franck–Hertz current vs. accelerating voltage — student should see the periodic dips at 4.9 V, 9.8 V, 14.7 V; annotate each dip with the number of inelastic collisions it represents; a clean version of this curve is the entire argument for discrete energy levels made visible] -->
 
-In the ultraviolet. Franck and Hertz built a spectroscope and saw it: a sharp emission line at 253.7 nm whenever the accelerating voltage exceeded 4.9 V.
+If this interpretation is right, the excited mercury atoms decay back to their ground state by emitting photons, and those photons should have energy 4.9 eV. The wavelength:
 
-This was the direct experimental demonstration that atoms have discrete internal energy levels. The spectroscopic evidence (Balmer series, Lyman, Paschen) was already known — but spectroscopy is indirect, you see the emitted photons and back-infer the levels. Franck–Hertz is direct: you watch the electron lose energy in discrete chunks.
+$$\lambda = \frac{hc}{E} = \frac{1240 \, \text{eV·nm}}{4.9 \, \text{eV}} \approx 253 \, \text{nm}.$$
 
-**The misconception.** "Franck–Hertz proves the Bohr model." It proves that mercury has discrete energy levels and the first one is 4.9 eV above the ground state. It does not prove the *specific* level structure of hydrogen Bohr proposed. The Bohr model was the first theoretical account that predicted a discrete level structure for hydrogen, but the full quantum-mechanical solution (Unit 6) refines it substantially. Franck–Hertz is robust under that refinement; the Bohr model is only approximately right.
+Franck and Hertz built a spectroscope and observed a sharp emission line at 253.7 nm whenever the accelerating voltage exceeded 4.9 V. Two completely independent probes — electron stopping voltage and photon wavelength — gave the same energy for the same atomic transition. The energy levels are real.
 
-**Worked example: the threshold photon.** From the 4.9 V threshold, predict the wavelength of the emitted UV photon. Compare to the measured 253.7 nm. Agreement to within experimental precision. The two completely different experimental probes — electron stopping voltage and photon wavelength — give the same energy, and that energy is a property of the mercury atom, not of either probe.
+This is the direct evidence for discrete internal energy structure in atoms. Spectroscopy — the Balmer series, the Lyman series — was already known, but spectroscopy is indirect: you see emitted photons and back-infer the levels. Franck–Hertz is direct. You watch the electron lose exactly 4.9 eV in a collision, and then you watch the photon come out at exactly the predicted wavelength.
 
-*The lesson:* atomic energy levels are discrete. This is a fact about matter, not about light, and it was established by an experiment that did not require any quantum theory of light to interpret.
+---
 
-*The limit:* the experiment names the levels but does not predict them. Predicting them requires the Schrödinger equation for the hydrogen atom (Unit 6) or, in the multi-electron mercury case, computational quantum chemistry that goes well beyond an undergraduate course.
+## What the five experiments require
 
-## 5. Synthesis: what these five experiments demand
+After 1927, any theory that wanted to replace classical physics had to accommodate five specific, quantitative facts:
 
-After 1927, five quantitative facts had to be accommodated by any successor to classical physics:
+1. Energy exchange between matter and the radiation field happens in discrete units of $h\nu$ (Planck, 1900).
+2. The electromagnetic field carries energy in indivisible packets of $h\nu$ (Einstein, 1905).
+3. Those packets carry momentum $h/\lambda$ (Compton, 1923).
+4. Matter has wave properties, with wavelength $h/p$ (de Broglie, 1924; Davisson–Germer, 1927).
+5. Atomic systems have discrete internal energy levels (Franck–Hertz, 1914).
 
-1. Energy is exchanged between matter and the radiation field in discrete units of $h\nu$ (Planck).
-2. The electromagnetic field itself carries energy in indivisible packets of $h\nu$ (Einstein, photoelectric).
-3. Those packets carry momentum $h/\lambda$ (Compton).
-4. Matter has wavelike properties with wavelength $h/p$ (de Broglie, Davisson–Germer).
-5. Atomic systems have discrete internal energy levels (Franck–Hertz).
+<!-- → [TABLE: summary of the five experiments — columns: experiment, year, classical prediction, observed result, formula forced, value of h extracted; rows for Planck/Lummer–Pringsheim, Einstein/Millikan, Compton, de Broglie/Davisson–Germer, Franck–Hertz; the h column makes the point that five independent experiments converge on the same constant] -->
 
-Three corollary requirements follow. The new theory must give a *probabilistic* account of detection — you cannot predict where a single electron in the two-slit experiment lands; you can only predict the long-run distribution. It must have *wave-equation structure* — to handle the interference and the matter-wave behavior. And it must have *eigenvalue structure* — to handle the discrete energy levels.
+Three structural requirements follow from these. The new theory needs a *probabilistic* account of measurement: you cannot predict where a single electron in a diffraction experiment lands; you can predict only the long-run distribution. It needs *wave-equation structure*: to handle interference and de Broglie wavelengths. And it needs *eigenvalue structure*: to handle discrete energy levels.
 
-Unit 2 builds the mathematics: complex vector spaces, Hermitian operators, eigenvalues. Unit 3 supplies the wave equation: the Schrödinger equation. The five experiments above are the constraints; the next two units are the theory that meets them.
+The next chapters build those structures. The mathematics required is the theory of operators on complex vector spaces, and the wave equation that governs how quantum amplitudes evolve in time. The five experiments above are the constraints. What follows is the theory built to meet them.
 
-## 6. Reading map
+Before you go on, notice something. Planck's constant $h$ appears in all five relations. The Compton shift, the de Broglie wavelength, the photoelectric threshold, the Planck distribution — all of them have $h$ in them, and in every case it is the same $h$, $6.626 \times 10^{-34}$ J·s, extracted from independent experiments with completely different setups. That's not a coincidence. That's a constant of nature, setting the scale at which classical descriptions fail. When you want to understand *why* quantum mechanics looks the way it does, start there: it is the theory forced by the existence of this one number and its appearance in every one of these five confrontations.
 
-| TIKTOC topic | Griffiths reference | Pop-sci book | This companion |
-|---|---|---|---|
-| Classical physics and its failures | Ch. 1 introduction | Ch. 3, 11 (motivation) [BOOK] | §3, §4 (frames the failures with math) |
-| Blackbody radiation | Ch. 1 intro + Afterword on thermal radiation | Ch. 3 [BOOK ✅] | §4.1 (Planck derivation) |
-| Photoelectric effect | Ch. 1 intro | Ch. 4 [BOOK ✅] | §4.2 (work function, threshold) |
-| Compton scattering | brief in Ch. 1 intro; full derivation in Griffiths *Elementary Particles* | Ch. 10 [BOOK ⚠️ — Klein–Nishina error] | §4.3 (full kinematic derivation) |
-| de Broglie + wave-particle | Ch. 1 intro | Ch. 5, 11 [BOOK ✅/⚠️] | §4.4 (Davisson–Germer worked) |
-| Franck–Hertz | not in Griffiths | Ch. 6 [BOOK ✅] | §4.5 (threshold + UV photon) |
+---
 
-The pop-sci book is the right "first read" for the history. Griffiths Ch. 1 is the right second read for the physics, and is unusually compressed because his book proper begins at Ch. 1.1 with the wave function. This companion fills the quantitative middle.
+## Exercises
 
-## 7. Exercises
+**Warm-up**
 
-**E1 (L1, Knowledge).** State the five formulas of this chapter from memory: Planck's distribution, the photoelectric equation, the Compton shift, the de Broglie relation, and the Franck–Hertz threshold condition.
+**W1.** Write down the five key formulas from this chapter from memory: the Planck distribution, the photoelectric equation, the Compton shift, the de Broglie relation, and the Franck–Hertz threshold condition. For each, name the one quantity that makes it non-classical — the quantity that goes to zero in the classical limit. *(Tests recall and the classical-limit intuition built throughout the chapter.)*
 
-**E2 (L3, Application).** A potassium surface ($\phi = 2.30$ eV) is illuminated by light of wavelength 350 nm. Compute (a) the threshold wavelength for photoemission, (b) the maximum kinetic energy of the photoelectrons, (c) the stopping voltage you would need to halt the most energetic electrons. *Hint: use $E[\text{eV}] \cdot \lambda[\text{nm}] = 1240$.*
+**W2.** A photon has wavelength 620 nm (red light). Compute its frequency, energy in joules, and energy in eV. Use $E[\text{eV}] \cdot \lambda[\text{nm}] = 1240$ to check your answer. *(Direct application of $E = h\nu$; builds fluency with the 1240 eV·nm shortcut used throughout.)*
 
-**E3 (L3, Application).** An X-ray photon of wavelength 0.020 nm scatters off a free electron at $\theta = 60°$. Compute the wavelength shift, the scattered wavelength, and the kinetic energy gained by the electron.
+**W3.** At what scattering angle $\theta$ does the Compton shift reach its maximum value? What is that maximum shift in picometers? *(Direct substitution into $\Delta\lambda = (h/m_e c)(1-\cos\theta)$; tests whether the student sees that the formula's maximum is a geometric fact.)*
 
-**E4 (L4, Analysis).** Derive the Compton wavelength-shift formula yourself, starting from energy and momentum conservation. Do not refer back to §4.3 until you are stuck. After you derive it, take the non-relativistic limit ($h\nu \ll m_e c^2$) and check that the electron recoil is small compared to $m_e c$.
+**Application**
 
-**E5 (L4, Analysis).** An electron is accelerated through a potential difference of 1000 V. Compute its de Broglie wavelength. (You may use the non-relativistic relation $p = \sqrt{2 m_e K}$ at this energy — check after the fact that this is justified.) Compare to the X-ray wavelength used in Compton's original experiment (0.0711 nm). Which is shorter?
+**A1.** Copper has work function $\phi = 4.65$ eV. (a) Find the threshold wavelength for photoemission. (b) Light of wavelength 200 nm strikes the surface. Find the maximum kinetic energy of the ejected electrons and the stopping voltage required to halt them. (c) The intensity of the 200 nm beam is doubled. What changes? *(Part (c) is the trap: intensity changes the rate of ejection, not the energy per electron. Tests whether the student has genuinely internalized the one-photon-one-electron picture.)*
 
-**E6 (L5, Evaluation).** Read Millikan's 1916 paper introduction (*Physical Review* 7, 355–388). Identify two places where Millikan describes his expectations going into the experiment. Now identify the sentence where he concedes the result. What does the gap between expectation and result tell you about how empirical science actually proceeds when a theorist proposes something physicists do not yet believe?
+**A2.** An electron is accelerated through 150 V. (a) Compute its de Broglie wavelength using the non-relativistic relation $p = \sqrt{2m_e K}$. (b) After computing, check whether the non-relativistic approximation is justified: compare $K$ to $m_e c^2 = 511$ keV. (c) A crystal with interplanar spacing $d = 0.20$ nm is used as a diffraction target. Predict the angle of the first-order diffraction peak. *(Combines §4.4 calculation with a built-in sanity check on the approximation; the approximation check is a habit worth training early.)*
 
-**E7 (L6, Synthesis).** A hypothetical 1925 experimentalist accelerates electrons through 200 V and aims them at a crystal with interplanar spacing 0.30 nm. Predict the angle of the first-order diffraction peak from the de Broglie wavelength and the Bragg condition. Then design a single sentence describing what the experimentalist would conclude if the peak appeared at the predicted angle, and a second sentence describing what they would conclude if it did not appear at all.
+**A3.** In a Franck–Hertz experiment with neon gas, the periodic current dips are observed at 18.7 V, 37.4 V, and 56.1 V. (a) What is the energy of neon's first excited state above the ground state? (b) Predict the wavelength of the photon emitted when the excited neon atom returns to its ground state. In what part of the electromagnetic spectrum does this fall? *(Transfers the mercury analysis to a new element; the wavelength result — visible orange-red — is a satisfying check since neon signs glow that color.)*
 
-## 8. What would change my mind
+**Synthesis**
 
-A reproducible experiment that recovered classical wave or particle behavior in a regime where the five experiments above predict quantum behavior — say, photoelectric emission below the threshold frequency at sufficiently high intensity, or electron diffraction wavelengths that did not scale as $h/p$ — would force a fundamental revision of this unit's central claim. The current claim is conservative and well-tested: in the regimes accessible to these five experiments, classical physics is *quantitatively* wrong, and the quantum corrections all scale with Planck's constant $h$. A demonstration that $h$ effectively goes to zero in any of these regimes would rewrite the unit. None has appeared in over a century of attempts.
+**S1.** Millikan's photoelectric measurements gave $h = 6.57 \times 10^{-27}$ erg·s. Planck's blackbody fit gave $h = 6.55 \times 10^{-27}$ erg·s. These two experiments involve completely different physical systems — one is about radiation emitted by a hot cavity, the other is about electrons ejected from a metal surface. Write two or three sentences explaining why the agreement of these values is significant, and what it would mean for Einstein's photon hypothesis if the two values had differed by 20%. *(Tests synthesis of §4.1 and §4.2; the counterfactual forces the student to reason about what the constant $h$ actually represents.)*
 
-## 9. Still puzzling
+**S2.** The Tonomura experiment (1989) sent electrons through a double slit one at a time. After 100 electrons, the detector showed random-looking dots. After 70,000 electrons, a clear interference pattern had built up. (a) What does this result rule out as an explanation for diffraction — specifically, what classical mechanism cannot account for it? (b) The de Broglie wavelength of each electron was 0.05 nm. The slit separation was 300 nm. Using the double-slit formula $d\sin\theta = n\lambda$, predict the angle to the first bright fringe. (c) If the electrons were replaced by protons with the same kinetic energy, would the fringe spacing increase, decrease, or stay the same? Justify your answer with a calculation. *(Integrates §4.4 wave-particle reasoning with a quantitative prediction and a comparison that requires understanding what $\lambda = h/p$ actually depends on.)*
 
-- *What is a photon, really?* The operational definition — a quantum of the electromagnetic field with energy $h\nu$ and momentum $h\nu/c$ — works for all the calculations in this unit. The ontological question is harder. Willis Lamb argued in 1995 ([*Applied Physics B* 60, 77–84](https://doi.org/10.1007/BF01135846)) that the term "photon" should be retired in favor of "QED field excitation." Most working physicists keep the word and leave the ontology unresolved. The companion takes the operational position throughout.
+**Challenge**
 
-- *Why these constants?* Planck's constant has a specific value, $6.626 \times 10^{-34}$ J·s. Why this value, and not another? The Standard Model treats $h$ as an empirical input — it sets the scale at which classical descriptions fail. Whether $h$ is determined by some deeper theory or is a brute fact about our universe is open and probably unresolvable within non-relativistic QM.
+**C1.** In Compton's original experiment, he observed two peaks in the scattered X-ray spectrum at each angle: one at the incident wavelength $\lambda$ (unshifted) and one at $\lambda' = \lambda + \Delta\lambda$ (shifted). The unshifted peak is not predicted by the photon-billiard-ball derivation in §4.3. Propose a physical mechanism that produces the unshifted peak — your explanation should be consistent with the conservation-law framework in §4.3 and should identify what is different about the scattering event that leaves $\lambda$ unchanged. *(Goes beyond the chapter's explicit content; the answer involves scattering off the nucleus rather than a free electron, so the recoiling mass is ~20,000× larger, making $\Delta\lambda$ negligible. Tests whether the student can reason from the formula rather than just apply it.)*
 
-- *Schrödinger's interpretive failure.* By 1926 Schrödinger had the right wave equation but the wrong interpretation of $\psi$ — he wanted it to be a literal matter wave. Born's probabilistic interpretation displaced his within months. Why did the right equation come with the wrong story attached? Unit 3 will return to this; the short answer is that the equation is forced by the experimental constraints above, while the interpretation requires an additional postulate that no single experiment compels.
+---
 
-- *Mercury's level structure.* Franck–Hertz tells you mercury's first excited state is 4.9 eV up. Predicting that number from first principles requires multi-electron quantum chemistry and is genuinely hard — beyond this course. The fact that the experiment exists, and that the level is sharp and reproducible, is what matters for now.
+## LLM Exercises
 
-**Tags:** blackbody-radiation, photoelectric-effect, compton-scattering, de-broglie, franck-hertz, classical-failures, planck-constant, quantum-history, griffiths-ch1
+**LLM-E1.** Ask a language model to explain the "ultraviolet catastrophe" to you as if you have no background in physics. Then ask it to explain it to you as a physicist. Compare the two explanations: what did it add, what did it simplify, and what did it get wrong or imprecise in each version? Identify one place in each explanation where the model substituted a metaphor for a mechanism.
+
+**LLM-E2.** Paste the Compton scattering derivation from this chapter into a language model and ask it to verify each algebraic step. Where does it agree, where does it flag an error (real or hallucinated), and where does it skip steps without warning? Then ask it to redo the derivation in a different notation (using wavelengths $\lambda, \lambda'$ throughout instead of frequencies). Evaluate whether the result is mathematically equivalent.
+
+**LLM-E3.** Describe the Davisson–Germer experiment to a language model — the 54 V electrons, the nickel crystal, the measured angle of 50° — and ask it to reconstruct the calculation predicting the diffraction angle. Then ask it to explain what the result would mean if the measured angle had been 35° instead of 50°. Evaluate the quality of its physical reasoning, not just its arithmetic.
+
+**LLM-E4.** Ask a language model: "Did Planck quantize light in 1900?" Evaluate the response for precision. The historically and physically correct answer is narrow: he quantized the energy *exchange* between oscillators in the cavity walls and the radiation field, not the field itself. Then ask it to distinguish Planck's 1900 quantization from Einstein's 1905 quantization. Does it maintain the distinction, or does it collapse them?
+
+**LLM-E5.** Give a language model this prompt: "The Franck–Hertz experiment proves the Bohr model." Ask it to evaluate the claim. A strong response should accept what the experiment actually establishes (discrete energy levels in mercury, with the first at 4.9 eV) while distinguishing this from what the Bohr model claims (a specific orbital structure predicting hydrogen's level spacings). Evaluate whether the model draws that line correctly.
