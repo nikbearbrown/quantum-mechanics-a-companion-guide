@@ -1,242 +1,182 @@
-# Unit 8 — Identical Particles
+# Chapter 8 — Identical Particles
 
-> Two electrons in helium are not "electron 1 and electron 2." Forgetting that throws away the helium spectrum, the periodic table, and the white dwarf.
+*Two electrons in helium are not "electron 1 and electron 2." Forgetting that throws away the helium spectrum, the periodic table, and the white dwarf.*
 
 ---
 
-## 1. What this chapter is doing
+Here is a question that sounds like it should have a simple answer. You have two electrons in a helium atom. You measure the position of one and find it at $\mathbf{r}_1$. You measure the position of the other and find it at $\mathbf{r}_2$. Now here is the question: which electron did you measure first?
 
-You have an instinct from classical mechanics that two billiard balls remain distinguishable forever — paint them red and blue and you can follow each trajectory through any collision you like. Quantum mechanics removes the paint. The wave function spreads each particle over a region; the regions overlap; when a detector clicks, there is no procedure available that says *which one* triggered it. That sounds like an inconvenience. It is, in fact, the entire reason chemistry exists. The architecture of multi-electron atoms — and therefore the periodic table, and therefore everything that has periodic-table structure underneath it — follows from one algebraic fact about identical particles: their multi-particle wave function is either symmetric or antisymmetric under exchange. This unit derives that fact, builds the antisymmetric construction (the Slater determinant), shows it kill the helium ground-state calculation if you ignore it, and then uses it to read the periodic table off as a consequence. Griffiths covers this material in Ch. 5 of *Introduction to Quantum Mechanics* — exchange symmetry in §5.1, helium and the periodic table in §5.2. The pop-sci companion ([*Quantum Physics for Beginners*, 2021]) narrates the periodic table well in its Ch. 13 but states the Pauli principle as a rule rather than deriving it from antisymmetry. This unit fills the derivation underneath.
+You cannot answer it. Not because you forgot to label them, and not because your measuring apparatus is imprecise. The two electrons are genuinely, irreducibly indistinguishable. There is no physical procedure — no color, no tag, no trajectory you could follow — that separates "electron 1" from "electron 2." The Schrödinger equation for two electrons has the same structure when you swap their labels, and the wave function knows this. A multi-particle wave function that treats the two electrons as distinct particles is, in a precise sense, lying about the physics.
 
-## 2. Learning objectives
+You might think this is a philosophical subtlety with no observable consequences. It is not. Whether the two-electron wave function is symmetric or antisymmetric under particle exchange determines which spin states helium's excited configurations can have, which in turn determines how often the two electrons sit close to each other, which determines the Coulomb energy by hundreds of millielectronvolts. The singlet-triplet splitting in helium — two families of states with measurably different energies, historically called parahelium and orthohelium — is an experimental fact that a theory using labeled particles cannot even express, let alone predict.
 
-By the end of this unit, you should be able to:
+And beyond helium: without the antisymmetry constraint, every electron in every atom would pile into the $1s$ orbital. Shell structure would not exist. The periodic table would not exist. Chemistry would not exist. The indistinguishability of electrons is not a technicality. It is the foundation.
 
-- **State** the symmetric/antisymmetric postulate for identical particles and identify which sign applies to bosons and which to fermions. (Bloom L1)
-- **Construct** the Slater determinant for $N=2$ and $N=3$ identical fermions in given single-particle orbitals. (L3)
-- **Explain** why the antisymmetric two-fermion wave function vanishes when both particles occupy the same single-particle state (Pauli exclusion as a property of determinants). (L3)
-- **Compute** the para- and orthohelium total wave functions by combining the spin singlet/triplet with the symmetric/antisymmetric spatial parts. (L4)
-- **Predict** the spin multiplicity of the ground state of any first- or second-row atom using Aufbau plus Hund's rule. (L4)
-- **Evaluate** which features of the periodic table follow from antisymmetry, which follow from Coulomb screening, and which fall out of Hund's rule. (L5)
+---
 
-## 3. The motivating problem
+## The exchange operator
 
-Set up the helium ground-state calculation the way a student who has just finished Unit 6 (the hydrogen atom) would set it up. The Hamiltonian is
+Define the *exchange operator* $\hat{P}_{12}$ on a two-particle wave function by
 
-$$ \hat{H} = -\frac{\hbar^2}{2m}\nabla_1^2 - \frac{\hbar^2}{2m}\nabla_2^2 - \frac{Ze^2}{4\pi\epsilon_0 r_1} - \frac{Ze^2}{4\pi\epsilon_0 r_2} + \frac{e^2}{4\pi\epsilon_0 r_{12}}, $$
+$$\hat{P}_{12}\,\psi(\mathbf{r}_1, \mathbf{r}_2) = \psi(\mathbf{r}_2, \mathbf{r}_1).$$
 
-with $Z=2$ and $r_{12} = |\mathbf{r}_1 - \mathbf{r}_2|$. Drop the electron-electron repulsion term for a moment as "small" (it isn't, but you have to start somewhere). The remaining Hamiltonian separates into two hydrogenic problems with effective charge $Z=2$, and the ground state of each is the $1s$ orbital $\psi_{100}(\mathbf{r})$ with energy $E_1 = -Z^2 \cdot 13.6 \text{ eV} = -54.4$ eV. Two electrons, two such orbitals, total zeroth-order energy $-108.8$ eV. Now add the Coulomb repulsion as a first-order perturbation. The first-order energy correction (we will derive this carefully in Unit 9) is
+Two immediate consequences. First, $\hat{P}_{12}^2 = \hat{1}$ — swap the labels twice and you are back where you started — so $\hat{P}_{12}$ has eigenvalues $\pm 1$ only. Second, if the particles are truly identical, every observable must be unchanged under their exchange. In particular, the Hamiltonian must commute with the exchange operator:
 
-$$ E^{(1)} = \langle \psi_0 | \frac{e^2}{4\pi\epsilon_0 r_{12}} | \psi_0 \rangle $$
+$$[\hat{H}, \hat{P}_{12}] = 0.$$
 
-evaluated on the unperturbed two-electron ground state. So far, so undergraduate.
+Operators that commute with $\hat{H}$ can be simultaneously diagonalized with it. So we can choose energy eigenstates that are also eigenstates of $\hat{P}_{12}$ — states that are either *symmetric* ($+1$ eigenvalue) or *antisymmetric* ($-1$ eigenvalue) under exchange.
 
-The question is: *what is* $|\psi_0\rangle$? Write it as $\psi_{100}(\mathbf{r}_1) \psi_{100}(\mathbf{r}_2)$ — electron 1 in the $1s$ orbital, electron 2 in the $1s$ orbital — and the integral evaluates to $(5/4) Z \cdot 13.6$ eV $= 34.0$ eV. Combined with the zeroth-order $-108.8$ eV, this gives a predicted ionization energy of $-108.8 + 34.0 = -74.8$ eV. Experimentally, helium's ground-state energy is $-79.0$ eV, measured spectroscopically with five-significant-figure precision ([NIST Atomic Spectra Database](https://www.nist.gov/pml/atomic-spectra-database)). The prediction is off by 4 eV — a 5% error, large by spectroscopic standards but tolerable for a first-order calculation.
+Nature then makes one more choice that quantum mechanics itself does not derive: it picks one of the two options for each particle species, permanently. Electrons, protons, neutrons, and all other half-integer-spin particles are *fermions* — their multi-particle wave functions are antisymmetric under exchange. Photons, Higgs bosons, and all other integer-spin particles are *bosons* — their wave functions are symmetric. The connection between spin and statistics is not a postulate of non-relativistic quantum mechanics but a theorem — Pauli's spin-statistics theorem, proved in 1940 [Pauli, *Physical Review* 58, 716–722](https://doi.org/10.1103/PhysRev.58.716) — that requires relativistic quantum field theory to derive. Inside non-relativistic QM, the anti/symmetric assignment is postulated. You should know the deeper theorem exists and that it requires tools we have not yet built.
 
-This is the right number, by accident.
+<!-- → [TABLE: two-column summary of fermions vs. bosons — rows: spin type (half-integer / integer), exchange symmetry (antisymmetric / symmetric), example particles (electron, proton, neutron / photon, Higgs, ⁴He atom), statistical distribution (Fermi-Dirac / Bose-Einstein), key consequence (Pauli exclusion, shell structure / Bose-Einstein condensation, laser coherence); makes the dichotomy scannable before the chapter elaborates each side] -->
 
-What you actually did was write a wave function $\psi_{100}(\mathbf{r}_1) \psi_{100}(\mathbf{r}_2)$ that treats the two electrons as labeled. The labels are an artifact of the way you set up the problem; nature has no procedure to enforce them. The correct two-electron ground state must respect the fact that the two electrons are identical, and as we will show in §4.1, this forces the spatial wave function to be either symmetric or antisymmetric under particle exchange. For two electrons both in the $1s$ orbital, the symmetric spatial wave function is just $\psi_{100}(\mathbf{r}_1)\psi_{100}(\mathbf{r}_2)$ — the labels were "accidentally" symmetric, so the answer happens to be correct. But this only works because we put both electrons in the *same* spatial orbital. Try the same shortcut for helium's first excited state (one electron in $1s$, one in $2s$) and the symmetry of the spatial wave function becomes an actual choice — and choosing wrong gives the wrong energy ordering and the wrong spectrum.
+One note on what this postulate applies to: it is not limited to electrons that are nearby. Two electrons at opposite ends of the galaxy are still identical, and in principle the wave function across all electrons in the universe is antisymmetric under the exchange of any pair. In practice, exchange effects between electrons in distant atoms are negligible because the overlap integral between their localized orbitals is exponentially small with distance. The antisymmetry holds globally; it only *matters* locally.
 
-The helium $1s2s$ excited state is observed to come in two flavors with measurably different energies: *parahelium* (singlet) at $-58.4$ eV and *orthohelium* (triplet) at $-59.2$ eV, with the triplet lower by about 0.8 eV ([NIST]). A theory that treats the electrons as labeled distinct particles has no language for this splitting. The labels themselves are the bug.
+And one note for completeness: in two spatial dimensions, the argument breaks down. When two particles exchange positions in 2D, the path of exchange can wind around the relative-position singularity in topologically distinct ways, and the exchange phase is not restricted to $\pm 1$ — it can be any complex number $e^{i\theta}$. Particles with such intermediate statistics are *anyons*, and they have been observed in the fractional quantum Hall effect [Bartolomei et al. 2020, *Science* 368, 173–177](https://doi.org/10.1126/science.aaz5601). The $\pm 1$ dichotomy is a property of three spatial dimensions, not of quantum mechanics in general.
 
-## 4. Concept blocks
+---
 
-### 4.1 The exchange operator and the symmetric/antisymmetric dichotomy
+## The Slater determinant
 
-Define the exchange operator $\hat{P}_{12}$ on the two-particle Hilbert space by
+For $N$ identical fermions, there is a clean way to write the antisymmetric multi-particle wave function. Label the single-particle *spin-orbitals* (spatial wave function times spin state) as $\phi_1, \phi_2, \ldots, \phi_N$, and label the particles as $1, 2, \ldots, N$. The antisymmetric state is
 
-$$ \hat{P}_{12} \psi(\mathbf{r}_1, \mathbf{r}_2) = \psi(\mathbf{r}_2, \mathbf{r}_1). $$
+$$\psi(1, 2, \ldots, N) = \frac{1}{\sqrt{N!}} \begin{vmatrix} \phi_1(1) & \phi_1(2) & \cdots & \phi_1(N) \\ \phi_2(1) & \phi_2(2) & \cdots & \phi_2(N) \\ \vdots & \vdots & \ddots & \vdots \\ \phi_N(1) & \phi_N(2) & \cdots & \phi_N(N) \end{vmatrix}.$$
 
-Two things follow immediately. First, $\hat{P}_{12}^2 = \hat{1}$ — swap the labels twice and you are back where you started — so the eigenvalues of $\hat{P}_{12}$ are $\pm 1$. Second, if the two particles are genuinely identical, every observable, including the Hamiltonian, must be invariant under their exchange:
+Slater introduced this in 1929 [*Physical Review* 34, 1293–1322](https://doi.org/10.1103/PhysRev.34.1293). The determinant structure does two things automatically.
 
-$$ [\hat{H}, \hat{P}_{12}] = 0. $$
+<!-- → [INFOGRAPHIC: annotated N=3 Slater determinant — show the 3×3 matrix with φ_a, φ_b, φ_c labeling rows (orbitals) and 1, 2, 3 labeling columns (particles); draw two arrows: one pointing at a pair of columns and labeled "swap two columns → sign flips = antisymmetry"; another pointing at two identical rows and labeled "identical rows → determinant = 0 = Pauli exclusion"; student should see both properties as structural facts about the matrix, not extra rules imposed on top] -->
 
-Commuting observables can be simultaneously diagonalized, so eigenstates of $\hat{H}$ can be chosen as eigenstates of $\hat{P}_{12}$ — that is, as either symmetric ($+1$ eigenvalue) or antisymmetric ($-1$ eigenvalue) under exchange. As far as we have measured in 3+1 dimensions, nature picks one of these two options per particle species and sticks with it.
+First, antisymmetry is built in. Swap two particle labels — that is, swap two columns of the determinant — and the determinant changes sign. That is what determinants do when you transpose two columns. No extra work needed; the algebra enforces the postulate.
 
-This is a postulate of non-relativistic quantum mechanics, not a derivation. Griffiths states it in §5.1: "It is a fact that all the particles known to nature fall into one of two categories." The deeper theorem — that integer-spin particles are bosons (symmetric) and half-integer-spin particles are fermions (antisymmetric) — is the *spin-statistics theorem*, proved by Pauli in 1940 ([*Physical Review* 58, 716–722](https://doi.org/10.1103/PhysRev.58.716)) and requiring relativistic quantum field theory to derive. The argument runs through the requirement that field operators at spacelike-separated points commute (for integer spin) or anticommute (for half-integer spin) so that causality is not violated. Inside a non-relativistic QM course you should know the theorem exists, that its proof requires QFT, and that within your current toolkit the connection is a postulate.
+Second, and this is the one that matters most for atomic physics: if two of the spin-orbitals are identical — two rows of the determinant are the same — the determinant is zero. The wave function vanishes identically. You cannot put two identical fermions in the same single-particle state, not because of a rule you learned about quantum numbers, but because the antisymmetric wave function constructed from two identical orbitals is zero. This is Pauli exclusion as a property of determinants.
 
-In two dimensions, the story breaks down. The two-particle exchange can wind around the relative-position singularity in topologically distinct ways, so the exchange phase is not restricted to $\pm 1$ — it can be any complex phase $e^{i\theta}$, and the resulting particles are *anyons*. They have been observed in the fractional quantum Hall effect ([Bartolomei et al. 2020, *Science* 368, 173–177](https://doi.org/10.1126/science.aaz5601)) and are the substrate of topological quantum computation. Our $\pm 1$ dichotomy is dimension-specific.
+For $N=2$, the Slater determinant is
 
-**Common misconception.** "Identical particles are identical because they look the same." More precise: identical particles are identical because the Hamiltonian is exchange-symmetric *and* the wave function is symmetric or antisymmetric under exchange. Two electrons in distant atoms are still formally identical; the wave function across all the electrons in the universe is, in principle, antisymmetric. Exchange effects between distant electrons are negligible only because the overlap integral between their localized orbitals is exponentially small, not because the symmetry stops applying.
+$$\psi(1,2) = \frac{1}{\sqrt{2}}\left[\phi_a(1)\phi_b(2) - \phi_a(2)\phi_b(1)\right].$$
 
-**Worked example.** Two non-interacting spin-1/2 particles in a one-dimensional infinite well of width $L$. The single-particle eigenstates are $\psi_n(x) = \sqrt{2/L} \sin(n\pi x/L)$ with energies $E_n = n^2 \pi^2 \hbar^2/(2mL^2)$. For both particles in the $n=1$ orbital with antisymmetric spatial wave function:
+For $N=3$, with spin-orbitals $\phi_a, \phi_b, \phi_c$, the determinant expands into $3! = 6$ terms with alternating signs — every permutation of the three particles among the three orbitals, weighted by the sign of the permutation. The general $N$-particle case has $N!$ terms.
 
-$$ \psi_A(x_1, x_2) = \frac{1}{\sqrt{2}}\left[\psi_1(x_1)\psi_1(x_2) - \psi_1(x_2)\psi_1(x_1)\right] = 0. $$
+The Slater determinant is also the foundation of Hartree–Fock theory — the workhorse of computational quantum chemistry. The approximation is: assume the $N$-electron ground state is a single Slater determinant, then minimize $\langle\psi|\hat{H}|\psi\rangle$ over the choice of single-particle orbitals. Everything in computational chemistry beyond Hartree–Fock — configuration interaction, coupled cluster, density-functional theory — is a correction to the single-determinant ansatz. This is not a computational detail; it is the direct consequence of the antisymmetry postulate applied to atoms.
 
-The antisymmetric combination is identically zero — Pauli exclusion has fallen out of antisymmetry by construction. You cannot put two identical fermions in the same single-particle state because the antisymmetric wave function constructed from that state vanishes.
+---
 
-### 4.2 Bosons, fermions, and the absence of an "exchange force"
+## The exchange correlation: why symmetry affects energy
 
-Particles whose multi-particle wave function is symmetric under exchange are *bosons*; particles whose wave function is antisymmetric are *fermions*. The empirical correspondence — observed in every experiment ever performed, derived in QFT via the spin-statistics theorem — is:
+Before helium, a simple example. Two non-interacting identical particles in a 1D infinite well. Particle A is in orbital $\psi_1(x)$; particle B is in orbital $\psi_2(x)$. For distinguishable particles, the joint wave function is just $\psi_1(x_1)\psi_2(x_2)$ and the joint probability density is $|\psi_1(x_1)|^2|\psi_2(x_2)|^2$.
 
-- **Bosons** (integer spin $0, 1, 2, \dots$): photon (spin 1), gluon (spin 1), W and Z (spin 1), Higgs (spin 0), and composite particles with an even total number of constituent fermions, like helium-4 atoms (2 protons + 2 neutrons + 2 electrons = 6 fermions, even).
-- **Fermions** (half-integer spin $1/2, 3/2, \dots$): electron, proton, neutron, neutrino (all spin 1/2), and composite particles with an odd total number of constituent fermions, like helium-3 atoms (1 proton + 2 neutrons + 2 electrons would be 5 — actually 2 protons + 1 neutron + 2 electrons = 5; the point is the parity).
+For identical fermions with symmetric spin (both spin-up, so the spin state is symmetric), the spatial wave function must be antisymmetric:
 
-The statistics that follow are different in kind. For $N$ bosons in single-particle states with occupation numbers $\{n_i\}$, the equilibrium occupation at temperature $T$ is *Bose–Einstein*,
+$$\psi_A(x_1, x_2) = \frac{1}{\sqrt{2}}\left[\psi_1(x_1)\psi_2(x_2) - \psi_1(x_2)\psi_2(x_1)\right].$$
 
-$$ \langle n_i \rangle_{\text{BE}} = \frac{1}{e^{(E_i - \mu)/k_B T} - 1}. $$
+For identical bosons, the symmetric spatial wave function is
 
-For $N$ fermions, the antisymmetrized state has at most one particle per single-particle state, and the occupation is *Fermi–Dirac*,
+$$\psi_S(x_1, x_2) = \frac{1}{\sqrt{2}}\left[\psi_1(x_1)\psi_2(x_2) + \psi_1(x_2)\psi_2(x_1)\right].$$
 
-$$ \langle n_i \rangle_{\text{FD}} = \frac{1}{e^{(E_i - \mu)/k_B T} + 1}. $$
+Now evaluate $\langle(x_1-x_2)^2\rangle$ for each case. Expanding the squared wave functions and integrating, the cross terms produce an *exchange integral* that adds to the fermion average separation and subtracts from the boson one. The result (Griffiths §5.1.2 carries this calculation):
 
-The sign in the denominator is the entire story. At low temperature and high density, bosons crowd into the ground state — *Bose–Einstein condensation*, first observed in dilute rubidium-87 gas at 170 nK by Cornell, Wieman, and collaborators ([Anderson et al. 1995, *Science* 269, 198–201](https://doi.org/10.1126/science.269.5221.198)) and weeks later in sodium by Ketterle's group at MIT ([Davis et al. 1995, *Physical Review Letters* 75, 3969](https://doi.org/10.1103/PhysRevLett.75.3969)); Nobel 2001. At the other extreme, fermions stack into the lowest available states up to the Fermi energy, and the resulting *degeneracy pressure* supports stellar remnants — Chandrasekhar showed in 1931 that electron degeneracy pressure cannot support a white dwarf above $M \approx 1.4 M_\odot$ ([Chandrasekhar 1931, *Astrophysical Journal* 74, 81–82](https://doi.org/10.1086/143324)). Without Pauli, every white dwarf would collapse.
+$$\langle(x_1-x_2)^2\rangle_\text{fermion} > \langle(x_1-x_2)^2\rangle_\text{distinguishable} > \langle(x_1-x_2)^2\rangle_\text{boson}.$$
 
-**Common misconception.** "Bosons attract; fermions repel." There is no statistical *force* in the ordinary sense — no term in the Hamiltonian that couples to particle identity. What there is, is a correlation in the joint probability density $|\psi(\mathbf{r}_1, \mathbf{r}_2)|^2$ that emerges from (anti)symmetrization. For two identical fermions in symmetric spin states, the spatial wave function must be antisymmetric, so $|\psi(\mathbf{r}_1, \mathbf{r}_2)|^2 \to 0$ as $\mathbf{r}_1 \to \mathbf{r}_2$ — the particles avoid coincidence. For two identical bosons, the symmetric spatial wave function enhances the probability at coincidence. Call this an *exchange correlation*, not an exchange force. The distinction matters because the helium calculation in §4.4 only gives the right answer if you keep the bookkeeping straight: the Coulomb repulsion is a real force in the Hamiltonian; the (anti)symmetry of the spatial wave function controls how often the electrons sit close enough for that repulsion to matter.
+No interaction term in the Hamiltonian has been turned on. The particles are non-interacting. The difference in average separation comes entirely from the symmetry of the spatial wave function. Fermions are statistically further apart than distinguishable particles would be; bosons are statistically closer. This is the *exchange correlation* — call it that, not an "exchange force." There is no extra term in the Hamiltonian. There is only the Coulomb force and the antisymmetry constraint on the wave function. The antisymmetry dictates how often the two electrons sit close enough for the Coulomb repulsion to matter. That is the entire mechanism behind the helium spectrum.
 
-**Worked example.** For two identical particles in adjacent infinite-well orbitals ($n=1$ and $n=2$), compute $\langle (x_1 - x_2)^2 \rangle$ for three cases: distinguishable, identical bosons (symmetric spatial), and identical fermions (antisymmetric spatial). Griffiths walks the calculation in §5.1.2; the result is
+<!-- → [CHART: three plots of |ψ(x₁, x₂)|² as a 2D heat map on the square [0,L]×[0,L] — left panel: distinguishable particles (uniform joint density); center panel: identical fermions (probability zero on the diagonal x₁=x₂, particle density pushed off-diagonal); right panel: identical bosons (probability enhanced along the diagonal); no interaction turned on in any panel; caption: "No interaction. No force. Just the symmetry of the wave function."] -->
 
-$$ \langle (x_1 - x_2)^2 \rangle_{\text{fermion}} > \langle (x_1 - x_2)^2 \rangle_{\text{distinguishable}} > \langle (x_1 - x_2)^2 \rangle_{\text{boson}}. $$
+---
 
-No interaction has been turned on. The fermions "push apart" and the bosons "pull together" purely as a function of the symmetry of the spatial wave function. This is what an exchange correlation looks like.
+## Helium: where the singlet-triplet splitting comes from
 
-### 4.3 The Slater determinant
+For two spin-1/2 particles, the spin states decompose into a *singlet* (antisymmetric under exchange, total spin $S=0$) and a *triplet* (symmetric under exchange, total spin $S=1$):
 
-For $N$ identical fermions, the antisymmetric multi-particle wave function is most cleanly written as the determinant of an $N \times N$ matrix whose entries are single-particle orbitals $\phi_i$ evaluated at single-particle coordinates $j$ (including spin):
+$$|\text{singlet}\rangle = \frac{1}{\sqrt{2}}(|\!\uparrow\downarrow\rangle - |\!\downarrow\uparrow\rangle), \qquad |\text{triplet}\rangle \in \left\{|\!\uparrow\uparrow\rangle,\; \tfrac{1}{\sqrt{2}}(|\!\uparrow\downarrow\rangle + |\!\downarrow\uparrow\rangle),\; |\!\downarrow\downarrow\rangle\right\}.$$
 
-$$ \psi(1, 2, \dots, N) = \frac{1}{\sqrt{N!}} \det\left[\phi_i(j)\right] = \frac{1}{\sqrt{N!}} \begin{vmatrix} \phi_1(1) & \phi_1(2) & \cdots & \phi_1(N) \\ \phi_2(1) & \phi_2(2) & \cdots & \phi_2(N) \\ \vdots & \vdots & \ddots & \vdots \\ \phi_N(1) & \phi_N(2) & \cdots & \phi_N(N) \end{vmatrix}. $$
+The total wave function — spatial times spin — must be antisymmetric for electrons (fermions). So:
 
-Slater introduced this construction in 1929 ([*Physical Review* 34, 1293–1322](https://doi.org/10.1103/PhysRev.34.1293)) to handle multi-electron atomic spectra systematically. It has two virtues that should be the pedagogical center of the unit.
+- Spin singlet (antisymmetric) pairs with spatial symmetric: *parahelium*.
+- Spin triplet (symmetric) pairs with spatial antisymmetric: *orthohelium*.
 
-*First*: antisymmetry is built into the structure. Swap two particle labels (two columns) and the determinant changes sign — that is what determinants do. No work required; the algebra enforces the postulate.
+The helium ground state has both electrons in the $1s$ orbital. The only spatial wave function available from two copies of $\psi_{1s}$ is the symmetric product $\psi_{1s}(\mathbf{r}_1)\psi_{1s}(\mathbf{r}_2)$ — it is automatically symmetric, because there is only one spatial orbital. This forces the spin to be singlet. The ground state of helium is necessarily $S=0$ parahelium with no other option.
 
-*Second*: if two orbitals are identical (two rows the same), the determinant is zero. This is Pauli exclusion as a property of determinants. The Bohr-era statement "no two electrons can have the same four quantum numbers" is a *consequence* of antisymmetry, not a primitive rule. Students who learn Pauli as a rule about quantum numbers carry the misconception into solid-state physics, where the "quantum numbers" are band indices and crystal momenta and the rule needs re-deriving anyway. Deliver it once, correctly, in Unit 8.
+The first excited state is more interesting: one electron in $1s$ and one in $2s$. Now the spatial wave function can be either symmetric or antisymmetric:
 
-For $N=2$:
+$$\psi_\pm(\mathbf{r}_1, \mathbf{r}_2) = \frac{1}{\sqrt{2}}\left[\psi_{1s}(\mathbf{r}_1)\psi_{2s}(\mathbf{r}_2) \pm \psi_{1s}(\mathbf{r}_2)\psi_{2s}(\mathbf{r}_1)\right].$$
 
-$$ \psi(1, 2) = \frac{1}{\sqrt{2}}\left[\phi_a(1)\phi_b(2) - \phi_a(2)\phi_b(1)\right]. $$
+The $+$ combination (symmetric) pairs with spin singlet to give parahelium. The $-$ combination (antisymmetric) pairs with spin triplet to give orthohelium. Both have the same zeroth-order energy — one electron in $1s$, one in $2s$. The Coulomb repulsion $e^2/(4\pi\varepsilon_0 r_{12})$ splits them.
 
-For $N=3$, with three spin-orbitals $\phi_a, \phi_b, \phi_c$:
+Compute $\langle V_{ee}\rangle$ on the two spatial states. Expanding $|\psi_\pm|^2$, the diagonal terms give the *direct (Coulomb) integral*
 
-$$ \psi(1, 2, 3) = \frac{1}{\sqrt{6}} \det\begin{pmatrix} \phi_a(1) & \phi_a(2) & \phi_a(3) \\ \phi_b(1) & \phi_b(2) & \phi_b(3) \\ \phi_c(1) & \phi_c(2) & \phi_c(3) \end{pmatrix}. $$
+$$J = \int\!\!\int |\psi_{1s}(\mathbf{r}_1)|^2\,|\psi_{2s}(\mathbf{r}_2)|^2\,\frac{e^2}{4\pi\varepsilon_0 r_{12}}\,d^3r_1\,d^3r_2,$$
 
-Expanded out, this is a sum of $3! = 6$ terms with alternating signs — every permutation of the three particles among the three orbitals, with the sign of the permutation as the coefficient. The general $N$-particle case has $N!$ terms.
+which is the classical Coulomb repulsion between the two charge distributions. The cross term gives the *exchange integral*
 
-**Common misconception.** "The Slater determinant is just notational shorthand for antisymmetry." It is more than that. It is the *minimal* antisymmetric construction from product states — the simplest antisymmetric thing you can build from $N$ independent single-particle orbitals. And it underlies the Hartree–Fock approximation, the workhorse of computational quantum chemistry: assume the $N$-electron ground state is a single Slater determinant, then minimize $\langle\psi|\hat{H}|\psi\rangle$ over the orbitals. Everything beyond that — configuration interaction, coupled cluster, density-functional theory — is a correction to the single-determinant ansatz. Unit 9 will come back to this when we develop the variational principle.
+$$K = \int\!\!\int \psi_{1s}^*(\mathbf{r}_1)\psi_{2s}^*(\mathbf{r}_2)\,\frac{e^2}{4\pi\varepsilon_0 r_{12}}\,\psi_{1s}(\mathbf{r}_2)\psi_{2s}(\mathbf{r}_1)\,d^3r_1\,d^3r_2.$$
 
-### 4.4 Helium: the singlet–triplet splitting
+$K$ has no classical analog. It exists because the wave function is antisymmetrized — the cross term in $|\psi_\pm|^2$ is present only because of the $\pm$ structure. For real $1s$ and $2s$ orbitals, $K > 0$. The energy corrections are:
 
-The two-electron helium atom is the simplest non-trivial multi-fermion problem and the cleanest place to see exchange effects produce a measurable energy splitting. Each electron has a spatial wave function and a spin state. The total wave function is the product of a spatial part and a spin part — and the total must be antisymmetric under exchange of both particles.
+$$\langle V_{ee}\rangle_\pm = J \pm K.$$
 
-For two spin-1/2 particles, the spin states decompose (Unit 7) into a *spin singlet* (antisymmetric under exchange, total spin $S=0$, one state) and a *spin triplet* (symmetric under exchange, total spin $S=1$, three states):
+Parahelium (symmetric spatial, $S=0$) has energy $E_0 + J + K$. Orthohelium (antisymmetric spatial, $S=1$) has energy $E_0 + J - K$. Orthohelium lies *lower* by $2K$.
 
-$$ |\text{singlet}\rangle = \frac{1}{\sqrt{2}}(|\uparrow\downarrow\rangle - |\downarrow\uparrow\rangle), $$
+Empirically: the orthohelium $1s2s$ state sits at $-59.2$ eV, the parahelium at $-58.4$ eV, a splitting of about 0.8 eV [NIST Atomic Spectra Database](https://www.nist.gov/pml/atomic-spectra-database). Orthohelium is lower, as the calculation predicts.
 
-$$ |\text{triplet}\rangle \in \left\{ |\uparrow\uparrow\rangle,\, \tfrac{1}{\sqrt{2}}(|\uparrow\downarrow\rangle + |\downarrow\uparrow\rangle),\, |\downarrow\downarrow\rangle \right\}. $$
+<!-- → [INFOGRAPHIC: helium energy level diagram — show the ground state (1s², S=0, parahelium) at −79.0 eV; then the 1s2s excited states as two levels: orthohelium triplet (S=1) at −59.2 eV and parahelium singlet (S=0) at −58.4 eV; label the splitting 2K ≈ 0.8 eV; annotate which spatial symmetry (+ or −) corresponds to each; draw a brace labeled "J" for the centroid and a brace labeled "±K" for the split; student should see the energy-level structure that the J/K decomposition produces] -->
 
-To make the *total* wave function (spatial $\times$ spin) antisymmetric:
+Notice what happened here. The spins did not interact directly — there is no $\hat{S}_1 \cdot \hat{S}_2$ term in the Hamiltonian at this order. What happened is that the spin state *forced the symmetry of the spatial wave function*, which forced how often the electrons sit near each other, which changed the Coulomb energy. The triplet has antisymmetric spatial: the electrons stay further apart, the Coulomb repulsion is reduced, the energy is lower. The spin label is a marker for the spatial symmetry sector. The Coulomb force is doing the work; the antisymmetry is channeling it.
 
-- **Spin singlet** (antisym) $\otimes$ **spatial symmetric** $\to$ *parahelium*.
-- **Spin triplet** (sym) $\otimes$ **spatial antisymmetric** $\to$ *orthohelium*.
+This generalizes to *Hund's first rule*: for a given electron configuration, the term with maximum total spin lies lowest in energy. More parallel spins force more antisymmetric pieces of the spatial wave function, which keeps electrons further apart, which reduces the Coulomb repulsion. The rule is exchange physics, applied configuration by configuration. [Hund 1925, *Zeitschrift für Physik* 33, 345–371](https://doi.org/10.1007/BF01328319).
 
-The ground state of helium is both electrons in the $1s$ orbital, which forces the spatial wave function to be symmetric (only one symmetric combination of $\phi_{1s}(1)\phi_{1s}(2)$ with itself), which forces the spin to be singlet. The ground state is necessarily parahelium with $S=0$.
+---
 
-The interesting case is the first excited state: $1s2s$ configuration. Now the spatial wave function has two flavors:
+## The periodic table as antisymmetry plus screening
 
-$$ \psi_{\text{spatial}}^{\pm}(\mathbf{r}_1, \mathbf{r}_2) = \frac{1}{\sqrt{2}}\left[\psi_{1s}(\mathbf{r}_1)\psi_{2s}(\mathbf{r}_2) \pm \psi_{1s}(\mathbf{r}_2)\psi_{2s}(\mathbf{r}_1)\right]. $$
+With Pauli exclusion from antisymmetry established, the architecture of the periodic table follows from three ingredients: the approximate hydrogenic energy ordering modified by electron screening, the requirement that each spin-orbital hold at most one electron, and Hund's rule for partially filled subshells.
 
-The $+$ combination is symmetric and pairs with spin singlet (parahelium, $S=0$). The $-$ combination is antisymmetric and pairs with spin triplet (orthohelium, $S=1$). The zeroth-order energies (ignoring electron-electron repulsion) are degenerate — both have one electron in $1s$ and one in $2s$. The Coulomb repulsion $V_{ee} = e^2/(4\pi\epsilon_0 r_{12})$ splits them.
+The *Aufbau* principle is the filling recipe. The *Madelung rule* encodes the empirical filling order: fill orbitals in sequence of increasing $n + \ell$, and for equal $n + \ell$ fill in order of increasing $n$:
 
-Compute the first-order correction $\langle V_{ee} \rangle$ on the symmetric and antisymmetric spatial states. Expand the squared spatial wave function:
+$$1s,\ 2s,\ 2p,\ 3s,\ 3p,\ 4s,\ 3d,\ 4p,\ 5s,\ 4d,\ 5p, \ldots$$
 
-$$ |\psi_{\text{spatial}}^{\pm}|^2 = \frac{1}{2}\left[|\psi_{1s}(1)|^2|\psi_{2s}(2)|^2 + |\psi_{1s}(2)|^2|\psi_{2s}(1)|^2 \pm 2\,\text{Re}[\psi_{1s}^*(1)\psi_{2s}^*(2)\psi_{1s}(2)\psi_{2s}(1)] \right]. $$
+The physical content is screening. An outer electron in a high-$\ell$ orbital is more effectively screened from the nucleus by the inner shells than an electron in a low-$\ell$ orbital at the same $n$, because low-$\ell$ orbitals penetrate the inner shells more deeply and experience a larger effective nuclear charge. This is why $4s$ sits below $3d$ in energy for light atoms — the $4s$ electron, despite its larger principal quantum number, penetrates the core more effectively than the $3d$ electron and is less screened.
 
-The first two terms in brackets are identical under the integration (they differ only by which electron's label you call "1"); their contribution to $\langle V_{ee} \rangle$ is the *direct (Coulomb) integral*
+<!-- → [INFOGRAPHIC: the Madelung diagonal-filling diagram — the classic n vs ℓ grid with diagonals of constant n+ℓ drawn through the (n,ℓ) grid points; arrows following the filling order along each diagonal; label the 4s/3d crossing to show that 4s (n+ℓ=4) fills before 3d (n+ℓ=5); annotate Cr and Cu as exception cases in the d-block with a note "exchange stabilization wins"; student should be able to read off the filling order from the diagram] -->
 
-$$ J = \int\!\!\int |\psi_{1s}(\mathbf{r}_1)|^2 |\psi_{2s}(\mathbf{r}_2)|^2 \frac{e^2}{4\pi\epsilon_0 |\mathbf{r}_1 - \mathbf{r}_2|} d^3r_1\, d^3r_2. $$
+Madelung's rule is not exact. Chromium's observed ground configuration is $[\text{Ar}]\,3d^5 4s^1$, not the predicted $3d^4 4s^2$. The half-filled $3d^5$ subshell is stabilized by exchange — five parallel spins, one per $d$-orbital, maximize the spin multiplicity and minimize the intra-subshell Coulomb energy through Hund's rule — and the $4s$–$3d$ energy gap is small enough that the exchange stabilization wins. Copper is $3d^{10} 4s^1$ for the analogous reason. There are roughly twenty such exceptions across the periodic table, concentrated in the $d$- and $f$-blocks where orbital energies become near-degenerate. The exceptions are not failures of quantum mechanics; they are places where the Madelung heuristic's approximations break down and the actual energy competition has to be computed.
 
-This is the classical Coulomb repulsion between two charge distributions $|\psi_{1s}|^2$ and $|\psi_{2s}|^2$, with no exchange content. The cross term gives the *exchange integral*
+Take carbon as the worked case. $Z=6$: configuration $1s^2\,2s^2\,2p^2$. The filled $1s$ and $2s$ subshells contribute nothing interesting — Pauli requires paired opposite spins and there is no choice. The $2p$ subshell has two electrons in three available orbitals ($m_\ell = -1, 0, +1$). By Hund's first rule, the two electrons go into *distinct* $m_\ell$ orbitals with *parallel* spins, total $S = 1$, spatial wave function antisymmetric in those two orbitals. The orbital angular momentum picks up $M_L = m_{\ell,1} + m_{\ell,2}$, and by Hund's second rule (maximum $L$ consistent with maximum $S$ and Pauli), the total orbital angular momentum is $L=1$. By Hund's third rule (for a less-than-half-filled subshell, minimum $J$ is the ground state), $J = |L - S| = 0$. The ground term is ${}^3P_0$. The NIST Atomic Spectra Database lists carbon's ground term as ${}^3P_0$ [NIST: C I](https://physics.nist.gov/PhysRefData/ASD/levels_form.html), with ${}^3P_1$ at $16.4\,\text{cm}^{-1}$ and ${}^3P_2$ at $43.4\,\text{cm}^{-1}$ above — fine-structure splittings of a few meV, consistent with spin-orbit coupling as a small perturbation on the much larger exchange splitting that established $S=1$ at the bottom.
 
-$$ K = \int\!\!\int \psi_{1s}^*(\mathbf{r}_1)\psi_{2s}^*(\mathbf{r}_2) \frac{e^2}{4\pi\epsilon_0 |\mathbf{r}_1 - \mathbf{r}_2|} \psi_{1s}(\mathbf{r}_2)\psi_{2s}(\mathbf{r}_1) d^3r_1\, d^3r_2. $$
+The same procedure predicts the ground term of the entire first row. H: ${}^2S_{1/2}$. He: ${}^1S_0$. Li: ${}^2S_{1/2}$. Be: ${}^1S_0$. B: ${}^2P_{1/2}$. C: ${}^3P_0$. N: ${}^4S_{3/2}$. O: ${}^3P_2$. F: ${}^2P_{3/2}$. Ne: ${}^1S_0$. Every prediction checks against NIST.
 
-$K$ has no classical analog. It arises purely from the antisymmetrization (the cross term in the squared wave function). For the $1s2s$ configuration with real orbitals, $K > 0$. Combining,
+---
 
-$$ \langle V_{ee}\rangle_{\pm} = J \pm K. $$
+## What the statistics look like at large scale
 
-The symmetric spatial state (parahelium, $S=0$) has energy $E_0 + J + K$; the antisymmetric spatial state (orthohelium, $S=1$) has energy $E_0 + J - K$, lower by $2K$. *Orthohelium lies below parahelium for the $1s2s$ configuration*. Empirically: $-59.2$ eV vs. $-58.4$ eV, splitting about 0.8 eV ([NIST]), and the lower state has $S=1$. (Sign convention here follows [Griffiths §5.2.1, 3rd ed.][verify against your edition]; some texts absorb sign factors differently and write the splitting with the opposite sign on $K$.)
+The antisymmetric structure of fermion wave functions has consequences far beyond atomic physics. When many fermions fill a band of single-particle states, they stack from the bottom up — each state takes at most one fermion — and at low temperature the distribution approaches a sharp step at the Fermi energy. The resulting *Fermi–Dirac distribution* is
 
-The deeper point: the spins do not interact directly at this order. There is no $\hat{S}_1 \cdot \hat{S}_2$ term in the Hamiltonian (until you add spin-orbit coupling, which is much smaller). What is happening is that *the spin state forces the symmetry of the spatial wave function*, which forces how often the electrons sit close to each other, which controls the Coulomb energy. The triplet has antisymmetric spatial, the electrons stay further apart, the Coulomb energy is lower. The spin label is just a marker — the Coulomb repulsion is doing the work, channeled by antisymmetry.
+$$\langle n_i\rangle_\text{FD} = \frac{1}{e^{(E_i - \mu)/k_BT} + 1}.$$
 
-This generalizes to *Hund's first rule*: for a given electron configuration, the term with maximum total spin lies lowest in energy. Parallel spins force the spatial wave function to be antisymmetric in those orbitals, which reduces the Coulomb repulsion. Hund's rule is exchange physics applied configuration by configuration ([Hund 1925, *Zeitschrift für Physik* 33, 345–371](https://doi.org/10.1007/BF01328319)).
+For bosons, the symmetric wave function allows unlimited occupation of any single state. At low temperature, bosons cascade into the ground state. The *Bose–Einstein distribution* is
 
-**Common misconception.** "Hund's rule says parallel spins repel less." The opposite: parallel spins *force the spatial wave function to be antisymmetric*, which keeps the electrons apart, which reduces the Coulomb repulsion. The spins themselves do not interact at this order. The exchange correlation does all the work; the spin label only tells you which spatial-symmetry sector you are in.
+$$\langle n_i\rangle_\text{BE} = \frac{1}{e^{(E_i - \mu)/k_BT} - 1}.$$
 
-### 4.5 The periodic table as antisymmetry plus screening
+The sign in the denominator is the entire story. At high temperature and low density, the two distributions converge to the classical Maxwell–Boltzmann form. At low temperature, they diverge: bosons condense, fermions refuse to.
 
-The architecture of the periodic table follows from three ingredients: the approximate hydrogenic energy ordering (modified by screening of one electron by the others), the Pauli principle from antisymmetry (at most two electrons per spatial orbital — one spin-up, one spin-down), and Hund's rule from exchange (within a partially-filled subshell, parallel spins fill distinct $m_\ell$ orbitals before any pairing).
+<!-- → [CHART: plot of ⟨n_i⟩ vs (E_i − μ)/k_BT for three distributions on the same axes — Fermi-Dirac (S-shaped step function approaching 1 at low energy and 0 at high), Bose-Einstein (diverging as E_i→μ from above), Maxwell-Boltzmann (smooth exponential decay); show how FD and BE both approach MB at high (E−μ)/k_BT; annotate the key region near E≈μ where the three distributions differ dramatically; caption: "One sign difference in the denominator. Two different universes at low temperature."] -->
 
-The *Aufbau* ("building-up") principle is the recipe: fill orbitals in order of increasing energy, respecting Pauli, with Hund's rule resolving ties. The *Madelung rule* ([Madelung 1936, *Die mathematischen Hilfsmittel des Physikers*]) gives the empirical filling order as "lowest $n + \ell$ first; for equal $n + \ell$, lowest $n$ first":
+Bose–Einstein condensation in dilute gases was first observed in rubidium-87 at 170 nK by Cornell and Wieman's group at Boulder [Anderson et al. 1995, *Science* 269, 198–201](https://doi.org/10.1126/science.269.5221.198), and days later in sodium at MIT by Ketterle's group [Davis et al. 1995, *Physical Review Letters* 75, 3969](https://doi.org/10.1103/PhysRevLett.75.3969). Nobel Prize 2001.
 
-$$ 1s,\ 2s,\ 2p,\ 3s,\ 3p,\ 4s,\ 3d,\ 4p,\ 5s,\ 4d,\ 5p,\ 6s,\ 4f,\ 5d,\ 6p,\ 7s,\ 5f,\ 6d,\ 7p. $$
+On the fermion side: Chandrasekhar showed in 1931 [*Astrophysical Journal* 74, 81–82](https://doi.org/10.1086/143324) that the *degeneracy pressure* from a Fermi sea of electrons supports white dwarfs against gravitational collapse, up to a limiting mass of $\approx 1.4\,M_\odot$ — the Chandrasekhar limit. Above that mass, electron degeneracy pressure cannot hold, and the star collapses to a neutron star or black hole. The same antisymmetry that governs the helium spectrum governs the fate of stellar remnants.
 
-The pattern reflects screening: an outer electron in a high-$\ell$ orbital is more thoroughly screened from the nucleus by the inner electrons than an electron in a low-$\ell$ orbital of the same principal quantum number, because low-$\ell$ orbitals penetrate the inner shells. So the $4s$ orbital ends up below $3d$ in energy for light atoms — Madelung's rule encodes the screening empirically.
+---
 
-The rule is not exact. Chromium is observed as $[\text{Ar}]\,3d^5 4s^1$ rather than the Madelung-predicted $3d^4 4s^2$, because the half-filled $d^5$ configuration is stabilized by exchange (five parallel spins maximize the spin multiplicity and minimize the Coulomb energy through Hund's rule), and the $4s$–$3d$ energy gap is small enough that the exchange stabilization wins. Copper is $3d^{10}4s^1$ for the analogous reason (fully-filled $d^{10}$ stability). There are roughly twenty such exceptions across the periodic table, mostly in the $d$- and $f$-blocks where orbital energies become near-degenerate ([NIST Atomic Spectra Database](https://www.nist.gov/pml/atomic-spectra-database) lists the experimental ground-state configuration of every element).
+## What would change my mind
 
-The deeper move worth making explicit: chemistry is the low-energy effective theory of atoms whose ground states are dictated by fermionic antisymmetry plus Coulomb. Without antisymmetry, every electron in every atom would crash into the $1s$ orbital and there would be no chemistry at all — just $N$ copies of helium-like systems with increasing nuclear charge, no shell structure, no valence electrons, no periodicity. The periodic table is a direct empirical signature of the antisymmetric structure of the electronic wave function.
+The VIP and VIP-2 collaborations at Gran Sasso have searched for Pauli-violating atomic transitions in copper — transitions that would be forbidden if the antisymmetry postulate held exactly. They have placed limits on the probability of such violations at the part-per-$10^{29}$ level [Curceanu et al. 2017, *Acta Physica Polonica B* 48, 1741; verify most recent VIP-2 bound, likely 2023–2024 *Physics Letters B* or *Physical Review Letters*][verify]. A positive signal at any level would force the central postulate of this chapter to be revised. None has appeared. Separately, an integer-spin fundamental particle that behaved as a fermion would force a revision of the spin-statistics theorem and therefore of relativistic QFT. No such particle has been observed.
 
-**Common misconception.** "Madelung's rule is exact." It is a good first-order rule. Real atoms have $\sim 20$ exceptions and the rule fails increasingly badly in the heaviest elements where relativistic effects (the $6s$ contraction, the lanthanide and actinide contractions) become significant. Students should not be asked to memorize Madelung; they should be shown that screening flips the energy ordering and that the $n + \ell$ rule is a useful summary, not a derived law.
+---
 
-## 5. Worked example — the carbon ground state
+## Still puzzling
 
-Take carbon, $Z=6$. The Aufbau prescription is
+**Why is the spin-statistics connection exact?** Pauli's 1940 proof runs through relativistic causality — operators at spacelike separation must commute or anticommute, depending on spin, so that measurements outside each other's light cone don't interfere. Both causality and Lorentz invariance are ingredients. Inside QFT these are non-negotiable, so the theorem is non-negotiable inside QFT. Whether QFT itself is the whole story is the harder question.
 
-$$ 1s^2\ 2s^2\ 2p^2. $$
+**What is happening in two dimensions?** Anyons exist because the topology of 2D particle exchange admits more than two equivalence classes of paths. The $\pm 1$ postulate is a statement about 3D topology, not about quantum mechanics. The cleanest exposition is in Wilczek's 1990 *Fractional Statistics and Anyon Superconductivity*. Whether anyon-based topological quantum computation becomes practical is a hardware question open at the time of writing.
 
-Six electrons. The $1s$ subshell is full (two electrons, opposite spins, spin singlet by Pauli — no choice). The $2s$ subshell is full (same reason). The interesting subshell is $2p$, which contains two electrons in three orbitals ($m_\ell = -1, 0, +1$).
+**Why does Madelung's rule have exceptions?** The honest answer is that the exchange stabilization of half-filled and full-filled shells competes with orbital energy ordering, and there is no closed-form rule for when one wins. Computational quantum chemistry handles this by computing, not by applying a rule. The Madelung heuristic is a good first-order organizer; it is not derivable from first principles without the calculation.
 
-By Hund's first rule, the two $2p$ electrons go into *distinct* $m_\ell$ orbitals with *parallel* spins — that is, the spin state is the symmetric triplet ($S=1$), and the spatial state is antisymmetric in the two singly-occupied $2p$ orbitals. Pick $m_{\ell,1} = +1$ and $m_{\ell,2} = 0$ (any choice within the three available works at this order); the total orbital angular momentum projection is $M_L = m_{\ell,1} + m_{\ell,2} = +1$. By symmetry across all the choices, the maximum total $L = 1$, and the ground term is
-
-$$ {}^{2S+1}L_J = {}^{3}P_J,\ \text{with } J = |L - S|, \dots, L + S = 0, 1, 2. $$
-
-By Hund's third rule (the spin-orbit coupling rule, which we will derive in the fine-structure section of Unit 9), for a less-than-half-filled subshell the lowest $J$ is the ground state, so the carbon ground term is ${}^3P_0$. The NIST atomic spectra database lists carbon's ground term as ${}^3P_0$ ([NIST Atomic Spectra: C I](https://physics.nist.gov/PhysRefData/ASD/levels_form.html)) at energy $0$, with ${}^3P_1$ at $16.4$ cm$^{-1}$ above and ${}^3P_2$ at $43.4$ cm$^{-1}$ above — fine-structure splittings on the order of $5 \times 10^{-3}$ eV, consistent with the spin-orbit coupling being a small perturbation on the much larger ($\sim$ eV) exchange splitting that put $S=1$ at the bottom in the first place.
-
-The same exercise predicts the ground term of the entire first row: H is ${}^2S_{1/2}$, He is ${}^1S_0$, Li is ${}^2S_{1/2}$, Be is ${}^1S_0$, B is ${}^2P_{1/2}$, C is ${}^3P_0$, N is ${}^4S_{3/2}$, O is ${}^3P_2$, F is ${}^2P_{3/2}$, Ne is ${}^1S_0$. Cross-check against NIST for any of these — every prediction agrees.
-
-What the exercise teaches: antisymmetry plus Hund's rule, applied to a known electron configuration, predicts the spin multiplicity and approximate orbital angular momentum of the ground state of any atom in the first two rows of the periodic table. Beyond that, configuration interaction (multiple Slater determinants contributing to the ground state) and relativistic effects become important, and the simple rule breaks down. Inside its domain of validity it is exact, and the domain covers the chemistry most students care about.
-
-## 6. Reading map
-
-| TIKTOC topic | Griffiths reference | Pop-sci book | This companion |
-|---|---|---|---|
-| Exchange symmetry | §5.1 ("Two-Particle Systems") | not covered | §4.1 (operator, $\pm 1$ postulate, anyon aside) |
-| Bosons and fermions | §5.1.1–5.1.2 | Ch. 18 (superfluids, touches) | §4.2 (BE/FD statistics, exchange correlation) |
-| Slater determinant | §5.2 (multi-electron atoms) | not covered | §4.3 (construction, Pauli-from-determinants) |
-| Helium singlet/triplet | §5.2.1 (helium) | not covered | §4.4 (full exchange-integral derivation) |
-| Periodic table | §5.2.2 | Ch. 13 ✅ | §4.5 (antisymmetry + screening + Hund) |
-
-The pop-sci book Ch. 13 is the right narrative reading for the periodic-table material. Griffiths Ch. 5 is the right formal reference. This companion supplies the antisymmetry derivation underneath, which Ch. 13 omits and Griffiths compresses.
-
-## 7. Exercises
-
-**E1 (L1, Knowledge).** State the symmetric/antisymmetric postulate. Write the $N=2$ Slater determinant explicitly. Identify which sign goes with bosons and which with fermions.
-
-**E2 (L3, Application).** Construct the Slater determinant for the ground state of lithium ($1s^2 2s^1$). Three electrons in three spin-orbitals: $1s\uparrow$, $1s\downarrow$, $2s\uparrow$. Write the $3\times 3$ determinant, expand it as a sum of six terms with alternating signs, and verify by direct computation that exchanging any two particle labels flips the sign of the wave function.
-
-**E3 (L3, Application).** Two non-interacting spin-1/2 particles sit in a 1D infinite well of width $L$, in spatial orbitals $n_1 = 1$ and $n_2 = 2$, both with spin up (spin state $|\uparrow\uparrow\rangle$, symmetric). Write the total wave function with the correct symmetry. Now sketch $|\psi(x_1, x_2)|^2$ along the line $x_1 = x_2$ from $0$ to $L$ and confirm it vanishes there.
-
-**E4 (L4, Analysis).** Show that the antisymmetric two-particle spatial wave function $\psi_A(x_1, x_2) = (1/\sqrt{2})[\psi_1(x_1)\psi_2(x_2) - \psi_1(x_2)\psi_2(x_1)]$ has $\langle (x_1 - x_2)^2 \rangle$ strictly greater than the corresponding symmetric combination, for any two orthonormal one-particle states $\psi_1$ and $\psi_2$. (Hint: expand the squared wave function and identify the cross term.)
-
-**E5 (L4, Application).** Predict the ground-state term symbol ${}^{2S+1}L_J$ of nitrogen ($Z=7$). Use Aufbau to get the configuration, Hund's first rule to set $S$, Hund's second rule (maximum $L$ consistent with maximum $S$ and Pauli) to set $L$, Hund's third rule to set $J$. Then cross-check against the NIST Atomic Spectra Database.
-
-**E6 (L5, Evaluation).** Chromium has the experimentally observed configuration $[\text{Ar}]\, 3d^5 4s^1$, contradicting the Madelung prediction $3d^4 4s^2$. Identify the two competing energy scales (the $4s$–$3d$ energy gap, and the exchange stabilization of the half-filled $3d^5$ subshell), estimate their relative size, and explain why a strict Madelung-based "rule" does not capture this. What does the chromium anomaly tell you about the level of theory at which Aufbau is a useful organizing principle?
-
-**E7 (L6, Synthesis).** Derive Hund's first rule from antisymmetry plus Coulomb repulsion. Start with two electrons in two orthogonal spatial orbitals $\phi_a$ and $\phi_b$. Show by explicit construction that the spin-triplet state forces an antisymmetric spatial wave function, that the antisymmetric spatial wave function has $\langle 1/r_{12} \rangle$ smaller than the symmetric one (by an exchange integral $K > 0$), and that this puts the triplet $2K$ below the singlet. Generalize: more parallel spins $\to$ more antisymmetric spatial pieces $\to$ lower Coulomb energy. State the rule and the limit (it applies within a configuration; it does not predict the configuration itself).
-
-## 8. What would change my mind
-
-A controlled experiment that demonstrated an *exchange phase* other than $+1$ or $-1$ for ordinary electrons or other 3+1-dimensional matter particles — for instance, a Pauli-principle-violating atomic transition in a regime where the antisymmetry postulate forbids it. The VIP and VIP-2 collaborations at Gran Sasso have searched for exactly this kind of violation in copper and have placed limits on the probability of Pauli-violating electronic transitions at the part-per-$10^{29}$ level ([Curceanu et al. 2017, *Acta Physica Polonica B* 48, 1741; verify the most recent VIP-2 bound, likely 2023–2024 *Physics Letters B* or *Physical Review Letters*][verify]). A positive signal at any level would force the central postulate of this chapter to be revised. None has appeared. Separately, an experimental demonstration that the spin-statistics theorem fails — for instance, an integer-spin fundamental particle that behaved as a fermion — would force a revision of relativistic quantum field theory, not just this chapter. No such particle has been observed.
-
-The aging risk on this unit's specific numbers is low. Helium's measured ground state and the singlet/triplet splittings have been known to high precision since the 1960s; the periodic-table assignments are stable. The frontier is in two-dimensional anyonic systems (where the $\pm 1$ postulate does not apply by construction, so this chapter's claims are not at risk — it is the *dimensionality* of the system that lets the postulate generalize) and in topological quantum computation. Both deserve their own treatment and neither contradicts the 3+1-dimensional postulate this chapter is built on.
-
-## 9. Still puzzling
-
-- *Why is the spin-statistics connection exact?* Pauli's 1940 proof relies on relativistic causality (operators at spacelike separation commute or anticommute) and on the structure of representations of the Lorentz group. Both are non-negotiable inside QFT, so the conclusion is non-negotiable inside QFT. But QFT itself rests on assumptions — Lorentz invariance, locality, microcausality — that we have not derived from anything more fundamental. The connection is exact within the theory; whether the theory is exact is the harder question.
-
-- *What is happening in two dimensions?* Anyons exist because the topology of two-particle exchange in 2D admits more than two equivalence classes. The 3+1-dimensional postulate is not "true everywhere"; it is true wherever the topology allows only two classes. The cleanest pedagogical version of this argument is in Wilczek's 1990 *Fractional Statistics and Anyon Superconductivity*. Whether anyon-based topological quantum computation will become practical is a separate, hardware question.
-
-- *Why does Madelung's rule have exceptions?* The standard answer — that the exchange stabilization of half-filled or fully-filled shells competes with the orbital energy ordering — is correct but unsatisfying as a *predictive* rule. There is no closed-form expression for "when does exchange beat orbital energy"; you have to compute. Computational quantum chemistry handles this routinely (Hartree–Fock, post-Hartree–Fock methods, DFT), but the chapter-level rule is empirical because the underlying physics is genuinely a balance of several effects of comparable magnitude.
-
-- *Is the universe one big antisymmetric electron wave function?* In principle, yes. In practice, the overlap integral between localized orbitals on widely separated atoms is exponentially small in the distance, so the antisymmetry between, say, an electron in your hand and an electron in Andromeda contributes nothing measurable. The reductio — "you are entangled with every electron in your light cone" — is technically defensible and operationally useless. I prefer to label the wave function "locally antisymmetric for atoms within overlap distance" and leave the cosmological extension as a thought experiment.
-
-**Tags:** identical-particles, exchange-symmetry, slater-determinant, pauli-exclusion, helium-spectrum, periodic-table, hunds-rule, spin-statistics-theorem, griffiths-ch5
+**Is the universe one large antisymmetric electron wave function?** In principle, yes. In practice, the overlap between localized orbitals at macroscopic separations is exponentially small, and the exchange effects are correspondingly negligible. The global antisymmetry holds; it produces no measurable consequence outside the atomic scale. Whether it is worth thinking about cosmologically is a thought experiment rather than a physics question.
