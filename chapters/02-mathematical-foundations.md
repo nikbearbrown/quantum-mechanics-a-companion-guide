@@ -1,339 +1,257 @@
-# Unit 2 — Mathematical Foundations
+# Chapter 2 — Mathematical Foundations
 
-> Quantum mechanics is linear algebra over the complex numbers with an inner product and a Hermiticity condition. This unit builds the language. Every later unit speaks it.
+*The language quantum mechanics is written in, and why no simpler language works.*
 
 ---
 
-## 1. What this chapter is doing
+There is a single experiment that forces the whole mathematical structure on you. Not because physicists decided to make things complicated — because the experiment *insists*, and you either follow where it leads or you stop doing physics.
 
-This is the unit where the pop-sci companion contributes nothing. TIKTOC marks every entry in this section as ❌ — complex numbers, vector spaces, Dirac notation, operators, Hermitian conjugation. *Quantum Physics for Beginners* (2021) makes no pretense of being a math book. Griffiths Ch. 3 ("Formalism," 3rd ed. 2018) is the canonical undergraduate treatment and is the spine of this unit; Shankar *Principles of Quantum Mechanics* (2nd ed. 1994) Ch. 1 is the alternative I will point you to when you want more rigor. This companion does the unit's full work — every concept, every derivation, every worked example. By the end you should be fluent in three languages: matrix notation in $\mathbb{C}^2$, the abstract Dirac notation, and the integral-and-derivative notation of wave functions on the real line. They are the same language, written three ways.
+Run electrons, one at a time, through two slits. Each electron lands somewhere on the screen behind. After ten thousand electrons, a pattern appears: bright bands where many landed, dark bands where almost none did. The bands are interference fringes — the same pattern you get when water waves pass through two gaps.
 
-If Unit 1 told you why quantum mechanics has to exist, Unit 2 builds the apparatus that lets you say anything precise inside it.
+But these are electrons. Single electrons. There is no other electron for each one to interfere *with*. Whatever is interfering is the electron interfering with itself.
 
-## 2. Learning objectives
+Now here is the thing that forces the math. To get those dark bands, you need the contributions from the two slits to *cancel*. Not add to something small — cancel. If the two contributions are $\psi_1$ and $\psi_2$, and you add them as $\psi_1 + \psi_2$, and then you compute intensity as $|\psi_1 + \psi_2|^2$, you can get cancellation when $\psi_1 = -\psi_2$. Fine. But you need not just cancellation at one angle — you need alternating bright and dark bands across the whole screen. The contributions need to vary smoothly in sign and magnitude as the angle changes. They need a continuously varying *phase*.
 
-By the end of this unit, you should be able to:
+Things with a continuously varying phase look like $e^{i\varphi}$. And $e^{i\varphi}$ requires $i = \sqrt{-1}$. Which requires complex numbers.
 
-- **State** Euler's formula, the inner product of two kets, the eigenvalue equation, and the Hermiticity condition. (Bloom L1)
-- **Convert** an expression in Dirac notation to a matrix calculation in a chosen basis, and back. (L2)
-- **Compute** the eigenvalues and eigenvectors of any $2 \times 2$ Hermitian matrix, including the three Pauli matrices. (L3)
-- **Verify** that $\hat{p} = -i\hbar\,d/dx$ is Hermitian on the space of square-integrable functions vanishing at infinity. (L4)
-- **Distinguish** Hermitian from symmetric, and explain why the distinction matters for complex matrices. (L5)
-- **Construct** the Hermitian conjugate of a product $(\hat{A}\hat{B})^\dagger = \hat{B}^\dagger \hat{A}^\dagger$ and explain the order reversal. (L6)
+This is not a convenient choice. The experiment doesn't give you an alternative.
 
-## 3. The motivating problem
+<!-- → [IMAGE: double-slit experiment diagram with single-electron sequential buildup — left panel shows random-looking scatter after ~100 electrons, right panel shows clear interference fringes after ~10,000 electrons; caption should note that each dot is a single detection event, no wave visible in individual hits] -->
 
-The double slit, run with single electrons, lands one particle at a time on a screen. Each particle arrives somewhere; over many particles, a pattern of bright and dark fringes appears. The pattern is identical to the one you would compute by adding two classical waves and squaring. So whatever describes the particle has to (a) be the kind of thing that can be added, (b) carry phase information so that the addition can produce constructive and destructive interference, and (c) be turned into a probability by some operation that throws away an overall sign or rotation.
+---
 
-Real numbers cannot do this. If $\psi_1$ and $\psi_2$ are real, then $|\psi_1 + \psi_2|^2 = \psi_1^2 + \psi_2^2 + 2\psi_1\psi_2$, and the cross term $2\psi_1\psi_2$ is a fixed sign — no oscillation. To get the bright-and-dark fringes, the cross term has to be $2\,\text{Re}(\psi_1^* \psi_2)$, an oscillating function of the path difference. Oscillation requires phase. Phase requires $e^{i\varphi}$. $e^{i\varphi}$ requires complex numbers.
+## The arithmetic of complex numbers
 
-So the first move of quantum mechanics is to insist that the *amplitudes* — the things you add — live in $\mathbb{C}$, and the *probabilities* — the things you observe — come from squaring the modulus. That single move, applied consistently, is the whole formalism.
+A complex number is $z = a + bi$ where $a$ and $b$ are ordinary real numbers and $i^2 = -1$. The real part is $a$, the imaginary part is $b$. The *complex conjugate* of $z$ is $z^* = a - bi$ — you flip the sign on the imaginary part. The *modulus* is
 
-A second motivating fact. The Franck–Hertz experiment from Unit 1 found that mercury's energy levels are discrete — 4.9 eV, then 9.8 eV, then 14.7 eV. Whatever the formalism is, it has to produce *discrete spectra* for bounded systems. In linear algebra, the natural way to get a discrete spectrum is from the eigenvalues of an operator on a finite-dimensional vector space (or a compactly-supported operator on an infinite-dimensional one). So the formalism has to be operator-based, with energies appearing as eigenvalues.
+$$|z| = \sqrt{z^* z} = \sqrt{a^2 + b^2}.$$
 
-Complex amplitudes plus operators with eigenvalues. That's the math we have to build.
+That is a non-negative real number. You can think of $a$ and $b$ as coordinates in a plane — the "complex plane" — where the real axis goes left-right and the imaginary axis goes up-down. The modulus is the distance from the origin.
 
-## 4. The five tools
+Euler's formula is the fact that makes complex numbers useful in physics:
 
-### 4.1 Complex numbers — the smallest non-trivial extension of arithmetic
+$$e^{i\theta} = \cos\theta + i\sin\theta.$$
 
-A complex number is $z = a + bi$, where $a$ and $b$ are real and $i^2 = -1$. The real part is $\text{Re}(z) = a$, the imaginary part is $\text{Im}(z) = b$. The *complex conjugate* is $z^* = a - bi$: flip the sign of the imaginary part. The *modulus* is
+If you want to see why, expand $e^{i\theta}$, $\cos\theta$, and $\sin\theta$ in their Taylor series and check that the real and imaginary parts match term by term. The point is this: every complex number can be written as $z = r\,e^{i\theta}$ where $r = |z|$ is its distance from the origin and $\theta$ is its angle. Multiplying two complex numbers multiplies their distances and *adds* their angles. Taking the conjugate flips the angle: $(re^{i\theta})^* = re^{-i\theta}$.
 
-$$ |z| = \sqrt{z^* z} = \sqrt{a^2 + b^2}, $$
+The three facts you will use over and over:
 
-a non-negative real number. The modulus squared is just $|z|^2 = z^* z = a^2 + b^2$.
+<!-- → [INFOGRAPHIC: the complex plane showing a point z = re^{iθ} — label the real axis, imaginary axis, modulus r as the radial distance, angle θ, and the unit circle |z|=1 with e^{iθ} marked on it; arrows showing that conjugation flips θ to −θ and multiplication adds angles] -->
 
-Euler's formula is the relation that makes complex numbers useful in physics:
+- $|e^{i\theta}| = 1$ for any real $\theta$. A pure phase factor doesn't change the size of anything.
+- $e^{i\theta_1} \cdot e^{i\theta_2} = e^{i(\theta_1 + \theta_2)}$. Phases add when complex numbers multiply.
+- $(z_1 z_2)^* = z_1^* z_2^*$. Conjugation distributes over multiplication.
 
-$$ e^{i\theta} = \cos\theta + i\sin\theta. $$
+Now back to the double slit. Label the two slits. The amplitude arriving at the screen from slit 1 is $\psi_1$; from slit 2, $\psi_2$. The rule of quantum mechanics — we will state it precisely in Unit 3, but use it here — is that you *add the amplitudes* and then *square the modulus* to get intensity. The total amplitude is $\psi = \psi_1 + \psi_2$, and the intensity is $|\psi|^2$.
 
-If you want to derive it, expand both sides in Taylor series and check that the real and imaginary parts match $\cos$ and $\sin$ term by term. The point: every complex number can be written in *polar form* as $z = r\,e^{i\theta}$, where $r = |z| \geq 0$ is the modulus and $\theta = \arg(z) \in [0, 2\pi)$ is the phase. Multiplication of complex numbers is multiplication of moduli and addition of phases. Conjugation flips the phase sign: $(r\,e^{i\theta})^* = r\,e^{-i\theta}$.
+Take a specific simple case: one slit is a distance $r$ from the screen point, the other is a distance $r + d\sin\theta$ away. Assign equal magnitudes $1/\sqrt{2}$ and phases determined by path length:
 
-Three facts you will use constantly:
+$$\psi_1 = \frac{1}{\sqrt{2}} e^{ikr}, \qquad \psi_2 = \frac{1}{\sqrt{2}} e^{ik(r + d\sin\theta)},$$
 
-- $|e^{i\theta}| = 1$ for any real $\theta$. (Hence multiplication by a phase factor doesn't change moduli.)
-- $e^{i\theta_1} e^{i\theta_2} = e^{i(\theta_1 + \theta_2)}$. (Phases add when complex numbers multiply.)
-- $(z_1 z_2)^* = z_1^* z_2^*$ and $(z_1 + z_2)^* = z_1^* + z_2^*$. (Conjugation distributes over both operations.)
+where $k = 2\pi/\lambda$ is the wavenumber. Now expand $|\psi_1 + \psi_2|^2$:
 
-**Why complex amplitudes are not optional.** Stueckelberg (1960) showed you can reformulate QM with real numbers if you double the dimension of the Hilbert space (one extra real dimension for each complex one). What you cannot do is reformulate it with real numbers in the same dimension. Renou et al. (2021) ran a Bell-inequality experiment that ruled out an entire class of real-amplitude reformulations as inconsistent with observation [Renou et al., *Nature* 600, 625–629, *verify pagination*]. The complex numbers are doing real work; they are not a calculational convenience.
+$$|\psi|^2 = \frac{1}{2}\left[e^{-ikr} + e^{-ik(r+d\sin\theta)}\right]\left[e^{ikr} + e^{ik(r+d\sin\theta)}\right]$$
 
-**Worked example: double slit, two amplitudes.** Two slits at $x = \pm d/2$. Light of wavelength $\lambda$ (wavenumber $k = 2\pi/\lambda$) arrives at a screen far away, at angle $\theta$ from the central axis. The path difference between the two slits is $d \sin\theta$. So the two amplitudes at the screen are
+$$= \frac{1}{2}\left[1 + e^{ikd\sin\theta} + e^{-ikd\sin\theta} + 1\right] = 1 + \cos(kd\sin\theta).$$
 
-$$ \psi_1 = \frac{1}{\sqrt{2}} e^{ikr}, \qquad \psi_2 = \frac{1}{\sqrt{2}} e^{ik(r + d\sin\theta)}. $$
+Using $1 + \cos x = 2\cos^2(x/2)$:
 
-The total amplitude is $\psi = \psi_1 + \psi_2$, and the intensity (probability density) is
+$$|\psi|^2 = 2\cos^2\!\left(\frac{kd\sin\theta}{2}\right).$$
 
-$$ |\psi|^2 = \psi^* \psi = \tfrac{1}{2}\big[e^{-ikr} + e^{-ik(r + d\sin\theta)}\big]\big[e^{ikr} + e^{ik(r + d\sin\theta)}\big]. $$
+Maxima where $d\sin\theta = n\lambda$; zeros where $d\sin\theta = (n + 1/2)\lambda$. Bright and dark bands, exactly as observed. The complex exponentials made this calculation work in four lines. Try it with real numbers: the cross term is $2\psi_1\psi_2$, a fixed sign, no oscillation. No dark bands. No double slit experiment.
 
-Expand:
+<!-- → [CHART: plot of |ψ|² = 2cos²(kd sinθ / 2) vs. sinθ for a chosen d/λ — show several bright fringes and deep zeros; add a second trace showing what |ψ|² would look like with real amplitudes (featureless or monotone), so the student sees the contrast directly] -->
 
-$$ |\psi|^2 = \tfrac{1}{2}\big[1 + e^{ikd\sin\theta} + e^{-ikd\sin\theta} + 1\big] = 1 + \cos(kd\sin\theta). $$
+Stueckelberg showed in 1960 that you can reformulate quantum mechanics with real numbers if you double the dimension of every space — one extra real dimension to replace each complex one. What you cannot do is reformulate it with real numbers *in the same dimension*. And Renou and collaborators published an experiment in 2021 that directly tested a whole class of real-amplitude reformulations using Bell inequalities — and ruled them out [Renou et al., *Nature* 600, 625–629 (2021), *verify pagination*]. The complex numbers are not a convention. They are measured.
 
-Use the identity $1 + \cos x = 2\cos^2(x/2)$:
+---
 
-$$ |\psi|^2 = 2\cos^2\!\left(\frac{kd\sin\theta}{2}\right). $$
+## Vector spaces and inner products
 
-The interference pattern. Maxima when $kd\sin\theta = 2n\pi$, i.e., $d\sin\theta = n\lambda$. Minima when $kd\sin\theta = (2n+1)\pi$, i.e., $d\sin\theta = (n + 1/2)\lambda$. The bright and dark fringes follow from the complex algebra; they do not exist in the real-amplitude version.
+A *vector space* over $\mathbb{C}$ is a set of objects — we will call them states and write them $|\psi\rangle$ — with two operations: you can add any two of them ($|\psi\rangle + |\phi\rangle$), and you can multiply any one by a complex number ($\alpha|\psi\rangle$). These operations satisfy the usual rules: addition is commutative and associative, scalar multiplication distributes. The simplest example is $\mathbb{C}^n$, columns of $n$ complex numbers.
 
-*The lesson:* phases produce interference. Phases require complex numbers.
+An *inner product* is a way to measure the "angle" between two states. It is a map $\langle\cdot|\cdot\rangle: V \times V \to \mathbb{C}$ satisfying three conditions:
 
-### 4.2 Vector spaces and inner products — the structure that survives from linear algebra
+1. **Conjugate symmetry:** $\langle\phi|\psi\rangle = \langle\psi|\phi\rangle^*$.
+2. **Linear in the second slot:** $\langle\phi|\alpha\psi + \beta\chi\rangle = \alpha\langle\phi|\psi\rangle + \beta\langle\phi|\chi\rangle$.
+3. **Positive definite:** $\langle\psi|\psi\rangle \geq 0$, with equality only for the zero vector.
 
-You already know real vector spaces from a first linear algebra course. The picture: vectors are columns, you can add them, scale them by real numbers, take dot products, and find orthogonal bases. Almost all of that survives the move to complex vector spaces. One thing changes.
+From (1) and (2) it follows that the inner product is *anti-linear* in the first slot — scalars come out conjugated: $\langle\alpha\phi|\psi\rangle = \alpha^*\langle\phi|\psi\rangle$. This is the physicist convention, followed here throughout.
 
-A *complex vector space* $V$ is a set of vectors closed under (a) addition $|\psi\rangle + |\phi\rangle \in V$ and (b) scalar multiplication by complex numbers $\alpha|\psi\rangle \in V$ for $\alpha \in \mathbb{C}$. The familiar example is $\mathbb{C}^n$, columns of $n$ complex numbers. An *inner product* on $V$ is a map $\langle \cdot|\cdot \rangle: V \times V \to \mathbb{C}$ satisfying:
+The *norm* of a state is $\|\psi\| = \sqrt{\langle\psi|\psi\rangle}$. A *Hilbert space* is a complex vector space with an inner product that is also *complete* — meaning no sequences escape the space. In finite dimensions (like $\mathbb{C}^n$), completeness is automatic. For wave functions on the real line, the relevant Hilbert space is $L^2(\mathbb{R})$, the space of square-integrable functions, and completeness is a genuine theorem.
 
-1. **Conjugate symmetry:** $\langle \phi|\psi \rangle = \langle \psi|\phi \rangle^*$. (Reversing the order conjugates the result.)
-2. **Linearity in the second slot:** $\langle \phi|\alpha\psi + \beta\chi\rangle = \alpha\langle\phi|\psi\rangle + \beta\langle\phi|\chi\rangle$.
-3. **Positive-definite:** $\langle\psi|\psi\rangle \geq 0$, with equality only when $|\psi\rangle$ is the zero vector.
+Concretely in $\mathbb{C}^n$: if $|\psi\rangle = (\alpha_1, \ldots, \alpha_n)^T$ and $|\phi\rangle = (\beta_1, \ldots, \beta_n)^T$, then
 
-From (1) and (2) it follows that the inner product is *antilinear* in the first slot: $\langle\alpha\phi + \beta\chi|\psi\rangle = \alpha^*\langle\phi|\psi\rangle + \beta^*\langle\chi|\psi\rangle$. This is the physicist convention. Mathematicians sometimes use the opposite convention (linear in the first, antilinear in the second); we follow Griffiths and use the physicist convention throughout.
+$$\langle\phi|\psi\rangle = \sum_{i=1}^n \beta_i^* \alpha_i.$$
 
-The *norm* is $\|\psi\| = \sqrt{\langle\psi|\psi\rangle}$, a non-negative real number. A *Hilbert space* is a complex vector space with an inner product that is *complete* — meaning every Cauchy sequence converges. For finite-dimensional spaces (like $\mathbb{C}^n$) completeness is automatic and you don't need to think about it. For infinite-dimensional spaces — wave functions on the real line — the relevant Hilbert space is $L^2(\mathbb{R})$, the space of square-integrable functions, and completeness is non-trivial mathematics that an undergraduate course mostly elides.
+Conjugate the first slot's entries; multiply; sum. Concretely on $L^2(\mathbb{R})$: if $\psi$ and $\phi$ are wave functions,
 
-**Concretely in $\mathbb{C}^n$.** Write a vector as a column $|\psi\rangle = (\alpha_1, \alpha_2, \ldots, \alpha_n)^T$. The inner product is
+$$\langle\phi|\psi\rangle = \int_{-\infty}^\infty \phi^*(x)\,\psi(x)\,dx.$$
 
-$$ \langle\phi|\psi\rangle = \sum_{i=1}^n \phi_i^* \psi_i. $$
+Same idea, integral instead of sum.
 
-That is the formula. Complex conjugate on the first slot's entries, ordinary multiplication, sum. You have done this calculation a hundred times in real linear algebra; the only difference is the conjugate.
+---
 
-**Concretely on $L^2(\mathbb{R})$.** Write a vector as a function $\psi(x)$ with $\int |\psi(x)|^2 dx < \infty$. The inner product is
+## Dirac notation
 
-$$ \langle\phi|\psi\rangle = \int_{-\infty}^{\infty} \phi^*(x)\, \psi(x)\, dx. $$
-
-Same idea: conjugate the first slot, multiply, integrate (the continuous analog of summing).
-
-**Misconception alert.** "Hilbert space is some special exotic space." It is not. For a single spin-1/2 system, Hilbert space is $\mathbb{C}^2$. For two spin-1/2 systems, it's $\mathbb{C}^4$. For a particle in a box, it's a countable-dimensional space spanned by the basis functions $\sqrt{2/L}\sin(n\pi x/L)$ for $n = 1, 2, 3, \ldots$. For a free particle on the line, it's $L^2(\mathbb{R})$. Each of these is an "inner-product space, complete with respect to the norm" — that's what Hilbert space means.
-
-### 4.3 Dirac notation — the bookkeeping that does work
-
-P. A. M. Dirac introduced bra-ket notation in 1939 [Dirac, *Mathematical Proceedings of the Cambridge Philosophical Society* 35, 416–418](https://doi.org/10.1017/S0305004100021162). It looks like ornament. It isn't. It packages four operations cleanly enough that calculations that would take half a page in indexed-vector notation take three lines in Dirac notation.
+P. A. M. Dirac introduced the bra-ket notation in 1939 [Dirac, *Math. Proc. Cambridge Phil. Soc.* 35, 416–418]. It looks like decoration. It is not. It packages four operations into a notation clean enough that calculations that would take a page in indexed components take three lines.
 
 **Ket.** $|\psi\rangle$ is the state vector. In $\mathbb{C}^n$, think of it as a column.
 
-**Bra.** $\langle\psi|$ is the *dual vector* — the linear functional that maps $|\phi\rangle \mapsto \langle\psi|\phi\rangle \in \mathbb{C}$. In $\mathbb{C}^n$, the bra is the conjugate transpose of the ket: if $|\psi\rangle = (\alpha_1, \alpha_2)^T$ then $\langle\psi| = (\alpha_1^*, \alpha_2^*)$ as a row. *Both conjugation and transposition.* This is the operation Hermitian conjugation does in general.
+**Bra.** $\langle\psi|$ is the *dual vector* — the linear functional that, given any ket $|\phi\rangle$, produces the number $\langle\psi|\phi\rangle$. In $\mathbb{C}^n$, if $|\psi\rangle = (\alpha_1, \alpha_2)^T$, then $\langle\psi| = (\alpha_1^*, \alpha_2^*)$ as a row. *Both* conjugate the entries *and* transpose. These are not separate steps; they happen together. The operation that does both is Hermitian conjugation, written $\dagger$, so $\langle\psi| = |\psi\rangle^\dagger$.
 
-**Inner product.** $\langle\phi|\psi\rangle$ is a complex number, the bra acting on the ket. In matrix terms: row times column. In integrals: $\int \phi^*(x)\psi(x)\,dx$.
+**Inner product.** $\langle\phi|\psi\rangle$ is a complex number: row times column, or integral of $\phi^*\psi$, depending on the space.
 
-**Outer product.** $|\psi\rangle\langle\phi|$ is an *operator*: it takes a ket $|\chi\rangle$ to the ket $|\psi\rangle \langle\phi|\chi\rangle = (\text{number}) |\psi\rangle$. In matrix terms: column times row = $n \times n$ matrix.
+**Outer product.** $|\psi\rangle\langle\phi|$ is an *operator*: it takes a ket $|\chi\rangle$ to the ket $|\psi\rangle\,(\langle\phi|\chi\rangle)$, which is a complex number times $|\psi\rangle$.
 
-You have to internalize two identities to use Dirac notation fluently.
+<!-- → [TABLE: four-row summary of Dirac notation objects — columns: name, symbol, what it is, concrete form in ℂ²; rows: ket (|ψ⟩, state vector, column), bra (⟨ψ|, dual vector/row, conjugate-transposed column), inner product (⟨φ|ψ⟩, complex number, row × column), outer product (|ψ⟩⟨φ|, operator, column × row = 2×2 matrix)] -->
 
-**The completeness relation.** For any orthonormal basis $\{|n\rangle\}_{n=1}^N$,
+Two identities anchor everything that follows. The first is the *completeness relation*. Take any orthonormal basis $\{|n\rangle\}$ of the space — a set of mutually orthogonal unit vectors that spans the whole space, meaning $\langle m|n\rangle = \delta_{mn}$ and every state can be expanded in them. Then:
 
-$$ \sum_n |n\rangle\langle n| = \hat{I}, $$
+$$\sum_n |n\rangle\langle n| = \hat{I}.$$
 
-where $\hat{I}$ is the identity operator. The reason: any $|\psi\rangle = \sum_n c_n |n\rangle$, and the components are $c_n = \langle n|\psi\rangle$, so $|\psi\rangle = \sum_n |n\rangle\langle n|\psi\rangle = (\sum_n |n\rangle\langle n|)|\psi\rangle$. The sum is the identity. Inserting it between operators — "resolving the identity" — is the single most common Dirac-notation maneuver in QM calculations.
+Why? Take any $|\psi\rangle$. Expand it as $|\psi\rangle = \sum_n c_n|n\rangle$ where $c_n = \langle n|\psi\rangle$. Then $\sum_n |n\rangle\langle n|\psi\rangle = \sum_n c_n|n\rangle = |\psi\rangle$. The operator $\sum_n|n\rangle\langle n|$ acts as the identity. "Inserting the identity" — writing $\hat{I} = \sum_n|n\rangle\langle n|$ between two other operators — is the single most common calculational maneuver in quantum mechanics.
 
-**The position-basis resolution.** For the continuous case (a particle on a line),
+The second identity: the wave function $\psi(x)$ is the *position-basis component* of the abstract state $|\psi\rangle$. There exist generalized position eigenstates $|x\rangle$ (not normalizable; they live in an extended sense outside $L^2(\mathbb{R})$, but they are useful) with $\langle x|x'\rangle = \delta(x - x')$, and
 
-$$ \int dx\, |x\rangle\langle x| = \hat{I}, \quad \text{with}\quad \langle x|\psi\rangle = \psi(x). $$
+$$\int dx\,|x\rangle\langle x| = \hat{I}, \qquad \langle x|\psi\rangle = \psi(x).$$
 
-The position kets $|x\rangle$ are not normalizable — $\langle x|x'\rangle = \delta(x - x')$, a Dirac delta, not a Kronecker delta. They are not physical states. They are calculational devices, *generalized* eigenvectors that live in a larger space (the "rigged Hilbert space") than $L^2(\mathbb{R})$ itself. Griffiths handles this in a footnote in Ch. 3.3. The student should know about the issue, defer the rigor (Ballentine *Quantum Mechanics: A Modern Development* Ch. 1 is the standard reference), and proceed.
+So $|\psi\rangle = \int dx\,\psi(x)|x\rangle$ — the wave function is the expansion coefficients of $|\psi\rangle$ in the position basis. Abstract Dirac notation and concrete wave-function notation are the same object written two ways. Insert $\int dx|x\rangle\langle x|$ to move from one to the other.
 
-The big payoff: the wave function $\psi(x)$ is *the position-basis component* of the abstract state vector $|\psi\rangle$. Two notations, same object:
+The single most common student error: computing a matrix element $\langle\phi|\hat{A}|\psi\rangle$ by writing $\phi$'s components as a row *without conjugating them*. The result is wrong — complex when it should be real, typically. Always conjugate when you turn a ket into a bra. If you get a complex expectation value for what you believe is an observable, look for the missing conjugation first.
 
-$$ |\psi\rangle = \int dx\, \psi(x) |x\rangle. $$
+---
 
-You can switch between abstract Dirac notation and concrete wave-function notation by inserting $\int dx |x\rangle\langle x|$ or its discrete-basis cousin $\sum_n |n\rangle\langle n|$.
+## Operators and eigenvalues
 
-**Worked example: norm and probabilities in $\mathbb{C}^2$.** Take
-
-$$ |\psi\rangle = \frac{3}{5}|0\rangle + \frac{4i}{5}|1\rangle, $$
-
-with $\{|0\rangle, |1\rangle\}$ an orthonormal basis of $\mathbb{C}^2$. The bra is
-
-$$ \langle\psi| = \frac{3}{5}\langle 0| - \frac{4i}{5}\langle 1| $$
-
-— *conjugate* the coefficients, not just transpose. Now compute the norm:
-
-$$ \langle\psi|\psi\rangle = \left(\frac{3}{5}\right)\left(\frac{3}{5}\right) + \left(-\frac{4i}{5}\right)\left(\frac{4i}{5}\right) = \frac{9}{25} + \frac{16}{25} = 1. $$
-
-The minus from conjugation and the $i^2 = -1$ combine to give $-(4i)(4i)/25 = +16/25$. The state is normalized.
-
-Probability of measuring outcome "0": $|\langle 0|\psi\rangle|^2 = |3/5|^2 = 9/25 = 36\%$. Probability of "1": $|4i/5|^2 = 16/25 = 64\%$. They sum to 1, as they must.
-
-**Misconception alert.** The single most common student error in matrix-element calculations: $\langle\phi|\hat{A}|\psi\rangle$ computed by writing $\phi$'s components as a row *without conjugating them*, multiplying by $\hat{A}$'s matrix, and contracting with $\psi$. The result is the wrong number (complex when it should be real, in general). Always conjugate when you turn a ket into a bra. If you find yourself with a complex-valued "expectation value" for a Hermitian observable, that is the bug. Look for the missing conjugation.
-
-### 4.4 Operators and eigenvalue equations
-
-A *linear operator* $\hat{A}$ on a vector space $V$ is a map $V \to V$ satisfying $\hat{A}(\alpha|\psi\rangle + \beta|\phi\rangle) = \alpha\hat{A}|\psi\rangle + \beta\hat{A}|\phi\rangle$. In $\mathbb{C}^n$, every linear operator is represented by an $n \times n$ matrix once a basis is chosen.
+A *linear operator* $\hat{A}$ on $V$ maps $V \to V$ and respects addition and scalar multiplication: $\hat{A}(\alpha|\psi\rangle + \beta|\phi\rangle) = \alpha\hat{A}|\psi\rangle + \beta\hat{A}|\phi\rangle$. In $\mathbb{C}^n$, every linear operator is an $n \times n$ matrix.
 
 The *eigenvalue equation* is
 
-$$ \hat{A}|a\rangle = a|a\rangle, $$
+$$\hat{A}|a\rangle = a|a\rangle.$$
 
-a vector $|a\rangle$ that the operator leaves in the same direction, scaled by a complex number $a$. The set of all eigenvalues $a$ is the *spectrum* of $\hat{A}$. You find the eigenvalues by solving the characteristic polynomial $\det(\hat{A} - a\hat{I}) = 0$, and for each eigenvalue you find the corresponding eigenvectors by solving $(\hat{A} - a\hat{I})|a\rangle = 0$.
+A vector $|a\rangle$ that the operator leaves pointing in the same direction, scaled by a complex number $a$. The eigenvalues come from the characteristic polynomial $\det(\hat{A} - a\hat{I}) = 0$.
 
-**The spectral theorem** (finite-dimensional Hermitian case, which is everything you'll see in Unit 2): if $\hat{A}$ is Hermitian (defined below), then
+Now here is where Hermitian operators become the central object. An operator is *Hermitian* if $\hat{A}^\dagger = \hat{A}$, where $\hat{A}^\dagger$ is defined by the requirement that $\langle\phi|\hat{A}\psi\rangle = \langle\hat{A}^\dagger\phi|\psi\rangle$ for all $|\phi\rangle$, $|\psi\rangle$. In matrix form, $\hat{A}^\dagger$ is the conjugate transpose: $(A^\dagger)_{ij} = A_{ji}^*$. Hermitian means $A_{ij} = A_{ji}^*$.
+
+The *spectral theorem* for Hermitian operators says three things:
 
 1. All eigenvalues are real.
-2. Eigenvectors corresponding to distinct eigenvalues are orthogonal.
-3. The eigenvectors can be chosen to form an orthonormal basis of $V$.
+2. Eigenvectors for different eigenvalues are orthogonal.
+3. The eigenvectors form an orthonormal basis.
 
-The consequence: any state can be expanded in the eigenbasis of $\hat{A}$ as $|\psi\rangle = \sum_n c_n |a_n\rangle$ with $c_n = \langle a_n|\psi\rangle$, and the operator itself decomposes as
+The proof of (1) is one line: if $\hat{A}|a\rangle = a|a\rangle$ and $\hat{A} = \hat{A}^\dagger$, take the inner product of both sides with $|a\rangle$:
 
-$$ \hat{A} = \sum_n a_n |a_n\rangle\langle a_n|. $$
+$$\langle a|\hat{A}|a\rangle = a\langle a|a\rangle.$$
 
-This *spectral decomposition* is the computational engine of QM. Measurement probabilities, expectation values, and time evolution all reduce to algebra on this decomposition.
+But also $\langle a|\hat{A}|a\rangle = \langle \hat{A}a|a\rangle = \langle a|a\rangle\, a^*$. So $a\langle a|a\rangle = a^*\langle a|a\rangle$. Since $\langle a|a\rangle > 0$, we get $a = a^*$, so $a$ is real.
 
-**Common misconception.** "Every operator has eigenvectors that form a basis." False for general operators. The spectral theorem is specific to *normal* operators — operators that commute with their adjoint, $\hat{A}\hat{A}^\dagger = \hat{A}^\dagger\hat{A}$. Hermitian operators (where $\hat{A}^\dagger = \hat{A}$) and unitary operators (where $\hat{A}^\dagger\hat{A} = \hat{I}$) are both normal, and these cover everything you'll meet in introductory QM. But you should know the constraint exists.
+These three properties are why every observable in quantum mechanics is a Hermitian operator: real eigenvalues because measurement outcomes are real numbers; orthogonal eigenstates because distinct outcomes correspond to distinguishable results; a complete eigenbasis because the measurement must have *some* outcome with probability 1.
 
-**Worked example: two-level atom with off-diagonal coupling.** Take
+---
 
-$$ \hat{H} = \varepsilon(|0\rangle\langle 1| + |1\rangle\langle 0|) = \varepsilon \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}. $$
+## The three Pauli matrices
 
-Characteristic polynomial: $\det(\hat{H} - E\hat{I}) = E^2 - \varepsilon^2 = 0$, so $E = \pm\varepsilon$. For $E = +\varepsilon$, solve $(\hat{H} - \varepsilon\hat{I})|+\rangle = 0$:
+The spin-1/2 system is the cleanest possible quantum system: two-dimensional Hilbert space $\mathbb{C}^2$, three Hermitian observables, all the essential features visible in $2 \times 2$ matrix arithmetic.
 
-$$ \varepsilon \begin{pmatrix} -1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} a \\ b \end{pmatrix} = 0 \implies a = b. $$
+The three Pauli matrices are
 
-Normalized: $|+\rangle = (1/\sqrt{2})(|0\rangle + |1\rangle)$. For $E = -\varepsilon$ similarly: $|-\rangle = (1/\sqrt{2})(|0\rangle - |1\rangle)$. The eigenvectors are orthogonal: $\langle+|-\rangle = (1/2)(\langle 0| + \langle 1|)(|0\rangle - |1\rangle) = (1/2)(1 - 1) = 0$. Check.
+<!-- → [TABLE: the three Pauli matrices side by side — columns: σ_x, σ_y, σ_z; rows: matrix entries, eigenvalues, eigenvectors (written in ket notation), physical meaning (spin-x/y/z observable); highlight that σ_y is the only one with purely imaginary off-diagonal entries, making it the clearest example of Hermitian ≠ symmetric] -->
 
-This is the ammonia molecule's tunneling Hamiltonian, the simplest neutrino-oscillation Hamiltonian, and a basic model of every two-level atom. The same matrix, with different names attached.
+$$\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \qquad \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.$$
 
-### 4.5 Hermitian operators and observables
+All three are Hermitian — check $(A^\dagger)_{ij} = A_{ji}^*$ for each. All three have eigenvalues $\pm 1$. Their eigenvectors are different, and that difference is the substance of quantum measurement.
 
-An operator $\hat{A}$ is *Hermitian* (or *self-adjoint* — the distinction matters in infinite dimensions; see flag below) if $\hat{A}^\dagger = \hat{A}$, where $\hat{A}^\dagger$ is the *adjoint*, defined by the inner-product relation
+$\sigma_z$ is already diagonal. Eigenvectors:
 
-$$ \langle\phi|\hat{A}\psi\rangle = \langle \hat{A}^\dagger\phi|\psi\rangle \quad \text{for all } |\phi\rangle, |\psi\rangle. $$
+$$|\!\uparrow\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \qquad |\!\downarrow\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}.$$
 
-In matrix form, $\hat{A}^\dagger$ is the *conjugate transpose* of $\hat{A}$. Component-wise: $(A^\dagger)_{ij} = A_{ji}^*$. *Both* swap the indices *and* take the complex conjugate. Hermitian means $A_{ij} = A_{ji}^*$. The diagonal entries are therefore real (since $A_{ii} = A_{ii}^*$ forces $\text{Im}(A_{ii}) = 0$).
+These are spin-up and spin-down along the $z$-axis.
 
-**The first postulate of QM in operator language:** every observable is represented by a Hermitian operator. The eigenvalues of the operator are the possible measurement outcomes. The spectral theorem (eigenvalues real, eigenstates orthogonal, eigenstates a complete basis) is the *reason* measurement outcomes are real numbers, the *reason* the Born rule is well-defined, and the *reason* repeated measurements of the same observable give the same result.
+For $\sigma_x$: characteristic polynomial $\lambda^2 - 1 = 0$, eigenvalues $\pm 1$. For $\lambda = +1$, the eigenvector equation $(\sigma_x - I)|v\rangle = 0$ gives equal components. Normalized:
 
-**Misconception, the most important one in this unit:** "Hermitian = symmetric matrix." Wrong for complex matrices. For a real matrix, transpose = conjugate transpose, and Hermitian collapses to symmetric. For a complex matrix, they are different. The matrix
+$$|+_x\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix} = \frac{1}{\sqrt{2}}(|\!\uparrow\rangle + |\!\downarrow\rangle), \qquad |-_x\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -1 \end{pmatrix} = \frac{1}{\sqrt{2}}(|\!\uparrow\rangle - |\!\downarrow\rangle).$$
 
-$$ \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} $$
+For $\sigma_y$: same eigenvalues. For $\lambda = +1$, the equation $(\sigma_y - I)|v\rangle = 0$ gives $-v_1 - iv_2 = 0$, so $v_2 = iv_1$. Normalized:
 
-is *Hermitian* — $\sigma_y^\dagger$ swaps the off-diagonal entries and conjugates them, so the $-i$ at position (1,2) becomes $+i$ at position (2,1) (conjugate of $-i$), and the $+i$ at position (2,1) becomes $-i$ at position (1,2). Same matrix. Hermitian. But $\sigma_y$ is *not symmetric* — symmetric means $A_{ij} = A_{ji}$ without conjugation, and $-i \neq +i$. So $\sigma_y$ is the cleanest example of a Hermitian-but-not-symmetric matrix. The companion will use it as the canonical example whenever the distinction comes up.
+$$|+_y\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix} = \frac{1}{\sqrt{2}}(|\!\uparrow\rangle + i|\!\downarrow\rangle), \qquad |-_y\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -i \end{pmatrix} = \frac{1}{\sqrt{2}}(|\!\uparrow\rangle - i|\!\downarrow\rangle).$$
 
-**The three Pauli matrices.** These are the spin-1/2 observables along $x$, $y$, $z$. Memorize them.
+That $i$ in the component of $|+_y\rangle$ is the whole point. There is no real-coefficient basis that diagonalizes $\sigma_y$. Try to write a real $2\times 2$ symmetric matrix with eigenvalues $\pm 1$ that is physically equivalent to $\sigma_y$ — you cannot, because the chirality of $\sigma_y$ is encoded in the complex structure. $\sigma_y$ is the place in the introductory course where you cannot look at the $i$ and tell yourself it is just notation.
 
-$$ \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},\quad \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix},\quad \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}. $$
+Now consider what it means for measurements to be non-commuting. Start with the state $|\!\uparrow\rangle$. Apply $\sigma_x$:
 
-All three are Hermitian. All three square to the identity. All three have eigenvalues $\pm 1$. Their eigenvectors are different.
+$$\sigma_x|\!\uparrow\rangle = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 0 \\ 1 \end{pmatrix} = |\!\downarrow\rangle.$$
 
-**Worked example: diagonalize $\sigma_z$.** The matrix is already diagonal. Eigenvalues $\pm 1$. Eigenvectors
+The spin-$z$-up state is not a spin-$x$ eigenstate; acting with $\sigma_x$ takes it to the orthogonal state. To find the measurement probabilities, expand $|\!\uparrow\rangle$ in the $\sigma_x$ eigenbasis. Inverting the relations above: $|\!\uparrow\rangle = (1/\sqrt{2})(|+_x\rangle + |-_x\rangle)$. The probability of measuring $\sigma_x = +1$ in the state $|\!\uparrow\rangle$ is $|\langle +_x|\!\uparrow\rangle|^2 = |1/\sqrt{2}|^2 = 1/2$. Fifty-fifty. A particle known to be spin-up along $z$ is completely undetermined along $x$. That is the Stern–Gerlach experiment, written in basis-change arithmetic.
 
-$$ |\!\uparrow\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \qquad |\!\downarrow\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}. $$
+<!-- → [IMAGE: Stern-Gerlach apparatus diagram showing sequential measurements — first magnet along z splits beam into ↑ and ↓; second magnet along x then splits the ↑ beam into +x and −x with equal probability; student should see that certainty in z produces 50/50 uncertainty in x, which is the physical content of the basis-change calculation above] -->
 
-Check: $\sigma_z |\!\uparrow\rangle = (+1)|\!\uparrow\rangle$, $\sigma_z |\!\downarrow\rangle = (-1)|\!\downarrow\rangle$. These are the spin-up and spin-down states along the $z$-axis.
+---
 
-**Worked example: diagonalize $\sigma_x$.** Characteristic polynomial: $\det(\sigma_x - \lambda I) = \lambda^2 - 1 = 0$, so $\lambda = \pm 1$. For $\lambda = +1$, solve
+## Hermitian operators in infinite dimensions: checking $\hat{p}$
 
-$$ \begin{pmatrix} -1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} a \\ b \end{pmatrix} = 0 \implies a = b. $$
+The momentum operator in the position representation is $\hat{p} = -i\hbar\,d/dx$. Let us verify it is Hermitian on the space of square-integrable functions vanishing at infinity.
 
-Normalized: $|+_x\rangle = (1/\sqrt{2})(1, 1)^T = (1/\sqrt{2})(|\!\uparrow\rangle + |\!\downarrow\rangle)$. For $\lambda = -1$: $|-_x\rangle = (1/\sqrt{2})(1, -1)^T = (1/\sqrt{2})(|\!\uparrow\rangle - |\!\downarrow\rangle)$.
+We need to confirm $\langle\phi|\hat{p}\psi\rangle = \langle\hat{p}\phi|\psi\rangle$, i.e.,
 
-The spin-x eigenstates are *superpositions* of the spin-z eigenstates. This is the central fact about non-commuting observables: if you know the spin along $z$, you don't know it along $x$. The math is just basis change.
+$$\int_{-\infty}^\infty \phi^*(x)\left(-i\hbar\frac{d\psi}{dx}\right)dx = \int_{-\infty}^\infty \left(-i\hbar\frac{d\phi}{dx}\right)^*\psi(x)\,dx.$$
 
-**Worked example: diagonalize $\sigma_y$.** Characteristic polynomial: $\det(\sigma_y - \lambda I) = \lambda^2 - i \cdot (-i) = \lambda^2 - 1 = 0$, so $\lambda = \pm 1$. For $\lambda = +1$:
+The right side is $\int (+i\hbar\,d\phi^*/dx)\,\psi\,dx$. Integrate the left side by parts:
 
-$$ \begin{pmatrix} -1 & -i \\ i & -1 \end{pmatrix} \begin{pmatrix} a \\ b \end{pmatrix} = 0 \implies -a - ib = 0 \implies b = ia. $$
+$$\int \phi^*\frac{d\psi}{dx}\,dx = \left[\phi^*\psi\right]_{-\infty}^\infty - \int\frac{d\phi^*}{dx}\psi\,dx.$$
 
-Normalized: $|+_y\rangle = (1/\sqrt{2})(1, i)^T = (1/\sqrt{2})(|\!\uparrow\rangle + i|\!\downarrow\rangle)$. For $\lambda = -1$: $|-_y\rangle = (1/\sqrt{2})(1, -i)^T = (1/\sqrt{2})(|\!\uparrow\rangle - i|\!\downarrow\rangle)$.
+The boundary term $[\phi^*\psi]_{-\infty}^\infty$ vanishes because both $\phi$ and $\psi$ are square-integrable — if they didn't go to zero at infinity, $\int|\psi|^2\,dx$ would diverge. So
 
-Notice that the components are *complex* — $|+_y\rangle$ has a real first component and an imaginary second component. There is no real-coefficient eigenvector of $\sigma_y$. This is the worked example where the student sees, concretely, that complex numbers are not optional. Try to write a real $2 \times 2$ matrix with eigenvalues $\pm 1$ that has *only real eigenvectors* and is unitarily equivalent to $\sigma_y$. You can't. The chirality is built into the complex structure.
+$$\int\phi^*\frac{d\psi}{dx}\,dx = -\int\frac{d\phi^*}{dx}\psi\,dx.$$
 
-*The lesson:* the three Pauli matrices are three Hermitian operators on $\mathbb{C}^2$ with the same spectrum $\{+1, -1\}$ and three different eigenbases. Linear algebra over $\mathbb{C}$ is what makes them distinct.
+Multiply both sides by $-i\hbar$:
 
-**Apply this to $\sigma_x|\!\uparrow\rangle$.** Compute:
+$$-i\hbar\int\phi^*\frac{d\psi}{dx}\,dx = +i\hbar\int\frac{d\phi^*}{dx}\psi\,dx. \checkmark$$
 
-$$ \sigma_x |\!\uparrow\rangle = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 0 \\ 1 \end{pmatrix} = |\!\downarrow\rangle. $$
+Two things to notice. First: the $-i$ in $\hat{p} = -i\hbar\,d/dx$ is load-bearing. Without it, $d/dx$ is *anti-Hermitian* ($\hat{A}^\dagger = -\hat{A}$) by the same argument; the $-i$ rotates anti-Hermitian to Hermitian. Every basic QM operator carries these factors of $i$ for exactly this reason. Second: the proof used the boundary conditions. On a finite interval with states that don't vanish at the endpoints, the boundary term does not necessarily vanish, and $\hat{p}$ may not be Hermitian on that domain. The domain is part of the definition of the operator. In infinite dimensions, *Hermitian* and *self-adjoint* are not the same thing — a Hermitian operator might have eigenstates but lack a complete eigenbasis, or fail to admit a unique unambiguous extension to its full domain. Griffiths' footnotes acknowledge this; Reed and Simon *Methods of Modern Mathematical Physics* Vol. 2 is the reference for when it matters. It will matter again in Unit 4 when half-line problems first appear.
 
-So $\sigma_x |\!\uparrow\rangle = |\!\downarrow\rangle$. The spin-up state is *not* a $\sigma_x$ eigenstate — applying $\sigma_x$ takes it to the orthogonal state.
+<!-- → [INFOGRAPHIC: annotated integration-by-parts steps for the momentum Hermiticity proof — show the key line ∫φ*(dψ/dx)dx → boundary term + remaining integral, with an arrow marking "boundary term vanishes for L² functions" and a second arrow showing the sign flip that completes the proof; makes the one-page calculation scannable at a glance] -->
 
-Now expand $|\!\uparrow\rangle$ in the $\sigma_x$ eigenbasis. From the worked examples, $|+_x\rangle = (1/\sqrt{2})(|\!\uparrow\rangle + |\!\downarrow\rangle)$ and $|-_x\rangle = (1/\sqrt{2})(|\!\uparrow\rangle - |\!\downarrow\rangle)$. Inverting:
+---
 
-$$ |\!\uparrow\rangle = \frac{1}{\sqrt{2}}(|+_x\rangle + |-_x\rangle). $$
+## What the formalism looks like in one picture
 
-The probability of measuring $\sigma_x = +1$ given the state $|\!\uparrow\rangle$ is $|\langle +_x|\!\uparrow\rangle|^2 = |1/\sqrt{2}|^2 = 1/2$. Same for $\sigma_x = -1$. A spin-up-along-$z$ particle is 50/50 along $x$. This is the linear-algebra statement of the Stern–Gerlach experiment when you rotate the second magnet.
+Quantum states are vectors in a complex Hilbert space. Observables are Hermitian operators on that space. The eigenvalues of an observable are the possible measurement outcomes. A state $|\psi\rangle$ expanded in the eigenbasis of $\hat{A}$ as $|\psi\rangle = \sum_n c_n|a_n\rangle$ has probability $|c_n|^2$ of yielding outcome $a_n$. The expectation value is
 
-### 4.6 Verifying $\hat{p} = -i\hbar\,d/dx$ is Hermitian
+$$\langle\hat{A}\rangle = \langle\psi|\hat{A}|\psi\rangle = \sum_n a_n|c_n|^2.$$
 
-The momentum operator in the position representation is $\hat{p} = -i\hbar\,d/dx$. It is Hermitian on the space of square-integrable functions vanishing at infinity. The verification is the cleanest example of how Hermiticity works for differential operators, and Griffiths Ch. 3.2 Example 3.1 does this calculation. It is worth stepping through here.
+Five tools: complex numbers, vector spaces with inner products, Dirac notation, eigenvalue equations, Hermitian operators. That is the complete mathematical vocabulary of quantum mechanics. Everything in the units that follow — the Schrödinger equation, spin, identical particles, entanglement, scattering — is this vocabulary applied to particular problems.
 
-We want to check $\langle\phi|\hat{p}\psi\rangle = \langle\hat{p}\phi|\psi\rangle$, i.e.,
+---
 
-$$ \int_{-\infty}^\infty \phi^*(x)\left(-i\hbar \frac{d\psi}{dx}\right) dx = \int_{-\infty}^\infty \left(-i\hbar \frac{d\phi}{dx}\right)^* \psi(x)\, dx. $$
+## What would change my mind
 
-The right-hand side is $\int (+i\hbar\, d\phi^*/dx)\,\psi\, dx$. So we need
+The claim that quantum mechanics requires complex amplitudes is settled at the operational level by a century of experiments. Renou et al. (2021) tightened it further, ruling out a broad class of real-amplitude reformulations on Bell-inequality grounds. What would force a revision: a reproducible experiment showing that a real-amplitude theory in the same Hilbert-space dimension reproduces the measured probabilities — specifically, surviving the Bell test Renou designed. None has appeared.
 
-$$ -i\hbar \int \phi^* \frac{d\psi}{dx}\, dx \stackrel{?}{=} +i\hbar \int \frac{d\phi^*}{dx}\,\psi\, dx. $$
+The Hermitian-operator postulate rests on the spectral theorem and the requirement that measurement outcomes be real. If an open quantum system requires non-Hermitian operators — as in $\mathcal{PT}$-symmetric theories (Bender and Boettcher, 1998) — the story becomes more complicated. This is an active research area and is not the framework assumed here. The unit's claims are restricted to closed systems.
 
-Integrate the left side by parts:
+---
 
-$$ \int_{-\infty}^\infty \phi^* \frac{d\psi}{dx}\, dx = \left[\phi^* \psi\right]_{-\infty}^\infty - \int_{-\infty}^\infty \frac{d\phi^*}{dx}\,\psi\, dx. $$
+## Still puzzling
 
-For square-integrable functions, $\phi^* \psi \to 0$ as $|x| \to \infty$ (otherwise the integral $\int|\psi|^2$ diverges). The boundary term vanishes. So
+**Why $\mathbb{C}$ and not $\mathbb{H}$?** The Stueckelberg argument rules out real QM in fixed dimension; the Renou result sharpens it experimentally. But the quaternions $\mathbb{H}$ also give a sensible-looking inner-product structure (Adler, *Quaternionic Quantum Mechanics and Quantum Fields*, 1995). Why does nature prefer $\mathbb{C}$? The conventional answer is that no experiment has required $\mathbb{H}$. That is not the same as an argument.
 
-$$ \int \phi^* \frac{d\psi}{dx}\, dx = -\int \frac{d\phi^*}{dx}\,\psi\, dx, $$
+**The rigged Hilbert space.** Position eigenstates $|x\rangle$ are not in $L^2(\mathbb{R})$. They live in a strictly larger space — the "rigged Hilbert space" or Gelfand triple construction. Undergraduate courses elide this. Ballentine *Quantum Mechanics: A Modern Development* Ch. 1 handles it carefully.
 
-and multiplying both sides by $-i\hbar$:
+**Why is the state space projective?** The state $|\psi\rangle$ and $e^{i\alpha}|\psi\rangle$ make identical physical predictions for every observable. The "real" state space is normalized vectors modulo global phase — projective Hilbert space. The formalism carries a redundancy the physics doesn't need. One answer: the redundancy is the price of linearity, which you need for superposition. Whether there is a deeper structural reason remains open.
 
-$$ -i\hbar\int \phi^* \frac{d\psi}{dx}\, dx = +i\hbar\int \frac{d\phi^*}{dx}\,\psi\, dx. $$
+---
 
-Which is what we needed. So $\hat{p}^\dagger = \hat{p}$ on this space.
+## LLM exercises
 
-Two morals. First: the Hermiticity of $\hat{p}$ depends on the *boundary conditions*. For a particle on a finite interval with non-zero boundary values, the proof above fails; $\hat{p}$ may not be Hermitian on that domain, and you have to specify the domain explicitly. This is the Hermitian-versus-self-adjoint distinction in disguise, and it's why Reed and Simon (*Methods of Modern Mathematical Physics*, Vol. 1) is the reference when this matters in earnest. Second: the factor of $-i$ in $\hat{p}$ is essential. Without the $i$, the operator $d/dx$ is *anti-Hermitian* — $\hat{A}^\dagger = -\hat{A}$ — by the same integration-by-parts argument. Multiplying by $i$ rotates anti-Hermitian to Hermitian. That is one structural reason QM's basic operators all carry $i$'s.
+The following exercises are designed to be worked interactively with a language model. Use the model to check your reasoning step by step — not to generate answers, but to test whether you can explain each step clearly enough that the model can follow and push back.
 
-## 5. Synthesis: the abstract picture
+**L1.** Ask the model to give you a random normalized state in $\mathbb{C}^2$ with complex coefficients. Compute its bra by hand. Then compute the norm $\langle\psi|\psi\rangle$ step by step and verify it equals 1. Have the model check each arithmetic step and explain where you are applying the conjugation rule.
 
-Quantum states are vectors in a complex Hilbert space. Observables are Hermitian operators on that space. The eigenvalues of an observable are the possible outcomes of a measurement; the eigenvectors form an orthonormal basis in which the state expands as $|\psi\rangle = \sum_n c_n |a_n\rangle$. The probability of getting outcome $a_n$ is $|c_n|^2 = |\langle a_n|\psi\rangle|^2$. The expectation value is $\langle\hat{A}\rangle = \langle\psi|\hat{A}|\psi\rangle = \sum_n a_n |c_n|^2$.
+**L2.** Give the model any $2 \times 2$ Hermitian matrix you construct. Ask it to compute the eigenvalues and eigenvectors. Then do the same computation yourself from scratch using the characteristic polynomial. Compare the results and ask the model to explain any discrepancy in terms of the steps in the derivation.
 
-This is the whole formalism. Five tools: complex numbers, vector spaces with inner products, Dirac notation, eigenvalue equations, Hermitian operators. With them you can state the Schrödinger equation (Unit 3), solve specific potential problems (Unit 4), build the measurement postulate and the uncertainty principle (Unit 5), and proceed through the rest of QM. Without them — as in the pop-sci book — QM is a list of facts to memorize. With them, it is a working theory you can do calculations in.
+**L3.** Dictate a proof to the model that $\hat{p} = -i\hbar\,d/dx$ is Hermitian, in natural language — no formulas allowed in your explanation. Ask the model to translate your words into the integral calculation and identify any step you described incorrectly or imprecisely.
 
-## 6. Reading map
+**L4.** Construct the operator $|\!\uparrow\rangle\langle\!\downarrow|$ as a $2 \times 2$ matrix. Ask the model: is this operator Hermitian? What are its eigenvalues? Can you use it as an observable? Walk through each question yourself before asking. Then ask the model whether your conclusions about Hermitian, non-Hermitian, and anti-Hermitian operators were correct.
 
-| TIKTOC topic | Griffiths reference | Pop-sci book | This companion |
-|---|---|---|---|
-| Complex numbers | not in Griffiths proper; assumed prerequisite | ❌ | §4.1 (full treatment) |
-| Vector spaces and inner products | Ch. 3.1 | ❌ | §4.2 |
-| Dirac notation | Ch. 3.3 | ❌ | §4.3 |
-| Operators and eigenvalue equations | Ch. 3.2 | ❌ | §4.4 |
-| Hermitian operators and observables | Ch. 3.2 (Example 3.1) | ❌ | §4.5, §4.6 |
-| Pauli matrices | Ch. 4.4 (briefly; spin systems) | ❌ | §4.5 worked examples |
-
-Pop-sci book is unusable here. Griffiths Ch. 3 is the spine; read it after working through this companion. Shankar Ch. 1 ([2nd ed., 1994](https://link.springer.com/book/10.1007/978-1-4757-0576-8)) is the alternative reference, more rigorous and longer; if you have the time, read it for a second pass. Sakurai *Modern Quantum Mechanics* Ch. 1 is graduate-level and should be on your shelf for later.
-
-## 7. Exercises
-
-**E1 (L1, Knowledge).** State (a) Euler's formula, (b) the definition of the inner product in $\mathbb{C}^n$, (c) the eigenvalue equation, (d) the Hermiticity condition in matrix-element form $A_{ij} = A_{ji}^*$, and (e) the completeness relation $\sum_n |n\rangle\langle n| = \hat{I}$.
-
-**E2 (L2, Comprehension).** Translate the following from Dirac notation to wave-function notation: $\langle\phi|\hat{p}|\psi\rangle$ where $\hat{p} = -i\hbar\,d/dx$. Write it as an integral over $x$. Then translate back.
-
-**E3 (L3, Application).** Diagonalize the Hamiltonian
-
-$$ \hat{H} = \begin{pmatrix} E_0 & V \\ V^* & E_0 \end{pmatrix} $$
-
-for real $E_0$ and complex $V$. Find the eigenvalues and eigenvectors explicitly. Check that the eigenvectors are orthogonal.
-
-**E4 (L3, Application).** Take the state $|\psi\rangle = (1/\sqrt{5})(|+_y\rangle + 2|-_y\rangle)$ in the $\sigma_y$ eigenbasis. (a) Verify the state is normalized. (b) Compute $\langle\sigma_y\rangle = \langle\psi|\sigma_y|\psi\rangle$. (c) Compute $\langle\sigma_z\rangle$ by first re-expressing $|\psi\rangle$ in the $\{|\!\uparrow\rangle, |\!\downarrow\rangle\}$ basis. *Check that $\langle\sigma_y\rangle$ is real.*
-
-**E5 (L4, Analysis).** Show that the *commutator* of two Hermitian operators, $[\hat{A}, \hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A}$, is anti-Hermitian — that is, $[\hat{A}, \hat{B}]^\dagger = -[\hat{A}, \hat{B}]$. Use the rule for Hermitian conjugation of a product: $(\hat{A}\hat{B})^\dagger = \hat{B}^\dagger\hat{A}^\dagger$. (You should derive this rule too, if you haven't already.)
-
-**E6 (L4, Analysis).** Compute the commutators $[\sigma_x, \sigma_y]$, $[\sigma_y, \sigma_z]$, $[\sigma_z, \sigma_x]$ directly from the matrix definitions. You should find $[\sigma_i, \sigma_j] = 2i\,\varepsilon_{ijk}\sigma_k$ (with $\varepsilon_{ijk}$ the Levi-Civita symbol). This is the spin-1/2 angular momentum algebra; it will return in Unit 7.
-
-**E7 (L5, Evaluation).** Consider the matrix
-
-$$ M = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}. $$
-
-Is it Hermitian? Is it symmetric? Is it unitary ($M^\dagger M = I$)? Does it have a basis of orthonormal eigenvectors? Justify each answer with a direct calculation.
-
-**E8 (L6, Synthesis).** Show that $\hat{x}$, $\hat{p}$, and the Hamiltonian $\hat{H} = \hat{p}^2/2m + V(\hat{x})$ are all Hermitian on the space of square-integrable functions on the line. You may use the result for $\hat{p}$ from §4.6 directly. State precisely what assumptions about the boundary behavior of $\psi$ and $V$ you are using.
-
-## 8. What would change my mind
-
-The structural argument of this unit — that quantum mechanics requires complex amplitudes, Hermitian operators on a Hilbert space, and a Born-rule probability formula $|\langle a|\psi\rangle|^2$ — is settled at the operational level by a century of experimental success. Renou et al. (2021) tightened the screw on the complex-amplitude requirement specifically, ruling out a broad class of real-amplitude reformulations on Bell-inequality grounds [Renou et al., *Nature* 600, 625–629, *verify*]. What would force me to revise the unit's claim: a reproducible experiment in which complex amplitudes were demonstrably *not* required to reproduce the measured probabilities (i.e., a real-amplitude theory that survived a stringent Bell-inequality test). None has appeared. A weaker revision — adopting a non-Hermitian "$\mathcal{PT}$-symmetric" extension of QM for certain open systems (Bender & Boettcher 1998) — has been proposed in the literature and remains contested; the standard mathematical foundations here apply to closed systems, and the unit's claim is restricted accordingly.
-
-## 9. Still puzzling
-
-- *Why complex numbers, not quaternions?* The Stueckelberg argument rules out real-only QM in fixed dimension; the Renou result tightens it experimentally. But you could in principle replace $\mathbb{C}$ with the quaternions $\mathbb{H}$ and still have a sensible-looking formalism (Adler, *Quaternionic Quantum Mechanics and Quantum Fields*, 1995). Why does nature pick $\mathbb{C}$ specifically? Open question; the conventional answer is "no experimental need for $\mathbb{H}$ has appeared."
-
-- *The rigged Hilbert space.* Position and momentum eigenvectors $|x\rangle$ and $|p\rangle$ are not normalizable; they live in a larger space than $L^2(\mathbb{R})$ itself. This is mathematically clean (Gelfand triples, distribution theory) but it is genuinely outside the formalism of a Hilbert space proper. Undergraduate texts elide this; the curious student is pointed to Ballentine *Quantum Mechanics: A Modern Development*, Ch. 1.
-
-- *Hermitian versus self-adjoint.* In finite dimensions these coincide. In infinite dimensions they don't always, and the distinction has physical content — a Hermitian operator that fails self-adjointness on a given domain may have ambiguous physical interpretation (e.g., a "particle in a half-line" requires a boundary condition that pins down which self-adjoint extension you mean). Reed & Simon Vol. 2 is the reference. The companion will return to this in Unit 4 when half-line problems first appear.
-
-- *Why is the state space projective?* If $|\psi\rangle$ and $e^{i\alpha}|\psi\rangle$ produce the same physical predictions for all $\alpha$, then the "real" state space is the set of normalized vectors modulo the global phase — projective Hilbert space, $\mathbb{CP}^{n-1}$ for finite dimensions. Why should the mathematical formalism carry this redundancy? One answer: the redundancy is the price of linearity (you need vectors so you can superpose, but vectors carry extra information that physical states do not). Whether there is a deeper reason is open.
-
-**Tags:** dirac-notation, hermitian-operators, pauli-matrices, complex-amplitudes, hilbert-space, eigenvalues, griffiths-ch3, linear-algebra
+**L5.** Ask the model to generate a state $|\psi\rangle \in \mathbb{C}^2$ and then walk you through computing $\langle\sigma_z\rangle$, $\langle\sigma_x\rangle$, and $\langle\sigma_y\rangle$ in sequence. After each calculation, check that the result is real. If any result is not real, identify the error before asking the model where it is.
