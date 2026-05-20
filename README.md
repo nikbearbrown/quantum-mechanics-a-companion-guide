@@ -94,4 +94,10 @@ Permissions · Errata · Adoption · Course integration: [bear@bearbrown.co](mai
 
 ---
 
+## Signature Simulations
+
+<!-- TODO: populate from chapter content -->
+
+---
+
 *Read both books. Trust neither. Diagnose every claim. This is the companion that makes that possible.*

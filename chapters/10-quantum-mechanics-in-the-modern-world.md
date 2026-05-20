@@ -86,6 +86,7 @@ The first relation says spontaneous emission dominates at high frequency ($\nu^3
 Lasing requires *population inversion*: $N_2 > N_1$. In thermal equilibrium this is impossible — Boltzmann puts most population in the lower level. Inversion is achieved by pumping atoms into a third or fourth level from which they decay to the upper laser level faster than the laser transition rate. Theodore Maiman built the first laser in May 1960 at Hughes Research Labs, a ruby rod pumped by a flashlamp, producing 694.3 nm red light in pulses ([Maiman 1960, *Nature* 187, 493–494](https://doi.org/10.1038/187493a0)). *Physical Review Letters* rejected the paper as too incremental. Within a year there were HeNe, semiconductor, and CO$_2$ lasers.
 
 By 2026 [verify], lasers are a ten-figure annual industry — fiber-optic communications, surgical and industrial cutting, optical storage, spectroscopy, precision metrology, ranging. The principle is unchanged from 1917. What Einstein computed from thermodynamic consistency about a single pair of energy levels became a technology that rewired the world's communications infrastructure.
+<!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/10-quantum-mechanics-in-the-modern-world-assertions.md -->
 
 <!-- → [INFOGRAPHIC: three-panel energy level diagram — left panel: thermal equilibrium, N₁ > N₂, absorptions dominate, no lasing; center panel: population inversion achieved by pumping, N₂ > N₁, stimulated emission rate exceeds absorption; right panel: cavity feedback — mirrors trap the coherent photons, gain medium amplifies each pass; label each rate with the Einstein coefficient (A₂₁, B₁₂, B₂₁) and the ν³ scaling note alongside the spontaneous emission arrow; student should see why population inversion is necessary and how stimulated emission builds the beam] -->
 
@@ -136,6 +137,7 @@ Two algorithms anchor the field. *Shor's algorithm* ([Shor 1994; 1997, *SIAM Jou
 <!-- → [CHART: log-log plot of runtime vs. problem size n for four algorithms — classical factoring (exponential, steep curve), Shor's algorithm (polynomial O(n³), gentle curve, labeled "quantum"); classical search O(N) (linear); Grover's algorithm O(√N) (sub-linear); annotate the crossing points where quantum beats classical; note that Grover's advantage is quadratic (a constant factor on the log-log plot) while Shor's is exponential (the curves diverge); caption: "Not all quantum speedups are the same. Grover wins by a constant factor on the log scale. Shor wins by the whole game."] -->
 
 As of 2026 [verify], the field is in the NISQ era (Preskill 2018, [*Quantum* 2, 79](https://doi.org/10.22331/q-2018-08-06-79)) — hardware with hundreds to thousands of noisy qubits, not yet error-corrected to fault tolerance. IBM's Condor processor announced around 1,100 superconducting qubits in late 2023; Google's Sycamore family has been demonstrated through 70 qubits; Quantinuum's H2 trapped-ion system offers high-fidelity all-to-all connectivity; Atom Computing has demonstrated neutral-atom arrays exceeding 1,000 qubits [verify, 2026]. Google's 2023 paper ([Acharya et al. 2023, *Nature* 614, 676–681](https://doi.org/10.1038/s41586-022-05434-1)) demonstrated below-threshold logical qubits — increasing surface-code distance from 3 to 5 reduced the logical error rate — which is the first experimental evidence that quantum error correction scales as theory predicts. But from below-threshold demonstration to fault-tolerant factoring of 2048-bit keys, the engineering distance is enormous.
+<!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/10-quantum-mechanics-in-the-modern-world-assertions.md -->
 
 The honest framing: no quantum computer has as of 2026 demonstrated useful speedup on a practically important problem. The 2019 "quantum supremacy" result (Google Sycamore, [*Nature* 574, 505](https://doi.org/10.1038/s41586-019-1666-5)) was a sampling task with no practical utility, and the classical-simulation runtime estimate was revised downward by orders of magnitude within months. These experiments demonstrate that quantum hardware can do something hard to simulate classically; they do not demonstrate that quantum hardware can solve problems people need solved.
 
@@ -158,6 +160,7 @@ where $N(0)$ is the density of states at the Fermi level, $V$ is the attractive 
 The prediction $2\Delta/k_BT_c \approx 3.53$ is universal in the weak-coupling limit. For aluminum: $\Delta \approx 0.17$ meV predicts $T_c \approx 1.1$ K; measured $T_c = 1.18$ K, within 7%. Zero resistance follows because pair-breaking requires supplying energy $2\Delta$; at $k_BT \ll \Delta$ no scattering process has this energy available. The supercurrent also expels magnetic flux — the Meissner effect ([Meissner and Ochsenfeld 1933, *Naturwissenschaften* 21, 787](https://doi.org/10.1007/BF01504252)) — which distinguishes superconductors from hypothetical perfect conductors and falls out of the BCS theory through the London equations.
 
 Bednorz and Müller's 1986 discovery ([*Zeitschrift für Physik B* 64, 189](https://doi.org/10.1007/BF01303701)) of superconductivity in copper-oxide perovskites at $T_c \approx 35$ K broke the picture. YBa$_2$Cu$_3$O$_7$ followed at $T_c \approx 93$ K (above liquid nitrogen's 77 K boiling point), making economically practical high-$T_c$ materials suddenly real. Nobel 1987, the fastest in the history of the prize. Under extreme pressure, hydrogen sulfide reaches $\sim 203$ K ([Drozdov et al. 2015, *Nature* 525, 73](https://doi.org/10.1038/nature14964)) and lanthanum hydride reaches $\sim 250$ K at $\sim 170$ GPa ([Somayazulu et al. 2019, *PRL* 122, 027001](https://doi.org/10.1103/PhysRevLett.122.027001)). Room-temperature ambient-pressure superconductivity has not been demonstrated as of 2026 [verify]. The mechanism for cuprate superconductivity — forty years after discovery — remains contested.
+<!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/10-quantum-mechanics-in-the-modern-world-assertions.md -->
 
 <!-- → [CHART: timeline of superconductor T_c records from 1911 to 2026 — x-axis: year; y-axis: T_c in Kelvin (log scale or linear); mark key milestones: Hg 4.2 K (1911, Onnes); Nb 9.3 K; NbN 16 K; La-Ba-Cu-O 35 K (1986, Bednorz-Müller, Nobel '87 starred); YBCO 93 K (1987, Wu et al.); H₃S 203 K (2015, high pressure, dashed line); LaH₁₀ ~250 K (2019, high pressure, dashed line); horizontal reference lines at 77 K (liquid N₂) and 293 K (room temperature); ambient-pressure and high-pressure records distinguished by solid vs. dashed markers] -->
 
@@ -182,6 +185,7 @@ where $\phi$ is the work function. For $\phi = 4$ eV, $\kappa \approx 1\,\text{�
 *Josephson junctions.* Cooper-pair tunneling across an insulating barrier between two superconductors ([Josephson 1962, *Physics Letters* 1, 251](https://doi.org/10.1016/0031-9163(62)91369-0)) produces a supercurrent at zero voltage (DC Josephson effect) and an oscillating current at frequency $2eV/\hbar$ under DC bias (AC Josephson effect). SQUIDs — superconducting quantum interference devices based on Josephson junctions — are the most sensitive magnetometers known and underlie the SI definition of the volt since 1990.
 
 *Biological tunneling.* Electron tunneling in respiratory and photosynthetic electron-transport chains is well-established (Marcus theory). Proton tunneling in DNA base pairs was proposed by Löwdin ([*Reviews of Modern Physics* 35, 724, 1963](https://doi.org/10.1103/RevModPhys.35.724)) as a source of spontaneous mutation — the mechanism is real; whether it is quantitatively significant compared to thermal tautomerization is debated. The 2007 claim of long-lived quantum coherence in photosynthetic energy transfer ([Engel et al., *Nature* 446, 782](https://doi.org/10.1038/nature05678)) has been substantially walked back; current consensus is that coherences are present but short-lived and not the dominant mechanism for energy-transfer efficiency [verify, 2024–2026].
+<!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/10-quantum-mechanics-in-the-modern-world-assertions.md -->
 
 ---
 
@@ -206,3 +210,31 @@ Four scenarios would force a substantial rewrite. A demonstration of *useful qua
 **What is the actual landscape of useful quantum algorithms?** Shor's algorithm gives exponential speedup for factoring. Grover's gives quadratic speedup for unstructured search. Quantum simulation gives plausible exponential speedup for certain Hamiltonians. Beyond that, the list of quantum algorithms with proven super-polynomial speedup on practically relevant problems is short. The complexity class BQP is not known to contain NP — quantum computers do not in general solve NP-complete problems in polynomial time.
 
 **What is the 2022 Nobel's actual scope?** Aspect, Clauser, and Zeilinger established experimentally that local hidden variables of the EPR form do not describe quantum correlations. They did not settle which interpretation of quantum mechanics is correct, whether quantum mechanics is foundationally complete, or whether it is the large-scale limit of some more fundamental theory. The Nobel closes one specific argument. The foundational discussion continues.
+
+---
+
+## References
+
+*Added by fact-check pass 2026-05-14.*
+
+1. The Nobel Prize in Physics 2022 — Aspect, Clauser, Zeilinger. https://www.nobelprize.org/prizes/physics/2022/
+2. Clauser, J. F., Horne, M. A., Shimony, A. & Holt, R. A. "Proposed Experiment to Test Local Hidden-Variable Theories." *Physical Review Letters* 23, 880–884 (1969). https://doi.org/10.1103/PhysRevLett.23.880
+3. Cirel'son, B. S. "Quantum generalizations of Bell's inequality." *Letters in Mathematical Physics* 4, 93–100 (1980). https://doi.org/10.1007/BF00417500
+4. Aspect, A., Dalibard, J. & Roger, G. "Experimental Test of Bell's Inequalities Using Time-Varying Analyzers." *Physical Review Letters* 49, 1804–1807 (1982). https://doi.org/10.1103/PhysRevLett.49.1804
+5. Hensen, B. et al. "Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres." *Nature* 526, 682 (2015). https://doi.org/10.1038/nature15759
+6. Giustina, M. et al. "Significant-Loophole-Free Test of Bell's Theorem with Entangled Photons." *Physical Review Letters* 115, 250401 (2015).
+7. Shalm, L. K. et al. "Strong Loophole-Free Test of Local Realism." *Physical Review Letters* 115, 250402 (2015).
+8. Einstein, A. "Zur Quantentheorie der Strahlung." *Physikalische Zeitschrift* 18, 121–128 (1917).
+9. Maiman, T. H. "Stimulated Optical Radiation in Ruby." *Nature* 187, 493–494 (1960). https://doi.org/10.1038/187493a0
+10. Bloch, F. "Über die Quantenmechanik der Elektronen in Kristallgittern." *Zeitschrift für Physik* 52, 555–600 (1928).
+11. Kronig, R. de L. & Penney, W. G. *Proceedings of the Royal Society A* 130, 499 (1931).
+12. Shor, P. W. "Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer." *SIAM Journal on Computing* 26, 1484 (1997).
+13. DiVincenzo, D. P. "Two-bit gates are universal for quantum computation." *Physical Review A* 51, 1015 (1995). https://doi.org/10.1103/PhysRevA.51.1015
+14. Bardeen, J., Cooper, L. N. & Schrieffer, J. R. "Theory of Superconductivity." *Physical Review* 108, 1175–1204 (1957). https://doi.org/10.1103/PhysRev.108.1175
+15. Bednorz, J. G. & Müller, K. A. "Possible high-T_c superconductivity in the Ba−La−Cu−O system." *Zeitschrift für Physik B* 64, 189 (1986).
+16. Drozdov, A. P. et al. *Nature* 525, 73 (2015). https://doi.org/10.1038/nature14964
+17. Somayazulu, M. et al. *Physical Review Letters* 122, 027001 (2019).
+18. Binnig, G., Rohrer, H., Gerber, Ch. & Weibel, E. "Surface Studies by Scanning Tunneling Microscopy." *Physical Review Letters* 49, 57–61 (1982). https://doi.org/10.1103/PhysRevLett.49.57
+19. Josephson, B. D. "Possible new effects in superconductive tunnelling." *Physics Letters* 1, 251–253 (1962).
+20. Acharya, R. et al. "Suppressing quantum errors by scaling a surface code logical qubit." *Nature* 614, 676 (2023). https://doi.org/10.1038/s41586-022-05434-1
+21. NIST FIPS 203/204/205 (Aug 2024). https://csrc.nist.gov/projects/post-quantum-cryptography

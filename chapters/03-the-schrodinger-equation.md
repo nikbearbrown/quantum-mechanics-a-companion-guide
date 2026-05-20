@@ -5,12 +5,14 @@
 ---
 
 In late 1925, Erwin Schrödinger took a Christmas vacation in the Swiss Alps, at the Villa Herwig in Arosa, and came back down the mountain in January 1926 with an equation. Walter Moore's biography (*Schrödinger: Life and Thought*, Cambridge University Press, 1989) [*verify exact chapter*] describes the visit; the physics folklore fills in colorful details about who accompanied him. What is not in doubt is the result. Four papers appeared in *Annalen der Physik* beginning in January 1926 [Schrödinger, *Ann. Phys.* 79, 361–376](https://doi.org/10.1002/andp.19263840404), and within months they had reproduced every known energy level of hydrogen, explained the selection rules for atomic transitions, and given physicists a formalism they could actually use.
+<!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/03-the-schrodinger-equation-assertions.md -->
 
 Heisenberg, Born, and Jordan had reached the same physics six months earlier through matrix mechanics. But matrix mechanics looked like nothing classical physicists had seen before — arrays of numbers following unfamiliar multiplication rules. Schrödinger's wave equation looked like a wave equation, and physicists are comfortable with wave equations. The wave-equation formulation became the standard entry point almost immediately, and it remains so now.
 
 Here is where we are in the story. Unit 1 gave you the experimental evidence that forced quantum mechanics to exist: Planck's blackbody radiation, the photoelectric effect, the Compton scattering, de Broglie's matter waves, the Franck–Hertz experiment. Unit 2 gave you the mathematical apparatus: complex Hilbert spaces, inner products, Hermitian operators, eigenvalue equations. What is missing is a *dynamical law* — a rule that says how a quantum state changes in time. Classical mechanics has Newton's $\vec{F} = m\vec{a}$. Quantum mechanics needs its analog. The Schrödinger equation is it.
 
 But — and this is the move this chapter has to make honestly — *the Schrödinger equation cannot be derived.* Griffiths says this directly in §1.1 of the third edition: "Where did Schrödinger's equation come from? In a sense, it cannot be derived." There is a plausibility argument that makes the equation look natural given what de Broglie and Einstein told us. The plausibility argument is worth running. But running it is not the same as deriving the equation. The Schrödinger equation has the same status as Newton's second law: a fundamental postulate that we accept because of what it explains, not because we have a deeper theory it follows from. Asking why nature uses this equation rather than some neighboring one is a question without a deeper answer inside non-relativistic quantum mechanics.
+<!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/03-the-schrodinger-equation-assertions.md -->
 
 ---
 
@@ -251,3 +253,17 @@ The following exercises are designed to be worked interactively with a language 
 **L4.** Construct a normalized superposition of the first two infinite-square-well eigenstates. Ask the model to compute $\langle x\rangle(t)$ step by step. Do the calculation yourself first. Compare not just the final answer but each intermediate step — the expansion of $|\psi|^2$, the identification of the cross term, the integral of $x\psi_1\psi_2$, the Bohr frequency. Identify any step where your approach and the model's diverged.
 
 **L5.** Ask the model to explain why a free-particle plane wave $\psi = Ae^{ikx}$ is not a physical state, even though it satisfies the Schrödinger equation. Then give your own explanation. Ask the model to compare the two explanations and identify which one is more physically precise — and whether "not normalizable" is a sufficient explanation or whether there is something deeper to say about the role of wave packets and the Fourier representation.
+
+---
+
+## References
+
+*Added by fact-check pass 2026-05-14.*
+
+1. Schrödinger, E. "Quantisierung als Eigenwertproblem (Erste Mitteilung)." *Annalen der Physik* 79, 361–376 (1926). https://doi.org/10.1002/andp.19263840404
+2. Born, M. "Zur Quantenmechanik der Stoßvorgänge." *Zeitschrift für Physik* 37, 863–867 (1926). https://doi.org/10.1007/BF01397477
+3. The Nobel Prize in Physics 1954 — Max Born. https://www.nobelprize.org/prizes/physics/1954/born/facts/
+4. Aspect, A., Grangier, P. & Roger, G. "Experimental Realization of Einstein-Podolsky-Rosen-Bohm Gedankenexperiment." *Physical Review Letters* 49, 91 (1982).
+5. The Nobel Prize in Physics 2022 — Aspect, Clauser, Zeilinger. https://www.nobelprize.org/prizes/physics/2022/
+6. Ghirardi, G. C., Rimini, A. & Weber, T. "Unified dynamics for microscopic and macroscopic systems." *Physical Review D* 34, 470–491 (1986).
+7. Zurek, W. H. "Decoherence, einselection, and the quantum origins of the classical." *Reviews of Modern Physics* 75, 715–775 (2003). https://doi.org/10.1103/RevModPhys.75.715

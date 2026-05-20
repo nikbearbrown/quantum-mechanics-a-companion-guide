@@ -22,7 +22,9 @@ The red line at 656 nm, the blue-green at 486 nm, the violet at 434 nm — all t
 
 It was one of the great coups in the history of physics. It was also, as we now know, obtained by a model that is wrong about almost everything except the energies. Bohr's electron traces a definite circular path at a definite radius. That picture is false. And yet the energies are right.
 
-Why? The full answer is the subject of this chapter. The short version is that the Coulomb potential $V \propto 1/r$ has a hidden symmetry — beyond the obvious rotational symmetry — that forces all states with the same $n$ to have the same energy regardless of how they actually behave. Bohr stumbled onto a consequence of that symmetry without knowing it existed. The accident only works for hydrogen; apply Bohr's method to helium and it fails by 30%. The deep-dive of this chapter is: solve hydrogen properly, show where $a_0$ and $-13.6\,\text{eV}$ actually come from, and use the exact solution to dismantle the picture of the electron as an orbiting particle.
+Why? The full answer is the subject of this chapter. The short version is that the Coulomb potential $V \propto 1/r$ has a hidden symmetry — beyond the obvious rotational symmetry — that forces all states with the same $n$ to have the same energy regardless of how they actually behave. Bohr stumbled onto a consequence of that symmetry without knowing it existed. The accident only works for hydrogen; apply Bohr's method to helium and it fails by 30%.
+<!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/06-the-hydrogen-atom-assertions.md (specific 30% figure should be sourced; magnitude correct ~30–40%) -->
+ The deep-dive of this chapter is: solve hydrogen properly, show where $a_0$ and $-13.6\,\text{eV}$ actually come from, and use the exact solution to dismantle the picture of the electron as an orbiting particle.
 
 ---
 
@@ -197,3 +199,20 @@ Hydrogen spectroscopy is quantum mechanics' best-tested prediction. Every refine
 ## Still puzzling
 
 The $\mathrm{SO}(4)$ symmetry of the Coulomb potential — the hidden symmetry that makes hydrogen's energy depend only on $n$, not on $\ell$ — feels like a coincidence even though it is mathematically forced by the $1/r$ form of the potential. Pauli's 1926 derivation makes the algebra explicit and clean. It does not make the symmetry feel inevitable. Why does the inverse-square law have this extra conserved quantity while, say, a $1/r^2$ potential does not? There is a clean answer in classical mechanics — Bertrand's theorem, which says the only potentials producing closed orbits are $1/r$ and $r^2$ — and a corresponding quantum-mechanical answer involving the Laplace–Runge–Lenz vector. I find both explanations technically correct and somehow aesthetically unsatisfying. The fact that hydrogen, and only hydrogen among the one-electron atoms, is cleanly soluble feels like a coincidence with a deep reason rather than a deep reason I fully understand.
+
+---
+
+## References
+
+*Added by fact-check pass 2026-05-14.*
+
+1. Balmer, J. J. "Notiz über die Spectrallinien des Wasserstoffs." *Annalen der Physik* 261, 80–87 (1885). https://doi.org/10.1002/andp.18852610506
+2. Bohr, N. "On the Constitution of Atoms and Molecules." *Philosophical Magazine* (Series 6) 26, 1–25 (1913). https://doi.org/10.1080/14786441308634955
+3. Pauli, W. "Über das Wasserstoffspektrum vom Standpunkt der neuen Quantenmechanik." *Zeitschrift für Physik* 36, 336–363 (1926). https://doi.org/10.1007/BF01450175
+4. Gerlach, W. & Stern, O. "Der experimentelle Nachweis der Richtungsquantelung im Magnetfeld." *Zeitschrift für Physik* 9, 349–352 (1922). https://doi.org/10.1007/BF01326983
+5. Uhlenbeck, G. E. & Goudsmit, S. "Ersetzung der Hypothese vom unmechanischen Zwang..." *Die Naturwissenschaften* 13, 953–954 (1925). https://doi.org/10.1007/BF01558878
+6. Dirac, P. A. M. "The Quantum Theory of the Electron." *Proceedings of the Royal Society A* 117, 610–624 (1928). https://doi.org/10.1098/rspa.1928.0023
+7. Pauli, W. "Über den Zusammenhang des Abschlusses der Elektronengruppen im Atom mit der Komplexstruktur der Spektren." *Zeitschrift für Physik* 31, 765–783 (1925). https://doi.org/10.1007/BF02980631
+8. Pohl, R. et al. "The size of the proton." *Nature* 466, 213–216 (2010). https://doi.org/10.1038/nature09250
+9. Bezginov, N. et al. "A measurement of the atomic hydrogen Lamb shift and the proton charge radius." *Science* 365, 1007–1012 (2019). https://doi.org/10.1126/science.aau7807
+10. NIST CODATA 2018: Rydberg constant, Bohr radius. https://physics.nist.gov/cuu/Constants/

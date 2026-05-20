@@ -149,7 +149,7 @@ $$T \approx \exp\!\left(-\frac{2}{\hbar}\int_a^b \sqrt{2m\bigl(V(x) - E\bigr)}\,
 
 The integrand is the magnitude of the (imaginary) momentum inside the barrier: $|p(x)| = \sqrt{2m(V(x) - E)}$. The WKB approximation works when $V(x)$ varies slowly on the scale of the local de Broglie wavelength. It breaks down at the classical turning points ($V = E$, where the momentum goes to zero), and patching the approximation across those points requires more careful analysis. But the core result — that $\ln T$ is minus twice the integral of $|p(x)|/\hbar$ across the barrier — is what matters for applications.
 
-**Alpha decay: Gamow's calculation.** A heavy nucleus like uranium-238 contains an alpha particle (helium-4 nucleus) sitting in the nuclear potential well, surrounded by a Coulomb barrier. The Coulomb repulsion between the alpha ($+2e$) and the residual nucleus ($(Z-2)e$) at the nuclear surface radius $R \approx 7$ fm is about 28 MeV for uranium. But the alpha particles emitted from U-238 carry only about 4.27 MeV. Classically they cannot escape. They tunnel.
+**Alpha decay: Gamow's calculation.** A heavy nucleus like uranium-238 contains an alpha particle (helium-4 nucleus) sitting in the nuclear potential well, surrounded by a Coulomb barrier. The Coulomb repulsion between the alpha ($+2e$) and the residual nucleus ($(Z-2)e$) at the *touching* radius $R \approx 9$ fm — roughly the daughter nuclear radius plus the alpha radius, $R \approx 1.2\,\text{fm} \cdot (A_{\text{daughter}}^{1/3} + 4^{1/3})$ — is about 28 MeV for uranium. But the alpha particles emitted from U-238 carry only about 4.27 MeV. Classically they cannot escape. They tunnel.
 
 Apply the WKB formula to the Coulomb barrier. The barrier runs from the nuclear radius $r_1 = R$ to the outer turning point $r_2$ where $V(r_2) = E$, i.e., $r_2 = 2(Z-2)e^2/(4\pi\epsilon_0 E)$. The integral
 
@@ -163,7 +163,8 @@ where $v = \sqrt{2E/m}$ is the asymptotic velocity. For U-238, plugging in $E = 
 
 <!-- → [IMAGE: nuclear potential well diagram for alpha decay — deep attractive nuclear potential inside radius R, Coulomb repulsion V(r) = 2(Z−2)e²/(4πε₀r) outside, the alpha energy E drawn as a horizontal line well below the Coulomb barrier peak; the classically forbidden tunneling region shaded between R and the outer turning point r₂; this is the visual argument that makes "tunneling out of a nucleus" concrete] -->
 
-The reason this calculation is worth sitting with is the dynamic range. Alpha-decay half-lives across the periodic table span 24 orders of magnitude: from microseconds for Po-212 to $10^{17}$ years for Th-232. That entire range — 24 orders of magnitude — is produced by modest changes in $Z$ and $E$ fed into an exponential. Po-212 has $E \approx 8.78$ MeV; Th-232 has $E \approx 4.08$ MeV. The energies differ by roughly a factor of two. The half-lives differ by a factor of $10^{24}$. The exponential does that. The Geiger-Nuttall law — the empirical observation, known since 1911, that a plot of $\log(\text{half-life})$ against $1/\sqrt{E}$ falls on a straight line — was mysterious for nearly two decades. When Gamow's calculation landed, it explained the straight line in one page of quantum mechanics.
+The reason this calculation is worth sitting with is the dynamic range. Alpha-decay half-lives across the periodic table span 24 orders of magnitude: from microseconds for Po-212 to $10^{17}$ years for Th-232. That entire range — 24 orders of magnitude — is produced by modest changes in $Z$ and $E$ fed into an exponential. Po-212 has $E \approx 8.78$ MeV; Th-232 has $E \approx 4.01$ MeV. The energies differ by roughly a factor of two. The half-lives differ by a factor of $10^{24}$. The exponential does that. The Geiger-Nuttall law — the empirical observation, known since 1911, that a plot of $\log(\text{half-life})$ against $1/\sqrt{E}$ falls on a straight line — was mysterious for nearly two decades. When Gamow's calculation landed, it explained the straight line in one page of quantum mechanics.
+<!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/04-one-dimensional-problems-assertions.md -->
 
 <!-- → [CHART: Geiger-Nuttall plot — log(half-life) vs. 1/√E for a selection of alpha emitters across the periodic table (Po-212 through Th-232); the data should fall approximately on a straight line; annotate Po-212 (microseconds) and Th-232 (10¹⁰ years) at opposite ends to make the 24-order-of-magnitude range visible; the linearity is the Gamow factor made graphical] -->
 
@@ -203,7 +204,7 @@ These are toy systems in the sense that they are exactly solvable and highly ide
 
 **S1.** The ground-state energy of the infinite square well is $E_1 = \pi^2\hbar^2/(2mL^2)$. The uncertainty-principle estimate from the introduction gives $E_\text{est} \approx \hbar^2/(8mL^2)$. The two differ by a factor of $4\pi^2 \approx 39$. Explain in physical terms why the estimate is off by this factor — specifically, what assumption in the estimate is too loose. Then apply the same uncertainty-principle logic to the harmonic oscillator: minimize $\langle T \rangle + \langle V \rangle$ over $\sigma_p$ (using $\langle V \rangle \geq \frac{1}{2}m\omega^2\sigma_x^2$ and the Robertson bound) and show that the estimate gives $E_0 \geq \hbar\omega/2$ — this time exactly right. Why does the estimate work exactly for the oscillator but only order-of-magnitude for the box? *(Connects two sections of the chapter through a single thread; the answer involves the Gaussian ground state of the oscillator saturating the Robertson bound.)*
 
-**S2.** Estimate the alpha-decay half-life of polonium-212 ($Z = 84$, alpha energy $E \approx 8.78$ MeV) using the Gamow approach from the chapter. Then estimate Th-232 ($Z = 90$, $E \approx 4.08$ MeV). Compare your estimates to the measured values (Po-212: $\sim 0.3\ \mu$s; Th-232: $\sim 1.4 \times 10^{10}$ years). The two alpha energies differ by roughly a factor of two. The half-lives differ by roughly $10^{24}$. Write two sentences explaining, quantitatively, how a factor-of-two energy difference produces a $10^{24}$ range in half-life. *(Requires executing the Gamow integral twice with different inputs; the two-sentence explanation tests whether the student has genuinely internalized the exponential dependence rather than just computing it.)*
+**S2.** Estimate the alpha-decay half-life of polonium-212 ($Z = 84$, alpha energy $E \approx 8.78$ MeV) using the Gamow approach from the chapter. Then estimate Th-232 ($Z = 90$, $E \approx 4.01$ MeV). Compare your estimates to the measured values (Po-212: $\sim 0.3\ \mu$s; Th-232: $\sim 1.4 \times 10^{10}$ years). The two alpha energies differ by roughly a factor of two. The half-lives differ by roughly $10^{24}$. Write two sentences explaining, quantitatively, how a factor-of-two energy difference produces a $10^{24}$ range in half-life. *(Requires executing the Gamow integral twice with different inputs; the two-sentence explanation tests whether the student has genuinely internalized the exponential dependence rather than just computing it.)*
 
 **Challenge**
 
@@ -222,3 +223,16 @@ These are toy systems in the sense that they are exactly solvable and highly ide
 **LLM-E4.** Give a language model this claim: "Quantum tunneling means a particle passes through a barrier instantly." Ask it to evaluate the claim. A strong response will distinguish transmission probability (which the chapter covers and which is uncontroversial) from tunneling time (which is genuinely unsettled and which the chapter flags as an open problem). Does the model acknowledge the open question, or does it give a confident answer to a question that is not resolved?
 
 **LLM-E5.** Ask a language model: "Does a finite square well in one dimension always have at least one bound state?" Then ask: "Does the same statement hold for a three-dimensional spherical well?" A correct response distinguishes the two cases (1D always binds; 3D requires critical depth). If the model gets it wrong or collapses the two cases, show it the relevant argument and ask it to explain where its first response went wrong.
+
+---
+
+## References
+
+*Added by fact-check pass 2026-05-14.*
+
+1. Binnig, G. & Rohrer, H. "Scanning Tunneling Microscopy—from Birth to Adolescence." *Reviews of Modern Physics* 59, 615 (1987).
+2. Gamow, G. "Zur Quantentheorie des Atomkernes." *Zeitschrift für Physik* 51, 204–212 (1928). https://doi.org/10.1007/BF01343196
+3. Gurney, R. W. & Condon, E. U. "Wave Mechanics and Radioactive Disintegration." *Nature* 122, 439 (1928).
+4. Geiger, H. & Nuttall, J. M. "The ranges of the α particles from various radioactive substances and a relation between range and period of transformation." *Phil. Mag.* 22, 613 (1911).
+5. Simon, B. "The bound state of weakly coupled Schrödinger operators in one and two dimensions." *Annals of Physics* 97, 279 (1976).
+6. NNDC Nuclear Wallet Cards. https://www.nndc.bnl.gov/

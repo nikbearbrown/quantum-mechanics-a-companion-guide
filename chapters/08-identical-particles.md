@@ -168,6 +168,7 @@ On the fermion side: Chandrasekhar showed in 1931 [*Astrophysical Journal* 74, 8
 ## What would change my mind
 
 The VIP and VIP-2 collaborations at Gran Sasso have searched for Pauli-violating atomic transitions in copper — transitions that would be forbidden if the antisymmetry postulate held exactly. They have placed limits on the probability of such violations at the part-per-$10^{29}$ level [Curceanu et al. 2017, *Acta Physica Polonica B* 48, 1741; verify most recent VIP-2 bound, likely 2023–2024 *Physics Letters B* or *Physical Review Letters*][verify]. A positive signal at any level would force the central postulate of this chapter to be revised. None has appeared. Separately, an integer-spin fundamental particle that behaved as a fermion would force a revision of the spin-statistics theorem and therefore of relativistic QFT. No such particle has been observed.
+<!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/08-identical-particles-assertions.md -->
 
 ---
 
@@ -180,3 +181,18 @@ The VIP and VIP-2 collaborations at Gran Sasso have searched for Pauli-violating
 **Why does Madelung's rule have exceptions?** The honest answer is that the exchange stabilization of half-filled and full-filled shells competes with orbital energy ordering, and there is no closed-form rule for when one wins. Computational quantum chemistry handles this by computing, not by applying a rule. The Madelung heuristic is a good first-order organizer; it is not derivable from first principles without the calculation.
 
 **Is the universe one large antisymmetric electron wave function?** In principle, yes. In practice, the overlap between localized orbitals at macroscopic separations is exponentially small, and the exchange effects are correspondingly negligible. The global antisymmetry holds; it produces no measurable consequence outside the atomic scale. Whether it is worth thinking about cosmologically is a thought experiment rather than a physics question.
+
+---
+
+## References
+
+*Added by fact-check pass 2026-05-14.*
+
+1. Pauli, W. "The Connection Between Spin and Statistics." *Physical Review* 58, 716–722 (1940). https://doi.org/10.1103/PhysRev.58.716
+2. Slater, J. C. "The Theory of Complex Spectra." *Physical Review* 34, 1293–1322 (1929). https://doi.org/10.1103/PhysRev.34.1293
+3. Bartolomei, H. et al. "Fractional statistics in anyon collisions." *Science* 368, 173–177 (2020). https://doi.org/10.1126/science.aaz5601
+4. Hund, F. "Zur Deutung verwickelter Spektren..." *Zeitschrift für Physik* 33, 345–371 (1925). https://doi.org/10.1007/BF01328319
+5. Anderson, M. H. et al. "Observation of Bose-Einstein Condensation in a Dilute Atomic Vapor." *Science* 269, 198–201 (1995). https://doi.org/10.1126/science.269.5221.198
+6. Davis, K. B. et al. "Bose-Einstein Condensation in a Gas of Sodium Atoms." *Physical Review Letters* 75, 3969–3973 (1995). https://doi.org/10.1103/PhysRevLett.75.3969
+7. Chandrasekhar, S. "The Maximum Mass of Ideal White Dwarfs." *Astrophysical Journal* 74, 81–82 (1931). https://doi.org/10.1086/143324
+8. NIST Atomic Spectra Database. https://physics.nist.gov/PhysRefData/ASD/levels_form.html

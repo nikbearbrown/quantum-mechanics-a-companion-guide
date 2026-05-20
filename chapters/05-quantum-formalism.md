@@ -3,7 +3,7 @@
 
 ---
 
-Two students sit in a library with two papers. The first is Werner Heisenberg's 1927 paper in *Zeitschrift für Physik* — the one with the gamma-ray microscope thought experiment. The second is Howard P. Robertson's four-page note in *Physical Review*, 1929, titled simply "The Uncertainty Principle."
+Two students sit in a library with two papers. The first is Werner Heisenberg's 1927 paper in *Zeitschrift für Physik* — the one with the gamma-ray microscope thought experiment. The second is Howard P. Robertson's two-page note in *Physical Review*, 1929, titled simply "The Uncertainty Principle."
 
 The first student says: uncertainty is about measurement. To find an electron's position, you bounce a photon off it. The photon kicks the electron and disturbs its momentum. That is the principle. Their popular-physics book says essentially the same thing with a balloon: to find a balloon in the dark you have to bump into it, and bumping moves it. That is what $\Delta x\,\Delta p \gtrsim \hbar$ means.
 
@@ -175,7 +175,7 @@ In 2013, Maximilian Schlosshauer, Johannes Kofler, and Anton Zeilinger surveyed 
 
 One misconception the chapter corrects explicitly: "the observer's consciousness causes wave function collapse." This is the von Neumann–Wigner interpretation, sketched by Wigner in a 1961 essay and largely abandoned even by him afterward. The 2013 survey found essentially no support for it. The pop-science framing of "the observer creates reality" trades on this idea and should be pushed back on. There is a genuine measurement problem; consciousness is not the mainstream answer; decoherence is the mainstream mechanism for the quantum-to-classical transition; the interpretive disagreement is about whether decoherence plus something — and which something — closes the problem.
 
-One recent result that sharpened the debate. Daniela Frauchiger and Renato Renner, writing in *Nature Communications* in 2018, constructed a thought experiment in which different observers, each reasoning consistently within quantum mechanics, reach contradictory conclusions about a measurement outcome. Every interpretation resolves the apparent paradox by giving up a different assumption: Copenhagen by restricting which observers count, Many-Worlds by clarifying what "outcome" means across branches. A 2024 follow-up by Vilasini and collaborators examined which assumption each interpretation must drop. The point is not that any interpretation failed — each survives by making its choice explicit. The point is that the choice is forced. The foundations are still under active construction.
+One recent result that sharpened the debate. Daniela Frauchiger and Renato Renner, writing in *Nature Communications* in 2018, constructed a thought experiment in which different observers, each reasoning consistently within quantum mechanics, reach contradictory conclusions about a measurement outcome. Every interpretation resolves the apparent paradox by giving up a different assumption: Copenhagen by restricting which observers count, Many-Worlds by clarifying what "outcome" means across branches. Vilasini and Renner's 2024 follow-up ([*Nature Communications* 15, 7155](https://doi.org/10.1038/s41467-024-47170-2)) examined which assumption each interpretation must drop. The point is not that any interpretation failed — each survives by making its choice explicit. The point is that the choice is forced. The foundations are still under active construction.
 
 ---
 
@@ -230,3 +230,20 @@ A working physicist can compute with all five postulates without committing to a
 **LLM-E4.** Ask a language model: "Which interpretation of quantum mechanics is correct?" Evaluate whether the response honestly represents the lack of consensus, or whether it picks a winner. A strong response names the major interpretations, states what each one says about collapse, and acknowledges that working physicists disagree. A weak response quietly endorses Copenhagen (or Many-Worlds) without flagging the disagreement. Compare the response to the Schlosshauer-Kofler-Zeilinger 2013 survey result.
 
 **LLM-E5.** Give a language model this sentence from a popular-physics book: "The act of observation causes the wave function to collapse — the observer creates reality." Ask it to evaluate the claim carefully. A strong response will distinguish the measurement problem (genuine, unresolved) from the consciousness-causes-collapse interpretation (not the mainstream answer), invoke decoherence as the standard mechanism for the quantum-to-classical transition, and identify what is misleading about the "observer creates reality" framing without dismissing the underlying question as trivial.
+
+---
+
+## References
+
+*Added by fact-check pass 2026-05-14.*
+
+1. Robertson, H. P. "The Uncertainty Principle." *Physical Review* 34, 163–164 (1929). https://journals.aps.org/pr/abstract/10.1103/PhysRev.34.163
+2. Ozawa, M. "Universally valid reformulation of the Heisenberg uncertainty principle on noise and disturbance in measurement." *Physical Review A* 67, 042105 (2003). https://doi.org/10.1103/PhysRevA.67.042105
+3. Erhart, J., Sponar, S., Sulyok, G., Badurek, G., Ozawa, M. & Hasegawa, Y. "Experimental demonstration of a universally valid error–disturbance uncertainty relation in spin measurements." *Nature Physics* 8, 185–189 (2012). https://doi.org/10.1038/nphys2194
+4. Schrödinger, E. "Zum Heisenbergschen Unschärfeprinzip." *Sitzungsber. Preuss. Akad. Wiss.* 14, 296–303 (1930).
+5. Bell, J. S. "Against 'measurement.'" *Physics World* 3 (8), 33–40 (1990).
+6. Everett, H., III. "'Relative State' Formulation of Quantum Mechanics." *Reviews of Modern Physics* 29, 454–462 (1957). https://doi.org/10.1103/RevModPhys.29.454
+7. Bohm, D. "A Suggested Interpretation of the Quantum Theory in Terms of 'Hidden' Variables." *Physical Review* 85, 166, 180 (1952).
+8. Schlosshauer, M., Kofler, J. & Zeilinger, A. "A Snapshot of Foundational Attitudes Toward Quantum Mechanics." *Studies in History and Philosophy of Modern Physics* 44, 222–230 (2013). https://doi.org/10.1016/j.shpsb.2013.04.004
+9. Frauchiger, D. & Renner, R. "Quantum theory cannot consistently describe the use of itself." *Nature Communications* 9, 3711 (2018). https://doi.org/10.1038/s41467-018-05739-8
+10. Wigner, E. P. "Remarks on the Mind-Body Question," in *The Scientist Speculates*, ed. I. J. Good, Heinemann (1961), pp. 284–302.
