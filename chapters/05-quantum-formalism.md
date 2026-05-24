@@ -254,21 +254,3 @@ A working physicist can compute with all five postulates without committing to a
 8. Schlosshauer, M., Kofler, J. & Zeilinger, A. "A Snapshot of Foundational Attitudes Toward Quantum Mechanics." *Studies in History and Philosophy of Modern Physics* 44, 222–230 (2013). https://doi.org/10.1016/j.shpsb.2013.04.004
 9. Frauchiger, D. & Renner, R. "Quantum theory cannot consistently describe the use of itself." *Nature Communications* 9, 3711 (2018). https://doi.org/10.1038/s41467-018-05739-8
 10. Wigner, E. P. "Remarks on the Mind-Body Question," in *The Scientist Speculates*, ed. I. J. Good, Heinemann (1961), pp. 284–302.
-
-## Prompts
-
-Use these prompts with Claude to generate interactive D3 v7 versions of the
-figures in this chapter. Each produces a standalone HTML file you can open
-in a browser and modify freely.
-
-**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
-your Claude project context before using these prompts. They define the stack,
-naming conventions, color system, and typography the figures use.
-
----
-
-### Figure 5.1 — Proof structure flowchart 
-
-Create a standalone D3 v7 HTML file for Figure Proof structure flowchart . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: proof structure flowchart — boxes for (1) define shifted operators A', B'; (2) form vectors |f⟩ = A'|ψ⟩, |g⟩ = B'|ψ⟩; (3) apply Cauchy–Schwarz; (4) bound |z|² ≥ (Im z)²; (5) extract imaginary part as commutator; (6) Robertson bound — arrows connecting each step; student should see the logical chain at a glance before working through the algebra. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
-
-> Reference implementation: `d3/05-quantum-formalism-fig-01.html`
