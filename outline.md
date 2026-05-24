@@ -14,7 +14,7 @@
 
 # Quantum Mechanics A Companion Guide — Outline
 
-**Author:** Nik Bear Brown
+**Author:** Humanitarians AI
 
 ---
 

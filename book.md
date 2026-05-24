@@ -12,7 +12,7 @@
 
 # Quantum Mechanics A Companion Guide
 
-**Author:** Nik Bear Brown
+**Author:** Humanitarians AI
 
 ---
 

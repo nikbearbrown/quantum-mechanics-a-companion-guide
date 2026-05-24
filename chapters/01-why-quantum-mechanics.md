@@ -22,7 +22,8 @@ Classical statistical mechanics has a clean answer. Each electromagnetic mode in
 
 $$\rho_{\text{RJ}}(\nu, T) = \frac{8\pi \nu^2}{c^3} k_B T.$$
 
-<!-- → [CHART: side-by-side plot of Rayleigh–Jeans vs. Planck distribution at a fixed temperature — x-axis frequency, y-axis spectral energy density — student should see the RJ curve diverging upward at high frequency while Planck peaks and falls; annotate the "ultraviolet catastrophe" region and the region where the two curves agree (low frequency)] -->
+![Plot of Rayleigh–Jeans vs](images/01-why-quantum-mechanics-fig-01.png)
+*Figure 1.1 — Plot of Rayleigh–Jeans vs*
 
 This rises without bound as frequency increases. The total energy, $\int_0^\infty \rho_{\text{RJ}} \, d\nu$, diverges. A box at room temperature should contain infinite energy in its short-wavelength modes. This is what Paul Ehrenfest later called the "ultraviolet catastrophe."
 
@@ -60,7 +61,8 @@ $$K_{\max} = h\nu - \phi.$$
 
 Below the threshold frequency $\nu_0 = \phi/h$, no electrons emerge regardless of intensity. Above it, intensity controls how many electrons emerge per second; frequency controls how much energy each one has.
 
-<!-- → [CHART: stopping potential V_s vs. incident frequency ν for two metals with different work functions — student should see two parallel straight lines with slope h/e, y-intercepts at −φ₁/e and −φ₂/e; annotate the threshold frequency for each and the universal slope] -->
+![Stopping potential V_s vs](images/01-why-quantum-mechanics-fig-02.png)
+*Figure 1.2 — Stopping potential V_s vs*
 
 Robert Millikan spent four years (1912–1916) trying to disprove this. He measured the stopping potential $V_s$ — the retarding voltage that just halts the most energetic electrons, so $eV_s = K_{\max}$ — as a function of frequency. The slope, by Einstein's equation, is $h/e$. Millikan measured $h = 6.57 \times 10^{-27}$ erg·s. That's within 0.5% of Planck's blackbody value from a completely different experiment. He published his result with the concession that the photoelectric equation worked despite his conviction that the underlying hypothesis was "untenable."
 
@@ -90,7 +92,8 @@ The combination $h/m_e c = 2.426 \times 10^{-12}$ m is called the Compton wavele
 
 The derivation is the cleanest piece of math in this chapter. Treat the photon as a relativistic particle with energy $E_\gamma = h\nu$ and momentum $p_\gamma = h/\lambda$. The electron is initially at rest. Write conservation of energy and conservation of momentum (two components), then eliminate the electron's recoil angle.
 
-<!-- → [DIAGRAM: Compton scattering geometry — incident photon moving horizontally, electron at rest, scattered photon at angle θ above the axis, recoiling electron at angle φ below; label all four momentum vectors with their magnitudes h/λ, h/λ', p_e; this is the diagram the derivation below requires] -->
+![Compton scattering geometry ](images/01-why-quantum-mechanics-fig-03.png)
+*Figure 1.3 — Compton scattering geometry *
 
 *Conservation of energy:*
 $$h\nu + m_e c^2 = h\nu' + E_e.$$
@@ -150,7 +153,8 @@ Nickel's (111) surface plane spacing is $d = 0.215$ nm. The surface diffraction 
 
 The single-electron version was done as a continuous buildup by Akira Tonomura's group at Hitachi in 1989. Electrons arrived one at a time, each registering as a point on the detector. Accumulated over hours, the points formed a diffraction pattern. A single electron, with no other electrons present to interact with, produced interference. There is no classical reading of this. The electron "interferes with itself" in a way that has no analog in Newtonian language.
 
-<!-- → [IMAGE: Tonomura buildup sequence — four panels showing the detector at 10, 100, 1000, and 10000 electrons; the point-by-point accumulation resolving into a diffraction pattern is the visual argument that the wave is not a collective property of many electrons but a property of each one individually] -->
+![Tonomura buildup sequence ](images/01-why-quantum-mechanics-fig-04.png)
+*Figure 1.4 — Tonomura buildup sequence *
 
 The lesson: matter has wave properties, and those properties are not about the particle's *size* — the wavelength is a property of the associated amplitude, not a physical extent. When the electron is detected, it appears as a point. The wave shows up only in the statistical pattern built from many detections.
 
@@ -162,7 +166,8 @@ In 1914, James Franck and Gustav Hertz accelerated electrons through mercury vap
 
 The interpretation: an electron with kinetic energy below 4.9 eV bounces off mercury atoms elastically, losing no energy, and reaches the collector. At 4.9 eV the electron can give that exact amount to the mercury atom, exciting it from its ground state to its first excited state. The electron then lacks enough energy to reach the collector against the retarding field — hence the drop. More voltage, and the electron regains enough energy to reach the collector, until it has 9.8 eV and can excite two mercury atoms in succession.
 
-<!-- → [CHART: Franck–Hertz current vs. accelerating voltage — student should see the periodic dips at 4.9 V, 9.8 V, 14.7 V; annotate each dip with the number of inelastic collisions it represents; a clean version of this curve is the entire argument for discrete energy levels made visible] -->
+![Franck–Hertz current vs](images/01-why-quantum-mechanics-fig-05.png)
+*Figure 1.5 — Franck–Hertz current vs*
 
 If this interpretation is right, the excited mercury atoms decay back to their ground state by emitting photons, and those photons should have energy 4.9 eV. The wavelength:
 
@@ -184,7 +189,9 @@ After 1927, any theory that wanted to replace classical physics had to accommoda
 4. Matter has wave properties, with wavelength $h/p$ (de Broglie, 1924; Davisson–Germer, 1927).
 5. Atomic systems have discrete internal energy levels (Franck–Hertz, 1914).
 
-<!-- → [TABLE: summary of the five experiments — columns: experiment, year, classical prediction, observed result, formula forced, value of h extracted; rows for Planck/Lummer–Pringsheim, Einstein/Millikan, Compton, de Broglie/Davisson–Germer, Franck–Hertz; the h column makes the point that five independent experiments converge on the same constant] -->
+| experiment | year | classical prediction | observed result | formula forced |
+| --- | --- | --- | --- | --- |
+| summary of the five experiments — | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
 
 Three structural requirements follow from these. The new theory needs a *probabilistic* account of measurement: you cannot predict where a single electron in a diffraction experiment lands; you can predict only the long-run distribution. It needs *wave-equation structure*: to handle interference and de Broglie wavelengths. And it needs *eigenvalue structure*: to handle discrete energy levels.
 
@@ -253,3 +260,53 @@ Before you go on, notice something. Planck's constant $h$ appears in all five re
 9. Tonomura, A., Endo, J., Matsuda, T., Kawasaki, T. & Ezawa, H. "Demonstration of single-electron buildup of an interference pattern." *American Journal of Physics* 57, 117–120 (1989). https://doi.org/10.1119/1.16104
 10. Franck, J. & Hertz, G. "Über Zusammenstöße zwischen Elektronen und den Molekülen des Quecksilberdampfes und die Ionisierungsspannung desselben." *Verhandlungen der Deutschen Physikalischen Gesellschaft* 16, 457–467 (1914).
 11. NIST CODATA 2018. "Fundamental Physical Constants." https://physics.nist.gov/cuu/Constants/
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 1.1 — Plot of Rayleigh–Jeans vs
+
+Create a standalone D3 v7 HTML file for Figure Plot of Rayleigh–Jeans vs. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: side-by-side plot of Rayleigh–Jeans vs. Planck distribution at a fixed temperature — x-axis frequency, y-axis spectral energy density — student should see the RJ curve diverging upward at high frequency while Planck peaks and falls; annotate the "ultraviolet catastrophe" region and the region where the two curves agree (low frequency). Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/01-why-quantum-mechanics-fig-01.html`
+
+---
+
+### Figure 1.2 — Stopping potential V_s vs
+
+Create a standalone D3 v7 HTML file for Figure Stopping potential V_s vs. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: stopping potential V_s vs. incident frequency ν for two metals with different work functions — student should see two parallel straight lines with slope h/e, y-intercepts at −φ₁/e and −φ₂/e; annotate the threshold frequency for each and the universal slope. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/01-why-quantum-mechanics-fig-02.html`
+
+---
+
+### Figure 1.3 — Compton scattering geometry 
+
+Create a standalone D3 v7 HTML file for Figure Compton scattering geometry . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: Compton scattering geometry — incident photon moving horizontally, electron at rest, scattered photon at angle θ above the axis, recoiling electron at angle φ below; label all four momentum vectors with their magnitudes h/λ, h/λ', p_e; this is the diagram the derivation below requires. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/01-why-quantum-mechanics-fig-03.html`
+
+---
+
+### Figure 1.4 — Tonomura buildup sequence 
+
+Create a standalone D3 v7 HTML file for Figure Tonomura buildup sequence . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: Tonomura buildup sequence — four panels showing the detector at 10, 100, 1000, and 10000 electrons; the point-by-point accumulation resolving into a diffraction pattern is the visual argument that the wave is not a collective property of many electrons but a property of each one individually. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/01-why-quantum-mechanics-fig-04.html`
+
+---
+
+### Figure 1.5 — Franck–Hertz current vs
+
+Create a standalone D3 v7 HTML file for Figure Franck–Hertz current vs. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: Franck–Hertz current vs. accelerating voltage — student should see the periodic dips at 4.9 V, 9.8 V, 14.7 V; annotate each dip with the number of inelastic collisions it represents; a clean version of this curve is the entire argument for discrete energy levels made visible. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/01-why-quantum-mechanics-fig-05.html`

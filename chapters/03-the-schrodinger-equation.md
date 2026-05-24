@@ -42,7 +42,8 @@ In operator language, with the Hamiltonian $\hat{H} = \hat{p}^2/2m + V(\hat{x},t
 
 $$i\hbar\frac{\partial\psi}{\partial t} = \hat{H}\psi.$$
 
-<!-- → [INFOGRAPHIC: annotated anatomy of the time-dependent Schrödinger equation — label each term: left side "i ℏ ∂ψ/∂t" annotated as "energy × ψ (time derivative side)"; right side kinetic term "−ℏ²/2m · ∂²ψ/∂x²" annotated as "kinetic energy operator acting on ψ"; potential term "V(x,t)ψ" annotated as "potential energy"; show the classical analog E = p²/2m + V alongside; student should see the structural correspondence between classical energy equation and quantum operator equation] -->
+![Anatomy of the time-dependent Schrödinger equation ](images/03-the-schrodinger-equation-fig-01.png)
+*Figure 3.1 — Anatomy of the time-dependent Schrödinger equation *
 
 Three features the argument assembles but does not *prove*:
 
@@ -52,7 +53,8 @@ The equation is **first-order in time**: specifying $\psi$ at one instant determ
 
 The equation has **the factor of $i$**: without it, the equation becomes $\partial_t\psi = (\hbar/2m)\partial_x^2\psi$ — the diffusion equation. Solutions spread irreversibly; a localized initial condition smooths out and never recovers. The $i$ turns diffusion into wave propagation, and it is what ensures the integral $\int|\psi|^2 dx$ stays constant over time. We will prove that shortly.
 
-<!-- → [CHART: two side-by-side plots of an initially Gaussian wave packet evolving in time — left panel: the diffusion equation (no factor of i), showing a hump that spreads and flattens irreversibly over three time steps; right panel: the Schrödinger equation (with i), showing the envelope spreading while oscillations appear inside it, and the area under |ψ|² remaining constant; student should see the qualitative contrast between irreversible smoothing and norm-preserving wave evolution] -->
+![Two side-by-side plots of an initially Gaussian wave](images/03-the-schrodinger-equation-fig-02.png)
+*Figure 3.2 — Two side-by-side plots of an initially Gaussian wave*
 
 None of these is a consequence of the plausibility argument. They are properties of the equation that the equation itself carries. The plausibility argument motivates the *form* of the equation; experiment confirms that nature uses it.
 
@@ -82,7 +84,8 @@ $$P = \frac{2}{L}\int_0^{L/4}\sin^2\!\left(\frac{\pi x}{L}\right)dx = \frac{1}{L
 
 About 9%, not 25%. The ground-state probability density has a single peak in the center of the well; the leftmost quarter is depleted. This number — $1/4 - 1/2\pi$ — comes entirely from the wave function's shape, not from the particle's history. There is no trajectory. There is only the amplitude, squared.
 
-<!-- → [CHART: plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L] — shade the region [0, L/4] in a distinct color to show the 9% probability; also draw a dashed horizontal reference line at 1/L (the uniform distribution that would give 25%) so the student can see directly that the ground state is depleted near the walls and concentrated in the middle; label the shaded area "≈ 9%" and the unshaded central region] -->
+![Plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L]](images/03-the-schrodinger-equation-fig-03.png)
+*Figure 3.3 — Plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L]*
 
 The two misconceptions to dispose of now, rather than later. First: "$\psi$ is the particle." No — $\psi$ is the probability amplitude. What registers in a detector is the particle. Before detection, what exists is the amplitude. Second: "$|\psi|^2$ is telling you what you don't know about the particle's actual position, which has some definite value you just haven't measured." No. Bell-inequality experiments — Aspect 1982, refined many times since, awarded the 2022 Nobel Prize to Aspect, Clauser, and Zeilinger — rule out local hidden-variable theories that would make this story work. The probability is irreducible. It is not a stand-in for incomplete classical knowledge.
 
@@ -112,7 +115,8 @@ $$\frac{\partial\rho}{\partial t} + \frac{\partial j}{\partial x} = 0.$$
 
 This is the local statement of probability conservation. Probability does not disappear at one point and reappear somewhere else discontinuously — it flows. If probability is leaving a region, it is flowing across the boundary, and the rate of flow is $j$.
 
-<!-- → [INFOGRAPHIC: diagram of a 1D region [a, b] with probability density ρ(x,t) shaded inside — arrows at the left boundary labeled j(a,t) pointing inward and at the right boundary labeled j(b,t) pointing outward; annotation showing that the rate of change of total probability inside equals the net inflow j(a,t)−j(b,t); label the continuity equation ∂ρ/∂t + ∂j/∂x = 0 as the local version of this same bookkeeping; makes the physics of probability flow visible before the algebra] -->
+![Diagram of a 1D region [a, b] with](images/03-the-schrodinger-equation-fig-04.png)
+*Figure 3.4 — Diagram of a 1D region [a, b] with*
 
 To derive it: compute $\partial_t(\psi^*\psi)$, substitute the Schrödinger equation for $\partial_t\psi$ and $\partial_t\psi^*$, watch the potential terms cancel because $V$ is real, and recognize the remaining structure as $\partial_x(\psi^*\partial_x\psi - \psi\partial_x\psi^*)$ from the product rule. The derivation is a half-page exercise; each step is just the Schrödinger equation applied twice, once to $\psi$ and once to $\psi^*$.
 
@@ -136,7 +140,8 @@ Why "stationary"? Because $|\psi(x,t)|^2 = |\psi(x)|^2$ — the probability dens
 
 Now here is the misconception that ruins everything, and it ruins it in a specific way: *stationary states are not static.* The *probability density* is constant. The *amplitude* $\psi(x,t) = \psi(x)\,e^{-iEt/\hbar}$ rotates in the complex plane at angular frequency $E/\hbar$. The magnitude at each $x$ is fixed. The phase advances at rate $E/\hbar$. For a single stationary state in isolation, this phase rotation has no observable consequence, because measurements depend only on $|\psi|^2$, and $|e^{-iEt/\hbar}| = 1$. You cannot see it. But the moment you put two stationary states together, you can see nothing else.
 
-<!-- → [INFOGRAPHIC: two-panel diagram — left panel shows a single stationary state ψ(x)e^{−iEt/ℏ} as a vector of fixed length rotating in the complex plane at each spatial point x; right panel shows a superposition of two states at different energies, where the two phasors rotate at different rates and their relative angle — the Bohr frequency — produces a beating oscillation in |ψ|²; caption: "A single phasor rotating invisibly. Two phasors beating visibly."] -->
+![A single phasor rotating invisibly. Two phasors beating visibly.](images/03-the-schrodinger-equation-fig-05.png)
+*Figure 3.5 — Diagram *
 
 Form a superposition of states at energies $E_1$ and $E_2$:
 
@@ -162,7 +167,8 @@ $$\langle x\rangle(t) = \frac{L}{2} - \frac{16L}{9\pi^2}\cos(\omega t),\qquad \o
 
 The expectation value of position oscillates about the midpoint of the well with amplitude $16L/9\pi^2 \approx 0.18L$ at the Bohr frequency. The particle is not moving in any classical sense — there is no trajectory, no velocity, no definite position at any time. But the center of the probability distribution swings back and forth like a pendulum. This is a quantum state that radiates.
 
-<!-- → [CHART: animation-ready sequence of three snapshots of |ψ(x,t)|² for the ψ₁+ψ₂ superposition at t = 0, t = π/2ω, t = π/ω — showing the probability density hump shifting from left-of-center to symmetric to right-of-center and back; overlay a horizontal marker at ⟨x⟩(t) tracking the oscillation; caption should note the Bohr frequency ω = (E₂−E₁)/ℏ and the amplitude ≈ 0.18L] -->
+![Animation-ready sequence of three snapshots of |ψ(x,t)|² for](images/03-the-schrodinger-equation-fig-06.png)
+*Figure 3.6 — Animation-ready sequence of three snapshots of |ψ(x,t)|² for*
 
 ---
 
@@ -206,7 +212,8 @@ $$\psi(x,t) = \frac{1}{\sqrt{2\pi}}\int\phi(k)\,e^{i(kx - \omega(k)t)}\,dk.$$
 
 Because $\omega(k)$ is quadratic in $k$ — not linear — components at different momenta move at different speeds. The wave packet *spreads*. For a Gaussian initial packet of width $\sigma_0$, the position-space width grows as $\sigma(t) = \sigma_0\sqrt{1 + (\hbar t/2m\sigma_0^2)^2}$. At early times the spreading is slow; at late times the width grows linearly in $t$. This spreading is one of the first genuinely quantum predictions you can compute and check — and it has no classical analog for a particle. A baseball thrown in a definite direction stays on that trajectory. A quantum particle disperses.
 
-<!-- → [CHART: plot of Gaussian wave-packet width σ(t) vs. time t for two values of σ₀ (narrow and broad initial packet) — show σ(t) = σ₀√(1 + (ℏt/2mσ₀²)²) as a hyperbola; mark the "knee" where linear spreading begins (roughly t ~ 2mσ₀²/ℏ); also show σ(t) = constant as a dashed line for comparison with a classical particle that does not spread; student should see that the narrower the initial packet, the sooner and more dramatically it spreads] -->
+![Plot of Gaussian wave-packet width σ(t) vs](images/03-the-schrodinger-equation-fig-07.png)
+*Figure 3.7 — Plot of Gaussian wave-packet width σ(t) vs*
 
 ---
 
@@ -267,3 +274,69 @@ The following exercises are designed to be worked interactively with a language 
 5. The Nobel Prize in Physics 2022 — Aspect, Clauser, Zeilinger. https://www.nobelprize.org/prizes/physics/2022/
 6. Ghirardi, G. C., Rimini, A. & Weber, T. "Unified dynamics for microscopic and macroscopic systems." *Physical Review D* 34, 470–491 (1986).
 7. Zurek, W. H. "Decoherence, einselection, and the quantum origins of the classical." *Reviews of Modern Physics* 75, 715–775 (2003). https://doi.org/10.1103/RevModPhys.75.715
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 3.1 — Anatomy of the time-dependent Schrödinger equation 
+
+Create a standalone D3 v7 HTML file for Figure Anatomy of the time-dependent Schrödinger equation . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: annotated anatomy of the time-dependent Schrödinger equation — label each term: left side "i ℏ ∂ψ/∂t" annotated as "energy × ψ (time derivative side)"; right side kinetic term "−ℏ²/2m · ∂²ψ/∂x²" annotated as "kinetic energy operator acting on ψ"; potential term "V(x,t)ψ" annotated as "potential energy"; show the classical analog E = p²/2m + V alongside; student should see the structural correspondence between classical energy equation and quantum operator equation. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/03-the-schrodinger-equation-fig-01.html`
+
+---
+
+### Figure 3.2 — Two side-by-side plots of an initially Gaussian wave
+
+Create a standalone D3 v7 HTML file for Figure Two side-by-side plots of an initially Gaussian wave. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: two side-by-side plots of an initially Gaussian wave packet evolving in time — left panel: the diffusion equation (no factor of i), showing a hump that spreads and flattens irreversibly over three time steps; right panel: the Schrödinger equation (with i), showing the envelope spreading while oscillations appear inside it, and the area under |ψ|² remaining constant; student should see the qualitative contrast between irreversible smoothing and norm-preserving wave evolution. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/03-the-schrodinger-equation-fig-02.html`
+
+---
+
+### Figure 3.3 — Plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L]
+
+Create a standalone D3 v7 HTML file for Figure Plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L]. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L] — shade the region [0, L/4] in a distinct color to show the 9% probability; also draw a dashed horizontal reference line at 1/L (the uniform distribution that would give 25%) so the student can see directly that the ground state is depleted near the walls and concentrated in the middle; label the shaded area "≈ 9%" and the unshaded central region. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/03-the-schrodinger-equation-fig-03.html`
+
+---
+
+### Figure 3.4 — Diagram of a 1D region [a, b] with
+
+Create a standalone D3 v7 HTML file for Figure Diagram of a 1D region [a, b] with. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: diagram of a 1D region [a, b] with probability density ρ(x,t) shaded inside — arrows at the left boundary labeled j(a,t) pointing inward and at the right boundary labeled j(b,t) pointing outward; annotation showing that the rate of change of total probability inside equals the net inflow j(a,t)−j(b,t); label the continuity equation ∂ρ/∂t + ∂j/∂x = 0 as the local version of this same bookkeeping; makes the physics of probability flow visible before the algebra. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/03-the-schrodinger-equation-fig-04.html`
+
+---
+
+### Figure 3.5 — Diagram 
+
+Create a standalone D3 v7 HTML file for Figure Diagram . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: two-panel diagram — left panel shows a single stationary state ψ(x)e^{−iEt/ℏ} as a vector of fixed length rotating in the complex plane at each spatial point x; right panel shows a superposition of two states at different energies, where the two phasors rotate at different rates and their relative angle — the Bohr frequency — produces a beating oscillation in |ψ|²; caption: "A single phasor rotating invisibly. Two phasors beating visibly.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/03-the-schrodinger-equation-fig-05.html`
+
+---
+
+### Figure 3.6 — Animation-ready sequence of three snapshots of |ψ(x,t)|² for
+
+Create a standalone D3 v7 HTML file for Figure Animation-ready sequence of three snapshots of |ψ(x,t)|² for. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: animation-ready sequence of three snapshots of |ψ(x,t)|² for the ψ₁+ψ₂ superposition at t = 0, t = π/2ω, t = π/ω — showing the probability density hump shifting from left-of-center to symmetric to right-of-center and back; overlay a horizontal marker at ⟨x⟩(t) tracking the oscillation; caption should note the Bohr frequency ω = (E₂−E₁)/ℏ and the amplitude ≈ 0.18L. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/03-the-schrodinger-equation-fig-06.html`
+
+---
+
+### Figure 3.7 — Plot of Gaussian wave-packet width σ(t) vs
+
+Create a standalone D3 v7 HTML file for Figure Plot of Gaussian wave-packet width σ(t) vs. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: plot of Gaussian wave-packet width σ(t) vs. time t for two values of σ₀ (narrow and broad initial packet) — show σ(t) = σ₀√(1 + (ℏt/2mσ₀²)²) as a hyperbola; mark the "knee" where linear spreading begins (roughly t ~ 2mσ₀²/ℏ); also show σ(t) = constant as a dashed line for comparison with a classical particle that does not spread; student should see that the narrower the initial packet, the sooner and more dramatically it spreads. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/03-the-schrodinger-equation-fig-07.html`

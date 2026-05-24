@@ -16,7 +16,8 @@ Things with a continuously varying phase look like $e^{i\varphi}$. And $e^{i\var
 
 This is not a convenient choice. The experiment doesn't give you an alternative.
 
-<!-- → [IMAGE: double-slit experiment diagram with single-electron sequential buildup — left panel shows random-looking scatter after ~100 electrons, right panel shows clear interference fringes after ~10,000 electrons; caption should note that each dot is a single detection event, no wave visible in individual hits] -->
+![Double-slit experiment diagram with single-electron sequential buildup ](images/02-mathematical-foundations-fig-01.png)
+*Figure 2.1 — Double-slit experiment diagram with single-electron sequential buildup *
 
 ---
 
@@ -36,7 +37,8 @@ If you want to see why, expand $e^{i\theta}$, $\cos\theta$, and $\sin\theta$ in 
 
 The three facts you will use over and over:
 
-<!-- → [INFOGRAPHIC: the complex plane showing a point z = re^{iθ} — label the real axis, imaginary axis, modulus r as the radial distance, angle θ, and the unit circle |z|=1 with e^{iθ} marked on it; arrows showing that conjugation flips θ to −θ and multiplication adds angles] -->
+![The complex plane showing a point z =](images/02-mathematical-foundations-fig-02.png)
+*Figure 2.2 — The complex plane showing a point z =*
 
 - $|e^{i\theta}| = 1$ for any real $\theta$. A pure phase factor doesn't change the size of anything.
 - $e^{i\theta_1} \cdot e^{i\theta_2} = e^{i(\theta_1 + \theta_2)}$. Phases add when complex numbers multiply.
@@ -60,7 +62,8 @@ $$|\psi|^2 = 2\cos^2\!\left(\frac{kd\sin\theta}{2}\right).$$
 
 Maxima where $d\sin\theta = n\lambda$; zeros where $d\sin\theta = (n + 1/2)\lambda$. Bright and dark bands, exactly as observed. The complex exponentials made this calculation work in four lines. Try it with real numbers: the cross term is $2\psi_1\psi_2$, a fixed sign, no oscillation. No dark bands. No double slit experiment.
 
-<!-- → [CHART: plot of |ψ|² = 2cos²(kd sinθ / 2) vs. sinθ for a chosen d/λ — show several bright fringes and deep zeros; add a second trace showing what |ψ|² would look like with real amplitudes (featureless or monotone), so the student sees the contrast directly] -->
+![Plot of |ψ|² = 2cos²(kd sinθ / 2)](images/02-mathematical-foundations-fig-03.png)
+*Figure 2.3 — Plot of |ψ|² = 2cos²(kd sinθ / 2)*
 
 Stueckelberg showed in 1960 that you can reformulate quantum mechanics with real numbers if you double the dimension of every space — one extra real dimension to replace each complex one. What you cannot do is reformulate it with real numbers *in the same dimension*. And Renou and collaborators published an experiment in 2021 that directly tested a whole class of real-amplitude reformulations using Bell inequalities — and ruled them out [Renou et al., *Nature* 600, 625–629 (2021), *verify pagination*]. The complex numbers are not a convention. They are measured.
 
@@ -104,7 +107,12 @@ P. A. M. Dirac introduced the bra-ket notation in 1939 [Dirac, *Math. Proc. Camb
 
 **Outer product.** $|\psi\rangle\langle\phi|$ is an *operator*: it takes a ket $|\chi\rangle$ to the ket $|\psi\rangle\,(\langle\phi|\chi\rangle)$, which is a complex number times $|\psi\rangle$.
 
-<!-- → [TABLE: four-row summary of Dirac notation objects — columns: name, symbol, what it is, concrete form in ℂ²; rows: ket (|ψ⟩, state vector, column), bra (⟨ψ|, dual vector/row, conjugate-transposed column), inner product (⟨φ|ψ⟩, complex number, row × column), outer product (|ψ⟩⟨φ|, operator, column × row = 2×2 matrix)] -->
+| name | symbol | what it is | concrete form in ℂ² |
+| --- | --- | --- | --- |
+| ket (/ψ⟩, state vector, column | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| bra (⟨ψ/, dual vector | row, conjugate-transposed column | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| inner product (⟨φ/ψ⟩, complex number, row × column | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| outer product (/ψ⟩⟨φ/, operator, column × row = 2×2 matrix | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
 
 Two identities anchor everything that follows. The first is the *completeness relation*. Take any orthonormal basis $\{|n\rangle\}$ of the space — a set of mutually orthogonal unit vectors that spans the whole space, meaning $\langle m|n\rangle = \delta_{mn}$ and every state can be expanded in them. Then:
 
@@ -156,7 +164,11 @@ The spin-1/2 system is the cleanest possible quantum system: two-dimensional Hil
 
 The three Pauli matrices are
 
-<!-- → [TABLE: the three Pauli matrices side by side — columns: σ_x, σ_y, σ_z; rows: matrix entries, eigenvalues, eigenvectors (written in ket notation), physical meaning (spin-x/y/z observable); highlight that σ_y is the only one with purely imaginary off-diagonal entries, making it the clearest example of Hermitian ≠ symmetric] -->
+| σ_x | σ_y | σ_z |
+| --- | --- | --- |
+| matrix entries, eigenvalues, eigenvectors (written in ket notation | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| physical meaning (spin-x | y | z observable |
+| highlight that σ_y is the only one with purely imaginary off-diagonal entries, making it the clearest example of Hermitian ≠ symmetric | Use the chapter example as the concrete test case. | A concrete checkpoint for applying the chapter concept. |
 
 $$\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \qquad \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.$$
 
@@ -184,7 +196,8 @@ $$\sigma_x|\!\uparrow\rangle = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begi
 
 The spin-$z$-up state is not a spin-$x$ eigenstate; acting with $\sigma_x$ takes it to the orthogonal state. To find the measurement probabilities, expand $|\!\uparrow\rangle$ in the $\sigma_x$ eigenbasis. Inverting the relations above: $|\!\uparrow\rangle = (1/\sqrt{2})(|+_x\rangle + |-_x\rangle)$. The probability of measuring $\sigma_x = +1$ in the state $|\!\uparrow\rangle$ is $|\langle +_x|\!\uparrow\rangle|^2 = |1/\sqrt{2}|^2 = 1/2$. Fifty-fifty. A particle known to be spin-up along $z$ is completely undetermined along $x$. That is the Stern–Gerlach experiment, written in basis-change arithmetic.
 
-<!-- → [IMAGE: Stern-Gerlach apparatus diagram showing sequential measurements — first magnet along z splits beam into ↑ and ↓; second magnet along x then splits the ↑ beam into +x and −x with equal probability; student should see that certainty in z produces 50/50 uncertainty in x, which is the physical content of the basis-change calculation above] -->
+![Stern-Gerlach apparatus diagram showing sequential measurements ](images/02-mathematical-foundations-fig-04.png)
+*Figure 2.4 — Stern-Gerlach apparatus diagram showing sequential measurements *
 
 ---
 
@@ -210,7 +223,8 @@ $$-i\hbar\int\phi^*\frac{d\psi}{dx}\,dx = +i\hbar\int\frac{d\phi^*}{dx}\psi\,dx.
 
 Two things to notice. First: the $-i$ in $\hat{p} = -i\hbar\,d/dx$ is load-bearing. Without it, $d/dx$ is *anti-Hermitian* ($\hat{A}^\dagger = -\hat{A}$) by the same argument; the $-i$ rotates anti-Hermitian to Hermitian. Every basic QM operator carries these factors of $i$ for exactly this reason. Second: the proof used the boundary conditions. On a finite interval with states that don't vanish at the endpoints, the boundary term does not necessarily vanish, and $\hat{p}$ may not be Hermitian on that domain. The domain is part of the definition of the operator. In infinite dimensions, *Hermitian* and *self-adjoint* are not the same thing — a Hermitian operator might have eigenstates but lack a complete eigenbasis, or fail to admit a unique unambiguous extension to its full domain. Griffiths' footnotes acknowledge this; Reed and Simon *Methods of Modern Mathematical Physics* Vol. 2 is the reference for when it matters. It will matter again in Unit 4 when half-line problems first appear.
 
-<!-- → [INFOGRAPHIC: annotated integration-by-parts steps for the momentum Hermiticity proof — show the key line ∫φ*(dψ/dx)dx → boundary term + remaining integral, with an arrow marking "boundary term vanishes for L² functions" and a second arrow showing the sign flip that completes the proof; makes the one-page calculation scannable at a glance] -->
+![Integration-by-parts steps for the momentum Hermiticity proof ](images/02-mathematical-foundations-fig-05.png)
+*Figure 2.5 — Integration-by-parts steps for the momentum Hermiticity proof *
 
 ---
 
@@ -269,3 +283,53 @@ The following exercises are designed to be worked interactively with a language 
 4. Reed, M. & Simon, B. *Methods of Modern Mathematical Physics, Vol. II: Fourier Analysis, Self-Adjointness*. Academic Press, 1975.
 5. Bender, C. M. & Boettcher, S. "Real Spectra in Non-Hermitian Hamiltonians Having PT Symmetry." *Physical Review Letters* 80, 5243 (1998). https://doi.org/10.1103/PhysRevLett.80.5243
 6. Adler, S. L. *Quaternionic Quantum Mechanics and Quantum Fields*. Oxford University Press, 1995.
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 2.1 — Double-slit experiment diagram with single-electron sequential buildup 
+
+Create a standalone D3 v7 HTML file for Figure Double-slit experiment diagram with single-electron sequential buildup . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: double-slit experiment diagram with single-electron sequential buildup — left panel shows random-looking scatter after ~100 electrons, right panel shows clear interference fringes after ~10,000 electrons; caption should note that each dot is a single detection event, no wave visible in individual hits. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/02-mathematical-foundations-fig-01.html`
+
+---
+
+### Figure 2.2 — The complex plane showing a point z =
+
+Create a standalone D3 v7 HTML file for Figure The complex plane showing a point z =. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: the complex plane showing a point z = re^{iθ} — label the real axis, imaginary axis, modulus r as the radial distance, angle θ, and the unit circle |z|=1 with e^{iθ} marked on it; arrows showing that conjugation flips θ to −θ and multiplication adds angles. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/02-mathematical-foundations-fig-02.html`
+
+---
+
+### Figure 2.3 — Plot of |ψ|² = 2cos²(kd sinθ / 2)
+
+Create a standalone D3 v7 HTML file for Figure Plot of |ψ|² = 2cos²(kd sinθ / 2). Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: plot of |ψ|² = 2cos²(kd sinθ / 2) vs. sinθ for a chosen d/λ — show several bright fringes and deep zeros; add a second trace showing what |ψ|² would look like with real amplitudes (featureless or monotone), so the student sees the contrast directly. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/02-mathematical-foundations-fig-03.html`
+
+---
+
+### Figure 2.4 — Stern-Gerlach apparatus diagram showing sequential measurements 
+
+Create a standalone D3 v7 HTML file for Figure Stern-Gerlach apparatus diagram showing sequential measurements . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: Stern-Gerlach apparatus diagram showing sequential measurements — first magnet along z splits beam into ↑ and ↓; second magnet along x then splits the ↑ beam into +x and −x with equal probability; student should see that certainty in z produces 50/50 uncertainty in x, which is the physical content of the basis-change calculation above. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/02-mathematical-foundations-fig-04.html`
+
+---
+
+### Figure 2.5 — Integration-by-parts steps for the momentum Hermiticity proof 
+
+Create a standalone D3 v7 HTML file for Figure Integration-by-parts steps for the momentum Hermiticity proof . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: annotated integration-by-parts steps for the momentum Hermiticity proof — show the key line ∫φ*(dψ/dx)dx → boundary term + remaining integral, with an arrow marking "boundary term vanishes for L² functions" and a second arrow showing the sign flip that completes the proof; makes the one-page calculation scannable at a glance. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/02-mathematical-foundations-fig-05.html`

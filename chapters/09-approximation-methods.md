@@ -49,7 +49,8 @@ $$E_n^{(2)} = \sum_{m \neq n}\frac{|\langle m^{(0)} | \hat{H}' | n^{(0)}\rangle|
 
 For the ground state, every denominator $E_0^{(0)} - E_m^{(0)}$ is negative and every numerator is non-negative, so $E_0^{(2)} \leq 0$ always. The second-order correction to the ground-state energy is always non-positive. This is *level repulsion*: a perturbation pushes the ground state down and excited states up, more strongly the closer the levels are. The effect runs through band-structure physics, nuclear physics, and quantum chemistry wherever two levels come near each other and avoid crossing.
 
-<!-- → [DIAGRAM: energy-level diagram showing level repulsion — two unperturbed levels (dashed) close in energy, with arrows showing the lower level pushed down and upper level pushed up by the perturbation; label the gap and the off-diagonal matrix element; student should see why small gaps produce large corrections and why the ground state always goes down] -->
+![Energy-level diagram showing level repulsion ](images/09-approximation-methods-fig-01.png)
+*Figure 9.1 — Energy-level diagram showing level repulsion *
 
 One thing to say explicitly about convergence: the perturbation series often does not converge in the usual sense. Freeman Dyson argued in 1952 that QED perturbation theory must be an asymptotic series with zero radius of convergence. The physical reason: if you flip the sign of the electric charge from $+e$ to $-e$, electrons would attract each other and the vacuum would be unstable. So the series cannot be analytic at the origin in the coupling constant, and the radius of convergence is zero. The series diverges if you sum it term by term — but the first few terms give excellent numerical results anyway, because the series is *asymptotically* accurate near the expansion point. Perturbation theory is useful precisely because the first few terms are accurate, not because the series converges.
 
@@ -71,7 +72,8 @@ $$W = \begin{pmatrix} 0 & -3e\mathcal{E} a_0 \\ -3e\mathcal{E} a_0 & 0 \end{pmat
 
 with eigenvalues $\pm 3e\mathcal{E} a_0$. The $|2p_x\rangle$ and $|2p_y\rangle$ states are untouched — no matrix elements connect them to anything. So the $n=2$ manifold of hydrogen splits *linearly* with the electric field: two outer states shifted by $\pm 3e\mathcal{E} a_0$, two inner states unshifted. This is the linear Stark effect. It occurs because the accidental degeneracy of $|2s\rangle$ and $|2p_z\rangle$ in hydrogen allows the perturbation to mix them at first order in a way that produces a net dipole moment.
 
-<!-- → [DIAGRAM: hydrogen n=2 energy-level splitting diagram — four degenerate levels on the left; on the right, two levels shifted by ±3eεa₀ and two unshifted levels, with the electric field ε on the horizontal axis; arrows showing which states mix (2s and 2p_z) and which are unaffected (2p_x, 2p_y); label the linear splitting] -->
+![Hydrogen n=2 energy-level splitting diagram ](images/09-approximation-methods-fig-02.png)
+*Figure 9.2 — Hydrogen n=2 energy-level splitting diagram *
 
 ---
 
@@ -105,7 +107,8 @@ $$E_{\text{var}} = -(Z^*)^2 = -(27/16)^2 \approx -2.848\ \text{Hartree} \approx 
 
 The experimental value is $-79.0$ eV. The one-parameter variational result is within 2% — and it has a clear physical story: each electron sees an effective nuclear charge of about 1.69 because the other electron screens 5/16 of the bare charge of 2.
 
-<!-- → [CHART: ⟨H⟩(Z*) vs Z* for helium — a parabola-like curve with a clear minimum at Z* = 27/16 ≈ 1.69; mark the minimum energy −2.848 Hartree with a horizontal dashed line and the experimental value −2.904 Hartree below it; student should see that the variational estimate is above experiment, confirming the upper-bound property] -->
+![⟨H⟩(Z*) vs Z* for helium ](images/09-approximation-methods-fig-03.png)
+*Figure 9.3 — ⟨H⟩(Z*) vs Z* for helium *
 
 One thing to be careful about: the variational method gives you the ground-state *energy* reliably, not necessarily the ground-state *wave function* for other purposes. The energy converges much faster than the wave function, so variational energies are accurate to many decimal places in modern quantum chemistry while observables that depend sensitively on the wave function — like the charge density at the nucleus — require more care.
 
@@ -163,7 +166,8 @@ This is the central result. Let $\Omega = \omega_{fi} - \omega$ be the detuning 
 
 $$\frac{\sin^2(\Omega t/2)}{\Omega^2} \to \frac{\pi t}{2}\,\delta(\Omega).$$
 
-<!-- → [CHART: sin²(Ωt/2)/Ω² vs Ω for three values of t (small, medium, large) — student should see the peak narrowing and heightening as t increases, and understand visually why the long-time limit is a delta function; annotate the peak width ~1/t and peak height ~t²/4] -->
+![Sin²(Ωt/2)/Ω² vs Ω for three values of t](images/09-approximation-methods-fig-04.png)
+*Figure 9.4 — Sin²(Ωt/2)/Ω² vs Ω for three values of t*
 
 Substitute and simplify:
 
@@ -203,7 +207,9 @@ Let me say what each method is actually for.
 
 The deeper unity: all five methods are approximations to the same Schrödinger equation under different conditions. Perturbation theory expands in a small parameter. The variational method constrains the search to a family of trial states. WKB expands in $\hbar$. Time-dependent perturbation theory expands in the coupling strength and takes a specific limit. What determines which method to use is not what the textbook chapter is titled — it is what the physical problem is actually asking.
 
-<!-- → [TABLE: method selection guide — columns: method, when to use it, what it requires, what it gives you, canonical example; rows for non-degenerate PT, degenerate PT, variational, WKB, Fermi's golden rule; the student should be able to scan this before a problem set and pick the right tool] -->
+| method | when to use it | what it requires | what it gives you | canonical example |
+| --- | --- | --- | --- | --- |
+| method selection guide — | A concrete checkpoint for applying the chapter concept. | A specific, evidence-linked version that readers can verify. | A concrete checkpoint for applying the chapter concept. | Use the chapter example as the concrete test case. |
 
 ---
 
@@ -260,3 +266,45 @@ Knowing which kind of approximation you are using — a convergent expansion, an
 3. Fermi, E. *Nuclear Physics: A Course Given by Enrico Fermi at the University of Chicago*. U. Chicago Press, 1950.
 4. Dyson, F. J. "Divergence of Perturbation Theory in Quantum Electrodynamics." *Physical Review* 85, 631–632 (1952). https://doi.org/10.1103/PhysRev.85.631
 5. Bender, C. M. & Wu, T. T. "Anharmonic Oscillator." *Physical Review* 184, 1231–1260 (1969). https://doi.org/10.1103/PhysRev.184.1231
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 9.1 — Energy-level diagram showing level repulsion 
+
+Create a standalone D3 v7 HTML file for Figure Energy-level diagram showing level repulsion . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: energy-level diagram showing level repulsion — two unperturbed levels (dashed) close in energy, with arrows showing the lower level pushed down and upper level pushed up by the perturbation; label the gap and the off-diagonal matrix element; student should see why small gaps produce large corrections and why the ground state always goes down. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/09-approximation-methods-fig-01.html`
+
+---
+
+### Figure 9.2 — Hydrogen n=2 energy-level splitting diagram 
+
+Create a standalone D3 v7 HTML file for Figure Hydrogen n=2 energy-level splitting diagram . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: hydrogen n=2 energy-level splitting diagram — four degenerate levels on the left; on the right, two levels shifted by ±3eεa₀ and two unshifted levels, with the electric field ε on the horizontal axis; arrows showing which states mix (2s and 2p_z) and which are unaffected (2p_x, 2p_y); label the linear splitting. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/09-approximation-methods-fig-02.html`
+
+---
+
+### Figure 9.3 — ⟨H⟩(Z*) vs Z* for helium 
+
+Create a standalone D3 v7 HTML file for Figure ⟨H⟩(Z*) vs Z* for helium . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: ⟨H⟩(Z*) vs Z* for helium — a parabola-like curve with a clear minimum at Z* = 27/16 ≈ 1.69; mark the minimum energy −2.848 Hartree with a horizontal dashed line and the experimental value −2.904 Hartree below it; student should see that the variational estimate is above experiment, confirming the upper-bound property. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/09-approximation-methods-fig-03.html`
+
+---
+
+### Figure 9.4 — Sin²(Ωt/2)/Ω² vs Ω for three values of t
+
+Create a standalone D3 v7 HTML file for Figure Sin²(Ωt/2)/Ω² vs Ω for three values of t. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: sin²(Ωt/2)/Ω² vs Ω for three values of t (small, medium, large) — student should see the peak narrowing and heightening as t increases, and understand visually why the long-time limit is a delta function; annotate the peak width ~1/t and peak height ~t²/4. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/09-approximation-methods-fig-04.html`

@@ -68,7 +68,8 @@ $$\hat{L}_z(\hat{L}_+|\ell, m\rangle) = (\hat{L}_+\hat{L}_z + \hbar\hat{L}_+)|\e
 
 So $\hat{L}_+|\ell, m\rangle$ is an eigenstate of $\hat{L}_z$ with eigenvalue $(m+1)\hbar$. The raising operator climbs the ladder of $m$-values one rung at a time, staying at the same $\hat{L}^2$ eigenvalue throughout. The lowering operator $\hat{L}_-$ descends by one rung.
 
-<!-- → [DIAGRAM: ladder diagram showing m-values from −ℓ to +ℓ as horizontal rungs on a vertical ladder, with ↑ arrows labeled L̂₊ and ↓ arrows labeled L̂₋; the top rung labeled mₘₐₓ = ℓ with L̂₊|ℓ,ℓ⟩ = 0, and bottom rung mₘᵢₙ = −ℓ with L̂₋|ℓ,−ℓ⟩ = 0; student should see the bounded structure before the algebra proves it] -->
+![Ladder diagram showing m-values from −ℓ to +ℓ](images/07-angular-momentum-fig-01.png)
+*Figure 7.1 — Ladder diagram showing m-values from −ℓ to +ℓ*
 
 The ladder cannot extend forever, because expectation values are bounded. The operator $\hat{L}^2 - \hat{L}_z^2 = \hat{L}_x^2 + \hat{L}_y^2$ is a sum of squared Hermitian operators, so its expectation value is non-negative in any state:
 
@@ -112,7 +113,8 @@ The first few spherical harmonics, for orientation:
 
 $$Y_{0,0} = \frac{1}{\sqrt{4\pi}}, \qquad Y_{1,0} = \sqrt{\frac{3}{4\pi}}\cos\theta, \qquad Y_{1,\pm 1} = \mp\sqrt{\frac{3}{8\pi}}\sin\theta\,e^{\pm i\phi}.$$
 
-<!-- → [IMAGE: polar plots of |Y_{ℓm}(θ,φ)|² for ℓ = 0 (sphere), ℓ = 1 m = 0 (dumbbell along z), and ℓ = 1 m = ±1 (torus around z) — student should see the azimuthal symmetry of m = ±1 and the z-axis preference of m = 0, and understand why the real p_x, p_y combinations point along x and y instead] -->
+![Polar plots of |Y_{ℓm}(θ,φ)|² for ℓ = 0](images/07-angular-momentum-fig-02.png)
+*Figure 7.2 — Polar plots of |Y_{ℓm}(θ,φ)|² for ℓ = 0*
 
 One thing worth saying about the chemists' $p$ orbitals, because the confusion is universal. The familiar $p_x$ and $p_y$ orbitals are real-valued combinations of $Y_{1,\pm 1}$:
 
@@ -211,7 +213,8 @@ The singlet has three properties worth naming slowly.
 
 So far this could be classical — like a pair of gloves separated into two boxes, each definite but unknown until observed. The non-classical part is the rotational invariance. Because the singlet has the same form in every basis, the same perfect anti-correlation holds for $S_x$, $S_y$, or any axis $\hat{n}$: the two outcomes are always opposite. Verify: writing $|0,0\rangle$ in the $|+x\rangle, |-x\rangle$ basis gives $(1/\sqrt{2})(|+x\rangle_1|-x\rangle_2 - |-x\rangle_1|+x\rangle_2)$. Perfect anti-correlation along $\hat{x}$, not just $\hat{z}$.
 
-<!-- → [DIAGRAM: two-particle singlet measurement schematic — source in center emitting two particles in opposite directions, each particle heading toward a Stern–Gerlach apparatus whose orientation can be rotated; labels showing that whatever axis Alice measures, Bob's outcome is always opposite; the rotational freedom of the detectors is what makes the Bell argument possible] -->
+![Two-particle singlet measurement schematic ](images/07-angular-momentum-fig-03.png)
+*Figure 7.3 — Two-particle singlet measurement schematic *
 
 The question Einstein, Podolsky, and Rosen raised in 1935 is: does each particle "carry" a pre-existing definite value for $S_z$, $S_x$, and every other direction simultaneously — values that the measurement merely reveals? David Bohm reformulated their argument in terms of the spin singlet in 1951, making it more tractable. John Bell answered it in 1964 with an inequality: if pre-existing definite values exist, the correlations between measurements on the two particles must satisfy a certain bound. Quantum mechanics, via the singlet, predicts a violation of that bound. Experiment has confirmed the violation repeatedly. Chapter 10 does the full calculation. What this chapter has done is build the state on which the argument rests. Now you know where $|0,0\rangle$ came from, what its three properties mean, and why it cannot be reduced to anything simpler.
 
@@ -264,3 +267,37 @@ The student who asked the right question in office hours now has the answer. The
 3. Einstein, A., Podolsky, B. & Rosen, N. "Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?" *Physical Review* 47, 777–780 (1935). https://doi.org/10.1103/PhysRev.47.777
 4. Bohm, D. *Quantum Theory*. Prentice Hall, 1951, Ch. 22.
 5. Bell, J. S. "On the Einstein-Podolsky-Rosen paradox." *Physics Physique Fizika* 1, 195–200 (1964).
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 7.1 — Ladder diagram showing m-values from −ℓ to +ℓ
+
+Create a standalone D3 v7 HTML file for Figure Ladder diagram showing m-values from −ℓ to +ℓ. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: ladder diagram showing m-values from −ℓ to +ℓ as horizontal rungs on a vertical ladder, with ↑ arrows labeled L̂₊ and ↓ arrows labeled L̂₋; the top rung labeled mₘₐₓ = ℓ with L̂₊|ℓ,ℓ⟩ = 0, and bottom rung mₘᵢₙ = −ℓ with L̂₋|ℓ,−ℓ⟩ = 0; student should see the bounded structure before the algebra proves it. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/07-angular-momentum-fig-01.html`
+
+---
+
+### Figure 7.2 — Polar plots of |Y_{ℓm}(θ,φ)|² for ℓ = 0
+
+Create a standalone D3 v7 HTML file for Figure Polar plots of |Y_{ℓm}(θ,φ)|² for ℓ = 0. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: polar plots of |Y_{ℓm}(θ,φ)|² for ℓ = 0 (sphere), ℓ = 1 m = 0 (dumbbell along z), and ℓ = 1 m = ±1 (torus around z) — student should see the azimuthal symmetry of m = ±1 and the z-axis preference of m = 0, and understand why the real p_x, p_y combinations point along x and y instead. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/07-angular-momentum-fig-02.html`
+
+---
+
+### Figure 7.3 — Two-particle singlet measurement schematic 
+
+Create a standalone D3 v7 HTML file for Figure Two-particle singlet measurement schematic . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: two-particle singlet measurement schematic — source in center emitting two particles in opposite directions, each particle heading toward a Stern–Gerlach apparatus whose orientation can be rotated; labels showing that whatever axis Alice measures, Bob's outcome is always opposite; the rotational freedom of the detectors is what makes the Bell argument possible. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/07-angular-momentum-fig-03.html`

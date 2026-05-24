@@ -43,7 +43,9 @@ $$\langle \psi(t)|\psi(t)\rangle = \langle\psi(0)|\hat{U}^\dagger\hat{U}|\psi(0)
 
 requires $\hat{U}^\dagger\hat{U} = \hat{1}$. Unitarity is the algebraic encoding of "total probability is always one."
 
-<!-- → [TABLE: five-postulate summary — columns: postulate number, name, one-sentence statement, physical requirement enforced; rows for State/Hilbert space, Observables/Hermitian, Born rule/probability, Collapse/measurement, Time evolution/unitarity — the table the student can use as a checklist when reconstructing the theory from scratch] -->
+| postulate number | name | one-sentence statement | physical requirement enforced |
+| --- | --- | --- | --- |
+| the student can use as a checklist when reconstructing the theory from scratch | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
 
 One structural observation that matters: Postulates 1, 2, 3, and 5 are uncontroversial among working physicists. Every interpretation of quantum mechanics uses them unchanged. Postulate 4 is where the interpretations diverge. Copenhagen accepts collapse as a postulate. Many-Worlds denies collapse happens at all. Bohmian mechanics replaces it with a deterministic guidance equation. The mathematics is the same across all these views; the story about what the mathematics is describing is not. Hold that structure in mind from here on — four settled postulates, one contested postulate, and a century of literature trying to figure out what to do about the contested one.
 
@@ -87,7 +89,8 @@ $$\sigma_A^2\sigma_B^2 \;\geq\; \frac{1}{4}\bigl|\langle[\hat{A}, \hat{B}]\rangl
 
 which is the Robertson bound. That is the whole proof: Cauchy–Schwarz on shifted operators, isolate the imaginary part, the commutator falls out.
 
-<!-- → [DIAGRAM: proof structure flowchart — boxes for (1) define shifted operators A', B'; (2) form vectors |f⟩ = A'|ψ⟩, |g⟩ = B'|ψ⟩; (3) apply Cauchy–Schwarz; (4) bound |z|² ≥ (Im z)²; (5) extract imaginary part as commutator; (6) Robertson bound — arrows connecting each step; student should see the logical chain at a glance before working through the algebra] -->
+![Proof structure flowchart ](images/05-quantum-formalism-fig-01.png)
+*Figure 5.1 — Proof structure flowchart *
 
 For position and momentum, $[\hat{x}, \hat{p}] = i\hbar$ — a constant, independent of the state — so $|\langle[\hat{x}, \hat{p}]\rangle| = \hbar$ for every state, and
 
@@ -105,7 +108,9 @@ Now the balloon analogy correction, stated precisely. The Robertson bound is a s
 
 The balloon analogy gets the order-of-magnitude answer right and is faithful to Heisenberg's 1927 pedagogical motivation. But it gives a wrong picture of what the inequality is. A student trained on the balloon will conflate state preparation with measurement disturbance — which is exactly the conflation physicists worked out of the theory by 1930. Masanao Ozawa, in 2003, formalized the measurement-disturbance version into its own separate inequality, one that mixes the state uncertainty with the apparatus noise and the disturbance the apparatus inflicts on subsequent measurements. Experimental tests (Erhart et al., *Nature Physics*, 2012) confirmed Ozawa's version and showed that the measurement-disturbance product can be made *smaller* than the naive Heisenberg microscope suggests. The Robertson bound is preparation uncertainty. Ozawa's is measurement-disturbance uncertainty. They are related but not the same inequality, and the balloon never told you there were two.
 
-<!-- → [TABLE: Heisenberg 1927 vs. Robertson 1929 vs. Ozawa 2003 — columns: paper, year, type of uncertainty, what varies, mathematical form, what it says about measurement; three rows one per paper — the student should see that the three are related but distinct and that the balloon conflates rows 1 and 2] -->
+| paper | year | type of uncertainty | what varies | mathematical form |
+| --- | --- | --- | --- | --- |
+| Heisenberg 1927 vs. Robertson 1929 vs. Ozawa 2003 — | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
 
 **The ground state saturates the bound.** This is the claim that ties the formalism back to Chapter 4. The harmonic-oscillator ground state is
 
@@ -169,7 +174,9 @@ The live interpretations diverge here. The chapter names them; it does not adjud
 
 **Decoherence** (Zurek and others, circa 1970s onward). Not strictly an interpretation — a mechanism. Interaction with the environment rapidly suppresses interference between macroscopically distinct states, producing apparent classical behavior. Decoherence explains why you do not see superpositions of a live cat and a dead cat. It does not explain which specific outcome you observe — it eliminates the off-diagonal coherences but leaves the diagonal terms, and the question of which diagonal term you got is exactly the measurement problem restated. Decoherence is part of the answer every interpretation must incorporate. It is not a complete answer by itself.
 
-<!-- → [TABLE: interpretation comparison — columns: name, what replaces collapse, what ψ represents, strength, weakness; rows for Copenhagen, Many-Worlds, Bohmian, QBism, Dynamical Collapse, Decoherence — the student needs to see these side by side to keep them straight; the "what replaces collapse" column is the key one] -->
+| name | what replaces collapse | what ψ represents | strength | weakness |
+| --- | --- | --- | --- | --- |
+| interpretation comparison — | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
 
 In 2013, Maximilian Schlosshauer, Johannes Kofler, and Anton Zeilinger surveyed 33 physicists at a specialist foundations conference. The most popular position was Copenhagen-flavored (around 42%), followed by information-based or QBism-adjacent views (around 24%), then Many-Worlds (around 18%), with smaller minorities for Bohm, collapse models, and others. The sample is small and self-selected — these were foundations specialists, not a random draw of physicists — but the headline is robust: *there is no consensus*. Working physicists disagree about what their own most successful theory is describing.
 
@@ -247,3 +254,21 @@ A working physicist can compute with all five postulates without committing to a
 8. Schlosshauer, M., Kofler, J. & Zeilinger, A. "A Snapshot of Foundational Attitudes Toward Quantum Mechanics." *Studies in History and Philosophy of Modern Physics* 44, 222–230 (2013). https://doi.org/10.1016/j.shpsb.2013.04.004
 9. Frauchiger, D. & Renner, R. "Quantum theory cannot consistently describe the use of itself." *Nature Communications* 9, 3711 (2018). https://doi.org/10.1038/s41467-018-05739-8
 10. Wigner, E. P. "Remarks on the Mind-Body Question," in *The Scientist Speculates*, ed. I. J. Good, Heinemann (1961), pp. 284–302.
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 5.1 — Proof structure flowchart 
+
+Create a standalone D3 v7 HTML file for Figure Proof structure flowchart . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: proof structure flowchart — boxes for (1) define shifted operators A', B'; (2) form vectors |f⟩ = A'|ψ⟩, |g⟩ = B'|ψ⟩; (3) apply Cauchy–Schwarz; (4) bound |z|² ≥ (Im z)²; (5) extract imaginary part as commutator; (6) Robertson bound — arrows connecting each step; student should see the logical chain at a glance before working through the algebra. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/05-quantum-formalism-fig-01.html`

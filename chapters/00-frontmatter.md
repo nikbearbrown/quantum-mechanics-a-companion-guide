@@ -1,14 +1,14 @@
 # Quantum Mechanics — A Companion Guide
 
-**Nik Bear Brown**
+**Humanitarians AI**
 
 ---
 
 ## Copyright
 
-Copyright © 2026 Nik Bear Brown. All rights reserved.
+Copyright © 2026 Humanitarians AI. All rights reserved.
 
-Published by Bear Brown, LLC.
+Published by Humanitarians AI.
 
 No part of this publication may be reproduced, distributed, or transmitted in
 any form or by any means without the prior written permission of the publisher,
@@ -31,27 +31,64 @@ For permissions inquiries: bear@bearbrown.co
 
 ## Preface
 
-Two kinds of book about quantum mechanics sit on bookstore shelves, and they do not speak to each other.
+*What is this book? Why now? Why Humanitarians AI?*
 
-The first is the rigorous undergraduate text — Griffiths, Liboff, Shankar, Cohen-Tannoudji. Equations on the page. Worked examples. Problem sets. A student who works through Griffiths cover to cover can solve the hydrogen atom by hand, derive the Robertson uncertainty relation from Cauchy-Schwarz, and explain why $L_x$ and $L_y$ cannot be measured simultaneously to arbitrary precision. The mathematics is solid. The physics is precise. The book is exactly what a working physicist needs and exactly what a curious general reader cannot read.
+This book is part of the **AI+1 series** — a curriculum published by Humanitarians AI, a 501(c)(3) nonprofit, and made available under the principle that graduate-level AI education should not require a graduate tuition bill to access. Every book in the series is free to read. Every book is written for a specific domain, by practitioners who have done the work, for people who are about to.
 
-The second is the popular-science book on quantum mechanics. The shelves are full of them. Some are good. Many are not. The ones that aren't share a specific failure mode: they teach the student a beautiful, vivid, and *wrong* mental picture. The most common is the balloon analogy for the uncertainty principle — "to find a balloon in the dark, you must bump into it, changing its position." This image is exactly the kind of thing a popular-science writer reaches for. It is also exactly the misconception Heisenberg himself proposed in 1927 and that Robertson corrected in 1929. The balloon analogy teaches the wrong physics: uncertainty as measurement disturbance, when uncertainty is in fact a property of the quantum state, derivable from operator non-commutativity, *before any measurement occurs*.
+---
 
-A student who reads only Griffiths struggles to develop intuition for objects that have no classical analogue. A student who reads only a pop-science book develops vivid intuition for objects that don't behave the way they imagine. The two failure modes are different. The bridge between them is what this book is.
+## What is this book?
 
-I wrote this book because I have been teaching computational physics and AI-for-engineering at Northeastern for over a decade, and over that time I have watched undergraduates fail in both directions. The ones who read pop-sci first arrived in my course confident that they understood quantum mechanics; when I asked them why uncertainty was intrinsic to the state rather than caused by measurement, they could not answer, because their book had taught them the wrong story. The ones who read Griffiths first arrived in my course able to grind through the math but unable to tell me what an orbital actually is — they had been told to compute $\langle r\rangle$ and the most probable $r$ but had never confronted the fact that these are *different numbers about the same distribution*. The first group needed corrections. The second group needed intuition. Both groups needed the same thing: a careful reading guide that points to the right primary text for each question, names the misconceptions that the standard pop-science treatments install, and provides the math the pop-science treatments omit.
+[BOOK-SPECIFIC: one paragraph stating the book's exact scope and the discipline it serves. Name what the reader will be able to do that they cannot do now. Name what the book does *not* cover.]
 
-This book is that reading guide.
+The organizing frame is the AI+1 argument: you do not need to leave your field to work at the frontier. You need to add the layer of capability your field now requires — the judgment layer, the supervision layer, the reasoning layer that AI cannot perform and that your domain expertise uniquely equips you to hold. This book renders that argument for [DOMAIN].
 
-Why now: because the pop-science quantum mechanics market is larger than it has ever been and shows no signs of stopping. Every six months, another book appears with a title like *Quantum Physics for Beginners* or *The Strange World of Quantum Reality* or *Quantum Mechanics in Five Easy Steps*. Some are clear. Most are not. The genre's standard moves — the balloon analogy, the "observer creates reality" framing, the conflation of entanglement with faster-than-light signaling — are recycled from book to book, each iteration drifting slightly farther from what the equations actually say. The student walking into their first university quantum-mechanics course has often already read three of these books and has installed a mental model that the professor must spend half the semester carefully dismantling. A diagnostic companion that names the recycled misconceptions explicitly and points to where Griffiths corrects them is not a luxury anymore. It is what the situation requires.
+---
 
-Why me: because I have run the diagnostic for over a decade across courses in computational physics, computational biology, and AI-for-engineering, and watched the same misconceptions recur in the same places. I am not the working theoretical physicist who will write the next generation of QM textbooks. I am the cross-domain instructor who has watched many quantum-mechanics-curious students try to read the standard pop-science books, then try to read Griffiths, and bounce off the gap between the two. This book is the document I wished existed when I was teaching them.
+## The Series
 
-This book does **not** teach you quantum mechanics from zero. It is a companion. Use it with Griffiths (or Shankar, or Liboff). It does not replace the primary text. It does not solve all the problems in Griffiths for you. It does not derive every result; it points to where the result is derived properly and adds the explanation the pop-science treatment skipped.
+Every book in the AI+1 series asks the same question in a different domain: *what does a [domain professional] with AI superpowers actually know how to do?*
 
-This book does **not** review every pop-science quantum book on the market. It is built around an audit of one specific exemplar — an anonymously authored *Quantum Physics for Beginners* (2021) that is widely sold and that represents the genre faithfully. The audit table in the TIKTOC.md document (which precedes this book) rates that exemplar topic by topic and identifies what to use and what to avoid. The conclusions generalize: every pop-science quantum book makes essentially the same set of moves at the same places, with the same set of accompanying errors.
+The answer is never "write better prompts." It is always a precise account of where human cognition is irreplaceable in that domain — and what it looks like to build and exercise that capacity in practice.
 
-This book does **not** advance an interpretation of quantum mechanics. The interpretation question (Copenhagen / Many-Worlds / Bohmian / QBism / spontaneous collapse) is genuinely contested. The formalism is not. This book teaches the formalism honestly and names the interpretive question as open. Unit 5 contains the most careful treatment of where the contested ground actually is and is honest about not picking sides.
+The series draws on the **Irreducibly Human** taxonomy, which organizes human cognitive capacities into seven tiers, from pattern recognition (where machines are already superhuman) to practical wisdom under genuine stakes (where machines are absent by definition). The books do not make this taxonomy explicit in every chapter. It is the architecture the curriculum is built on, not the subject it teaches.
 
-— Nik Bear Brown
-Boston, 2026
+The full taxonomy, the series index, and free digital versions of every book are maintained at [irreducibly.xyz](https://irreducibly.xyz).
+
+---
+
+## Why now
+
+[BOOK-SPECIFIC: one to two paragraphs on the specific urgency in this domain. What is breaking, accelerating, or newly possible in [DOMAIN] because of AI? What is the harm being done right now by the absence of the capability this book teaches?]
+
+The general answer is always the same: AI systems are being deployed faster than the institutions deploying them can evaluate them. The professionals most affected are often the least equipped — not because they are unsophisticated, but because their training was built for a world where the execution layer and the judgment layer lived in the same person. That world is ending. This book is for the transition.
+
+---
+
+## Why Humanitarians AI?
+
+Humanitarians AI is a 501(c)(3) bridge education program. It connects international graduates on OPT with real projects, experienced mentors, and a framework for developing the capacities the AI era most urgently requires — and that most education has never taught. That framework is called Irreducibly Human.
+
+The books in this series are produced using **AI+1**, a software system built by Nik Bear Brown, Associate Teaching Professor in Engineering at Northeastern University, that allows domain-specific textbooks to be written at production scale without sacrificing depth or precision. AI+1 does not generate books. It enables a structured collaborative process in which human judgment — about what matters in a domain, what AI gets wrong in it, and what practitioners actually need to know — is the input, and a rigorously authored book is the output. The system is itself an instantiation of the argument every book in the series makes: AI handles the execution layer, humans supply the judgment layer, and the boundary between them is explicit by design.
+
+Nik Bear Brown's doctorate is in computer science from UCLA, with a major field in computational and systems biology and minor fields in artificial intelligence and statistics. He completed a postdoctoral fellowship in Computational Neurology at Harvard Medical School while teaching at Northeastern. He holds a Master's in Information Design and Data Visualization and an MBA, both from Northeastern, and has taught artificial intelligence, statistics, applied mathematics, and a range of technical and design subjects at Northeastern, UCLA, Santa Monica College, ITT, and the Art Institutes Hollywood. He founded Humanitarians AI in 2019.
+
+The nonprofit was founded on the observation that the most consequential AI failures are not engineering failures — they are judgment failures. The algorithm ran. Nobody was conducting it. Humanitarians AI exists to build the conductors.
+
+[BOOK-SPECIFIC CONTRIBUTOR PARAGRAPH: one paragraph naming the domain expert(s) who supplied the field knowledge this rendering required. This paragraph changes with each book.]
+
+Course materials, slide decks, and assignment scaffolds for courses using this book are available at [bearbrown.co](https://www.bearbrown.co/).
+
+---
+
+## A note on how Humanitarians AI is funded
+
+This book is free because the nonprofit's operating revenue comes from workshop contracts, university licensing, and platform subscriptions — not from the cover price of a textbook. Making the books free is not charity. It is the model.
+
+If your organization wants to run an AI+1 workshop — a half-day, a full day, or a multi-session engagement that delivers the domain-specific capability this book teaches — contact Humanitarians AI at [humanitarians.ai](https://www.humanitarians.ai/). The workshop is where the book becomes practice. The book is what lets the practice stick.
+
+---
+
+*Humanitarians AI*  
+*Boston, Massachusetts*  
+*2026*

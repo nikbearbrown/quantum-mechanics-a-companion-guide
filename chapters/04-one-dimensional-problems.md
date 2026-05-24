@@ -31,7 +31,8 @@ Write $k^2 = 2mE/\hbar^2$. The general solution is $\psi = A\sin(kx) + B\cos(kx)
 
 $$\psi_n(x) = \sqrt{\frac{2}{L}}\sin\!\left(\frac{n\pi x}{L}\right), \qquad E_n = \frac{n^2\pi^2\hbar^2}{2mL^2}, \qquad n = 1, 2, 3, \ldots$$
 
-<!-- → [CHART: first four wave functions ψ₁ through ψ₄ plotted in the box, stacked vertically with their corresponding energy levels marked on a shared energy axis — student should see that n counts the number of half-wavelengths, that nodes increase with n, and that each function goes to zero at both walls] -->
+![First four wave functions ψ₁ through ψ₄ plotted](images/04-one-dimensional-problems-fig-01.png)
+*Figure 4.1 — First four wave functions ψ₁ through ψ₄ plotted*
 
 The index starts at $n = 1$, not $n = 0$. Setting $n = 0$ gives $\psi \equiv 0$ everywhere — not a wave function, just the absence of a particle. The ground state is $n = 1$, and its energy is exactly $E_1 = \pi^2\hbar^2/(2mL^2)$ — the positive floor we were asking about.
 
@@ -43,7 +44,8 @@ $$P_1 = \frac{2}{L}\int_{L/3}^{2L/3}\sin^2\!\left(\frac{\pi x}{L}\right)dx = \fr
 
 More than a third. The $n = 1$ wave function peaks in the middle (no nodes inside the well), so the center carries more probability than the edges. For $n = 2$, the wave function has a node at $x = L/2$, so the central third is depleted instead: $P_2 \approx 0.196$. At large $n$, the rapid oscillations of $\sin^2$ average to $1/2$, and $P_n \to 1/3$ — the classical answer, in which a uniformly bouncing particle spends equal time in equal lengths. This is a face of the correspondence principle: for large quantum numbers, the quantum distribution approaches the classical one.
 
-<!-- → [CHART: |ψ_n|² for n = 1, 2, 10 plotted in the same box, with the classical uniform distribution 1/L overlaid as a dashed line — student should see the probability density becoming increasingly uniform as n grows, making the correspondence principle visible] -->
+![|ψ_n|² for n = 1, 2, 10 plotted](images/04-one-dimensional-problems-fig-02.png)
+*Figure 4.2 — |ψ_n|² for n = 1, 2, 10 plotted*
 
 ---
 
@@ -97,7 +99,8 @@ For large $|\xi|$, solutions behave as $e^{\pm\xi^2/2}$; only the decaying one i
 
 $$\psi_0(x) = \left(\frac{m\omega}{\pi\hbar}\right)^{1/4}\exp\!\left(-\frac{m\omega x^2}{2\hbar}\right).$$
 
-<!-- → [IMAGE: plots of ψ_n(x) for n = 0, 1, 2, 3 overlaid on the parabolic potential V(x) = ½mω²x² — each wave function plotted at the height of its energy level, so the student sees both the wave function shape and where the energy level sits relative to the classical turning points; the Gaussian envelope of ψ₀ should be visually clear] -->
+![Plots of ψ_n(x) for n = 0, 1,](images/04-one-dimensional-problems-fig-03.png)
+*Figure 4.3 — Plots of ψ_n(x) for n = 0, 1,*
 
 You can derive this directly from $\hat{a}_-|0\rangle = 0$. In position representation that condition reads
 
@@ -117,7 +120,8 @@ The first is that the spectrum splits into bound states (discrete, $E < 0$) and 
 
 The second is more striking. In the classically forbidden region outside the well, the wave function is not zero. Inside, $\psi$ oscillates. Outside, the Schrödinger equation gives $\psi'' = \kappa^2\psi$ with $\kappa = \sqrt{-2mE}/\hbar > 0$, and the normalizable solution is $\psi \propto e^{-\kappa|x|}$ — an exponentially decaying tail that extends into the region where a classical particle with the same energy could not exist. The particle leaks.
 
-<!-- → [IMAGE: finite square well potential diagram showing V = −V₀ inside |x| < a and V = 0 outside, with two bound-state wave functions sketched — one even-parity and one odd-parity — showing the oscillating interior and the exponentially decaying exterior tails; classical turning points marked; the leakage into the forbidden region should be visually prominent] -->
+![Finite square well potential diagram showing V =](images/04-one-dimensional-problems-fig-04.png)
+*Figure 4.4 — Finite square well potential diagram showing V =*
 
 Matching $\psi$ and $d\psi/dx$ at $x = \pm a$ gives a transcendental equation. For even-parity bound states, it takes the form
 
@@ -161,12 +165,14 @@ $$\gamma \approx \frac{\pi(Z-2)e^2}{4\pi\epsilon_0\hbar v}$$
 
 where $v = \sqrt{2E/m}$ is the asymptotic velocity. For U-238, plugging in $E = 4.27$ MeV and $Z = 92$ gives $\gamma \approx 44$, so $T = e^{-2\gamma} \approx e^{-88}$. Multiplied by the assault frequency $v/R \approx 2 \times 10^{21}\ \text{s}^{-1}$, this yields a half-life of order $10^{17}$ seconds — a few billion years. The measured half-life of U-238 is $4.5 \times 10^9$ years. Order-of-magnitude agreement from a one-page calculation that George Gamow published in 1928.
 
-<!-- → [IMAGE: nuclear potential well diagram for alpha decay — deep attractive nuclear potential inside radius R, Coulomb repulsion V(r) = 2(Z−2)e²/(4πε₀r) outside, the alpha energy E drawn as a horizontal line well below the Coulomb barrier peak; the classically forbidden tunneling region shaded between R and the outer turning point r₂; this is the visual argument that makes "tunneling out of a nucleus" concrete] -->
+![Nuclear potential well diagram for alpha decay ](images/04-one-dimensional-problems-fig-05.png)
+*Figure 4.5 — Nuclear potential well diagram for alpha decay *
 
 The reason this calculation is worth sitting with is the dynamic range. Alpha-decay half-lives across the periodic table span 24 orders of magnitude: from microseconds for Po-212 to $10^{17}$ years for Th-232. That entire range — 24 orders of magnitude — is produced by modest changes in $Z$ and $E$ fed into an exponential. Po-212 has $E \approx 8.78$ MeV; Th-232 has $E \approx 4.01$ MeV. The energies differ by roughly a factor of two. The half-lives differ by a factor of $10^{24}$. The exponential does that. The Geiger-Nuttall law — the empirical observation, known since 1911, that a plot of $\log(\text{half-life})$ against $1/\sqrt{E}$ falls on a straight line — was mysterious for nearly two decades. When Gamow's calculation landed, it explained the straight line in one page of quantum mechanics.
 <!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/04-one-dimensional-problems-assertions.md -->
 
-<!-- → [CHART: Geiger-Nuttall plot — log(half-life) vs. 1/√E for a selection of alpha emitters across the periodic table (Po-212 through Th-232); the data should fall approximately on a straight line; annotate Po-212 (microseconds) and Th-232 (10¹⁰ years) at opposite ends to make the 24-order-of-magnitude range visible; the linearity is the Gamow factor made graphical] -->
+![Geiger-Nuttall plot ](images/04-one-dimensional-problems-fig-06.png)
+*Figure 4.6 — Geiger-Nuttall plot *
 
 ---
 
@@ -236,3 +242,61 @@ These are toy systems in the sense that they are exactly solvable and highly ide
 4. Geiger, H. & Nuttall, J. M. "The ranges of the α particles from various radioactive substances and a relation between range and period of transformation." *Phil. Mag.* 22, 613 (1911).
 5. Simon, B. "The bound state of weakly coupled Schrödinger operators in one and two dimensions." *Annals of Physics* 97, 279 (1976).
 6. NNDC Nuclear Wallet Cards. https://www.nndc.bnl.gov/
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 4.1 — First four wave functions ψ₁ through ψ₄ plotted
+
+Create a standalone D3 v7 HTML file for Figure First four wave functions ψ₁ through ψ₄ plotted. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: first four wave functions ψ₁ through ψ₄ plotted in the box, stacked vertically with their corresponding energy levels marked on a shared energy axis — student should see that n counts the number of half-wavelengths, that nodes increase with n, and that each function goes to zero at both walls. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/04-one-dimensional-problems-fig-01.html`
+
+---
+
+### Figure 4.2 — |ψ_n|² for n = 1, 2, 10 plotted
+
+Create a standalone D3 v7 HTML file for Figure |ψ_n|² for n = 1, 2, 10 plotted. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: |ψ_n|² for n = 1, 2, 10 plotted in the same box, with the classical uniform distribution 1/L overlaid as a dashed line — student should see the probability density becoming increasingly uniform as n grows, making the correspondence principle visible. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/04-one-dimensional-problems-fig-02.html`
+
+---
+
+### Figure 4.3 — Plots of ψ_n(x) for n = 0, 1,
+
+Create a standalone D3 v7 HTML file for Figure Plots of ψ_n(x) for n = 0, 1,. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: plots of ψ_n(x) for n = 0, 1, 2, 3 overlaid on the parabolic potential V(x) = ½mω²x² — each wave function plotted at the height of its energy level, so the student sees both the wave function shape and where the energy level sits relative to the classical turning points; the Gaussian envelope of ψ₀ should be visually clear. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/04-one-dimensional-problems-fig-03.html`
+
+---
+
+### Figure 4.4 — Finite square well potential diagram showing V =
+
+Create a standalone D3 v7 HTML file for Figure Finite square well potential diagram showing V =. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: finite square well potential diagram showing V = −V₀ inside |x| < a and V = 0 outside, with two bound-state wave functions sketched — one even-parity and one odd-parity — showing the oscillating interior and the exponentially decaying exterior tails; classical turning points marked; the leakage into the forbidden region should be visually prominent. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/04-one-dimensional-problems-fig-04.html`
+
+---
+
+### Figure 4.5 — Nuclear potential well diagram for alpha decay 
+
+Create a standalone D3 v7 HTML file for Figure Nuclear potential well diagram for alpha decay . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: nuclear potential well diagram for alpha decay — deep attractive nuclear potential inside radius R, Coulomb repulsion V(r) = 2(Z−2)e²/(4πε₀r) outside, the alpha energy E drawn as a horizontal line well below the Coulomb barrier peak; the classically forbidden tunneling region shaded between R and the outer turning point r₂; this is the visual argument that makes "tunneling out of a nucleus" concrete. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/04-one-dimensional-problems-fig-05.html`
+
+---
+
+### Figure 4.6 — Geiger-Nuttall plot 
+
+Create a standalone D3 v7 HTML file for Figure Geiger-Nuttall plot . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: Geiger-Nuttall plot — log(half-life) vs. 1/√E for a selection of alpha emitters across the periodic table (Po-212 through Th-232); the data should fall approximately on a straight line; annotate Po-212 (microseconds) and Th-232 (10¹⁰ years) at opposite ends to make the 24-order-of-magnitude range visible; the linearity is the Gamow factor made graphical. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/04-one-dimensional-problems-fig-06.html`

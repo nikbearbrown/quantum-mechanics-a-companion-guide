@@ -18,7 +18,8 @@ $$E_n = -\frac{13.6\,\text{eV}}{n^2}.$$
 
 The red line at 656 nm, the blue-green at 486 nm, the violet at 434 nm — all there, all correct.
 
-<!-- → [CHART: hydrogen emission spectrum in the visible range — show the four Balmer lines as vertical bars at 656 nm (red), 486 nm (blue-green), 434 nm (violet), 410 nm (deep violet) against a dark background, with each line labeled by its transition n→2 (n=3,4,5,6); also overlay a continuous classical blackbody prediction as a smooth curve to show the contrast between discrete lines and what classical physics predicts] -->
+![Hydrogen emission spectrum in the visible range ](images/06-the-hydrogen-atom-fig-01.png)
+*Figure 6.1 — Hydrogen emission spectrum in the visible range *
 
 It was one of the great coups in the history of physics. It was also, as we now know, obtained by a model that is wrong about almost everything except the energies. Bohr's electron traces a definite circular path at a definite radius. That picture is false. And yet the energies are right.
 
@@ -48,7 +49,8 @@ For the $1s$ state ($\ell = 0$), the radial equation is
 
 $$-\frac{\hbar^2}{2m_e}\frac{d^2u}{dr^2} - \frac{e^2}{4\pi\varepsilon_0 r}u = Eu.$$
 
-<!-- → [INFOGRAPHIC: effective potential energy diagram for the hydrogen radial equation — plot V_eff(r) = −e²/(4πε₀r) + ℏ²ℓ(ℓ+1)/(2mᵣ²) as a function of r for ℓ=0 (pure Coulomb, no barrier, dips to −∞ at origin) and for ℓ=1 (Coulomb plus centrifugal barrier, creates a local minimum at finite r); show the bound-state energy E₁ as a horizontal dashed line; student should see why ℓ=0 electrons have probability near the nucleus while ℓ>0 electrons are pushed away] -->
+![Effective potential energy diagram for the hydrogen radial](images/06-the-hydrogen-atom-fig-02.png)
+*Figure 6.2 — Effective potential energy diagram for the hydrogen radial*
 
 ---
 
@@ -84,7 +86,8 @@ The angular integral is 1. The radial integral gives $A = 2/a_0^{3/2}$. The norm
 
 $$\boxed{\psi_{100}(r) = \frac{1}{\sqrt{\pi a_0^3}}\,e^{-r/a_0}.}$$
 
-<!-- → [CHART: plot of the 1s radial wave function R₁₀(r) = (2/a₀^{3/2})e^{−r/a₀} and its corresponding radial probability density P(r) = r²|R₁₀|² as two curves on the same axes vs r/a₀ — label the peak of P(r) at r = a₀ with a vertical marker; student should see that R₁₀ is maximum at the origin while P(r) is zero there due to the r² Jacobian, making explicit why "most probable radius ≠ maximum of the wave function"] -->
+![Plot of the 1s radial wave function R₁₀(r)](images/06-the-hydrogen-atom-fig-03.png)
+*Figure 6.3 — Plot of the 1s radial wave function R₁₀(r)*
 
 ---
 
@@ -110,7 +113,8 @@ The most probable radius is $a_0$. The average radius is $\tfrac{3}{2}a_0$.
 
 These are different numbers because the distribution is asymmetric: $P(r)$ peaks at $a_0$ but has a long tail toward larger $r$, and that tail pulls the average upward. If the electron were on a circular orbit at radius $a_0$, there would be exactly one radius, and "most probable" and "average" would both equal $a_0$. The fact that they differ is the mathematical signature that the electron occupies a distribution of radii, not a single one. There is no orbit. There is a probability cloud.
 
-<!-- → [CHART: P(r) = (4/a₀³)r²e^{−2r/a₀} plotted vs r/a₀ from 0 to 6a₀ — mark r_mp = a₀ with a vertical line labeled "most probable"; mark ⟨r⟩ = 3a₀/2 with a second vertical line labeled "average"; shade the area under the tail beyond a₀ to make the asymmetry visible; caption: "The orbit picture requires both markers to be at the same place. They are not."] -->
+![The orbit picture requires both markers to be at the same place. They are not.](images/06-the-hydrogen-atom-fig-04.png)
+*Figure 6.4 — P(r) = (4/a₀³)r²e^{−2r/a₀} plotted vs r/a₀ from 0*
 
 There is also no moment at which the electron is at a definite radius, moving at a definite speed, in a definite direction. What exists is $|\psi_{100}|^2$ — a spherically symmetric cloud that falls off exponentially from the nucleus. The quantity $a_0$ appears in that cloud as the length scale. Bohr found the right length scale by assuming a circular orbit. He got lucky: the length scale is real, the orbit is not.
 
@@ -144,11 +148,19 @@ $$\sum_{\ell=0}^{n-1}(2\ell+1) = n^2 \quad\text{(without spin)}, \qquad 2n^2 \qu
 
 The $n^2$ factor is a direct consequence of the $\mathrm{SO}(4)$ degeneracy. The shell at $n=1$ holds 2 electrons; at $n=2$, 8; at $n=3$, 18. These are the row capacities of the periodic table, imposed by quantum mechanics and Pauli, not by chemistry.
 
-<!-- → [TABLE: hydrogen quantum number summary — rows: n=1 (1s only), n=2 (2s, 2p with m_ℓ=−1,0,+1), n=3 (3s, 3p, 3d); columns: n, ℓ values, spectroscopic label, m_ℓ range, number of orbitals, states including spin, running total; highlight how the 2n² pattern emerges; note that all states in a given row have identical energy E_n due to SO(4) degeneracy] -->
+| n | ℓ values | spectroscopic label | m_ℓ range | number of orbitals |
+| --- | --- | --- | --- | --- |
+| n=1 (1s only | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| n=2 (2s, 2p with m_ℓ=−1,0,+1 | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| n=3 (3s, 3p, 3d | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| columns: n, ℓ values, spectroscopic label, m_ℓ range, number of orbitals, states including spin, running total | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| highlight how the 2n² pattern emerges | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| note that all states in a given row have identical energy E_n due to SO(4) degeneracy | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
 
 One name correction for what follows: the word "orbital" does not mean "orbit." An orbital — the spherical $s$ cloud, the dumbbell $p$, the four-lobed $d$ — is an isocontour of $|\psi_{n\ell m}|^2$, usually drawn at the surface that encloses 90% of the probability. It describes where the electron is *likely to be found if measured*. It does not describe what the electron is doing between measurements. There is no between-measurements story that quantum mechanics tells. The orbital shape is everything; the trajectory is nothing.
 
-<!-- → [IMAGE: 90%-probability isosurface renderings of the 1s, 2s, 2p_z, and 3d_z² orbitals — four panels side by side; label each with its (n, ℓ, m_ℓ) quantum numbers; caption should note explicitly that each shape is an isocontour of |ψ|², not a path, and that the electron has no position until measured] -->
+![90%-probability isosurface renderings of the 1s, 2s, 2p_z,](images/06-the-hydrogen-atom-fig-05.png)
+*Figure 6.5 — 90%-probability isosurface renderings of the 1s, 2s, 2p_z,*
 
 ---
 
@@ -158,7 +170,8 @@ In 1922 Otto Stern and Walther Gerlach sent a beam of neutral silver atoms throu
 
 Silver has one unpaired electron in a $5s$ state. The two spots correspond to the two projections of that electron's spin onto the magnetic-field axis: $S_z = +\hbar/2$ and $S_z = -\hbar/2$. Two outcomes, not a continuum.
 
-<!-- → [IMAGE: Stern-Gerlach apparatus diagram — show the silver atom beam entering from the left, passing through the inhomogeneous magnet (field lines visible, clearly non-uniform), and splitting into exactly two spots on the detector at right; add a second panel showing what classical physics predicts (a continuous vertical smear); label the two quantum spots "+ℏ/2" and "−ℏ/2"; caption: "Two spots where classical physics predicts a smear. The discreteness is spin."] -->
+![Two spots where classical physics predicts a smear. The discreteness is spin.](images/06-the-hydrogen-atom-fig-06.png)
+*Figure 6.6 — Stern-Gerlach apparatus diagram *
 
 Historical note worth making: Stern and Gerlach in 1922 did not interpret their result as electron spin. Spin had not been proposed. They thought they were seeing "space quantization" of orbital angular momentum. The correct interpretation — that the splitting comes from the spin of the unpaired $5s$ electron — came only after Uhlenbeck and Goudsmit proposed the idea of intrinsic electron spin in 1925. [Uhlenbeck & Goudsmit 1925, *Die Naturwissenschaften* 13, 953–954](https://doi.org/10.1007/BF01558878) [verify]. The experiment ran three years before anyone knew what it was measuring.
 
@@ -216,3 +229,61 @@ The $\mathrm{SO}(4)$ symmetry of the Coulomb potential — the hidden symmetry t
 8. Pohl, R. et al. "The size of the proton." *Nature* 466, 213–216 (2010). https://doi.org/10.1038/nature09250
 9. Bezginov, N. et al. "A measurement of the atomic hydrogen Lamb shift and the proton charge radius." *Science* 365, 1007–1012 (2019). https://doi.org/10.1126/science.aau7807
 10. NIST CODATA 2018: Rydberg constant, Bohr radius. https://physics.nist.gov/cuu/Constants/
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 6.1 — Hydrogen emission spectrum in the visible range 
+
+Create a standalone D3 v7 HTML file for Figure Hydrogen emission spectrum in the visible range . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: hydrogen emission spectrum in the visible range — show the four Balmer lines as vertical bars at 656 nm (red), 486 nm (blue-green), 434 nm (violet), 410 nm (deep violet) against a dark background, with each line labeled by its transition n→2 (n=3,4,5,6); also overlay a continuous classical blackbody prediction as a smooth curve to show the contrast between discrete lines and what classical physics predicts. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/06-the-hydrogen-atom-fig-01.html`
+
+---
+
+### Figure 6.2 — Effective potential energy diagram for the hydrogen radial
+
+Create a standalone D3 v7 HTML file for Figure Effective potential energy diagram for the hydrogen radial. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: effective potential energy diagram for the hydrogen radial equation — plot V_eff(r) = −e²/(4πε₀r) + ℏ²ℓ(ℓ+1)/(2mᵣ²) as a function of r for ℓ=0 (pure Coulomb, no barrier, dips to −∞ at origin) and for ℓ=1 (Coulomb plus centrifugal barrier, creates a local minimum at finite r); show the bound-state energy E₁ as a horizontal dashed line; student should see why ℓ=0 electrons have probability near the nucleus while ℓ>0 electrons are pushed away. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/06-the-hydrogen-atom-fig-02.html`
+
+---
+
+### Figure 6.3 — Plot of the 1s radial wave function R₁₀(r)
+
+Create a standalone D3 v7 HTML file for Figure Plot of the 1s radial wave function R₁₀(r). Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: plot of the 1s radial wave function R₁₀(r) = (2/a₀^{3/2})e^{−r/a₀} and its corresponding radial probability density P(r) = r²|R₁₀|² as two curves on the same axes vs r/a₀ — label the peak of P(r) at r = a₀ with a vertical marker; student should see that R₁₀ is maximum at the origin while P(r) is zero there due to the r² Jacobian, making explicit why "most probable radius ≠ maximum of the wave function". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/06-the-hydrogen-atom-fig-03.html`
+
+---
+
+### Figure 6.4 — P(r) = (4/a₀³)r²e^{−2r/a₀} plotted vs r/a₀ from 0
+
+Create a standalone D3 v7 HTML file for Figure P(r) = (4/a₀³)r²e^{−2r/a₀} plotted vs r/a₀ from 0. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: P(r) = (4/a₀³)r²e^{−2r/a₀} plotted vs r/a₀ from 0 to 6a₀ — mark r_mp = a₀ with a vertical line labeled "most probable"; mark ⟨r⟩ = 3a₀/2 with a second vertical line labeled "average"; shade the area under the tail beyond a₀ to make the asymmetry visible; caption: "The orbit picture requires both markers to be at the same place. They are not.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/06-the-hydrogen-atom-fig-04.html`
+
+---
+
+### Figure 6.5 — 90%-probability isosurface renderings of the 1s, 2s, 2p_z,
+
+Create a standalone D3 v7 HTML file for Figure 90%-probability isosurface renderings of the 1s, 2s, 2p_z,. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: 90%-probability isosurface renderings of the 1s, 2s, 2p_z, and 3d_z² orbitals — four panels side by side; label each with its (n, ℓ, m_ℓ) quantum numbers; caption should note explicitly that each shape is an isocontour of |ψ|², not a path, and that the electron has no position until measured. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/06-the-hydrogen-atom-fig-05.html`
+
+---
+
+### Figure 6.6 — Stern-Gerlach apparatus diagram 
+
+Create a standalone D3 v7 HTML file for Figure Stern-Gerlach apparatus diagram . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: Stern-Gerlach apparatus diagram — show the silver atom beam entering from the left, passing through the inhomogeneous magnet (field lines visible, clearly non-uniform), and splitting into exactly two spots on the detector at right; add a second panel showing what classical physics predicts (a continuous vertical smear); label the two quantum spots "+ℏ/2" and "−ℏ/2"; caption: "Two spots where classical physics predicts a smear. The discreteness is spin.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/06-the-hydrogen-atom-fig-06.html`

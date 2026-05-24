@@ -61,7 +61,8 @@ $$|S|_\text{QM} = 2\sqrt{2} \approx 2.828.$$
 
 Local hidden variables are bounded by 2. Quantum mechanics gives $2\sqrt{2}$. The gap is about 41%. The Tsirelson bound ([Tsirelson 1980, *Letters in Mathematical Physics* 4, 93–100](https://doi.org/10.1007/BF00417500)) says no quantum state with any measurement axes can exceed $2\sqrt{2}$; the singlet at these axes saturates it.
 
-<!-- → [INFOGRAPHIC: number line or bar diagram showing three regions — (1) classical (deterministic, no correlations): |S| ≤ 2 by construction; (2) any local hidden-variable theory: |S| ≤ 2 (CHSH bound, shaded); (3) quantum mechanics singlet at optimal axes: |S| = 2√2 ≈ 2.828 (Tsirelson bound); (4) no-signaling theories could in principle reach |S| = 4; mark the Aspect 1982 measurement S = 2.697 as a dot; caption: "The CHSH bound separates classical from quantum. The Tsirelson bound separates quantum from anything faster-than-light."] -->
+![The CHSH bound separates classical from quantum. The Tsirelson bound separates quantum from anything faster-than-light.](images/10-quantum-mechanics-in-the-modern-world-fig-01.png)
+*Figure 10.1 — Number line or bar diagram showing three regions*
 
 Aspect, Grangier, and Roger in 1981–1982 measured $S = 2.697 \pm 0.015$ with polarization-entangled photons from a calcium cascade source ([*PRL* 49, 91](https://doi.org/10.1103/PhysRevLett.49.91); *PRL* 49, 1804](https://doi.org/10.1103/PhysRevLett.49.1804)). Violates the CHSH bound by tens of standard deviations, but left two loopholes open: detection efficiency (most photons missed — the detected subsample might not be representative) and locality (could a signal have passed between the detectors during the measurement?). In 2015, three independent loophole-free experiments closed both simultaneously:
 
@@ -88,7 +89,8 @@ Lasing requires *population inversion*: $N_2 > N_1$. In thermal equilibrium this
 By 2026 [verify], lasers are a ten-figure annual industry — fiber-optic communications, surgical and industrial cutting, optical storage, spectroscopy, precision metrology, ranging. The principle is unchanged from 1917. What Einstein computed from thermodynamic consistency about a single pair of energy levels became a technology that rewired the world's communications infrastructure.
 <!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/10-quantum-mechanics-in-the-modern-world-assertions.md -->
 
-<!-- → [INFOGRAPHIC: three-panel energy level diagram — left panel: thermal equilibrium, N₁ > N₂, absorptions dominate, no lasing; center panel: population inversion achieved by pumping, N₂ > N₁, stimulated emission rate exceeds absorption; right panel: cavity feedback — mirrors trap the coherent photons, gain medium amplifies each pass; label each rate with the Einstein coefficient (A₂₁, B₁₂, B₂₁) and the ν³ scaling note alongside the spontaneous emission arrow; student should see why population inversion is necessary and how stimulated emission builds the beam] -->
+![Energy level diagram ](images/10-quantum-mechanics-in-the-modern-world-fig-02.png)
+*Figure 10.2 — Energy level diagram *
 
 ---
 
@@ -106,7 +108,8 @@ where $q = \sqrt{2mE}/\hbar$. The left side is bounded between $\pm 1$; the righ
 
 *Conductors* have a partially-filled band with empty states immediately above filled ones. *Insulators* have a fully-filled valence band separated from the empty conduction band by $\sim 5$ eV — thermal energy ($k_BT \approx 0.025$ eV at room temperature) cannot bridge it. *Semiconductors* sit in between with gaps of 0.5–2 eV: silicon at 1.12 eV, gallium arsenide at 1.43 eV. Thermal excitation populates the conduction band at room temperature in measurable amounts.
 
-<!-- → [INFOGRAPHIC: three side-by-side band diagrams — conductor (Fermi level bisecting a partially-filled band, empty states right above filled states); insulator (fully filled valence band, large ~5 eV gap, empty conduction band, k_BT arrow too short to bridge it); semiconductor (same structure but gap ~1 eV, k_BT arrow just reaching across, a few electrons shown thermally excited into conduction band); label the Fermi level, valence band, conduction band, and band gap in each; caption notes Si at 1.12 eV and GaAs at 1.43 eV] -->
+![Three side-by-side band diagrams ](images/10-quantum-mechanics-in-the-modern-world-fig-03.png)
+*Figure 10.3 — Three side-by-side band diagrams *
 
 Doping shifts the populations. Adding phosphorus (five valence electrons) to silicon (four valence electrons) injects electrons into the conduction band — n-type. Adding boron (three valence electrons) creates holes in the valence band — p-type. A pn junction develops a built-in electric field in its depletion region and is the heart of every diode, LED, photovoltaic cell, and transistor. The MOSFET switches current via a gate-voltage-controlled inversion layer. The Intel 4004 of 1971 had 2,300 transistors; current chips have tens of billions — all resting on Bloch's 1928 theorem and the Born-rule probability interpretation of $|\psi|^2$.
 
@@ -130,11 +133,13 @@ $$|00\rangle \xrightarrow{H\otimes I} \frac{1}{\sqrt{2}}(|00\rangle + |10\rangle
 
 That output is a Bell state — the same maximally entangled state at the heart of every CHSH experiment, produced in two gates. CNOT plus arbitrary single-qubit unitaries forms a universal gate set ([DiVincenzo 1995, *Physical Review A* 51, 1015](https://doi.org/10.1103/PhysRevA.51.1015)) — every multi-qubit unitary decomposes into this set with polynomially many gates.
 
-<!-- → [IMAGE: quantum circuit diagram for the Bell-state generation — horizontal qubit lines labeled |q₀⟩ = |0⟩ and |q₁⟩ = |0⟩; Hadamard gate box on q₀; CNOT gate with control dot on q₀ and ⊕ target on q₁; output labeled (1/√2)(|00⟩ + |11⟩); annotate intermediate state after the Hadamard; show the measurement symbols at the end collapsing to classical bits 00 or 11 with equal probability 50%; caption: "Two gates. One entangled state. The same state that violates Bell by 41%."] -->
+![Two gates. One entangled state. The same state that violates Bell by 41%.](images/10-quantum-mechanics-in-the-modern-world-fig-04.png)
+*Figure 10.4 — Quantum circuit diagram for the Bell-state generation *
 
 Two algorithms anchor the field. *Shor's algorithm* ([Shor 1994; 1997, *SIAM Journal on Computing* 26, 1484](https://doi.org/10.1109/SFCS.1994.365700)) factors an $n$-bit integer in $O(n^3)$ operations on a quantum computer, against the best known classical algorithm's $\exp(O(n^{1/3}(\log n)^{2/3}))$ — a super-polynomial speedup. A sufficiently large fault-tolerant quantum computer would break RSA. *Grover's algorithm* ([Grover 1996](https://doi.org/10.1145/237814.237866)) searches an $N$-item unsorted database in $O(\sqrt{N})$ queries against the classical $O(N)$ — a quadratic speedup, significant but not exponential.
 
-<!-- → [CHART: log-log plot of runtime vs. problem size n for four algorithms — classical factoring (exponential, steep curve), Shor's algorithm (polynomial O(n³), gentle curve, labeled "quantum"); classical search O(N) (linear); Grover's algorithm O(√N) (sub-linear); annotate the crossing points where quantum beats classical; note that Grover's advantage is quadratic (a constant factor on the log-log plot) while Shor's is exponential (the curves diverge); caption: "Not all quantum speedups are the same. Grover wins by a constant factor on the log scale. Shor wins by the whole game."] -->
+![Not all quantum speedups are the same. Grover wins by a constant factor on the log scale. Shor wins by the whole game.](images/10-quantum-mechanics-in-the-modern-world-fig-05.png)
+*Figure 10.5 — Log-log plot of runtime vs*
 
 As of 2026 [verify], the field is in the NISQ era (Preskill 2018, [*Quantum* 2, 79](https://doi.org/10.22331/q-2018-08-06-79)) — hardware with hundreds to thousands of noisy qubits, not yet error-corrected to fault tolerance. IBM's Condor processor announced around 1,100 superconducting qubits in late 2023; Google's Sycamore family has been demonstrated through 70 qubits; Quantinuum's H2 trapped-ion system offers high-fidelity all-to-all connectivity; Atom Computing has demonstrated neutral-atom arrays exceeding 1,000 qubits [verify, 2026]. Google's 2023 paper ([Acharya et al. 2023, *Nature* 614, 676–681](https://doi.org/10.1038/s41586-022-05434-1)) demonstrated below-threshold logical qubits — increasing surface-code distance from 3 to 5 reduced the logical error rate — which is the first experimental evidence that quantum error correction scales as theory predicts. But from below-threshold demonstration to fault-tolerant factoring of 2048-bit keys, the engineering distance is enormous.
 <!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/10-quantum-mechanics-in-the-modern-world-assertions.md -->
@@ -162,7 +167,8 @@ The prediction $2\Delta/k_BT_c \approx 3.53$ is universal in the weak-coupling l
 Bednorz and Müller's 1986 discovery ([*Zeitschrift für Physik B* 64, 189](https://doi.org/10.1007/BF01303701)) of superconductivity in copper-oxide perovskites at $T_c \approx 35$ K broke the picture. YBa$_2$Cu$_3$O$_7$ followed at $T_c \approx 93$ K (above liquid nitrogen's 77 K boiling point), making economically practical high-$T_c$ materials suddenly real. Nobel 1987, the fastest in the history of the prize. Under extreme pressure, hydrogen sulfide reaches $\sim 203$ K ([Drozdov et al. 2015, *Nature* 525, 73](https://doi.org/10.1038/nature14964)) and lanthanum hydride reaches $\sim 250$ K at $\sim 170$ GPa ([Somayazulu et al. 2019, *PRL* 122, 027001](https://doi.org/10.1103/PhysRevLett.122.027001)). Room-temperature ambient-pressure superconductivity has not been demonstrated as of 2026 [verify]. The mechanism for cuprate superconductivity — forty years after discovery — remains contested.
 <!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/10-quantum-mechanics-in-the-modern-world-assertions.md -->
 
-<!-- → [CHART: timeline of superconductor T_c records from 1911 to 2026 — x-axis: year; y-axis: T_c in Kelvin (log scale or linear); mark key milestones: Hg 4.2 K (1911, Onnes); Nb 9.3 K; NbN 16 K; La-Ba-Cu-O 35 K (1986, Bednorz-Müller, Nobel '87 starred); YBCO 93 K (1987, Wu et al.); H₃S 203 K (2015, high pressure, dashed line); LaH₁₀ ~250 K (2019, high pressure, dashed line); horizontal reference lines at 77 K (liquid N₂) and 293 K (room temperature); ambient-pressure and high-pressure records distinguished by solid vs. dashed markers] -->
+![Timeline of superconductor T_c records from 1911 to](images/10-quantum-mechanics-in-the-modern-world-fig-06.png)
+*Figure 10.6 — Timeline of superconductor T_c records from 1911 to*
 
 ---
 
@@ -176,7 +182,8 @@ $$I \propto e^{-2\kappa d}, \qquad \kappa \approx \sqrt{2m_e\phi}/\hbar,$$
 
 where $\phi$ is the work function. For $\phi = 4$ eV, $\kappa \approx 1\,\text{Å}^{-1}$, so a 1 Å change in $d$ changes the current by $e^2 \approx 7.4$. STM resolves individual atoms because the exponential sensitivity means the tunneling current is dominated by the single closest atom on the tip. The exponential does all the spatial resolution work.
 
-<!-- → [INFOGRAPHIC: STM cross-section diagram — show the sharp metal tip hovering above a corrugated atomic surface (bumps representing individual surface atoms); draw a curved tunneling-current profile above the surface matching the exponential I ∝ e^{−2κd}; annotate that a 1 Å height change produces a 7× current change; show a second panel with the resulting constant-current scan trace reproducing the atomic corrugation; caption: "The atom's height changes by 1 Å. The tunneling current changes by a factor of 7. That factor is why STM sees atoms."] -->
+![The atom's height changes by 1 Å. The tunneling current changes by a factor of 7. That factor is why STM sees atoms.](images/10-quantum-mechanics-in-the-modern-world-fig-07.png)
+*Figure 10.7 — STM cross-section diagram *
 
 *Flash memory.* The floating-gate transistor writes a bit by tunneling electrons through a thin oxide layer onto an isolated gate; the gate charge shifts the transistor's threshold voltage. Flash retains data for years without power because the tunneling rate at read-bias voltage is exponentially small — the same WKB exponential that spans 24 orders of magnitude in alpha-decay half-lives is what makes flash retain data over decades while remaining writable at write voltage.
 
@@ -238,3 +245,69 @@ Four scenarios would force a substantial rewrite. A demonstration of *useful qua
 19. Josephson, B. D. "Possible new effects in superconductive tunnelling." *Physics Letters* 1, 251–253 (1962).
 20. Acharya, R. et al. "Suppressing quantum errors by scaling a surface code logical qubit." *Nature* 614, 676 (2023). https://doi.org/10.1038/s41586-022-05434-1
 21. NIST FIPS 203/204/205 (Aug 2024). https://csrc.nist.gov/projects/post-quantum-cryptography
+
+## Prompts
+
+Use these prompts with Claude to generate interactive D3 v7 versions of the
+figures in this chapter. Each produces a standalone HTML file you can open
+in a browser and modify freely.
+
+**Prerequisites:** Load `brutalist/CLAUDE.md` and `brutalist/DESIGN.md` into
+your Claude project context before using these prompts. They define the stack,
+naming conventions, color system, and typography the figures use.
+
+---
+
+### Figure 10.1 — Number line or bar diagram showing three regions
+
+Create a standalone D3 v7 HTML file for Figure Number line or bar diagram showing three regions. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: number line or bar diagram showing three regions — (1) classical (deterministic, no correlations): |S| ≤ 2 by construction; (2) any local hidden-variable theory: |S| ≤ 2 (CHSH bound, shaded); (3) quantum mechanics singlet at optimal axes: |S| = 2√2 ≈ 2.828 (Tsirelson bound); (4) no-signaling theories could in principle reach |S| = 4; mark the Aspect 1982 measurement S = 2.697 as a dot; caption: "The CHSH bound separates classical from quantum. The Tsirelson bound separates quantum from anything faster-than-light.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/10-quantum-mechanics-in-the-modern-world-fig-01.html`
+
+---
+
+### Figure 10.2 — Energy level diagram 
+
+Create a standalone D3 v7 HTML file for Figure Energy level diagram . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: three-panel energy level diagram — left panel: thermal equilibrium, N₁ > N₂, absorptions dominate, no lasing; center panel: population inversion achieved by pumping, N₂ > N₁, stimulated emission rate exceeds absorption; right panel: cavity feedback — mirrors trap the coherent photons, gain medium amplifies each pass; label each rate with the Einstein coefficient (A₂₁, B₁₂, B₂₁) and the ν³ scaling note alongside the spontaneous emission arrow; student should see why population inversion is necessary and how stimulated emission builds the beam. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/10-quantum-mechanics-in-the-modern-world-fig-02.html`
+
+---
+
+### Figure 10.3 — Three side-by-side band diagrams 
+
+Create a standalone D3 v7 HTML file for Figure Three side-by-side band diagrams . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: three side-by-side band diagrams — conductor (Fermi level bisecting a partially-filled band, empty states right above filled states); insulator (fully filled valence band, large ~5 eV gap, empty conduction band, k_BT arrow too short to bridge it); semiconductor (same structure but gap ~1 eV, k_BT arrow just reaching across, a few electrons shown thermally excited into conduction band); label the Fermi level, valence band, conduction band, and band gap in each; caption notes Si at 1.12 eV and GaAs at 1.43 eV. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/10-quantum-mechanics-in-the-modern-world-fig-03.html`
+
+---
+
+### Figure 10.4 — Quantum circuit diagram for the Bell-state generation 
+
+Create a standalone D3 v7 HTML file for Figure Quantum circuit diagram for the Bell-state generation . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: quantum circuit diagram for the Bell-state generation — horizontal qubit lines labeled |q₀⟩ = |0⟩ and |q₁⟩ = |0⟩; Hadamard gate box on q₀; CNOT gate with control dot on q₀ and ⊕ target on q₁; output labeled (1/√2)(|00⟩ + |11⟩); annotate intermediate state after the Hadamard; show the measurement symbols at the end collapsing to classical bits 00 or 11 with equal probability 50%; caption: "Two gates. One entangled state. The same state that violates Bell by 41%.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/10-quantum-mechanics-in-the-modern-world-fig-04.html`
+
+---
+
+### Figure 10.5 — Log-log plot of runtime vs
+
+Create a standalone D3 v7 HTML file for Figure Log-log plot of runtime vs. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: log-log plot of runtime vs. problem size n for four algorithms — classical factoring (exponential, steep curve), Shor's algorithm (polynomial O(n³), gentle curve, labeled "quantum"); classical search O(N) (linear); Grover's algorithm O(√N) (sub-linear); annotate the crossing points where quantum beats classical; note that Grover's advantage is quadratic (a constant factor on the log-log plot) while Shor's is exponential (the curves diverge); caption: "Not all quantum speedups are the same. Grover wins by a constant factor on the log scale. Shor wins by the whole game.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/10-quantum-mechanics-in-the-modern-world-fig-05.html`
+
+---
+
+### Figure 10.6 — Timeline of superconductor T_c records from 1911 to
+
+Create a standalone D3 v7 HTML file for Figure Timeline of superconductor T_c records from 1911 to. Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: timeline of superconductor T_c records from 1911 to 2026 — x-axis: year; y-axis: T_c in Kelvin (log scale or linear); mark key milestones: Hg 4.2 K (1911, Onnes); Nb 9.3 K; NbN 16 K; La-Ba-Cu-O 35 K (1986, Bednorz-Müller, Nobel '87 starred); YBCO 93 K (1987, Wu et al.); H₃S 203 K (2015, high pressure, dashed line); LaH₁₀ ~250 K (2019, high pressure, dashed line); horizontal reference lines at 77 K (liquid N₂) and 293 K (room temperature); ambient-pressure and high-pressure records distinguished by solid vs. dashed markers. Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/10-quantum-mechanics-in-the-modern-world-fig-06.html`
+
+---
+
+### Figure 10.7 — STM cross-section diagram 
+
+Create a standalone D3 v7 HTML file for Figure STM cross-section diagram . Use the CDN https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js, inline CSS, ResizeObserver redraw, SVG role="img", aria-labelledby, title, and desc. Build the figure from this structural brief: STM cross-section diagram — show the sharp metal tip hovering above a corrugated atomic surface (bumps representing individual surface atoms); draw a curved tunneling-current profile above the surface matching the exponential I ∝ e^{−2κd}; annotate that a 1 Å height change produces a 7× current change; show a second panel with the resulting constant-current scan trace reproducing the atomic corrugation; caption: "The atom's height changes by 1 Å. The tunneling current changes by a factor of 7. That factor is why STM sees atoms.". Use the described data shape and labels; when exact values are not supplied, use plausible illustrative values that preserve the relationships in the brief. Use a zero baseline for bars or areas, direct labels where possible, and annotations named in the brief. Use only DESIGN.md color variables and the required serif/mono font split.
+
+> Reference implementation: `d3/10-quantum-mechanics-in-the-modern-world-fig-07.html`
