@@ -102,11 +102,11 @@ The two misconceptions to dispose of now, rather than later. First: "$\psi$ is t
 
 Differentiate the normalization integral under the integral sign:
 
-$$\frac{d}{dt}\int_{-\infty}^\infty|\psi|^2\,dx = \int\left(\psi^*\frac{\partial\psi}{\partial t} + \frac{\partial\psi^*}{\partial t}\psi\right)dx.$$
+$$\frac{d}{dt}\int_{-\infty}^\infty|\psi|^2\,dx = \int\left(\psi^{*}\frac{\partial\psi}{\partial t} + \frac{\partial\psi^{*}}{\partial t}\psi\right)dx.$$
 
-From the Schrödinger equation: $\partial_t\psi = -(i/\hbar)\hat{H}\psi$. For real $V$, $\partial_t\psi^* = +(i/\hbar)(\hat{H}\psi)^*$. Substituting:
+From the Schrödinger equation: $\partial_t\psi = -(i/\hbar)\hat{H}\psi$. For real $V$, $\partial_t\psi^{*} = +(i/\hbar)(\hat{H}\psi)^{*}$. Substituting:
 
-$$\frac{d}{dt}\int|\psi|^2\,dx = -\frac{i}{\hbar}\left[\int\psi^*\hat{H}\psi\,dx - \int(\hat{H}\psi)^*\psi\,dx\right] = -\frac{i}{\hbar}\left[\langle\psi|\hat{H}\psi\rangle - \langle\hat{H}\psi|\psi\rangle\right].$$
+$$\frac{d}{dt}\int|\psi|^2\,dx = -\frac{i}{\hbar}\left[\int\psi^{*}\hat{H}\psi\,dx - \int(\hat{H}\psi)^{*}\psi\,dx\right] = -\frac{i}{\hbar}\left[\langle\psi|\hat{H}\psi\rangle - \langle\hat{H}\psi|\psi\rangle\right].$$
 
 By Hermiticity of $\hat{H}$, $\langle\psi|\hat{H}\psi\rangle = \langle\hat{H}\psi|\psi\rangle$. The bracket is zero. Normalization is preserved.
 
@@ -114,7 +114,7 @@ Notice what the proof consumed: exactly one fact, Hermiticity of $\hat{H}$. This
 
 The same argument, looked at locally rather than globally, produces the *continuity equation*. Define the probability density $\rho(x,t) = |\psi|^2$ and the probability current
 
-$$j(x,t) = \frac{\hbar}{2mi}\left(\psi^*\frac{\partial\psi}{\partial x} - \psi\frac{\partial\psi^*}{\partial x}\right) = \frac{\hbar}{m}\,\text{Im}\!\left(\psi^*\frac{\partial\psi}{\partial x}\right).$$
+$$j(x,t) = \frac{\hbar}{2mi}\left(\psi^{*}\frac{\partial\psi}{\partial x} - \psi\frac{\partial\psi^{*}}{\partial x}\right) = \frac{\hbar}{m}\,\text{Im}\!\left(\psi^{*}\frac{\partial\psi}{\partial x}\right).$$
 
 Then
 
@@ -125,7 +125,7 @@ This is the local statement of probability conservation. Probability does not di
 ![Diagram of a 1D region [a, b] with](../images/03-the-schrodinger-equation-fig-04.png)
 *Figure 3.4 — Diagram of a 1D region [a, b] with*
 
-To derive it: compute $\partial_t(\psi^*\psi)$, substitute the Schrödinger equation for $\partial_t\psi$ and $\partial_t\psi^*$, watch the potential terms cancel because $V$ is real, and recognize the remaining structure as $\partial_x(\psi^*\partial_x\psi - \psi\partial_x\psi^*)$ from the product rule. The derivation is a half-page exercise; each step is just the Schrödinger equation applied twice, once to $\psi$ and once to $\psi^*$.
+To derive it: compute $\partial_t(\psi^{*}\psi)$, substitute the Schrödinger equation for $\partial_t\psi$ and $\partial_t\psi^{*}$, watch the potential terms cancel because $V$ is real, and recognize the remaining structure as $\partial_x(\psi^{*}\partial_x\psi - \psi\partial_x\psi^{*})$ from the product rule. The derivation is a half-page exercise; each step is just the Schrödinger equation applied twice, once to $\psi$ and once to $\psi^{*}$.
 
 For a plane wave $\psi = Ae^{i(kx-\omega t)}$, the current works out to $j = (\hbar k/m)|A|^2 = v|A|^2$ — density times velocity, exactly the classical expression for a moving fluid. In the limit where the wave picture should look classical, the probability current looks like a particle current. This is a sanity check that the formalism is internally consistent.
 
@@ -156,7 +156,7 @@ $$\psi(x,t) = \frac{1}{\sqrt{2}}\left[\psi_1(x)\,e^{-iE_1 t/\hbar} + \psi_2(x)\,
 
 Compute $|\psi|^2$:
 
-$$|\psi|^2 = \frac{1}{2}\left[|\psi_1|^2 + |\psi_2|^2 + 2\,\text{Re}\!\left(\psi_1^*\psi_2\,e^{-i(E_2 - E_1)t/\hbar}\right)\right].$$
+$$|\psi|^2 = \frac{1}{2}\left[|\psi_1|^2 + |\psi_2|^2 + 2\,\text{Re}\!\left(\psi_1^{*}\psi_2\,e^{-i(E_2 - E_1)t/\hbar}\right)\right].$$
 
 The cross term oscillates. It has a factor of $\cos((E_2 - E_1)t/\hbar)$ — the *Bohr frequency* $(E_2 - E_1)/\hbar$. The probability density rocks back and forth at this frequency. The expectation value of position oscillates. When the atom in a higher energy state decays to a lower one, it emits a photon of exactly this energy $E_2 - E_1$, producing a spectral line at frequency $(E_2 - E_1)/h$. Every spectral line in atomic physics — every line in the Balmer series, the Lyman series, the Paschen series — exists because the phases of stationary states rotate, and their *relative* rotation at the Bohr frequency is physically observable the moment you superpose them.
 
@@ -183,7 +183,7 @@ The expectation value of position oscillates about the midpoint of the well with
 
 The spectral theorem from Unit 2 says the energy eigenfunctions of a Hermitian Hamiltonian form a complete orthonormal basis. So any initial state can be expanded:
 
-$$\psi(x, 0) = \sum_n c_n\,\psi_n(x),\qquad c_n = \int\psi_n^*(x)\,\psi(x,0)\,dx.$$
+$$\psi(x, 0) = \sum_n c_n\,\psi_n(x),\qquad c_n = \int\psi_n^{*}(x)\,\psi(x,0)\,dx.$$
 
 Time evolution attaches a phase to each component:
 

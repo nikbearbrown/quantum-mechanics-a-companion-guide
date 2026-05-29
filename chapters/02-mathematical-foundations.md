@@ -30,9 +30,9 @@ This is not a convenient choice. The experiment doesn't give you an alternative.
 
 ## The arithmetic of complex numbers
 
-A complex number is $z = a + bi$ where $a$ and $b$ are ordinary real numbers and $i^2 = -1$. The real part is $a$, the imaginary part is $b$. The *complex conjugate* of $z$ is $z^* = a - bi$ — you flip the sign on the imaginary part. The *modulus* is
+A complex number is $z = a + bi$ where $a$ and $b$ are ordinary real numbers and $i^2 = -1$. The real part is $a$, the imaginary part is $b$. The *complex conjugate* of $z$ is $z^{*} = a - bi$ — you flip the sign on the imaginary part. The *modulus* is
 
-$$|z| = \sqrt{z^* z} = \sqrt{a^2 + b^2}.$$
+$$|z| = \sqrt{z^{*} z} = \sqrt{a^2 + b^2}.$$
 
 That is a non-negative real number. You can think of $a$ and $b$ as coordinates in a plane — the "complex plane" — where the real axis goes left-right and the imaginary axis goes up-down. The modulus is the distance from the origin.
 
@@ -40,7 +40,7 @@ Euler's formula is the fact that makes complex numbers useful in physics:
 
 $$e^{i\theta} = \cos\theta + i\sin\theta.$$
 
-If you want to see why, expand $e^{i\theta}$, $\cos\theta$, and $\sin\theta$ in their Taylor series and check that the real and imaginary parts match term by term. The point is this: every complex number can be written as $z = r\,e^{i\theta}$ where $r = |z|$ is its distance from the origin and $\theta$ is its angle. Multiplying two complex numbers multiplies their distances and *adds* their angles. Taking the conjugate flips the angle: $(re^{i\theta})^* = re^{-i\theta}$.
+If you want to see why, expand $e^{i\theta}$, $\cos\theta$, and $\sin\theta$ in their Taylor series and check that the real and imaginary parts match term by term. The point is this: every complex number can be written as $z = r\,e^{i\theta}$ where $r = |z|$ is its distance from the origin and $\theta$ is its angle. Multiplying two complex numbers multiplies their distances and *adds* their angles. Taking the conjugate flips the angle: $(re^{i\theta})^{*} = re^{-i\theta}$.
 
 The three facts you will use over and over:
 
@@ -49,7 +49,7 @@ The three facts you will use over and over:
 
 - $|e^{i\theta}| = 1$ for any real $\theta$. A pure phase factor doesn't change the size of anything.
 - $e^{i\theta_1} \cdot e^{i\theta_2} = e^{i(\theta_1 + \theta_2)}$. Phases add when complex numbers multiply.
-- $(z_1 z_2)^* = z_1^* z_2^*$. Conjugation distributes over multiplication.
+- $(z_1 z_2)^{*} = z_1^{*} z_2^{*}$. Conjugation distributes over multiplication.
 
 Now back to the double slit. Label the two slits. The amplitude arriving at the screen from slit 1 is $\psi_1$; from slit 2, $\psi_2$. The rule of quantum mechanics — we will state it precisely in Unit 3, but use it here — is that you *add the amplitudes* and then *square the modulus* to get intensity. The total amplitude is $\psi = \psi_1 + \psi_2$, and the intensity is $|\psi|^2$.
 
@@ -82,21 +82,21 @@ A *vector space* over $\mathbb{C}$ is a set of objects — we will call them sta
 
 An *inner product* is a way to measure the "angle" between two states. It is a map $\langle\cdot|\cdot\rangle: V \times V \to \mathbb{C}$ satisfying three conditions:
 
-1. **Conjugate symmetry:** $\langle\phi|\psi\rangle = \langle\psi|\phi\rangle^*$.
+1. **Conjugate symmetry:** $\langle\phi|\psi\rangle = \langle\psi|\phi\rangle^{*}$.
 2. **Linear in the second slot:** $\langle\phi|\alpha\psi + \beta\chi\rangle = \alpha\langle\phi|\psi\rangle + \beta\langle\phi|\chi\rangle$.
 3. **Positive definite:** $\langle\psi|\psi\rangle \geq 0$, with equality only for the zero vector.
 
-From (1) and (2) it follows that the inner product is *anti-linear* in the first slot — scalars come out conjugated: $\langle\alpha\phi|\psi\rangle = \alpha^*\langle\phi|\psi\rangle$. This is the physicist convention, followed here throughout.
+From (1) and (2) it follows that the inner product is *anti-linear* in the first slot — scalars come out conjugated: $\langle\alpha\phi|\psi\rangle = \alpha^{*}\langle\phi|\psi\rangle$. This is the physicist convention, followed here throughout.
 
 The *norm* of a state is $\|\psi\| = \sqrt{\langle\psi|\psi\rangle}$. A *Hilbert space* is a complex vector space with an inner product that is also *complete* — meaning no sequences escape the space. In finite dimensions (like $\mathbb{C}^n$), completeness is automatic. For wave functions on the real line, the relevant Hilbert space is $L^2(\mathbb{R})$, the space of square-integrable functions, and completeness is a genuine theorem.
 
 Concretely in $\mathbb{C}^n$: if $|\psi\rangle = (\alpha_1, \ldots, \alpha_n)^T$ and $|\phi\rangle = (\beta_1, \ldots, \beta_n)^T$, then
 
-$$\langle\phi|\psi\rangle = \sum_{i=1}^n \beta_i^* \alpha_i.$$
+$$\langle\phi|\psi\rangle = \sum_{i=1}^n \beta_i^{*} \alpha_i.$$
 
 Conjugate the first slot's entries; multiply; sum. Concretely on $L^2(\mathbb{R})$: if $\psi$ and $\phi$ are wave functions,
 
-$$\langle\phi|\psi\rangle = \int_{-\infty}^\infty \phi^*(x)\,\psi(x)\,dx.$$
+$$\langle\phi|\psi\rangle = \int_{-\infty}^\infty \phi^{*}(x)\,\psi(x)\,dx.$$
 
 Same idea, integral instead of sum.
 
@@ -108,9 +108,9 @@ P. A. M. Dirac introduced the bra-ket notation in 1939 [Dirac, *Math. Proc. Camb
 
 **Ket.** $|\psi\rangle$ is the state vector. In $\mathbb{C}^n$, think of it as a column.
 
-**Bra.** $\langle\psi|$ is the *dual vector* — the linear functional that, given any ket $|\phi\rangle$, produces the number $\langle\psi|\phi\rangle$. In $\mathbb{C}^n$, if $|\psi\rangle = (\alpha_1, \alpha_2)^T$, then $\langle\psi| = (\alpha_1^*, \alpha_2^*)$ as a row. *Both* conjugate the entries *and* transpose. These are not separate steps; they happen together. The operation that does both is Hermitian conjugation, written $\dagger$, so $\langle\psi| = |\psi\rangle^\dagger$.
+**Bra.** $\langle\psi|$ is the *dual vector* — the linear functional that, given any ket $|\phi\rangle$, produces the number $\langle\psi|\phi\rangle$. In $\mathbb{C}^n$, if $|\psi\rangle = (\alpha_1, \alpha_2)^T$, then $\langle\psi| = (\alpha_1^{*}, \alpha_2^{*})$ as a row. *Both* conjugate the entries *and* transpose. These are not separate steps; they happen together. The operation that does both is Hermitian conjugation, written $\dagger$, so $\langle\psi| = |\psi\rangle^\dagger$.
 
-**Inner product.** $\langle\phi|\psi\rangle$ is a complex number: row times column, or integral of $\phi^*\psi$, depending on the space.
+**Inner product.** $\langle\phi|\psi\rangle$ is a complex number: row times column, or integral of $\phi^{*}\psi$, depending on the space.
 
 **Outer product.** $|\psi\rangle\langle\phi|$ is an *operator*: it takes a ket $|\chi\rangle$ to the ket $|\psi\rangle\,(\langle\phi|\chi\rangle)$, which is a complex number times $|\psi\rangle$.
 
@@ -147,7 +147,7 @@ $$\hat{A}|a\rangle = a|a\rangle.$$
 
 A vector $|a\rangle$ that the operator leaves pointing in the same direction, scaled by a complex number $a$. The eigenvalues come from the characteristic polynomial $\det(\hat{A} - a\hat{I}) = 0$.
 
-Now here is where Hermitian operators become the central object. An operator is *Hermitian* if $\hat{A}^\dagger = \hat{A}$, where $\hat{A}^\dagger$ is defined by the requirement that $\langle\phi|\hat{A}\psi\rangle = \langle\hat{A}^\dagger\phi|\psi\rangle$ for all $|\phi\rangle$, $|\psi\rangle$. In matrix form, $\hat{A}^\dagger$ is the conjugate transpose: $(A^\dagger)_{ij} = A_{ji}^*$. Hermitian means $A_{ij} = A_{ji}^*$.
+Now here is where Hermitian operators become the central object. An operator is *Hermitian* if $\hat{A}^\dagger = \hat{A}$, where $\hat{A}^\dagger$ is defined by the requirement that $\langle\phi|\hat{A}\psi\rangle = \langle\hat{A}^\dagger\phi|\psi\rangle$ for all $|\phi\rangle$, $|\psi\rangle$. In matrix form, $\hat{A}^\dagger$ is the conjugate transpose: $(A^\dagger)_{ij} = A_{ji}^{*}$. Hermitian means $A_{ij} = A_{ji}^{*}$.
 
 The *spectral theorem* for Hermitian operators says three things:
 
@@ -159,7 +159,7 @@ The proof of (1) is one line: if $\hat{A}|a\rangle = a|a\rangle$ and $\hat{A} = 
 
 $$\langle a|\hat{A}|a\rangle = a\langle a|a\rangle.$$
 
-But also $\langle a|\hat{A}|a\rangle = \langle \hat{A}a|a\rangle = \langle a|a\rangle\, a^*$. So $a\langle a|a\rangle = a^*\langle a|a\rangle$. Since $\langle a|a\rangle > 0$, we get $a = a^*$, so $a$ is real.
+But also $\langle a|\hat{A}|a\rangle = \langle \hat{A}a|a\rangle = \langle a|a\rangle\, a^{*}$. So $a\langle a|a\rangle = a^{*}\langle a|a\rangle$. Since $\langle a|a\rangle > 0$, we get $a = a^{*}$, so $a$ is real.
 
 These three properties are why every observable in quantum mechanics is a Hermitian operator: real eigenvalues because measurement outcomes are real numbers; orthogonal eigenstates because distinct outcomes correspond to distinguishable results; a complete eigenbasis because the measurement must have *some* outcome with probability 1.
 
@@ -179,7 +179,7 @@ The three Pauli matrices are
 
 $$\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \qquad \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.$$
 
-All three are Hermitian — check $(A^\dagger)_{ij} = A_{ji}^*$ for each. All three have eigenvalues $\pm 1$. Their eigenvectors are different, and that difference is the substance of quantum measurement.
+All three are Hermitian — check $(A^\dagger)_{ij} = A_{ji}^{*}$ for each. All three have eigenvalues $\pm 1$. Their eigenvectors are different, and that difference is the substance of quantum measurement.
 
 $\sigma_z$ is already diagonal. Eigenvectors:
 
@@ -214,19 +214,19 @@ The momentum operator in the position representation is $\hat{p} = -i\hbar\,d/dx
 
 We need to confirm $\langle\phi|\hat{p}\psi\rangle = \langle\hat{p}\phi|\psi\rangle$, i.e.,
 
-$$\int_{-\infty}^\infty \phi^*(x)\left(-i\hbar\frac{d\psi}{dx}\right)dx = \int_{-\infty}^\infty \left(-i\hbar\frac{d\phi}{dx}\right)^*\psi(x)\,dx.$$
+$$\int_{-\infty}^\infty \phi^{*}(x)\left(-i\hbar\frac{d\psi}{dx}\right)dx = \int_{-\infty}^\infty \left(-i\hbar\frac{d\phi}{dx}\right)^{*}\psi(x)\,dx.$$
 
-The right side is $\int (+i\hbar\,d\phi^*/dx)\,\psi\,dx$. Integrate the left side by parts:
+The right side is $\int (+i\hbar\,d\phi^{*}/dx)\,\psi\,dx$. Integrate the left side by parts:
 
-$$\int \phi^*\frac{d\psi}{dx}\,dx = \left[\phi^*\psi\right]_{-\infty}^\infty - \int\frac{d\phi^*}{dx}\psi\,dx.$$
+$$\int \phi^{*}\frac{d\psi}{dx}\,dx = \left[\phi^{*}\psi\right]_{-\infty}^\infty - \int\frac{d\phi^{*}}{dx}\psi\,dx.$$
 
-The boundary term $[\phi^*\psi]_{-\infty}^\infty$ vanishes because both $\phi$ and $\psi$ are square-integrable — if they didn't go to zero at infinity, $\int|\psi|^2\,dx$ would diverge. So
+The boundary term $[\phi^{*}\psi]_{-\infty}^\infty$ vanishes because both $\phi$ and $\psi$ are square-integrable — if they didn't go to zero at infinity, $\int|\psi|^2\,dx$ would diverge. So
 
-$$\int\phi^*\frac{d\psi}{dx}\,dx = -\int\frac{d\phi^*}{dx}\psi\,dx.$$
+$$\int\phi^{*}\frac{d\psi}{dx}\,dx = -\int\frac{d\phi^{*}}{dx}\psi\,dx.$$
 
 Multiply both sides by $-i\hbar$:
 
-$$-i\hbar\int\phi^*\frac{d\psi}{dx}\,dx = +i\hbar\int\frac{d\phi^*}{dx}\psi\,dx. \checkmark$$
+$$-i\hbar\int\phi^{*}\frac{d\psi}{dx}\,dx = +i\hbar\int\frac{d\phi^{*}}{dx}\psi\,dx. \checkmark$$
 
 Two things to notice. First: the $-i$ in $\hat{p} = -i\hbar\,d/dx$ is load-bearing. Without it, $d/dx$ is *anti-Hermitian* ($\hat{A}^\dagger = -\hat{A}$) by the same argument; the $-i$ rotates anti-Hermitian to Hermitian. Every basic QM operator carries these factors of $i$ for exactly this reason. Second: the proof used the boundary conditions. On a finite interval with states that don't vanish at the endpoints, the boundary term does not necessarily vanish, and $\hat{p}$ may not be Hermitian on that domain. The domain is part of the definition of the operator. In infinite dimensions, *Hermitian* and *self-adjoint* are not the same thing — a Hermitian operator might have eigenstates but lack a complete eigenbasis, or fail to admit a unique unambiguous extension to its full domain. Griffiths' footnotes acknowledge this; Reed and Simon *Methods of Modern Mathematical Physics* Vol. 2 is the reference for when it matters. It will matter again in Unit 4 when half-line problems first appear.
 

@@ -123,7 +123,7 @@ $$J = \int\!\!\int |\psi_{1s}(\mathbf{r}_1)|^2\,|\psi_{2s}(\mathbf{r}_2)|^2\,\fr
 
 which is the classical Coulomb repulsion between the two charge distributions. The cross term gives the *exchange integral*
 
-$$K = \int\!\!\int \psi_{1s}^*(\mathbf{r}_1)\psi_{2s}^*(\mathbf{r}_2)\,\frac{e^2}{4\pi\varepsilon_0 r_{12}}\,\psi_{1s}(\mathbf{r}_2)\psi_{2s}(\mathbf{r}_1)\,d^3r_1\,d^3r_2.$$
+$$K = \int\!\!\int \psi_{1s}^{*}(\mathbf{r}_1)\psi_{2s}^{*}(\mathbf{r}_2)\,\frac{e^2}{4\pi\varepsilon_0 r_{12}}\,\psi_{1s}(\mathbf{r}_2)\psi_{2s}(\mathbf{r}_1)\,d^3r_1\,d^3r_2.$$
 
 $K$ has no classical analog. It exists because the wave function is antisymmetrized — the cross term in $|\psi_\pm|^2$ is present only because of the $\pm$ structure. For real $1s$ and $2s$ orbitals, $K > 0$. The energy corrections are:
 

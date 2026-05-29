@@ -94,23 +94,23 @@ The proof is two lines. Expand $|\psi_{\text{trial}}\rangle = \sum_n c_n|n\rangl
 
 Three virtues of the method. First, no expansion parameter is needed — you can apply it to helium without pretending the electron-electron repulsion is small. Second, the bound is one-sided: you can never *overestimate* the ground-state energy. Third, the energy error is second order in the deviation of $|\psi_{\text{trial}}\rangle$ from the true ground state — so even a mediocre trial state gives a good energy estimate.
 
-The helium calculation illustrates all three. The trial state is a product of two hydrogen-like $1s$ orbitals but with an adjustable effective nuclear charge $Z^*$:
+The helium calculation illustrates all three. The trial state is a product of two hydrogen-like $1s$ orbitals but with an adjustable effective nuclear charge $Z^{*}$:
 
-$$\psi_{\text{trial}}(\mathbf{r}_1, \mathbf{r}_2) = \frac{(Z^*)^3}{\pi a_0^3}\, e^{-Z^*(r_1 + r_2)/a_0}.$$
+$$\psi_{\text{trial}}(\mathbf{r}_1, \mathbf{r}_2) = \frac{(Z^{*})^3}{\pi a_0^3}\, e^{-Z^{*}(r_1 + r_2)/a_0}.$$
 
-The idea: each electron partially screens the nucleus from the other, so the effective charge each electron sees is less than the bare $Z = 2$. In atomic units (where energies are in Hartrees, $1\ \text{Hartree} = 27.2\ \text{eV}$), compute $\langle\hat{H}\rangle$ in three pieces. Kinetic energy: $(Z^*)^2$ (two electrons, each contributing $(Z^*)^2/2$). Electron-nucleus attraction: $-2ZZ^*$ (each electron in a $Z^*$ orbital has $\langle 1/r\rangle = Z^*$, and the true nuclear charge is $Z$). Electron-electron repulsion: $(5/8)Z^*$ (a standard Coulomb integral for two $1s$ orbitals with charge $Z^*$).
+The idea: each electron partially screens the nucleus from the other, so the effective charge each electron sees is less than the bare $Z = 2$. In atomic units (where energies are in Hartrees, $1\ \text{Hartree} = 27.2\ \text{eV}$), compute $\langle\hat{H}\rangle$ in three pieces. Kinetic energy: $(Z^{*})^2$ (two electrons, each contributing $(Z^{*})^2/2$). Electron-nucleus attraction: $-2ZZ^{*}$ (each electron in a $Z^{*}$ orbital has $\langle 1/r\rangle = Z^{*}$, and the true nuclear charge is $Z$). Electron-electron repulsion: $(5/8)Z^{*}$ (a standard Coulomb integral for two $1s$ orbitals with charge $Z^{*}$).
 
 Combining:
 
-$$\langle\hat{H}\rangle(Z^*) = (Z^*)^2 - 2ZZ^* + \frac{5}{8}Z^*.$$
+$$\langle\hat{H}\rangle(Z^{*}) = (Z^{*})^2 - 2ZZ^{*} + \frac{5}{8}Z^{*}.$$
 
-Minimize over $Z^*$:
+Minimize over $Z^{*}$:
 
-$$\frac{d\langle\hat{H}\rangle}{dZ^*} = 2Z^* - 2Z + \frac{5}{8} = 0 \implies Z^* = Z - \frac{5}{16}.$$
+$$\frac{d\langle\hat{H}\rangle}{dZ^{*}} = 2Z^{*} - 2Z + \frac{5}{8} = 0 \implies Z^{*} = Z - \frac{5}{16}.$$
 
-For helium, $Z = 2$, so $Z^* = 27/16 \approx 1.69$. The variational ground-state energy is
+For helium, $Z = 2$, so $Z^{*} = 27/16 \approx 1.69$. The variational ground-state energy is
 
-$$E_{\text{var}} = -(Z^*)^2 = -(27/16)^2 \approx -2.848\ \text{Hartree} \approx -77.5\ \text{eV}.$$
+$$E_{\text{var}} = -(Z^{*})^2 = -(27/16)^2 \approx -2.848\ \text{Hartree} \approx -77.5\ \text{eV}.$$
 
 The experimental value is $-79.0$ eV. The one-parameter variational result is within 2% — and it has a clear physical story: each electron sees an effective nuclear charge of about 1.69 because the other electron screens 5/16 of the bare charge of 2.
 
@@ -242,7 +242,7 @@ Knowing which kind of approximation you are using — a convergent expansion, an
 
 **W2.** The first-order Stark effect on hydrogen $1s$ is zero because the integral $\int |\psi_{1s}|^2 z\,d^3r$ vanishes. Explain in two sentences — without computing the integral — why it must be zero. Then explain why the same argument does *not* show that $\langle 1s | \hat{z}^2 | 1s \rangle = 0$. *(Tests physical understanding of parity and symmetry; the second part prevents memorizing "odd function = zero" without thinking about what changes when you square.)*
 
-**W3.** For the variational helium calculation, the electron-electron repulsion contributes $+(5/8)Z^*$ to $\langle\hat{H}\rangle$ in atomic units. (a) Explain in one sentence why this term increases with $Z^*$ — what is the physical effect of squeezing both electron wave functions toward the nucleus? (b) Without recomputing, predict whether the optimal $Z^*$ for lithium ($Z=3$) will be larger or smaller than for helium ($Z=2$), and by approximately how much. *(Forces physical reasoning before and after the calculation; part (b) is answered by the formula $Z^* = Z - 5/16$.)*
+**W3.** For the variational helium calculation, the electron-electron repulsion contributes $+(5/8)Z^{*}$ to $\langle\hat{H}\rangle$ in atomic units. (a) Explain in one sentence why this term increases with $Z^{*}$ — what is the physical effect of squeezing both electron wave functions toward the nucleus? (b) Without recomputing, predict whether the optimal $Z^{*}$ for lithium ($Z=3$) will be larger or smaller than for helium ($Z=2$), and by approximately how much. *(Forces physical reasoning before and after the calculation; part (b) is answered by the formula $Z^{*} = Z - 5/16$.)*
 
 **Application**
 
