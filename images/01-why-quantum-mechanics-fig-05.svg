@@ -1,25 +1,50 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Franck–Hertz current vs</title>
-  <desc id="desc">Franck–Hertz current vs. accelerating voltage — student should see the periodic dips at 4.9 V, 9.8 V, 14.7 V; annotate each dip with the number of ine</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
+<!--
+  Franck-Hertz Current vs Voltage
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 01-why-quantum-mechanics · Figure: 05
+-->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Franck-Hertz — Periodic Dips at 4.9 V Reveal Discrete Mercury Levels</title>
+  <desc>Collector current I vs accelerating voltage V for mercury vapor. Sharp current dips at V = 4.9, 9.8, 14.7 V — each corresponds to an inelastic collision where the electron transfers exactly 4.9 eV to a mercury atom. Direct evidence of energy quantization.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="01-why-quantum-mechanics" figure-number="05" figure-title="Franck-Hertz" figure-slug="franck-hertz" figure-type="quantitative" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/01-why-quantum-mechanics-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Franck–Hertz current vs</text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">Franck–Hertz current vs. accelerating voltage — student should see the periodic dips at 4.9 V, 9.8 V, 14.7 V; annotate each dip with the number of ine</text>
-  <rect x="64" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="144" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">FRANCK–HERTZ</text>
-  <circle cx="144" cy="204" r="28" fill="#6B3520"/>
-  <text x="144" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="258" y="116" width="160" height="180" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="338" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">CURRENT</text>
-  <circle cx="338" cy="204" r="36" fill="#C8102E"/>
-  <text x="338" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="452" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="532" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">VS</text>
-  <circle cx="532" cy="204" r="44" fill="#1A3A5C"/>
-  <text x="532" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <text x="350" y="340" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Panels translate the chapter prompt into comparable visual states.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Franck-Hertz, 1914 — Electrons Find Mercury's First Excited State</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Every 4.9 V the current dips. Each dip is one inelastic collision per electron. Discrete spectrum, mapped.</text>
+
+  <line x1="100" y1="340" x2="660" y2="340" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="100" y1="100" x2="100" y2="340" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="60" y="220" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454" transform="rotate(-90 60 220)">collector current I</text>
+  <text x="370" y="360" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454">accelerating voltage V (volts)</text>
+
+  <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454" text-anchor="middle">
+    <text x="100" y="356">0</text>
+    <text x="232" y="356">4.9</text>
+    <text x="364" y="356">9.8</text>
+    <text x="496" y="356">14.7</text>
+    <text x="628" y="356">19.6</text>
+  </g>
+
+  <!-- Current curve: rises, dips at 4.9, 9.8, 14.7, with rising overall envelope -->
+  <path d="M 100 320 Q 160 250 220 220 Q 232 215 244 290 Q 280 200 350 180 Q 364 175 378 250 Q 420 165 490 145 Q 496 140 510 220 Q 560 130 660 110" stroke="#0072B2" stroke-width="2.5" fill="none"/>
+
+  <!-- Dip markers (orange triangles below x-axis) -->
+  <polygon points="232,350 226,358 238,358" fill="#E69F00"/>
+  <polygon points="364,350 358,358 370,358" fill="#E69F00"/>
+  <polygon points="496,350 490,358 502,358" fill="#E69F00"/>
+
+  <!-- Vertical reference lines at dips -->
+  <line x1="232" y1="100" x2="232" y2="340" stroke="#aaa" stroke-width="0.5" stroke-dasharray="3 2"/>
+  <line x1="364" y1="100" x2="364" y2="340" stroke="#aaa" stroke-width="0.5" stroke-dasharray="3 2"/>
+  <line x1="496" y1="100" x2="496" y2="340" stroke="#aaa" stroke-width="0.5" stroke-dasharray="3 2"/>
+
+  <!-- Spacing annotation -->
+  <line x1="232" y1="124" x2="364" y2="124" stroke="#D55E00" stroke-width="1.5"/>
+  <polygon points="232,124 240,120 240,128" fill="#D55E00"/>
+  <polygon points="364,124 356,120 356,128" fill="#D55E00"/>
+  <text x="298" y="116" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D55E00">Δ = 4.9 V</text>
+
+  <!-- Energy level annotation -->
+  <text x="500" y="174" font-family="'JetBrains Mono', monospace" font-size="10" fill="#0072B2">Hg first excited state</text>
+  <text x="500" y="190" font-family="'JetBrains Mono', monospace" font-size="10" fill="#0072B2">at 4.9 eV above ground</text>
+
+  <text x="370" y="396" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">"The Bohr model, observed directly." — Franck &amp; Hertz, 1925 Nobel.</text>
 </svg>

@@ -14,6 +14,13 @@
 
 # Introduction
 
+
+## TL;DR
+
+- The Introduction does different work than the Preface: - Preface = why the book exists, why you wrote it (author's voice) - Introduction = what the book argues and how it is organized (reader's roadmap).
+- The chapter moves through How This Book Is Organized.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 <!-- Opening: state the central problem or claim in the first paragraph.
      Do not throat-clear. Do not say "In this book I will..." -->
 

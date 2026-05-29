@@ -1,5 +1,12 @@
 # Chapter 8 — Identical Particles
 
+
+## TL;DR
+
+- Two electrons in helium are not "electron 1 and electron 2.
+- The chapter moves through The exchange operator, The Slater determinant, The exchange correlation: why symmetry affects energy, Helium: where the singlet-triplet splitting comes from, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *Two electrons in helium are not "electron 1 and electron 2." Forgetting that throws away the helium spectrum, the periodic table, and the white dwarf.*
 
 ---
@@ -51,7 +58,7 @@ $$\psi(1, 2, \ldots, N) = \frac{1}{\sqrt{N!}} \begin{vmatrix} \phi_1(1) & \phi_1
 
 Slater introduced this in 1929 [*Physical Review* 34, 1293–1322](https://doi.org/10.1103/PhysRev.34.1293). The determinant structure does two things automatically.
 
-![N=3 Slater determinant ](images/08-identical-particles-fig-01.png)
+![N=3 Slater determinant ](../images/08-identical-particles-fig-01.png)
 *Figure 8.1 — N=3 Slater determinant *
 
 First, antisymmetry is built in. Swap two particle labels — that is, swap two columns of the determinant — and the determinant changes sign. That is what determinants do when you transpose two columns. No extra work needed; the algebra enforces the postulate.
@@ -86,7 +93,7 @@ $$\langle(x_1-x_2)^2\rangle_\text{fermion} > \langle(x_1-x_2)^2\rangle_\text{dis
 
 No interaction term in the Hamiltonian has been turned on. The particles are non-interacting. The difference in average separation comes entirely from the symmetry of the spatial wave function. Fermions are statistically further apart than distinguishable particles would be; bosons are statistically closer. This is the *exchange correlation* — call it that, not an "exchange force." There is no extra term in the Hamiltonian. There is only the Coulomb force and the antisymmetry constraint on the wave function. The antisymmetry dictates how often the two electrons sit close enough for the Coulomb repulsion to matter. That is the entire mechanism behind the helium spectrum.
 
-![No interaction. No force. Just the symmetry of the wave function.](images/08-identical-particles-fig-02.png)
+![No interaction. No force. Just the symmetry of the wave function.](../images/08-identical-particles-fig-02.png)
 *Figure 8.2 — Three plots of |ψ(x₁, x₂)|² as a 2D*
 
 ---
@@ -126,7 +133,7 @@ Parahelium (symmetric spatial, $S=0$) has energy $E_0 + J + K$. Orthohelium (ant
 
 Empirically: the orthohelium $1s2s$ state sits at $-59.2$ eV, the parahelium at $-58.4$ eV, a splitting of about 0.8 eV [NIST Atomic Spectra Database](https://www.nist.gov/pml/atomic-spectra-database). Orthohelium is lower, as the calculation predicts.
 
-![Helium energy level diagram ](images/08-identical-particles-fig-03.png)
+![Helium energy level diagram ](../images/08-identical-particles-fig-03.png)
 *Figure 8.3 — Helium energy level diagram *
 
 Notice what happened here. The spins did not interact directly — there is no $\hat{S}_1 \cdot \hat{S}_2$ term in the Hamiltonian at this order. What happened is that the spin state *forced the symmetry of the spatial wave function*, which forced how often the electrons sit near each other, which changed the Coulomb energy. The triplet has antisymmetric spatial: the electrons stay further apart, the Coulomb repulsion is reduced, the energy is lower. The spin label is a marker for the spatial symmetry sector. The Coulomb force is doing the work; the antisymmetry is channeling it.
@@ -145,7 +152,7 @@ $$1s,\ 2s,\ 2p,\ 3s,\ 3p,\ 4s,\ 3d,\ 4p,\ 5s,\ 4d,\ 5p, \ldots$$
 
 The physical content is screening. An outer electron in a high-$\ell$ orbital is more effectively screened from the nucleus by the inner shells than an electron in a low-$\ell$ orbital at the same $n$, because low-$\ell$ orbitals penetrate the inner shells more deeply and experience a larger effective nuclear charge. This is why $4s$ sits below $3d$ in energy for light atoms — the $4s$ electron, despite its larger principal quantum number, penetrates the core more effectively than the $3d$ electron and is less screened.
 
-![The Madelung diagonal-filling diagram ](images/08-identical-particles-fig-04.png)
+![The Madelung diagonal-filling diagram ](../images/08-identical-particles-fig-04.png)
 *Figure 8.4 — The Madelung diagonal-filling diagram *
 
 Madelung's rule is not exact. Chromium's observed ground configuration is $[\text{Ar}]\,3d^5 4s^1$, not the predicted $3d^4 4s^2$. The half-filled $3d^5$ subshell is stabilized by exchange — five parallel spins, one per $d$-orbital, maximize the spin multiplicity and minimize the intra-subshell Coulomb energy through Hund's rule — and the $4s$–$3d$ energy gap is small enough that the exchange stabilization wins. Copper is $3d^{10} 4s^1$ for the analogous reason. There are roughly twenty such exceptions across the periodic table, concentrated in the $d$- and $f$-blocks where orbital energies become near-degenerate. The exceptions are not failures of quantum mechanics; they are places where the Madelung heuristic's approximations break down and the actual energy competition has to be computed.
@@ -168,7 +175,7 @@ $$\langle n_i\rangle_\text{BE} = \frac{1}{e^{(E_i - \mu)/k_BT} - 1}.$$
 
 The sign in the denominator is the entire story. At high temperature and low density, the two distributions converge to the classical Maxwell–Boltzmann form. At low temperature, they diverge: bosons condense, fermions refuse to.
 
-![One sign difference in the denominator. Two different universes at low temperature.](images/08-identical-particles-fig-05.png)
+![One sign difference in the denominator. Two different universes at low temperature.](../images/08-identical-particles-fig-05.png)
 *Figure 8.5 — Plot of ⟨n_i⟩ vs (E_i − μ)/k_BT for*
 
 Bose–Einstein condensation in dilute gases was first observed in rubidium-87 at 170 nK by Cornell and Wieman's group at Boulder [Anderson et al. 1995, *Science* 269, 198–201](https://doi.org/10.1126/science.269.5221.198), and days later in sodium at MIT by Ketterle's group [Davis et al. 1995, *Physical Review Letters* 75, 3969](https://doi.org/10.1103/PhysRevLett.75.3969). Nobel Prize 2001.

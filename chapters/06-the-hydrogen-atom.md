@@ -1,5 +1,12 @@
 # Chapter 6 — The Hydrogen Atom
 
+
+## TL;DR
+
+- One electron, one proton, a Coulomb potential — and the cleanest test we have of whether quantum mechanics is right about the world.
+- The chapter moves through The setup: central potential, separation of variables, Solving the 1s state: where the numbers come from, Dismantling the orbit picture, Why Bohr got the energies right: the hidden symmetry, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *One electron, one proton, a Coulomb potential — and the cleanest test we have of whether quantum mechanics is right about the world.*
 
 ---
@@ -18,7 +25,7 @@ $$E_n = -\frac{13.6\,\text{eV}}{n^2}.$$
 
 The red line at 656 nm, the blue-green at 486 nm, the violet at 434 nm — all there, all correct.
 
-![Hydrogen emission spectrum in the visible range ](images/06-the-hydrogen-atom-fig-01.png)
+![Hydrogen emission spectrum in the visible range ](../images/06-the-hydrogen-atom-fig-01.png)
 *Figure 6.1 — Hydrogen emission spectrum in the visible range *
 
 It was one of the great coups in the history of physics. It was also, as we now know, obtained by a model that is wrong about almost everything except the energies. Bohr's electron traces a definite circular path at a definite radius. That picture is false. And yet the energies are right.
@@ -49,7 +56,7 @@ For the $1s$ state ($\ell = 0$), the radial equation is
 
 $$-\frac{\hbar^2}{2m_e}\frac{d^2u}{dr^2} - \frac{e^2}{4\pi\varepsilon_0 r}u = Eu.$$
 
-![Effective potential energy diagram for the hydrogen radial](images/06-the-hydrogen-atom-fig-02.png)
+![Effective potential energy diagram for the hydrogen radial](../images/06-the-hydrogen-atom-fig-02.png)
 *Figure 6.2 — Effective potential energy diagram for the hydrogen radial*
 
 ---
@@ -86,7 +93,7 @@ The angular integral is 1. The radial integral gives $A = 2/a_0^{3/2}$. The norm
 
 $$\boxed{\psi_{100}(r) = \frac{1}{\sqrt{\pi a_0^3}}\,e^{-r/a_0}.}$$
 
-![Plot of the 1s radial wave function R₁₀(r)](images/06-the-hydrogen-atom-fig-03.png)
+![Plot of the 1s radial wave function R₁₀(r)](../images/06-the-hydrogen-atom-fig-03.png)
 *Figure 6.3 — Plot of the 1s radial wave function R₁₀(r)*
 
 ---
@@ -113,7 +120,7 @@ The most probable radius is $a_0$. The average radius is $\tfrac{3}{2}a_0$.
 
 These are different numbers because the distribution is asymmetric: $P(r)$ peaks at $a_0$ but has a long tail toward larger $r$, and that tail pulls the average upward. If the electron were on a circular orbit at radius $a_0$, there would be exactly one radius, and "most probable" and "average" would both equal $a_0$. The fact that they differ is the mathematical signature that the electron occupies a distribution of radii, not a single one. There is no orbit. There is a probability cloud.
 
-![The orbit picture requires both markers to be at the same place. They are not.](images/06-the-hydrogen-atom-fig-04.png)
+![The orbit picture requires both markers to be at the same place. They are not.](../images/06-the-hydrogen-atom-fig-04.png)
 *Figure 6.4 — P(r) = (4/a₀³)r²e^{−2r/a₀} plotted vs r/a₀ from 0*
 
 There is also no moment at which the electron is at a definite radius, moving at a definite speed, in a definite direction. What exists is $|\psi_{100}|^2$ — a spherically symmetric cloud that falls off exponentially from the nucleus. The quantity $a_0$ appears in that cloud as the length scale. Bohr found the right length scale by assuming a circular orbit. He got lucky: the length scale is real, the orbit is not.
@@ -159,7 +166,7 @@ The $n^2$ factor is a direct consequence of the $\mathrm{SO}(4)$ degeneracy. The
 
 One name correction for what follows: the word "orbital" does not mean "orbit." An orbital — the spherical $s$ cloud, the dumbbell $p$, the four-lobed $d$ — is an isocontour of $|\psi_{n\ell m}|^2$, usually drawn at the surface that encloses 90% of the probability. It describes where the electron is *likely to be found if measured*. It does not describe what the electron is doing between measurements. There is no between-measurements story that quantum mechanics tells. The orbital shape is everything; the trajectory is nothing.
 
-![90%-probability isosurface renderings of the 1s, 2s, 2p_z,](images/06-the-hydrogen-atom-fig-05.png)
+![90%-probability isosurface renderings of the 1s, 2s, 2p_z,](../images/06-the-hydrogen-atom-fig-05.png)
 *Figure 6.5 — 90%-probability isosurface renderings of the 1s, 2s, 2p_z,*
 
 ---
@@ -170,7 +177,7 @@ In 1922 Otto Stern and Walther Gerlach sent a beam of neutral silver atoms throu
 
 Silver has one unpaired electron in a $5s$ state. The two spots correspond to the two projections of that electron's spin onto the magnetic-field axis: $S_z = +\hbar/2$ and $S_z = -\hbar/2$. Two outcomes, not a continuum.
 
-![Two spots where classical physics predicts a smear. The discreteness is spin.](images/06-the-hydrogen-atom-fig-06.png)
+![Two spots where classical physics predicts a smear. The discreteness is spin.](../images/06-the-hydrogen-atom-fig-06.png)
 *Figure 6.6 — Stern-Gerlach apparatus diagram *
 
 Historical note worth making: Stern and Gerlach in 1922 did not interpret their result as electron spin. Spin had not been proposed. They thought they were seeing "space quantization" of orbital angular momentum. The correct interpretation — that the splitting comes from the spin of the unpaired $5s$ electron — came only after Uhlenbeck and Goudsmit proposed the idea of intrinsic electron spin in 1925. [Uhlenbeck & Goudsmit 1925, *Die Naturwissenschaften* 13, 953–954](https://doi.org/10.1007/BF01558878) [verify]. The experiment ran three years before anyone knew what it was measuring.

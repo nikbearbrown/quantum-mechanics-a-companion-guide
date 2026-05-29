@@ -1,5 +1,12 @@
 # Chapter 2 — Mathematical Foundations
 
+
+## TL;DR
+
+- The language quantum mechanics is written in, and why no simpler language works.
+- The chapter moves through The arithmetic of complex numbers, Vector spaces and inner products, Dirac notation, Operators and eigenvalues, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *The language quantum mechanics is written in, and why no simpler language works.*
 
 ---
@@ -16,7 +23,7 @@ Things with a continuously varying phase look like $e^{i\varphi}$. And $e^{i\var
 
 This is not a convenient choice. The experiment doesn't give you an alternative.
 
-![Double-slit experiment diagram with single-electron sequential buildup ](images/02-mathematical-foundations-fig-01.png)
+![Double-slit experiment diagram with single-electron sequential buildup ](../images/02-mathematical-foundations-fig-01.png)
 *Figure 2.1 — Double-slit experiment diagram with single-electron sequential buildup *
 
 ---
@@ -37,7 +44,7 @@ If you want to see why, expand $e^{i\theta}$, $\cos\theta$, and $\sin\theta$ in 
 
 The three facts you will use over and over:
 
-![The complex plane showing a point z =](images/02-mathematical-foundations-fig-02.png)
+![The complex plane showing a point z =](../images/02-mathematical-foundations-fig-02.png)
 *Figure 2.2 — The complex plane showing a point z =*
 
 - $|e^{i\theta}| = 1$ for any real $\theta$. A pure phase factor doesn't change the size of anything.
@@ -62,7 +69,7 @@ $$|\psi|^2 = 2\cos^2\!\left(\frac{kd\sin\theta}{2}\right).$$
 
 Maxima where $d\sin\theta = n\lambda$; zeros where $d\sin\theta = (n + 1/2)\lambda$. Bright and dark bands, exactly as observed. The complex exponentials made this calculation work in four lines. Try it with real numbers: the cross term is $2\psi_1\psi_2$, a fixed sign, no oscillation. No dark bands. No double slit experiment.
 
-![Plot of |ψ|² = 2cos²(kd sinθ / 2)](images/02-mathematical-foundations-fig-03.png)
+![Plot of |ψ|² = 2cos²(kd sinθ / 2)](../images/02-mathematical-foundations-fig-03.png)
 *Figure 2.3 — Plot of |ψ|² = 2cos²(kd sinθ / 2)*
 
 Stueckelberg showed in 1960 that you can reformulate quantum mechanics with real numbers if you double the dimension of every space — one extra real dimension to replace each complex one. What you cannot do is reformulate it with real numbers *in the same dimension*. And Renou and collaborators published an experiment in 2021 that directly tested a whole class of real-amplitude reformulations using Bell inequalities — and ruled them out [Renou et al., *Nature* 600, 625–629 (2021), *verify pagination*]. The complex numbers are not a convention. They are measured.
@@ -196,7 +203,7 @@ $$\sigma_x|\!\uparrow\rangle = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begi
 
 The spin-$z$-up state is not a spin-$x$ eigenstate; acting with $\sigma_x$ takes it to the orthogonal state. To find the measurement probabilities, expand $|\!\uparrow\rangle$ in the $\sigma_x$ eigenbasis. Inverting the relations above: $|\!\uparrow\rangle = (1/\sqrt{2})(|+_x\rangle + |-_x\rangle)$. The probability of measuring $\sigma_x = +1$ in the state $|\!\uparrow\rangle$ is $|\langle +_x|\!\uparrow\rangle|^2 = |1/\sqrt{2}|^2 = 1/2$. Fifty-fifty. A particle known to be spin-up along $z$ is completely undetermined along $x$. That is the Stern–Gerlach experiment, written in basis-change arithmetic.
 
-![Stern-Gerlach apparatus diagram showing sequential measurements ](images/02-mathematical-foundations-fig-04.png)
+![Stern-Gerlach apparatus diagram showing sequential measurements ](../images/02-mathematical-foundations-fig-04.png)
 *Figure 2.4 — Stern-Gerlach apparatus diagram showing sequential measurements *
 
 ---
@@ -223,7 +230,7 @@ $$-i\hbar\int\phi^*\frac{d\psi}{dx}\,dx = +i\hbar\int\frac{d\phi^*}{dx}\psi\,dx.
 
 Two things to notice. First: the $-i$ in $\hat{p} = -i\hbar\,d/dx$ is load-bearing. Without it, $d/dx$ is *anti-Hermitian* ($\hat{A}^\dagger = -\hat{A}$) by the same argument; the $-i$ rotates anti-Hermitian to Hermitian. Every basic QM operator carries these factors of $i$ for exactly this reason. Second: the proof used the boundary conditions. On a finite interval with states that don't vanish at the endpoints, the boundary term does not necessarily vanish, and $\hat{p}$ may not be Hermitian on that domain. The domain is part of the definition of the operator. In infinite dimensions, *Hermitian* and *self-adjoint* are not the same thing — a Hermitian operator might have eigenstates but lack a complete eigenbasis, or fail to admit a unique unambiguous extension to its full domain. Griffiths' footnotes acknowledge this; Reed and Simon *Methods of Modern Mathematical Physics* Vol. 2 is the reference for when it matters. It will matter again in Unit 4 when half-line problems first appear.
 
-![Integration-by-parts steps for the momentum Hermiticity proof ](images/02-mathematical-foundations-fig-05.png)
+![Integration-by-parts steps for the momentum Hermiticity proof ](../images/02-mathematical-foundations-fig-05.png)
 *Figure 2.5 — Integration-by-parts steps for the momentum Hermiticity proof *
 
 ---

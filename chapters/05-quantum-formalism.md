@@ -1,4 +1,11 @@
 # Chapter 5 — Quantum Formalism
+
+## TL;DR
+
+- Two students sit in a library with two papers.
+- The chapter moves through The five postulates, The uncertainty principle: what Robertson actually proved, Compatible observables and commutators, The measurement problem: what is actually unsettled, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *Four Postulates Are Settled. One Is Not. The Difference Matters.*
 
 ---
@@ -89,7 +96,7 @@ $$\sigma_A^2\sigma_B^2 \;\geq\; \frac{1}{4}\bigl|\langle[\hat{A}, \hat{B}]\rangl
 
 which is the Robertson bound. That is the whole proof: Cauchy–Schwarz on shifted operators, isolate the imaginary part, the commutator falls out.
 
-![Proof structure flowchart ](images/05-quantum-formalism-fig-01.png)
+![Proof structure flowchart ](../images/05-quantum-formalism-fig-01.png)
 *Figure 5.1 — Proof structure flowchart *
 
 For position and momentum, $[\hat{x}, \hat{p}] = i\hbar$ — a constant, independent of the state — so $|\langle[\hat{x}, \hat{p}]\rangle| = \hbar$ for every state, and

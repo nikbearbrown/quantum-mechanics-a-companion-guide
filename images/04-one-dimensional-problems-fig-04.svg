@@ -1,25 +1,49 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Finite square well potential diagram showing V =</title>
-  <desc id="desc">finite square well potential diagram showing V = −V₀ inside |x| &lt; a and V = 0 outside, with two bound-state wave functions sketched — one even-parity </desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
+<!--
+  Finite Square Well — Wave Function with Exponential Tails
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 04-one-dimensional-problems · Figure: 04
+-->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Finite Square Well — Wave Function Leaks Exponentially into Forbidden Region</title>
+  <desc>Finite well: V=0 outside, V=−V₀ inside region [−a, a]. Energy level E shown as horizontal black line. Wave function ψ(x) drawn in blue: cosine-like oscillation inside the well, exponential decay into the classically forbidden region outside. Tails clearly extend beyond ±a.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="04-one-dimensional-problems" figure-number="04" figure-title="Finite Square Well" figure-slug="finite-square-well" figure-type="conceptual" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/04-one-dimensional-problems-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Finite square well potential diagram showing V =</text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">finite square well potential diagram showing V = −V₀ inside |x| &lt; a and V = 0 outside, with two bound-state wave functions sketched — one even-parity </text>
-  <rect x="64" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="144" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">FINITE</text>
-  <circle cx="144" cy="204" r="28" fill="#6B3520"/>
-  <text x="144" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="258" y="116" width="160" height="180" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="338" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">SQUARE</text>
-  <circle cx="338" cy="204" r="36" fill="#C8102E"/>
-  <text x="338" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="452" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="532" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">WELL</text>
-  <circle cx="532" cy="204" r="44" fill="#1A3A5C"/>
-  <text x="532" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <text x="350" y="340" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Panels translate the chapter prompt into comparable visual states.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Finite Well — ψ(x) Is Not Zero in the Classically Forbidden Region</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Outside [−a, +a], V > E. Classically forbidden — but ψ leaks exponentially into the tails.</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="240" x2="660" y2="240" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="370" y1="80" x2="370" y2="380" stroke="#2a1a0e" stroke-width="0.6"/>
+  <text x="668" y="244" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">x</text>
+
+  <!-- Potential — black: V=0 for |x| > a, V=−V₀ inside well -->
+  <line x1="80" y1="180" x2="245" y2="180" stroke="#000000" stroke-width="2"/>
+  <line x1="245" y1="180" x2="245" y2="310" stroke="#000000" stroke-width="2"/>
+  <line x1="245" y1="310" x2="495" y2="310" stroke="#000000" stroke-width="2"/>
+  <line x1="495" y1="310" x2="495" y2="180" stroke="#000000" stroke-width="2"/>
+  <line x1="495" y1="180" x2="660" y2="180" stroke="#000000" stroke-width="2"/>
+
+  <!-- Energy level: between 0 (top) and −V₀ (bottom) -->
+  <line x1="80" y1="220" x2="660" y2="220" stroke="#2a1a0e" stroke-width="0.7" stroke-dasharray="4 3"/>
+  <text x="668" y="224" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">E</text>
+
+  <!-- Wall labels -->
+  <text x="245" y="332" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">−a</text>
+  <text x="495" y="332" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">+a</text>
+  <text x="370" y="332" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">−V₀</text>
+
+  <!-- Wave function on baseline E (y=220) -->
+  <!-- left tail: exponential decay from y=220 (at x=245) to y near baseline far left -->
+  <path d="M 100 220 C 160 220 200 195 245 145" stroke="#0072B2" stroke-width="2" fill="none"/>
+  <!-- inside: cosine-like, peak inverted — from (245, 145) up over to (495, 145) -->
+  <path d="M 245 145 Q 370 350 495 145" stroke="#0072B2" stroke-width="2" fill="none"/>
+  <!-- right tail -->
+  <path d="M 495 145 C 540 195 580 220 640 220" stroke="#0072B2" stroke-width="2" fill="none"/>
+
+  <!-- Forbidden-region shading hint -->
+  <rect x="80" y="180" width="165" height="60" fill="#E69F00" fill-opacity="0.07" stroke="none"/>
+  <rect x="495" y="180" width="165" height="60" fill="#E69F00" fill-opacity="0.07" stroke="none"/>
+  <text x="160" y="266" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#C8860E">forbidden (V &gt; E)</text>
+  <text x="580" y="266" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#C8860E">forbidden (V &gt; E)</text>
+
+  <text x="370" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">The walls leak. Quantum particles don't respect classical boundaries.</text>
 </svg>

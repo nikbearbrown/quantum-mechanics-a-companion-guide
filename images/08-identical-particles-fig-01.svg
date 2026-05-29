@@ -1,25 +1,45 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">N=3 Slater determinant </title>
-  <desc id="desc">annotated N=3 Slater determinant — show the 3×3 matrix with φ_a, φ_b, φ_c labeling rows (orbitals) and 1, 2, 3 labeling columns (particles); draw two </desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
+<!--
+  N=2 Slater Determinant — Anti-Symmetry from Column Swap
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 08-identical-particles · Figure: 01
+-->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Slater Determinant Anatomy — Swap Two Columns, Flip the Sign</title>
+  <desc>Two side-by-side 2x2 matrices for the N=2 Slater determinant. Left: original arrangement ψ_a(1) ψ_b(1) / ψ_a(2) ψ_b(2). Right: columns swapped, with red minus-sign arrow showing the result equals minus the original. Bottom annotation: "two identical rows means determinant equals zero" demonstrating Pauli exclusion.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="08-identical-particles" figure-number="01" figure-title="Slater Determinant Anatomy" figure-slug="slater-determinant-anatomy" figure-type="reference" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/08-identical-particles-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">N=3 Slater determinant </text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">annotated N=3 Slater determinant — show the 3×3 matrix with φ_a, φ_b, φ_c labeling rows (orbitals) and 1, 2, 3 labeling columns (particles); draw two </text>
-  <rect x="64" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="144" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">N=3</text>
-  <circle cx="144" cy="204" r="28" fill="#6B3520"/>
-  <text x="144" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="258" y="116" width="160" height="180" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="338" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">SLATER</text>
-  <circle cx="338" cy="204" r="36" fill="#C8102E"/>
-  <text x="338" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="452" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="532" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">DETERMINANT</text>
-  <circle cx="532" cy="204" r="44" fill="#1A3A5C"/>
-  <text x="532" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <text x="350" y="340" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Panels translate the chapter prompt into comparable visual states.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Slater Determinant — Swap Particles → Minus Sign · Same Orbital Twice → Zero</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Determinants are the algebraic tool for enforcing fermion antisymmetry under exchange.</text>
+
+  <!-- Left matrix -->
+  <text x="180" y="110" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">original: rows = particles, columns = orbitals</text>
+  <text x="100" y="180" font-family="'JetBrains Mono', monospace" font-size="32" fill="#2a1a0e">|</text>
+  <text x="120" y="170" font-family="'JetBrains Mono', monospace" font-size="14" fill="#2a1a0e">ψ_a(1)</text>
+  <text x="200" y="170" font-family="'JetBrains Mono', monospace" font-size="14" fill="#2a1a0e">ψ_b(1)</text>
+  <text x="120" y="200" font-family="'JetBrains Mono', monospace" font-size="14" fill="#2a1a0e">ψ_a(2)</text>
+  <text x="200" y="200" font-family="'JetBrains Mono', monospace" font-size="14" fill="#2a1a0e">ψ_b(2)</text>
+  <text x="260" y="180" font-family="'JetBrains Mono', monospace" font-size="32" fill="#2a1a0e">|</text>
+
+  <!-- Arrow with minus -->
+  <line x1="290" y1="180" x2="380" y2="180" stroke="#D55E00" stroke-width="2"/>
+  <polygon points="380,180 372,176 372,184" fill="#D55E00"/>
+  <text x="335" y="170" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="14" fill="#D55E00">= − (left)</text>
+  <text x="335" y="200" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">swap columns</text>
+
+  <!-- Right matrix swapped -->
+  <text x="510" y="110" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">columns swapped (orbitals exchanged)</text>
+  <text x="420" y="180" font-family="'JetBrains Mono', monospace" font-size="32" fill="#2a1a0e">|</text>
+  <text x="440" y="170" font-family="'JetBrains Mono', monospace" font-size="14" fill="#2a1a0e">ψ_b(1)</text>
+  <text x="520" y="170" font-family="'JetBrains Mono', monospace" font-size="14" fill="#2a1a0e">ψ_a(1)</text>
+  <text x="440" y="200" font-family="'JetBrains Mono', monospace" font-size="14" fill="#2a1a0e">ψ_b(2)</text>
+  <text x="520" y="200" font-family="'JetBrains Mono', monospace" font-size="14" fill="#2a1a0e">ψ_a(2)</text>
+  <text x="580" y="180" font-family="'JetBrains Mono', monospace" font-size="32" fill="#2a1a0e">|</text>
+
+  <!-- Pauli exclusion -->
+  <rect x="100" y="260" width="500" height="100" fill="#FFFFFF" stroke="#E69F00" stroke-width="1.5"/>
+  <text x="350" y="282" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#C8860E">Pauli exclusion as a determinant property</text>
+  <text x="350" y="308" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" fill="#2a1a0e">if ψ_a = ψ_b then two columns are identical</text>
+  <text x="350" y="330" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" fill="#2a1a0e">⇒ determinant = 0  ⇒  state forbidden</text>
+  <text x="350" y="352" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="10" fill="#545454" font-style="italic">no two fermions in the same spin-orbital</text>
+
+  <text x="350" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Two algebraic facts — and an entire periodic table follows.</text>
 </svg>

@@ -1,25 +1,66 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Stern-Gerlach apparatus diagram showing sequential measurements </title>
-  <desc id="desc">Stern-Gerlach apparatus diagram showing sequential measurements — first magnet along z splits beam into ↑ and ↓; second magnet along x then splits the</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
-  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Stern-Gerlach apparatus diagram showing sequential measurements </text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">Stern-Gerlach apparatus diagram showing sequential measurements — first magnet along z splits beam into ↑ and ↓; second magnet along x then splits the</text>
-  <rect x="64" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="144" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">STERN-GERLACH</text>
-  <circle cx="144" cy="204" r="28" fill="#6B3520"/>
-  <text x="144" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="258" y="116" width="160" height="180" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="338" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">APPARATUS</text>
-  <circle cx="338" cy="204" r="36" fill="#C8102E"/>
-  <text x="338" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="452" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="532" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">DIAGRAM</text>
-  <circle cx="532" cy="204" r="44" fill="#1A3A5C"/>
-  <text x="532" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <text x="350" y="340" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Panels translate the chapter prompt into comparable visual states.</text>
+<!--
+  Stern-Gerlach Sequential Measurements
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 02-mathematical-foundations · Figure: 04
+-->
+<svg viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Sequential Stern-Gerlach — σ_z, σ_x, σ_z: Non-Commutativity Made Spatial</title>
+  <desc>Horizontal apparatus: oven emits beam, first σ_z magnet splits into |↑⟩ and |↓⟩; block the |↓⟩; |↑⟩ enters σ_x magnet which splits; one σ_x output enters σ_z again — it splits! The second measurement destroys the first measurement's information. σ_z and σ_x do not commute.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="02-mathematical-foundations" figure-number="04" figure-title="Sequential Stern-Gerlach" figure-slug="sequential-stern-gerlach" figure-type="application" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/02-mathematical-foundations-cajal.md"/></metadata>
+  <rect x="0" y="0" width="700" height="460" fill="#FFFFFF"/>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Sequential Stern-Gerlach — σ_z and σ_x Don't Commute</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">A spin-up state along z, measured along x, becomes a 50/50 superposition along z again.</text>
+
+  <!-- Oven -->
+  <rect x="40" y="220" width="40" height="40" fill="#2a1a0e"/>
+  <text x="60" y="280" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">oven</text>
+
+  <!-- Beam from oven to σ_z -->
+  <line x1="80" y1="240" x2="160" y2="240" stroke="#56B4E9" stroke-width="2"/>
+  <polygon points="160,240 152,236 152,244" fill="#56B4E9"/>
+
+  <!-- σ_z magnet -->
+  <rect x="160" y="200" width="60" height="80" fill="none" stroke="#0072B2" stroke-width="1.5"/>
+  <text x="190" y="194" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">σ_z</text>
+
+  <!-- Split into |↑⟩ (upper) and |↓⟩ (lower) -->
+  <line x1="220" y1="240" x2="260" y2="200" stroke="#56B4E9" stroke-width="2"/>
+  <line x1="220" y1="240" x2="260" y2="280" stroke="#56B4E9" stroke-width="2"/>
+
+  <!-- Block on |↓⟩ -->
+  <rect x="260" y="270" width="20" height="20" fill="#D55E00"/>
+  <text x="270" y="306" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">block</text>
+
+  <!-- |↑⟩ continues to σ_x magnet -->
+  <line x1="260" y1="200" x2="340" y2="200" stroke="#56B4E9" stroke-width="2"/>
+  <rect x="340" y="160" width="60" height="80" fill="none" stroke="#0072B2" stroke-width="1.5"/>
+  <text x="370" y="154" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">σ_x</text>
+
+  <!-- σ_x splits upper into |+x⟩ and |−x⟩ -->
+  <line x1="400" y1="200" x2="440" y2="160" stroke="#56B4E9" stroke-width="2"/>
+  <line x1="400" y1="200" x2="440" y2="240" stroke="#56B4E9" stroke-width="2"/>
+
+  <!-- Block on lower σ_x output -->
+  <rect x="440" y="230" width="20" height="20" fill="#D55E00"/>
+
+  <!-- |+x⟩ continues to second σ_z magnet -->
+  <line x1="440" y1="160" x2="520" y2="160" stroke="#56B4E9" stroke-width="2"/>
+  <rect x="520" y="120" width="60" height="80" fill="none" stroke="#0072B2" stroke-width="1.5"/>
+  <text x="550" y="114" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">σ_z</text>
+
+  <!-- σ_z splits AGAIN! -->
+  <line x1="580" y1="160" x2="640" y2="120" stroke="#56B4E9" stroke-width="2"/>
+  <line x1="580" y1="160" x2="640" y2="200" stroke="#56B4E9" stroke-width="2"/>
+  <polygon points="640,120 632,121 634,128" fill="#56B4E9"/>
+  <polygon points="640,200 632,196 634,203" fill="#56B4E9"/>
+
+  <text x="648" y="124" font-family="'JetBrains Mono', monospace" font-size="9" fill="#C8102E">50%</text>
+  <text x="648" y="204" font-family="'JetBrains Mono', monospace" font-size="9" fill="#C8102E">50%</text>
+
+  <!-- Annotation panel -->
+  <rect x="40" y="320" width="620" height="80" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
+  <text x="350" y="342" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">[σ_x, σ_z] = 2iσ_y ≠ 0</text>
+  <text x="60" y="366" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">σ_z eigenstate |↑⟩ is a superposition in σ_x basis: |↑⟩ = (|+x⟩ + |−x⟩)/√2</text>
+  <text x="60" y="384" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">measuring σ_x destroys the σ_z information → second σ_z again gives both outcomes</text>
+
+  <text x="350" y="426" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Two spins along incompatible axes — you can know one or the other, never both.</text>
 </svg>

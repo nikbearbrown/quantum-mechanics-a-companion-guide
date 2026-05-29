@@ -1,5 +1,12 @@
 # Chapter 3 — The Schrödinger Equation
 
+
+## TL;DR
+
+- The dynamical law of quantum mechanics was guessed, not proved.
+- The chapter moves through The plausibility argument, The Born rule: what $|\psi|^2$ means, Normalization is preserved, and why Hermiticity is the reason, Stationary states, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *The dynamical law of quantum mechanics was guessed, not proved. Here is what it says, why it works, and what it refuses to tell you.*
 
 ---
@@ -42,7 +49,7 @@ In operator language, with the Hamiltonian $\hat{H} = \hat{p}^2/2m + V(\hat{x},t
 
 $$i\hbar\frac{\partial\psi}{\partial t} = \hat{H}\psi.$$
 
-![Anatomy of the time-dependent Schrödinger equation ](images/03-the-schrodinger-equation-fig-01.png)
+![Anatomy of the time-dependent Schrödinger equation ](../images/03-the-schrodinger-equation-fig-01.png)
 *Figure 3.1 — Anatomy of the time-dependent Schrödinger equation *
 
 Three features the argument assembles but does not *prove*:
@@ -53,7 +60,7 @@ The equation is **first-order in time**: specifying $\psi$ at one instant determ
 
 The equation has **the factor of $i$**: without it, the equation becomes $\partial_t\psi = (\hbar/2m)\partial_x^2\psi$ — the diffusion equation. Solutions spread irreversibly; a localized initial condition smooths out and never recovers. The $i$ turns diffusion into wave propagation, and it is what ensures the integral $\int|\psi|^2 dx$ stays constant over time. We will prove that shortly.
 
-![Two side-by-side plots of an initially Gaussian wave](images/03-the-schrodinger-equation-fig-02.png)
+![Two side-by-side plots of an initially Gaussian wave](../images/03-the-schrodinger-equation-fig-02.png)
 *Figure 3.2 — Two side-by-side plots of an initially Gaussian wave*
 
 None of these is a consequence of the plausibility argument. They are properties of the equation that the equation itself carries. The plausibility argument motivates the *form* of the equation; experiment confirms that nature uses it.
@@ -84,7 +91,7 @@ $$P = \frac{2}{L}\int_0^{L/4}\sin^2\!\left(\frac{\pi x}{L}\right)dx = \frac{1}{L
 
 About 9%, not 25%. The ground-state probability density has a single peak in the center of the well; the leftmost quarter is depleted. This number — $1/4 - 1/2\pi$ — comes entirely from the wave function's shape, not from the particle's history. There is no trajectory. There is only the amplitude, squared.
 
-![Plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L]](images/03-the-schrodinger-equation-fig-03.png)
+![Plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L]](../images/03-the-schrodinger-equation-fig-03.png)
 *Figure 3.3 — Plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L]*
 
 The two misconceptions to dispose of now, rather than later. First: "$\psi$ is the particle." No — $\psi$ is the probability amplitude. What registers in a detector is the particle. Before detection, what exists is the amplitude. Second: "$|\psi|^2$ is telling you what you don't know about the particle's actual position, which has some definite value you just haven't measured." No. Bell-inequality experiments — Aspect 1982, refined many times since, awarded the 2022 Nobel Prize to Aspect, Clauser, and Zeilinger — rule out local hidden-variable theories that would make this story work. The probability is irreducible. It is not a stand-in for incomplete classical knowledge.
@@ -115,7 +122,7 @@ $$\frac{\partial\rho}{\partial t} + \frac{\partial j}{\partial x} = 0.$$
 
 This is the local statement of probability conservation. Probability does not disappear at one point and reappear somewhere else discontinuously — it flows. If probability is leaving a region, it is flowing across the boundary, and the rate of flow is $j$.
 
-![Diagram of a 1D region [a, b] with](images/03-the-schrodinger-equation-fig-04.png)
+![Diagram of a 1D region [a, b] with](../images/03-the-schrodinger-equation-fig-04.png)
 *Figure 3.4 — Diagram of a 1D region [a, b] with*
 
 To derive it: compute $\partial_t(\psi^*\psi)$, substitute the Schrödinger equation for $\partial_t\psi$ and $\partial_t\psi^*$, watch the potential terms cancel because $V$ is real, and recognize the remaining structure as $\partial_x(\psi^*\partial_x\psi - \psi\partial_x\psi^*)$ from the product rule. The derivation is a half-page exercise; each step is just the Schrödinger equation applied twice, once to $\psi$ and once to $\psi^*$.
@@ -140,7 +147,7 @@ Why "stationary"? Because $|\psi(x,t)|^2 = |\psi(x)|^2$ — the probability dens
 
 Now here is the misconception that ruins everything, and it ruins it in a specific way: *stationary states are not static.* The *probability density* is constant. The *amplitude* $\psi(x,t) = \psi(x)\,e^{-iEt/\hbar}$ rotates in the complex plane at angular frequency $E/\hbar$. The magnitude at each $x$ is fixed. The phase advances at rate $E/\hbar$. For a single stationary state in isolation, this phase rotation has no observable consequence, because measurements depend only on $|\psi|^2$, and $|e^{-iEt/\hbar}| = 1$. You cannot see it. But the moment you put two stationary states together, you can see nothing else.
 
-![A single phasor rotating invisibly. Two phasors beating visibly.](images/03-the-schrodinger-equation-fig-05.png)
+![A single phasor rotating invisibly. Two phasors beating visibly.](../images/03-the-schrodinger-equation-fig-05.png)
 *Figure 3.5 — Diagram *
 
 Form a superposition of states at energies $E_1$ and $E_2$:
@@ -167,7 +174,7 @@ $$\langle x\rangle(t) = \frac{L}{2} - \frac{16L}{9\pi^2}\cos(\omega t),\qquad \o
 
 The expectation value of position oscillates about the midpoint of the well with amplitude $16L/9\pi^2 \approx 0.18L$ at the Bohr frequency. The particle is not moving in any classical sense — there is no trajectory, no velocity, no definite position at any time. But the center of the probability distribution swings back and forth like a pendulum. This is a quantum state that radiates.
 
-![Animation-ready sequence of three snapshots of |ψ(x,t)|² for](images/03-the-schrodinger-equation-fig-06.png)
+![Animation-ready sequence of three snapshots of |ψ(x,t)|² for](../images/03-the-schrodinger-equation-fig-06.png)
 *Figure 3.6 — Animation-ready sequence of three snapshots of |ψ(x,t)|² for*
 
 ---
@@ -212,7 +219,7 @@ $$\psi(x,t) = \frac{1}{\sqrt{2\pi}}\int\phi(k)\,e^{i(kx - \omega(k)t)}\,dk.$$
 
 Because $\omega(k)$ is quadratic in $k$ — not linear — components at different momenta move at different speeds. The wave packet *spreads*. For a Gaussian initial packet of width $\sigma_0$, the position-space width grows as $\sigma(t) = \sigma_0\sqrt{1 + (\hbar t/2m\sigma_0^2)^2}$. At early times the spreading is slow; at late times the width grows linearly in $t$. This spreading is one of the first genuinely quantum predictions you can compute and check — and it has no classical analog for a particle. A baseball thrown in a definite direction stays on that trajectory. A quantum particle disperses.
 
-![Plot of Gaussian wave-packet width σ(t) vs](images/03-the-schrodinger-equation-fig-07.png)
+![Plot of Gaussian wave-packet width σ(t) vs](../images/03-the-schrodinger-equation-fig-07.png)
 *Figure 3.7 — Plot of Gaussian wave-packet width σ(t) vs*
 
 ---

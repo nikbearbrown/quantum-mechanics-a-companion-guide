@@ -1,29 +1,45 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Integration-by-parts steps for the momentum Hermiticity proof </title>
-  <desc id="desc">annotated integration-by-parts steps for the momentum Hermiticity proof — show the key line ∫φ*(dψ/dx)dx → boundary term + remaining integral, with an</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
+<!--
+  Hermitian Operators — Self-Adjoint Means Real Eigenvalues
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 02-mathematical-foundations · Figure: 05
+-->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Hermitian Operators — Why Observables Have Real Expectation Values</title>
+  <desc>Schematic identity for Hermitian operator Â = Â†. Diagrammatic chain: ⟨φ|Âψ⟩ = ⟨Âφ|ψ⟩ (Hermiticity) → eigenvalues real → orthogonal eigenstates → complete basis → quantum observables. Bridge from algebra to physical measurement.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="02-mathematical-foundations" figure-number="05" figure-title="Hermitian Properties" figure-slug="hermitian-properties" figure-type="reference" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/02-mathematical-foundations-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Integration-by-parts steps for the momentum Hermiticity proof </text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">annotated integration-by-parts steps for the momentum Hermiticity proof — show the key line ∫φ*(dψ/dx)dx → boundary term + remaining integral, with an</text>
-  <rect x="64" y="166" width="112" height="88" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="120" y="205" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">START</text>
-  <text x="120" y="226" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">checkpoint</text>
-  <path d="M 180 210 C 196 210, 206 210, 218 210" stroke="#2a1a0e" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <rect x="218" y="166" width="112" height="88" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="274" y="205" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">INTEGRATION-BY-PARTS</text>
-  <text x="274" y="226" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">checkpoint</text>
-  <path d="M 334 210 C 350 210, 360 210, 372 210" stroke="#2a1a0e" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <rect x="372" y="166" width="112" height="88" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="428" y="205" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">STEPS</text>
-  <text x="428" y="226" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">checkpoint</text>
-  <path d="M 488 210 C 504 210, 514 210, 526 210" stroke="#2a1a0e" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <rect x="526" y="166" width="112" height="88" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="582" y="205" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">FOR</text>
-  <text x="582" y="226" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">checkpoint</text>
-  <path d="M 120 292 C 240 340, 430 340, 584 292" stroke="#C8102E" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
-  <text x="350" y="362" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">The diagram emphasizes sequence, dependency, and the decision point.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Hermitian = Self-Adjoint = Physical Observable</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Â = Â† → real eigenvalues, orthogonal eigenstates, complete basis. Foundation of measurement.</text>
+
+  <!-- Top: definition -->
+  <rect x="40" y="90" width="620" height="56" fill="#FFFFFF" stroke="#0072B2" stroke-width="1.5"/>
+  <text x="350" y="112" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">definition: Hermitian Â means Â = Â†</text>
+  <text x="350" y="132" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">⟨φ | Â ψ⟩ = ⟨Â φ | ψ⟩ for all states φ, ψ</text>
+
+  <!-- Three consequence boxes -->
+  <rect x="40" y="170" width="200" height="120" fill="#FFFFFF" stroke="#009E73" stroke-width="1.2"/>
+  <text x="140" y="190" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#009E73">consequence 1</text>
+  <text x="140" y="224" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" fill="#2a1a0e">eigenvalues real</text>
+  <text x="140" y="252" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#009E73">measurement results are real</text>
+  <text x="140" y="266" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#009E73">numbers, as physics requires</text>
+
+  <rect x="250" y="170" width="200" height="120" fill="#FFFFFF" stroke="#0072B2" stroke-width="1.2"/>
+  <text x="350" y="190" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#0072B2">consequence 2</text>
+  <text x="350" y="224" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" fill="#2a1a0e">eigenstates orthogonal</text>
+  <text x="350" y="252" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">distinct outcomes correspond to</text>
+  <text x="350" y="266" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">distinguishable states</text>
+
+  <rect x="460" y="170" width="200" height="120" fill="#FFFFFF" stroke="#E69F00" stroke-width="1.2"/>
+  <text x="560" y="190" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#C8860E">consequence 3</text>
+  <text x="560" y="224" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" fill="#2a1a0e">basis is complete</text>
+  <text x="560" y="252" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#C8860E">any |ψ⟩ = Σ cₙ|n⟩</text>
+  <text x="560" y="266" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#C8860E">spectral decomposition</text>
+
+  <!-- Examples row -->
+  <rect x="40" y="316" width="620" height="80" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
+  <text x="350" y="336" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">canonical Hermitian operators in QM</text>
+  <text x="56" y="358" font-family="'JetBrains Mono', monospace" font-size="10" fill="#0072B2">position x̂</text>
+  <text x="180" y="358" font-family="'JetBrains Mono', monospace" font-size="10" fill="#0072B2">momentum p̂ = −iℏ ∂/∂x</text>
+  <text x="400" y="358" font-family="'JetBrains Mono', monospace" font-size="10" fill="#0072B2">Hamiltonian Ĥ</text>
+  <text x="540" y="358" font-family="'JetBrains Mono', monospace" font-size="10" fill="#0072B2">spin Pauli σ_z, σ_x, σ_y</text>
+  <text x="56" y="382" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">not Hermitian: ladder operators a, a†; time-evolution operator U (unitary, not Hermitian)</text>
 </svg>

@@ -1,32 +1,48 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Hydrogen n=2 energy-level splitting diagram </title>
-  <desc id="desc">hydrogen n=2 energy-level splitting diagram — four degenerate levels on the left; on the right, two levels shifted by ±3eεa₀ and two unshifted levels,</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
+<!--
+  Hydrogen n=2 Stark Effect — Linear Splitting
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 09-approximation-methods · Figure: 02
+-->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Hydrogen n=2 Linear Stark Effect — Four-Fold Level Splits Into Three</title>
+  <desc>Two-column energy-level diagram. Left column: single line "n=2 (4-fold degenerate)" at center energy. Right column: three lines split by external electric field — top at +3eℰa₀ labeled (|2s⟩ − |2p_z⟩)/√2; middle at 0 with degeneracy 2 labeled |2p_x⟩, |2p_y⟩; bottom at −3eℰa₀ labeled (|2s⟩ + |2p_z⟩)/√2. Connecting lines show state mixing.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="09-approximation-methods" figure-number="02" figure-title="Hydrogen Stark Effect" figure-slug="hydrogen-stark-effect" figure-type="quantitative" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/09-approximation-methods-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Hydrogen n=2 energy-level splitting diagram </text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">hydrogen n=2 energy-level splitting diagram — four degenerate levels on the left; on the right, two levels shifted by ±3eεa₀ and two unshifted levels,</text>
-  <rect x="64" y="92" width="572" height="252" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="0.75"/>
-  <line x1="64" y1="344" x2="636" y2="344" stroke="#2a1a0e" stroke-width="1"/>
-  <line x1="64" y1="92" x2="64" y2="344" stroke="#2a1a0e" stroke-width="1"/>
-  <line x1="64" y1="232" x2="636" y2="232" stroke="#D4D4D4" stroke-width="0.75" stroke-dasharray="4 3"/>
-  <rect x="88" y="132.4" width="64" height="201.6" fill="#C8102E"/>
-  <text x="120" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">A</text>
-  <text x="120" y="124.4" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">72</text>
-  <rect x="194" y="180" width="64" height="154" fill="#6B3520"/>
-  <text x="226" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">B</text>
-  <text x="226" y="172" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">55</text>
-  <rect x="300" y="210.8" width="64" height="123.19999999999999" fill="#6B3520"/>
-  <text x="332" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">C</text>
-  <text x="332" y="202.8" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">44</text>
-  <rect x="406" y="247.2" width="64" height="86.8" fill="#6B3520"/>
-  <text x="438" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">D</text>
-  <text x="438" y="239.2" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">31</text>
-  <rect x="512" y="283.6" width="64" height="50.4" fill="#6B3520"/>
-  <text x="544" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">E</text>
-  <text x="544" y="275.6" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">18</text>
-  <text x="64" y="382" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Values are illustrative, structured from the chapter prompt.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Linear Stark Effect — Hydrogen n=2 in External Electric Field</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">2s and 2p_z mix into "good" zeroth-order states. 2p_x and 2p_y remain degenerate at the unperturbed energy.</text>
+
+  <!-- Column headers -->
+  <text x="180" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">ℰ = 0   (4-fold degenerate)</text>
+  <text x="540" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">ℰ ≠ 0   (split into 3 levels)</text>
+
+  <!-- Reference dashed horizontal at center energy -->
+  <line x1="100" y1="240" x2="660" y2="240" stroke="#aaa" stroke-width="0.5" stroke-dasharray="4 3"/>
+  <text x="92" y="244" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">E_n=2</text>
+
+  <!-- Left column: single line at y=240 -->
+  <line x1="120" y1="240" x2="260" y2="240" stroke="#545454" stroke-width="4"/>
+  <text x="190" y="220" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">|2s⟩, |2p_x⟩, |2p_y⟩, |2p_z⟩</text>
+
+  <!-- Right column: three levels -->
+  <!-- top: +3eℰa₀ at y=140 -->
+  <line x1="430" y1="140" x2="600" y2="140" stroke="#D55E00" stroke-width="3.5"/>
+  <text x="515" y="125" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D55E00">+3eℰa₀</text>
+  <text x="515" y="160" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">(|2s⟩ − |2p_z⟩)/√2</text>
+
+  <!-- middle: 0 at y=240, double-degenerate -->
+  <line x1="430" y1="237" x2="600" y2="237" stroke="#0072B2" stroke-width="3"/>
+  <line x1="430" y1="243" x2="600" y2="243" stroke="#0072B2" stroke-width="3"/>
+  <text x="610" y="241" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">deg 2</text>
+  <text x="515" y="262" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">|2p_x⟩, |2p_y⟩</text>
+
+  <!-- bottom: -3eℰa₀ at y=340 -->
+  <line x1="430" y1="340" x2="600" y2="340" stroke="#009E73" stroke-width="3.5"/>
+  <text x="515" y="358" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#009E73">−3eℰa₀</text>
+  <text x="515" y="372" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#009E73">(|2s⟩ + |2p_z⟩)/√2</text>
+
+  <!-- Connecting lines from left to right -->
+  <line x1="260" y1="240" x2="430" y2="140" stroke="#D55E00" stroke-width="0.8" stroke-dasharray="2 2"/>
+  <line x1="260" y1="240" x2="430" y2="240" stroke="#0072B2" stroke-width="0.8" stroke-dasharray="2 2"/>
+  <line x1="260" y1="240" x2="430" y2="340" stroke="#009E73" stroke-width="0.8" stroke-dasharray="2 2"/>
+
+  <text x="370" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Degenerate perturbation theory: diagonalize the perturbation in the degenerate subspace.</text>
 </svg>

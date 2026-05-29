@@ -1,25 +1,64 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Three plots of |ψ(x₁, x₂)|² as a 2D</title>
-  <desc id="desc">No interaction. No force. Just the symmetry of the wave function.</desc>
+<!--
+  Exchange Correlation — Distinguishable, Fermion, Boson
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 08-identical-particles · Figure: 02
+-->
+<svg viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">|ψ(x₁, x₂)|² — Distinguishable vs Fermions vs Bosons</title>
+  <desc>Three side-by-side 2D heatmap panels of two-particle joint probability density. Panel A (distinguishable): uniform-looking product distribution. Panel B (fermions, antisymmetric): clear "exchange hole" along the diagonal x₁=x₂ where density vanishes. Panel C (bosons, symmetric): enhanced density along the diagonal. Diagonal dashed line shown in each panel.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="08-identical-particles" figure-number="02" figure-title="Exchange Correlation" figure-slug="exchange-correlation" figure-type="conceptual" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/08-identical-particles-cajal.md"/></metadata>
+  <rect x="0" y="0" width="700" height="460" fill="#FFFFFF"/>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Same Hamiltonian, Three Symmetries — Three Joint Distributions</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">There is no exchange force. There is only antisymmetry — and antisymmetry alone reshapes where particles sit.</text>
+
   <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
+    <radialGradient id="hole" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0072B2" stop-opacity="0.7"/>
+    </radialGradient>
+    <radialGradient id="bunch" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0072B2" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#56B4E9" stop-opacity="0.3"/>
+    </radialGradient>
   </defs>
-  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Three plots of |ψ(x₁, x₂)|² as a 2D</text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">No interaction. No force. Just the symmetry of the wave function.</text>
-  <rect x="64" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="144" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">THREE</text>
-  <circle cx="144" cy="204" r="28" fill="#6B3520"/>
-  <text x="144" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="258" y="116" width="160" height="180" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="338" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">PLOTS</text>
-  <circle cx="338" cy="204" r="36" fill="#C8102E"/>
-  <text x="338" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="452" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="532" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">OF</text>
-  <circle cx="532" cy="204" r="44" fill="#1A3A5C"/>
-  <text x="532" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <text x="350" y="340" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Panels translate the chapter prompt into comparable visual states.</text>
+
+  <!-- ===== Panel A: distinguishable ===== -->
+  <text x="120" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">distinguishable</text>
+  <rect x="50" y="120" width="180" height="180" fill="#56B4E9" fill-opacity="0.5" stroke="#000" stroke-width="1"/>
+  <!-- diagonal -->
+  <line x1="50" y1="300" x2="230" y2="120" stroke="#000" stroke-width="0.6" stroke-dasharray="4 3"/>
+  <text x="120" y="318" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">|ψ₁(x₁)ψ₂(x₂)|²</text>
+  <text x="120" y="332" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">uniform product</text>
+
+  <!-- ===== Panel B: fermions (exchange hole) ===== -->
+  <text x="360" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">fermions (antisymmetric)</text>
+  <rect x="290" y="120" width="180" height="180" fill="#56B4E9" fill-opacity="0.5" stroke="#000" stroke-width="1"/>
+  <!-- diagonal hole — draw a transparent band along the diagonal -->
+  <g>
+    <line x1="290" y1="300" x2="470" y2="120" stroke="#FFFFFF" stroke-width="22" stroke-opacity="0.85"/>
+    <line x1="290" y1="300" x2="470" y2="120" stroke="#FFFFFF" stroke-width="12" stroke-opacity="0.95"/>
+  </g>
+  <line x1="290" y1="300" x2="470" y2="120" stroke="#000" stroke-width="0.6" stroke-dasharray="4 3"/>
+  <text x="360" y="318" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">|ψ_A|²  — exchange hole</text>
+  <text x="360" y="332" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">ψ = 0 along x₁ = x₂</text>
+
+  <!-- ===== Panel C: bosons (bunching) ===== -->
+  <text x="600" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">bosons (symmetric)</text>
+  <rect x="530" y="120" width="180" height="180" fill="#56B4E9" fill-opacity="0.25" stroke="#000" stroke-width="1"/>
+  <!-- diagonal enhancement — bright band -->
+  <g>
+    <line x1="530" y1="300" x2="710" y2="120" stroke="#0072B2" stroke-width="22" stroke-opacity="0.45"/>
+    <line x1="530" y1="300" x2="710" y2="120" stroke="#0072B2" stroke-width="12" stroke-opacity="0.7"/>
+  </g>
+  <line x1="530" y1="300" x2="710" y2="120" stroke="#000" stroke-width="0.6" stroke-dasharray="4 3"/>
+  <text x="600" y="318" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">|ψ_S|²  — bunching</text>
+  <text x="600" y="332" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">enhanced along x₁ = x₂</text>
+
+  <!-- Axis labels -->
+  <text x="120" y="350" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">x₁</text>
+  <text x="20" y="210" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e" transform="rotate(-90 20 210)">x₂</text>
+
+  <!-- Summary bar -->
+  <rect x="80" y="380" width="540" height="48" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
+  <text x="350" y="402" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">interpretation: fermions repel statistically · bosons cluster statistically</text>
+  <text x="350" y="420" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="10" fill="#C8102E" font-style="italic">Quantum statistics is geometry of the wave function — not a force.</text>
 </svg>

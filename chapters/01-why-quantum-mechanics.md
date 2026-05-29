@@ -1,4 +1,11 @@
 # Chapter 1 — Why Quantum Mechanics?
+
+## TL;DR
+
+- The Theory a Universe Built by Breaking Every Prediction Classical Physics Made.
+- The chapter moves through The first confrontation: infinite energy in a box, The second confrontation: a threshold that shouldn't exist, The third confrontation: the wrong color comes back, The fourth confrontation: the electron as a wave, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *The Theory a Universe Built by Breaking Every Prediction Classical Physics Made.*
 
 ---
@@ -22,7 +29,7 @@ Classical statistical mechanics has a clean answer. Each electromagnetic mode in
 
 $$\rho_{\text{RJ}}(\nu, T) = \frac{8\pi \nu^2}{c^3} k_B T.$$
 
-![Plot of Rayleigh–Jeans vs](images/01-why-quantum-mechanics-fig-01.png)
+![Plot of Rayleigh–Jeans vs](../images/01-why-quantum-mechanics-fig-01.png)
 *Figure 1.1 — Plot of Rayleigh–Jeans vs*
 
 This rises without bound as frequency increases. The total energy, $\int_0^\infty \rho_{\text{RJ}} \, d\nu$, diverges. A box at room temperature should contain infinite energy in its short-wavelength modes. This is what Paul Ehrenfest later called the "ultraviolet catastrophe."
@@ -61,7 +68,7 @@ $$K_{\max} = h\nu - \phi.$$
 
 Below the threshold frequency $\nu_0 = \phi/h$, no electrons emerge regardless of intensity. Above it, intensity controls how many electrons emerge per second; frequency controls how much energy each one has.
 
-![Stopping potential V_s vs](images/01-why-quantum-mechanics-fig-02.png)
+![Stopping potential V_s vs](../images/01-why-quantum-mechanics-fig-02.png)
 *Figure 1.2 — Stopping potential V_s vs*
 
 Robert Millikan spent four years (1912–1916) trying to disprove this. He measured the stopping potential $V_s$ — the retarding voltage that just halts the most energetic electrons, so $eV_s = K_{\max}$ — as a function of frequency. The slope, by Einstein's equation, is $h/e$. Millikan measured $h = 6.57 \times 10^{-27}$ erg·s. That's within 0.5% of Planck's blackbody value from a completely different experiment. He published his result with the concession that the photoelectric equation worked despite his conviction that the underlying hypothesis was "untenable."
@@ -92,7 +99,7 @@ The combination $h/m_e c = 2.426 \times 10^{-12}$ m is called the Compton wavele
 
 The derivation is the cleanest piece of math in this chapter. Treat the photon as a relativistic particle with energy $E_\gamma = h\nu$ and momentum $p_\gamma = h/\lambda$. The electron is initially at rest. Write conservation of energy and conservation of momentum (two components), then eliminate the electron's recoil angle.
 
-![Compton scattering geometry ](images/01-why-quantum-mechanics-fig-03.png)
+![Compton scattering geometry ](../images/01-why-quantum-mechanics-fig-03.png)
 *Figure 1.3 — Compton scattering geometry *
 
 *Conservation of energy:*
@@ -153,7 +160,7 @@ Nickel's (111) surface plane spacing is $d = 0.215$ nm. The surface diffraction 
 
 The single-electron version was done as a continuous buildup by Akira Tonomura's group at Hitachi in 1989. Electrons arrived one at a time, each registering as a point on the detector. Accumulated over hours, the points formed a diffraction pattern. A single electron, with no other electrons present to interact with, produced interference. There is no classical reading of this. The electron "interferes with itself" in a way that has no analog in Newtonian language.
 
-![Tonomura buildup sequence ](images/01-why-quantum-mechanics-fig-04.png)
+![Tonomura buildup sequence ](../images/01-why-quantum-mechanics-fig-04.png)
 *Figure 1.4 — Tonomura buildup sequence *
 
 The lesson: matter has wave properties, and those properties are not about the particle's *size* — the wavelength is a property of the associated amplitude, not a physical extent. When the electron is detected, it appears as a point. The wave shows up only in the statistical pattern built from many detections.
@@ -166,7 +173,7 @@ In 1914, James Franck and Gustav Hertz accelerated electrons through mercury vap
 
 The interpretation: an electron with kinetic energy below 4.9 eV bounces off mercury atoms elastically, losing no energy, and reaches the collector. At 4.9 eV the electron can give that exact amount to the mercury atom, exciting it from its ground state to its first excited state. The electron then lacks enough energy to reach the collector against the retarding field — hence the drop. More voltage, and the electron regains enough energy to reach the collector, until it has 9.8 eV and can excite two mercury atoms in succession.
 
-![Franck–Hertz current vs](images/01-why-quantum-mechanics-fig-05.png)
+![Franck–Hertz current vs](../images/01-why-quantum-mechanics-fig-05.png)
 *Figure 1.5 — Franck–Hertz current vs*
 
 If this interpretation is right, the excited mercury atoms decay back to their ground state by emitting photons, and those photons should have energy 4.9 eV. The wavelength:

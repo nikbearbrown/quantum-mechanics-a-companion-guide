@@ -1,25 +1,51 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Plot of |ψ|² = 2cos²(kd sinθ / 2)</title>
-  <desc id="desc">plot of |ψ|² = 2cos²(kd sinθ / 2) vs. sinθ for a chosen d/λ — show several bright fringes and deep zeros; add a second trace showing what |ψ|² would l</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
+<!--
+  Interference Intensity — |ψ|² = 2cos²(kd sinθ/2)
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 02-mathematical-foundations · Figure: 03
+-->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Interference Intensity — Periodic cos² Bands Across the Angle</title>
+  <desc>Intensity vs angle θ for double-slit: |ψ|² = 2cos²(kd sin θ/2). Five to seven bright maxima at value 2, dark minima at 0. Bright bands marked with orange triangles; dark minima marked with black ticks.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="02-mathematical-foundations" figure-number="03" figure-title="Interference Intensity" figure-slug="interference-intensity" figure-type="quantitative" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/02-mathematical-foundations-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Plot of |ψ|² = 2cos²(kd sinθ / 2)</text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">plot of |ψ|² = 2cos²(kd sinθ / 2) vs. sinθ for a chosen d/λ — show several bright fringes and deep zeros; add a second trace showing what |ψ|² would l</text>
-  <rect x="64" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="144" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">PLOT</text>
-  <circle cx="144" cy="204" r="28" fill="#6B3520"/>
-  <text x="144" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="258" y="116" width="160" height="180" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="338" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">OF</text>
-  <circle cx="338" cy="204" r="36" fill="#C8102E"/>
-  <text x="338" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="452" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="532" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">|Ψ|²</text>
-  <circle cx="532" cy="204" r="44" fill="#1A3A5C"/>
-  <text x="532" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <text x="350" y="340" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Panels translate the chapter prompt into comparable visual states.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">|ψ|² = 2cos²(kd sin θ / 2) — Bright Where Two Paths Add, Dark Where They Cancel</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Path-length difference d sin θ shifts the relative phase. cos² gives the bright/dark fringe pattern.</text>
+
+  <line x1="100" y1="320" x2="660" y2="320" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="100" y1="100" x2="100" y2="320" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="60" y="220" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454" transform="rotate(-90 60 220)">|ψ|²</text>
+  <text x="370" y="380" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454">angle θ</text>
+
+  <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454" text-anchor="end">
+    <text x="94" y="324">0</text>
+    <text x="94" y="210">1</text>
+    <text x="94" y="100">2</text>
+  </g>
+
+  <!-- cos² curve with 7 maxima -->
+  <path d="M 100 100 Q 140 320 180 100 Q 220 320 260 100 Q 300 320 340 100 Q 380 320 420 100 Q 460 320 500 100 Q 540 320 580 100 Q 620 320 660 100" stroke="#0072B2" stroke-width="2.5" fill="none"/>
+
+  <!-- Bright-band markers (orange downward triangles above maxima) -->
+  <g fill="#E69F00">
+    <polygon points="100,92 96,86 104,86"/>
+    <polygon points="180,92 176,86 184,86"/>
+    <polygon points="260,92 256,86 264,86"/>
+    <polygon points="340,92 336,86 344,86"/>
+    <polygon points="420,92 416,86 424,86"/>
+    <polygon points="500,92 496,86 504,86"/>
+    <polygon points="580,92 576,86 584,86"/>
+    <polygon points="660,92 656,86 664,86"/>
+  </g>
+
+  <!-- Dark-band ticks (black vertical ticks at zeros below x-axis) -->
+  <g stroke="#2a1a0e" stroke-width="0.75">
+    <line x1="140" y1="320" x2="140" y2="328"/>
+    <line x1="220" y1="320" x2="220" y2="328"/>
+    <line x1="300" y1="320" x2="300" y2="328"/>
+    <line x1="380" y1="320" x2="380" y2="328"/>
+    <line x1="460" y1="320" x2="460" y2="328"/>
+    <line x1="540" y1="320" x2="540" y2="328"/>
+    <line x1="620" y1="320" x2="620" y2="328"/>
+  </g>
+
+  <text x="370" y="396" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Same algebra as in optics. Different physics: it's the wave function, not the field.</text>
 </svg>

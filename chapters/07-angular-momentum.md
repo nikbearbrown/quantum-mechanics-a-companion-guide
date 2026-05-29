@@ -1,4 +1,11 @@
 # Chapter 7 — Angular Momentum
+
+## TL;DR
+
+- A student asks the right question in office hours.
+- The chapter moves through The commutation relations, The ladder operators and the spectrum, Spherical harmonics and why half-integers fail for orbital angular momentum, Spin-1/2 and the Pauli matrices, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *One Commutation Relation. One Derivation. Every Eigenvalue You'll Ever Need.*
 
 ---
@@ -68,7 +75,7 @@ $$\hat{L}_z(\hat{L}_+|\ell, m\rangle) = (\hat{L}_+\hat{L}_z + \hbar\hat{L}_+)|\e
 
 So $\hat{L}_+|\ell, m\rangle$ is an eigenstate of $\hat{L}_z$ with eigenvalue $(m+1)\hbar$. The raising operator climbs the ladder of $m$-values one rung at a time, staying at the same $\hat{L}^2$ eigenvalue throughout. The lowering operator $\hat{L}_-$ descends by one rung.
 
-![Ladder diagram showing m-values from −ℓ to +ℓ](images/07-angular-momentum-fig-01.png)
+![Ladder diagram showing m-values from −ℓ to +ℓ](../images/07-angular-momentum-fig-01.png)
 *Figure 7.1 — Ladder diagram showing m-values from −ℓ to +ℓ*
 
 The ladder cannot extend forever, because expectation values are bounded. The operator $\hat{L}^2 - \hat{L}_z^2 = \hat{L}_x^2 + \hat{L}_y^2$ is a sum of squared Hermitian operators, so its expectation value is non-negative in any state:
@@ -113,7 +120,7 @@ The first few spherical harmonics, for orientation:
 
 $$Y_{0,0} = \frac{1}{\sqrt{4\pi}}, \qquad Y_{1,0} = \sqrt{\frac{3}{4\pi}}\cos\theta, \qquad Y_{1,\pm 1} = \mp\sqrt{\frac{3}{8\pi}}\sin\theta\,e^{\pm i\phi}.$$
 
-![Polar plots of |Y_{ℓm}(θ,φ)|² for ℓ = 0](images/07-angular-momentum-fig-02.png)
+![Polar plots of |Y_{ℓm}(θ,φ)|² for ℓ = 0](../images/07-angular-momentum-fig-02.png)
 *Figure 7.2 — Polar plots of |Y_{ℓm}(θ,φ)|² for ℓ = 0*
 
 One thing worth saying about the chemists' $p$ orbitals, because the confusion is universal. The familiar $p_x$ and $p_y$ orbitals are real-valued combinations of $Y_{1,\pm 1}$:
@@ -213,7 +220,7 @@ The singlet has three properties worth naming slowly.
 
 So far this could be classical — like a pair of gloves separated into two boxes, each definite but unknown until observed. The non-classical part is the rotational invariance. Because the singlet has the same form in every basis, the same perfect anti-correlation holds for $S_x$, $S_y$, or any axis $\hat{n}$: the two outcomes are always opposite. Verify: writing $|0,0\rangle$ in the $|+x\rangle, |-x\rangle$ basis gives $(1/\sqrt{2})(|+x\rangle_1|-x\rangle_2 - |-x\rangle_1|+x\rangle_2)$. Perfect anti-correlation along $\hat{x}$, not just $\hat{z}$.
 
-![Two-particle singlet measurement schematic ](images/07-angular-momentum-fig-03.png)
+![Two-particle singlet measurement schematic ](../images/07-angular-momentum-fig-03.png)
 *Figure 7.3 — Two-particle singlet measurement schematic *
 
 The question Einstein, Podolsky, and Rosen raised in 1935 is: does each particle "carry" a pre-existing definite value for $S_z$, $S_x$, and every other direction simultaneously — values that the measurement merely reveals? David Bohm reformulated their argument in terms of the spin singlet in 1951, making it more tractable. John Bell answered it in 1964 with an inequality: if pre-existing definite values exist, the correlations between measurements on the two particles must satisfy a certain bound. Quantum mechanics, via the singlet, predicts a violation of that bound. Experiment has confirmed the violation repeatedly. Chapter 10 does the full calculation. What this chapter has done is build the state on which the argument rests. Now you know where $|0,0\rangle$ came from, what its three properties mean, and why it cannot be reduced to anything simpler.

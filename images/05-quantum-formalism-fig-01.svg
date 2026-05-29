@@ -1,25 +1,57 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Proof structure flowchart </title>
-  <desc id="desc">proof structure flowchart — boxes for (1) define shifted operators A', B'; (2) form vectors |f⟩ = A'|ψ⟩, |g⟩ = B'|ψ⟩; (3) apply Cauchy–Schwarz; (4) bo</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
-  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Proof structure flowchart </text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">proof structure flowchart — boxes for (1) define shifted operators A', B'; (2) form vectors |f⟩ = A'|ψ⟩, |g⟩ = B'|ψ⟩; (3) apply Cauchy–Schwarz; (4) bo</text>
-  <rect x="64" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="144" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">PROOF</text>
-  <circle cx="144" cy="204" r="28" fill="#6B3520"/>
-  <text x="144" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="258" y="116" width="160" height="180" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="338" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">STRUCTURE</text>
-  <circle cx="338" cy="204" r="36" fill="#C8102E"/>
-  <text x="338" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="452" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="532" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">FLOWCHART</text>
-  <circle cx="532" cy="204" r="44" fill="#1A3A5C"/>
-  <text x="532" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <text x="350" y="340" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Panels translate the chapter prompt into comparable visual states.</text>
+<!--
+  Robertson Inequality — Proof Structure Flowchart
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 05-quantum-formalism · Figure: 01
+-->
+<svg viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Robertson 1929 — Five-Step Proof Structure</title>
+  <desc>Vertical flowchart showing the logical structure of the Robertson uncertainty proof: 1. Define shifted operators (zero-mean), 2. Build two Hilbert-space vectors, 3. Apply Cauchy-Schwarz, 4. Discard real part keep imaginary, 5. Commutator appears. Step 5 highlighted in orange as the punchline. Side branch from step 4 notes "Schrödinger 1930 strengthening keeps the real part too".</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="05-quantum-formalism" figure-number="01" figure-title="Robertson Proof Structure" figure-slug="robertson-proof-structure" figure-type="conceptual" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/05-quantum-formalism-cajal.md"/></metadata>
+  <rect x="0" y="0" width="700" height="460" fill="#FFFFFF"/>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Robertson's Uncertainty Inequality — Five Logical Steps</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">σ_A · σ_B ≥ ½ |⟨[A, B]⟩|. The whole derivation is Cauchy–Schwarz applied to two carefully chosen vectors.</text>
+
+  <!-- Step 1 -->
+  <rect x="220" y="90" width="260" height="50" fill="#FFFFFF" stroke="#aaa" stroke-width="1.2" rx="4"/>
+  <text x="350" y="111" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">step 1</text>
+  <text x="350" y="128" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">define shifted operators (zero-mean)</text>
+
+  <line x1="350" y1="140" x2="350" y2="160" stroke="#2a1a0e" stroke-width="1.2"/>
+  <polygon points="350,160 346,154 354,154" fill="#2a1a0e"/>
+
+  <!-- Step 2 -->
+  <rect x="220" y="160" width="260" height="50" fill="#FFFFFF" stroke="#aaa" stroke-width="1.2" rx="4"/>
+  <text x="350" y="181" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">step 2</text>
+  <text x="350" y="198" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">build two Hilbert-space vectors |f⟩, |g⟩</text>
+
+  <line x1="350" y1="210" x2="350" y2="230" stroke="#2a1a0e" stroke-width="1.2"/>
+  <polygon points="350,230 346,224 354,224" fill="#2a1a0e"/>
+
+  <!-- Step 3 -->
+  <rect x="220" y="230" width="260" height="50" fill="#FFFFFF" stroke="#aaa" stroke-width="1.2" rx="4"/>
+  <text x="350" y="251" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">step 3</text>
+  <text x="350" y="268" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">apply Cauchy–Schwarz inequality</text>
+
+  <line x1="350" y1="280" x2="350" y2="300" stroke="#2a1a0e" stroke-width="1.2"/>
+  <polygon points="350,300 346,294 354,294" fill="#2a1a0e"/>
+
+  <!-- Step 4 with branch -->
+  <rect x="220" y="300" width="260" height="50" fill="#FFFFFF" stroke="#aaa" stroke-width="1.2" rx="4"/>
+  <text x="350" y="321" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">step 4</text>
+  <text x="350" y="338" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">discard real part — keep imaginary part</text>
+
+  <!-- Branch -->
+  <line x1="480" y1="325" x2="540" y2="325" stroke="#56B4E9" stroke-width="0.8" stroke-dasharray="3 2"/>
+  <rect x="540" y="305" width="140" height="40" fill="#FFFFFF" stroke="#56B4E9" stroke-width="0.8" rx="4"/>
+  <text x="610" y="320" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#0072B2">Schrödinger 1930:</text>
+  <text x="610" y="334" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#0072B2">keep both → stronger bound</text>
+
+  <line x1="350" y1="350" x2="350" y2="370" stroke="#2a1a0e" stroke-width="1.2"/>
+  <polygon points="350,370 346,364 354,364" fill="#2a1a0e"/>
+
+  <!-- Step 5 — punchline -->
+  <rect x="200" y="370" width="300" height="50" fill="#FFFFFF" stroke="#E69F00" stroke-width="2" rx="4"/>
+  <text x="350" y="391" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#C8860E">step 5 — punchline</text>
+  <text x="350" y="408" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">commutator [A, B] appears</text>
+
+  <text x="350" y="448" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Cauchy–Schwarz plus "take the imaginary part." That is the whole proof.</text>
 </svg>

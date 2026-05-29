@@ -1,32 +1,68 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Hydrogen emission spectrum in the visible range </title>
-  <desc id="desc">hydrogen emission spectrum in the visible range — show the four Balmer lines as vertical bars at 656 nm (red), 486 nm (blue-green), 434 nm (violet), 4</desc>
+<!--
+  Hydrogen Emission Spectrum — Balmer Visible Lines
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 06-the-hydrogen-atom · Figure: 01
+-->
+<svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Hydrogen Visible Spectrum — Balmer Series</title>
+  <desc>Visible-spectrum horizontal strip from 400 nm to 700 nm with a continuous color gradient as the background reference. Four sharp vertical lines mark the Balmer-series emissions: Hα at 656 nm (red), Hβ at 486 nm (cyan), Hγ at 434 nm (violet), Hδ at 410 nm (deep violet). Each line labeled with its transition n → 2.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="06-the-hydrogen-atom" figure-number="01" figure-title="Hydrogen Emission Spectrum" figure-slug="hydrogen-emission-spectrum" figure-type="quantitative" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/06-the-hydrogen-atom-cajal.md"/></metadata>
+  <rect x="0" y="0" width="700" height="380" fill="#FFFFFF"/>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Hydrogen Visible Emission Lines — Balmer Series (n → 2)</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Wavelengths 656, 486, 434, 410 nm. Predicted by Rydberg formula 1/λ = R(1/4 − 1/n²); derived from Bohr 1913.</text>
+
+  <!-- Spectrum gradient background -->
   <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
+    <linearGradient id="spec" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5500AA"/>
+      <stop offset="15%" stop-color="#3300EE"/>
+      <stop offset="30%" stop-color="#00CCFF"/>
+      <stop offset="50%" stop-color="#00FF00"/>
+      <stop offset="70%" stop-color="#FFFF00"/>
+      <stop offset="85%" stop-color="#FF8800"/>
+      <stop offset="100%" stop-color="#EE0000"/>
+    </linearGradient>
   </defs>
-  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Hydrogen emission spectrum in the visible range </text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">hydrogen emission spectrum in the visible range — show the four Balmer lines as vertical bars at 656 nm (red), 486 nm (blue-green), 434 nm (violet), 4</text>
-  <rect x="64" y="92" width="572" height="252" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="0.75"/>
-  <line x1="64" y1="344" x2="636" y2="344" stroke="#2a1a0e" stroke-width="1"/>
-  <line x1="64" y1="92" x2="64" y2="344" stroke="#2a1a0e" stroke-width="1"/>
-  <line x1="64" y1="232" x2="636" y2="232" stroke="#D4D4D4" stroke-width="0.75" stroke-dasharray="4 3"/>
-  <rect x="88" y="132.4" width="64" height="201.6" fill="#C8102E"/>
-  <text x="120" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">A</text>
-  <text x="120" y="124.4" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">72</text>
-  <rect x="194" y="180" width="64" height="154" fill="#6B3520"/>
-  <text x="226" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">B</text>
-  <text x="226" y="172" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">55</text>
-  <rect x="300" y="210.8" width="64" height="123.19999999999999" fill="#6B3520"/>
-  <text x="332" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">C</text>
-  <text x="332" y="202.8" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">44</text>
-  <rect x="406" y="247.2" width="64" height="86.8" fill="#6B3520"/>
-  <text x="438" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">D</text>
-  <text x="438" y="239.2" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">31</text>
-  <rect x="512" y="283.6" width="64" height="50.4" fill="#6B3520"/>
-  <text x="544" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">E</text>
-  <text x="544" y="275.6" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">18</text>
-  <text x="64" y="382" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Values are illustrative, structured from the chapter prompt.</text>
+  <rect x="80" y="120" width="560" height="100" fill="url(#spec)" stroke="#000" stroke-width="1"/>
+
+  <!-- Mapping: x = 80 + (λ - 400) / 300 × 560 -->
+  <!-- Hα at 656 nm: x = 80 + 256/300 × 560 = 80 + 477.9 = 558 -->
+  <!-- Hβ at 486 nm: x = 80 + 86/300 × 560 = 80 + 160.5 = 241 -->
+  <!-- Hγ at 434 nm: x = 80 + 34/300 × 560 = 80 + 63.5 = 144 -->
+  <!-- Hδ at 410 nm: x = 80 + 10/300 × 560 = 80 + 18.7 = 99 -->
+
+  <line x1="558" y1="120" x2="558" y2="220" stroke="#FFFFFF" stroke-width="3.5"/>
+  <line x1="241" y1="120" x2="241" y2="220" stroke="#FFFFFF" stroke-width="3.5"/>
+  <line x1="144" y1="120" x2="144" y2="220" stroke="#FFFFFF" stroke-width="3.5"/>
+  <line x1="99" y1="120" x2="99" y2="220" stroke="#FFFFFF" stroke-width="3.5"/>
+
+  <!-- Line labels -->
+  <text x="558" y="248" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">Hα</text>
+  <text x="558" y="264" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">656 nm</text>
+  <text x="558" y="278" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">n=3→2</text>
+
+  <text x="241" y="248" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">Hβ</text>
+  <text x="241" y="264" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">486 nm</text>
+  <text x="241" y="278" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">n=4→2</text>
+
+  <text x="144" y="248" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">Hγ</text>
+  <text x="144" y="264" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">434 nm</text>
+  <text x="144" y="278" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">n=5→2</text>
+
+  <text x="99" y="248" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">Hδ</text>
+  <text x="99" y="264" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">410 nm</text>
+
+  <!-- Axis ticks -->
+  <line x1="80" y1="220" x2="640" y2="220" stroke="#2a1a0e" stroke-width="1"/>
+  <g font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">
+    <text x="80" y="306" text-anchor="middle">400</text>
+    <text x="173" y="306" text-anchor="middle">450</text>
+    <text x="267" y="306" text-anchor="middle">500</text>
+    <text x="360" y="306" text-anchor="middle">550</text>
+    <text x="453" y="306" text-anchor="middle">600</text>
+    <text x="547" y="306" text-anchor="middle">650</text>
+    <text x="640" y="306" text-anchor="middle">700</text>
+  </g>
+  <text x="360" y="324" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454">wavelength (nm)</text>
+
+  <text x="370" y="362" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Four sharp colors from one element — quantization made visible.</text>
 </svg>

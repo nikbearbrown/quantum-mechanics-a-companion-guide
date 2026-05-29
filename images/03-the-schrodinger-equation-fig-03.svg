@@ -1,32 +1,53 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L]</title>
-  <desc id="desc">plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L] — shade the region [0, L/4] in a distinct color to show the 9% probability; also draw a dashed horizont</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
+<!--
+  Continuity Equation — Probability Current Across a Region
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 03-the-schrodinger-equation · Figure: 03
+-->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Continuity Equation — dρ/dt = j(a) − j(b)</title>
+  <desc>1D region [a, b] shaded sky-blue. Three density-dot indicators inside. Green rightward arrow at x=a labeled j(a) for current entering. Vermillion rightward arrow at x=b labeled j(b) for current leaving. Black downward arrow above region indicates dρ/dt where current in ≠ current out. Local probability conservation: rate of change of ρ in region equals net current flux.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="03-the-schrodinger-equation" figure-number="03" figure-title="Continuity Equation" figure-slug="continuity-equation" figure-type="conceptual" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/03-the-schrodinger-equation-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L]</text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">plot of |ψ₁(x)|² = (2/L)sin²(πx/L) over [0, L] — shade the region [0, L/4] in a distinct color to show the 9% probability; also draw a dashed horizont</text>
-  <rect x="64" y="92" width="572" height="252" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="0.75"/>
-  <line x1="64" y1="344" x2="636" y2="344" stroke="#2a1a0e" stroke-width="1"/>
-  <line x1="64" y1="92" x2="64" y2="344" stroke="#2a1a0e" stroke-width="1"/>
-  <line x1="64" y1="232" x2="636" y2="232" stroke="#D4D4D4" stroke-width="0.75" stroke-dasharray="4 3"/>
-  <rect x="88" y="132.4" width="64" height="201.6" fill="#C8102E"/>
-  <text x="120" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">A</text>
-  <text x="120" y="124.4" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">72</text>
-  <rect x="194" y="180" width="64" height="154" fill="#6B3520"/>
-  <text x="226" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">B</text>
-  <text x="226" y="172" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">55</text>
-  <rect x="300" y="210.8" width="64" height="123.19999999999999" fill="#6B3520"/>
-  <text x="332" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">C</text>
-  <text x="332" y="202.8" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">44</text>
-  <rect x="406" y="247.2" width="64" height="86.8" fill="#6B3520"/>
-  <text x="438" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">D</text>
-  <text x="438" y="239.2" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">31</text>
-  <rect x="512" y="283.6" width="64" height="50.4" fill="#6B3520"/>
-  <text x="544" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">E</text>
-  <text x="544" y="275.6" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">18</text>
-  <text x="64" y="382" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Values are illustrative, structured from the chapter prompt.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Local Conservation of Probability — ∂ρ/∂t + ∂j/∂x = 0</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Rate of change of probability inside region [a, b] equals current entering at a minus current leaving at b.</text>
+
+  <!-- 1D axis -->
+  <line x1="80" y1="280" x2="660" y2="280" stroke="#2a1a0e" stroke-width="1.5"/>
+  <polygon points="660,280 652,276 652,284" fill="#2a1a0e"/>
+  <text x="668" y="284" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">x</text>
+
+  <!-- Region [a, b] shaded -->
+  <rect x="220" y="180" width="280" height="100" fill="#56B4E9" fill-opacity="0.25" stroke="none"/>
+
+  <!-- Region boundaries -->
+  <line x1="220" y1="160" x2="220" y2="300" stroke="#000000" stroke-width="1.5"/>
+  <line x1="500" y1="160" x2="500" y2="300" stroke="#000000" stroke-width="1.5"/>
+
+  <text x="220" y="320" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#000000">x = a</text>
+  <text x="500" y="320" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#000000">x = b</text>
+
+  <!-- Density indicators inside region -->
+  <circle cx="280" cy="230" r="5" fill="#0072B2"/>
+  <circle cx="360" cy="230" r="6" fill="#0072B2"/>
+  <circle cx="440" cy="230" r="4" fill="#0072B2"/>
+  <text x="360" y="218" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#0072B2">ρ(x, t)</text>
+
+  <!-- Current arrow entering at a (green) -->
+  <line x1="140" y1="230" x2="215" y2="230" stroke="#009E73" stroke-width="2"/>
+  <polygon points="215,230 207,226 207,234" fill="#009E73"/>
+  <text x="178" y="218" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#009E73">j(a) in</text>
+
+  <!-- Current arrow leaving at b (vermillion) -->
+  <line x1="505" y1="230" x2="600" y2="230" stroke="#D55E00" stroke-width="2"/>
+  <polygon points="600,230 592,226 592,234" fill="#D55E00"/>
+  <text x="552" y="218" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#D55E00">j(b) out</text>
+
+  <!-- Rate of change arrow above region (down arrow means dρ/dt < 0 when j(b) > j(a)) -->
+  <line x1="360" y1="120" x2="360" y2="175" stroke="#000000" stroke-width="2"/>
+  <polygon points="360,175 356,167 364,167" fill="#000000"/>
+  <text x="370" y="142" font-family="'JetBrains Mono', monospace" font-size="11" fill="#000000">dρ/dt</text>
+
+  <!-- Equation summary -->
+  <rect x="80" y="350" width="580" height="50" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
+  <text x="370" y="372" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" fill="#2a1a0e">d/dt ∫ₐᵇ ρ dx = j(a) − j(b)</text>
+  <text x="370" y="392" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="10" fill="#545454" font-style="italic">probability doesn't appear or disappear — it flows</text>
 </svg>

@@ -1,4 +1,11 @@
 # Chapter 9 — Approximation Methods
+
+## TL;DR
+
+- Five Tools for the Problems Schrödinger Couldn't Solve.
+- The chapter moves through Time-independent perturbation theory, Degenerate perturbation theory, The variational principle, The WKB approximation, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *Five Tools for the Problems Schrödinger Couldn't Solve.*
 
 ---
@@ -49,7 +56,7 @@ $$E_n^{(2)} = \sum_{m \neq n}\frac{|\langle m^{(0)} | \hat{H}' | n^{(0)}\rangle|
 
 For the ground state, every denominator $E_0^{(0)} - E_m^{(0)}$ is negative and every numerator is non-negative, so $E_0^{(2)} \leq 0$ always. The second-order correction to the ground-state energy is always non-positive. This is *level repulsion*: a perturbation pushes the ground state down and excited states up, more strongly the closer the levels are. The effect runs through band-structure physics, nuclear physics, and quantum chemistry wherever two levels come near each other and avoid crossing.
 
-![Energy-level diagram showing level repulsion ](images/09-approximation-methods-fig-01.png)
+![Energy-level diagram showing level repulsion ](../images/09-approximation-methods-fig-01.png)
 *Figure 9.1 — Energy-level diagram showing level repulsion *
 
 One thing to say explicitly about convergence: the perturbation series often does not converge in the usual sense. Freeman Dyson argued in 1952 that QED perturbation theory must be an asymptotic series with zero radius of convergence. The physical reason: if you flip the sign of the electric charge from $+e$ to $-e$, electrons would attract each other and the vacuum would be unstable. So the series cannot be analytic at the origin in the coupling constant, and the radius of convergence is zero. The series diverges if you sum it term by term — but the first few terms give excellent numerical results anyway, because the series is *asymptotically* accurate near the expansion point. Perturbation theory is useful precisely because the first few terms are accurate, not because the series converges.
@@ -72,7 +79,7 @@ $$W = \begin{pmatrix} 0 & -3e\mathcal{E} a_0 \\ -3e\mathcal{E} a_0 & 0 \end{pmat
 
 with eigenvalues $\pm 3e\mathcal{E} a_0$. The $|2p_x\rangle$ and $|2p_y\rangle$ states are untouched — no matrix elements connect them to anything. So the $n=2$ manifold of hydrogen splits *linearly* with the electric field: two outer states shifted by $\pm 3e\mathcal{E} a_0$, two inner states unshifted. This is the linear Stark effect. It occurs because the accidental degeneracy of $|2s\rangle$ and $|2p_z\rangle$ in hydrogen allows the perturbation to mix them at first order in a way that produces a net dipole moment.
 
-![Hydrogen n=2 energy-level splitting diagram ](images/09-approximation-methods-fig-02.png)
+![Hydrogen n=2 energy-level splitting diagram ](../images/09-approximation-methods-fig-02.png)
 *Figure 9.2 — Hydrogen n=2 energy-level splitting diagram *
 
 ---
@@ -107,7 +114,7 @@ $$E_{\text{var}} = -(Z^*)^2 = -(27/16)^2 \approx -2.848\ \text{Hartree} \approx 
 
 The experimental value is $-79.0$ eV. The one-parameter variational result is within 2% — and it has a clear physical story: each electron sees an effective nuclear charge of about 1.69 because the other electron screens 5/16 of the bare charge of 2.
 
-![⟨H⟩(Z*) vs Z* for helium ](images/09-approximation-methods-fig-03.png)
+![⟨H⟩(Z*) vs Z* for helium ](../images/09-approximation-methods-fig-03.png)
 *Figure 9.3 — ⟨H⟩(Z*) vs Z* for helium *
 
 One thing to be careful about: the variational method gives you the ground-state *energy* reliably, not necessarily the ground-state *wave function* for other purposes. The energy converges much faster than the wave function, so variational energies are accurate to many decimal places in modern quantum chemistry while observables that depend sensitively on the wave function — like the charge density at the nucleus — require more care.
@@ -166,7 +173,7 @@ This is the central result. Let $\Omega = \omega_{fi} - \omega$ be the detuning 
 
 $$\frac{\sin^2(\Omega t/2)}{\Omega^2} \to \frac{\pi t}{2}\,\delta(\Omega).$$
 
-![Sin²(Ωt/2)/Ω² vs Ω for three values of t](images/09-approximation-methods-fig-04.png)
+![Sin²(Ωt/2)/Ω² vs Ω for three values of t](../images/09-approximation-methods-fig-04.png)
 *Figure 9.4 — Sin²(Ωt/2)/Ω² vs Ω for three values of t*
 
 Substitute and simplify:

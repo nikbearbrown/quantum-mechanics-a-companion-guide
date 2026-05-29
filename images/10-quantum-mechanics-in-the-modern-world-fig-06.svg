@@ -1,29 +1,89 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Timeline of superconductor T_c records from 1911 to</title>
-  <desc id="desc">timeline of superconductor T_c records from 1911 to 2026 — x-axis: year; y-axis: T_c in Kelvin (log scale or linear); mark key milestones: Hg 4.2 K (1</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
-  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Timeline of superconductor T_c records from 1911 to</text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">timeline of superconductor T_c records from 1911 to 2026 — x-axis: year; y-axis: T_c in Kelvin (log scale or linear); mark key milestones: Hg 4.2 K (1</text>
-  <rect x="64" y="166" width="112" height="88" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="120" y="205" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">START</text>
-  <text x="120" y="226" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">checkpoint</text>
-  <path d="M 180 210 C 196 210, 206 210, 218 210" stroke="#2a1a0e" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <rect x="218" y="166" width="112" height="88" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="274" y="205" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">TIMELINE</text>
-  <text x="274" y="226" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">checkpoint</text>
-  <path d="M 334 210 C 350 210, 360 210, 372 210" stroke="#2a1a0e" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <rect x="372" y="166" width="112" height="88" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="428" y="205" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">OF</text>
-  <text x="428" y="226" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">checkpoint</text>
-  <path d="M 488 210 C 504 210, 514 210, 526 210" stroke="#2a1a0e" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <rect x="526" y="166" width="112" height="88" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="582" y="205" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">SUPERCONDUCTOR</text>
-  <text x="582" y="226" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">checkpoint</text>
-  <path d="M 120 292 C 240 340, 430 340, 584 292" stroke="#C8102E" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
-  <text x="350" y="362" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">The diagram emphasizes sequence, dependency, and the decision point.</text>
+<!--
+  Superconductor T_c Timeline — 1911 to Present
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 10-quantum-mechanics-in-the-modern-world · Figure: 06
+-->
+<svg viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Superconductor T_c Records — Hg 1911 to LaH₁₀ 2019</title>
+  <desc>Scatter plot of T_c (K, log scale) versus year (1911 to present). Conventional superconductors as blue circles (Hg, Nb, Nb3Ge). Cuprates as vermillion squares (LBCO, YBCO, HgBaCaCuO). Pressure-stabilized hydrides as orange triangles (H3S, LaH10). Horizontal dashed reference at 77 K (liquid nitrogen boiling point) crossed in 1987.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="10-quantum-mechanics-in-the-modern-world" figure-number="06" figure-title="Superconductor Tc Timeline" figure-slug="superconductor-tc-timeline" figure-type="quantitative" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/10-quantum-mechanics-in-the-modern-world-cajal.md"/></metadata>
+  <rect x="0" y="0" width="700" height="460" fill="#FFFFFF"/>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Superconductor T_c Records — 1911 to Present</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Mercury at 4.2 K (Onnes 1911) → cuprates above LN₂ (1987) → hydride T_c ~ 250 K under 170 GPa (2019).</text>
+
+  <!-- Axes -->
+  <line x1="100" y1="380" x2="660" y2="380" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="100" y1="100" x2="100" y2="380" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="380" y="412" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454">year</text>
+  <text x="60" y="240" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454" transform="rotate(-90 60 240)">T_c (K, log)</text>
+
+  <!-- Y-axis log ticks: 1, 10, 100, 1000 -->
+  <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454" text-anchor="end">
+    <text x="92" y="380">1</text>
+    <text x="92" y="290">10</text>
+    <text x="92" y="200">100</text>
+    <text x="92" y="110">1000</text>
+  </g>
+
+  <!-- X-axis year ticks -->
+  <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454" text-anchor="middle">
+    <text x="100" y="396">1911</text>
+    <text x="240" y="396">1950</text>
+    <text x="380" y="396">1980</text>
+    <text x="500" y="396">2000</text>
+    <text x="620" y="396">2020</text>
+  </g>
+
+  <!-- LN2 reference line at T=77K. log(77)/log(1000) * 270 = (1.886/3) * 270 ≈ 170. y = 380 - 170 = 210 -->
+  <line x1="100" y1="222" x2="660" y2="222" stroke="#0072B2" stroke-width="0.8" stroke-dasharray="6 3"/>
+  <text x="665" y="226" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">77 K (LN₂)</text>
+
+  <!-- Data points (color/shape by family) -->
+  <!-- Mapping year → x: x = 100 + (year-1911)/(2020-1911) * 560 -->
+  <!-- T → y: y = 380 - (log10(T)/3) * 270 -->
+  <!-- 1911: 4.2 K → x=100, y=380-log10(4.2)/3*270 = 380 - 0.623/3*270 = 380-56 = 324 -->
+  <!-- 1930: Nb 9K → x=100 + 19/109 * 560 ≈ 198, y=380 - log10(9)/3*270 = 380 - 86 = 294 -->
+  <!-- 1973: Nb3Ge 23K → x=100+62/109*560 ≈ 419, y=380 - log10(23)/3*270 = 380 - 122 = 258 -->
+  <!-- 1986: LBCO 35K → x=100+75/109*560 ≈ 485, y=380 - log10(35)/3*270 = 380 - 139 = 241 -->
+  <!-- 1987: YBCO 93K → x=100+76/109*560 ≈ 490, y=380 - log10(93)/3*270 = 380 - 177 = 203 -->
+  <!-- 1993: HgBaCaCuO 133K → x=100+82/109*560 ≈ 521, y=380 - log10(133)/3*270 = 380 - 191 = 189 -->
+  <!-- 2015: H3S 203K → x=100+104/109*560 ≈ 634, y=380 - log10(203)/3*270 = 380 - 207 = 173 -->
+  <!-- 2019: LaH10 250K → x=100+108/109*560 ≈ 655, y=380 - log10(250)/3*270 = 380 - 215 = 165 -->
+
+  <!-- Conventional (blue circle) -->
+  <g fill="#0072B2">
+    <circle cx="100" cy="324" r="5"/>
+    <circle cx="198" cy="294" r="5"/>
+    <circle cx="419" cy="258" r="5"/>
+  </g>
+  <text x="106" y="320" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">Hg</text>
+  <text x="204" y="290" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">Nb</text>
+  <text x="425" y="254" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">Nb₃Ge</text>
+
+  <!-- Cuprates (vermillion square) -->
+  <g fill="#D55E00">
+    <rect x="481" y="237" width="8" height="8"/>
+    <rect x="486" y="199" width="8" height="8"/>
+    <rect x="517" y="185" width="8" height="8"/>
+  </g>
+  <text x="495" y="193" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">YBCO (1987)</text>
+  <text x="528" y="183" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">HgBaCaCuO</text>
+
+  <!-- Hydrides (orange triangle) -->
+  <g fill="#E69F00">
+    <polygon points="634,179 628,167 640,167"/>
+    <polygon points="655,171 649,159 661,159"/>
+  </g>
+  <text x="595" y="165" font-family="'JetBrains Mono', monospace" font-size="9" fill="#C8860E">H₃S, LaH₁₀</text>
+  <text x="595" y="155" font-family="'JetBrains Mono', monospace" font-size="9" fill="#C8860E">(GPa pressure)</text>
+
+  <!-- Legend -->
+  <rect x="130" y="120" width="190" height="60" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
+  <circle cx="145" cy="134" r="4" fill="#0072B2"/>
+  <text x="155" y="138" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">conventional (BCS)</text>
+  <rect x="142" y="148" width="6" height="6" fill="#D55E00"/>
+  <text x="155" y="156" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">cuprates (high-T_c)</text>
+  <polygon points="145,170 140,162 150,162" fill="#E69F00"/>
+  <text x="155" y="172" font-family="'JetBrains Mono', monospace" font-size="9" fill="#C8860E">hydrides (under pressure)</text>
+
+  <text x="370" y="442" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Room-T_c at ambient pressure remains the unfulfilled promise.</text>
 </svg>

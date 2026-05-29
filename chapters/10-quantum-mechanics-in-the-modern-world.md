@@ -1,5 +1,12 @@
 # Chapter 10 — Quantum Mechanics in the Modern World
 
+
+## TL;DR
+
+- Bell's theorem is now a Nobel Prize.
+- The chapter moves through Entanglement, EPR, and the CHSH inequality, Lasers and stimulated emission, Semiconductors and band theory, Quantum computing, and related ideas.
+- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+
 *Bell's theorem is now a Nobel Prize. Lasers are a ten-figure industry. Quantum computing is a hardware race. Foundational quantum mechanics has stopped being only philosophy.*
 
 ---
@@ -61,7 +68,7 @@ $$|S|_\text{QM} = 2\sqrt{2} \approx 2.828.$$
 
 Local hidden variables are bounded by 2. Quantum mechanics gives $2\sqrt{2}$. The gap is about 41%. The Tsirelson bound ([Tsirelson 1980, *Letters in Mathematical Physics* 4, 93–100](https://doi.org/10.1007/BF00417500)) says no quantum state with any measurement axes can exceed $2\sqrt{2}$; the singlet at these axes saturates it.
 
-![The CHSH bound separates classical from quantum. The Tsirelson bound separates quantum from anything faster-than-light.](images/10-quantum-mechanics-in-the-modern-world-fig-01.png)
+![The CHSH bound separates classical from quantum. The Tsirelson bound separates quantum from anything faster-than-light.](../images/10-quantum-mechanics-in-the-modern-world-fig-01.png)
 *Figure 10.1 — Number line or bar diagram showing three regions*
 
 Aspect, Grangier, and Roger in 1981–1982 measured $S = 2.697 \pm 0.015$ with polarization-entangled photons from a calcium cascade source ([*PRL* 49, 91](https://doi.org/10.1103/PhysRevLett.49.91); *PRL* 49, 1804](https://doi.org/10.1103/PhysRevLett.49.1804)). Violates the CHSH bound by tens of standard deviations, but left two loopholes open: detection efficiency (most photons missed — the detected subsample might not be representative) and locality (could a signal have passed between the detectors during the measurement?). In 2015, three independent loophole-free experiments closed both simultaneously:
@@ -89,7 +96,7 @@ Lasing requires *population inversion*: $N_2 > N_1$. In thermal equilibrium this
 By 2026 [verify], lasers are a ten-figure annual industry — fiber-optic communications, surgical and industrial cutting, optical storage, spectroscopy, precision metrology, ranging. The principle is unchanged from 1917. What Einstein computed from thermodynamic consistency about a single pair of energy levels became a technology that rewired the world's communications infrastructure.
 <!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/10-quantum-mechanics-in-the-modern-world-assertions.md -->
 
-![Energy level diagram ](images/10-quantum-mechanics-in-the-modern-world-fig-02.png)
+![Energy level diagram ](../images/10-quantum-mechanics-in-the-modern-world-fig-02.png)
 *Figure 10.2 — Energy level diagram *
 
 ---
@@ -108,7 +115,7 @@ where $q = \sqrt{2mE}/\hbar$. The left side is bounded between $\pm 1$; the righ
 
 *Conductors* have a partially-filled band with empty states immediately above filled ones. *Insulators* have a fully-filled valence band separated from the empty conduction band by $\sim 5$ eV — thermal energy ($k_BT \approx 0.025$ eV at room temperature) cannot bridge it. *Semiconductors* sit in between with gaps of 0.5–2 eV: silicon at 1.12 eV, gallium arsenide at 1.43 eV. Thermal excitation populates the conduction band at room temperature in measurable amounts.
 
-![Three side-by-side band diagrams ](images/10-quantum-mechanics-in-the-modern-world-fig-03.png)
+![Three side-by-side band diagrams ](../images/10-quantum-mechanics-in-the-modern-world-fig-03.png)
 *Figure 10.3 — Three side-by-side band diagrams *
 
 Doping shifts the populations. Adding phosphorus (five valence electrons) to silicon (four valence electrons) injects electrons into the conduction band — n-type. Adding boron (three valence electrons) creates holes in the valence band — p-type. A pn junction develops a built-in electric field in its depletion region and is the heart of every diode, LED, photovoltaic cell, and transistor. The MOSFET switches current via a gate-voltage-controlled inversion layer. The Intel 4004 of 1971 had 2,300 transistors; current chips have tens of billions — all resting on Bloch's 1928 theorem and the Born-rule probability interpretation of $|\psi|^2$.
@@ -133,12 +140,12 @@ $$|00\rangle \xrightarrow{H\otimes I} \frac{1}{\sqrt{2}}(|00\rangle + |10\rangle
 
 That output is a Bell state — the same maximally entangled state at the heart of every CHSH experiment, produced in two gates. CNOT plus arbitrary single-qubit unitaries forms a universal gate set ([DiVincenzo 1995, *Physical Review A* 51, 1015](https://doi.org/10.1103/PhysRevA.51.1015)) — every multi-qubit unitary decomposes into this set with polynomially many gates.
 
-![Two gates. One entangled state. The same state that violates Bell by 41%.](images/10-quantum-mechanics-in-the-modern-world-fig-04.png)
+![Two gates. One entangled state. The same state that violates Bell by 41%.](../images/10-quantum-mechanics-in-the-modern-world-fig-04.png)
 *Figure 10.4 — Quantum circuit diagram for the Bell-state generation *
 
 Two algorithms anchor the field. *Shor's algorithm* ([Shor 1994; 1997, *SIAM Journal on Computing* 26, 1484](https://doi.org/10.1109/SFCS.1994.365700)) factors an $n$-bit integer in $O(n^3)$ operations on a quantum computer, against the best known classical algorithm's $\exp(O(n^{1/3}(\log n)^{2/3}))$ — a super-polynomial speedup. A sufficiently large fault-tolerant quantum computer would break RSA. *Grover's algorithm* ([Grover 1996](https://doi.org/10.1145/237814.237866)) searches an $N$-item unsorted database in $O(\sqrt{N})$ queries against the classical $O(N)$ — a quadratic speedup, significant but not exponential.
 
-![Not all quantum speedups are the same. Grover wins by a constant factor on the log scale. Shor wins by the whole game.](images/10-quantum-mechanics-in-the-modern-world-fig-05.png)
+![Not all quantum speedups are the same. Grover wins by a constant factor on the log scale. Shor wins by the whole game.](../images/10-quantum-mechanics-in-the-modern-world-fig-05.png)
 *Figure 10.5 — Log-log plot of runtime vs*
 
 As of 2026 [verify], the field is in the NISQ era (Preskill 2018, [*Quantum* 2, 79](https://doi.org/10.22331/q-2018-08-06-79)) — hardware with hundreds to thousands of noisy qubits, not yet error-corrected to fault tolerance. IBM's Condor processor announced around 1,100 superconducting qubits in late 2023; Google's Sycamore family has been demonstrated through 70 qubits; Quantinuum's H2 trapped-ion system offers high-fidelity all-to-all connectivity; Atom Computing has demonstrated neutral-atom arrays exceeding 1,000 qubits [verify, 2026]. Google's 2023 paper ([Acharya et al. 2023, *Nature* 614, 676–681](https://doi.org/10.1038/s41586-022-05434-1)) demonstrated below-threshold logical qubits — increasing surface-code distance from 3 to 5 reduced the logical error rate — which is the first experimental evidence that quantum error correction scales as theory predicts. But from below-threshold demonstration to fault-tolerant factoring of 2048-bit keys, the engineering distance is enormous.
@@ -167,7 +174,7 @@ The prediction $2\Delta/k_BT_c \approx 3.53$ is universal in the weak-coupling l
 Bednorz and Müller's 1986 discovery ([*Zeitschrift für Physik B* 64, 189](https://doi.org/10.1007/BF01303701)) of superconductivity in copper-oxide perovskites at $T_c \approx 35$ K broke the picture. YBa$_2$Cu$_3$O$_7$ followed at $T_c \approx 93$ K (above liquid nitrogen's 77 K boiling point), making economically practical high-$T_c$ materials suddenly real. Nobel 1987, the fastest in the history of the prize. Under extreme pressure, hydrogen sulfide reaches $\sim 203$ K ([Drozdov et al. 2015, *Nature* 525, 73](https://doi.org/10.1038/nature14964)) and lanthanum hydride reaches $\sim 250$ K at $\sim 170$ GPa ([Somayazulu et al. 2019, *PRL* 122, 027001](https://doi.org/10.1103/PhysRevLett.122.027001)). Room-temperature ambient-pressure superconductivity has not been demonstrated as of 2026 [verify]. The mechanism for cuprate superconductivity — forty years after discovery — remains contested.
 <!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/10-quantum-mechanics-in-the-modern-world-assertions.md -->
 
-![Timeline of superconductor T_c records from 1911 to](images/10-quantum-mechanics-in-the-modern-world-fig-06.png)
+![Timeline of superconductor T_c records from 1911 to](../images/10-quantum-mechanics-in-the-modern-world-fig-06.png)
 *Figure 10.6 — Timeline of superconductor T_c records from 1911 to*
 
 ---
@@ -182,7 +189,7 @@ $$I \propto e^{-2\kappa d}, \qquad \kappa \approx \sqrt{2m_e\phi}/\hbar,$$
 
 where $\phi$ is the work function. For $\phi = 4$ eV, $\kappa \approx 1\,\text{Å}^{-1}$, so a 1 Å change in $d$ changes the current by $e^2 \approx 7.4$. STM resolves individual atoms because the exponential sensitivity means the tunneling current is dominated by the single closest atom on the tip. The exponential does all the spatial resolution work.
 
-![The atom's height changes by 1 Å. The tunneling current changes by a factor of 7. That factor is why STM sees atoms.](images/10-quantum-mechanics-in-the-modern-world-fig-07.png)
+![The atom's height changes by 1 Å. The tunneling current changes by a factor of 7. That factor is why STM sees atoms.](../images/10-quantum-mechanics-in-the-modern-world-fig-07.png)
 *Figure 10.7 — STM cross-section diagram *
 
 *Flash memory.* The floating-gate transistor writes a bit by tunneling electrons through a thin oxide layer onto an isolated gate; the gate charge shifts the transistor's threshold voltage. Flash retains data for years without power because the tunneling rate at read-bias voltage is exponentially small — the same WKB exponential that spans 24 orders of magnitude in alpha-decay half-lives is what makes flash retain data over decades while remaining writable at write voltage.

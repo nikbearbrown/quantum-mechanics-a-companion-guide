@@ -1,29 +1,60 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">90%-probability isosurface renderings of the 1s, 2s, 2p_z,</title>
-  <desc id="desc">90%-probability isosurface renderings of the 1s, 2s, 2p_z, and 3d_z² orbitals — four panels side by side; label each with its (n, ℓ, m_ℓ) quantum numb</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
-  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">90%-probability isosurface renderings of the 1s, 2s, 2p_z,</text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">90%-probability isosurface renderings of the 1s, 2s, 2p_z, and 3d_z² orbitals — four panels side by side; label each with its (n, ℓ, m_ℓ) quantum numb</text>
-  <rect x="64" y="166" width="112" height="88" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="120" y="205" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">START</text>
-  <text x="120" y="226" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">checkpoint</text>
-  <path d="M 180 210 C 196 210, 206 210, 218 210" stroke="#2a1a0e" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <rect x="218" y="166" width="112" height="88" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="274" y="205" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">90%-PROBABILITY</text>
-  <text x="274" y="226" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">checkpoint</text>
-  <path d="M 334 210 C 350 210, 360 210, 372 210" stroke="#2a1a0e" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <rect x="372" y="166" width="112" height="88" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="428" y="205" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">ISOSURFACE</text>
-  <text x="428" y="226" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">checkpoint</text>
-  <path d="M 488 210 C 504 210, 514 210, 526 210" stroke="#2a1a0e" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <rect x="526" y="166" width="112" height="88" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="582" y="205" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">RENDERINGS</text>
-  <text x="582" y="226" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">checkpoint</text>
-  <path d="M 120 292 C 240 340, 430 340, 584 292" stroke="#C8102E" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
-  <text x="350" y="362" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">The diagram emphasizes sequence, dependency, and the decision point.</text>
+<!--
+  Hydrogen Orbital Isosurfaces — 1s, 2s, 2p_z, 3d_z²
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 06-the-hydrogen-atom · Figure: 05
+-->
+<svg viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Hydrogen Orbital 90% Isosurfaces — 1s, 2s, 2p_z, 3d_z²</title>
+  <desc>Four-panel grid showing schematic 3D orbital isosurfaces. Top-left 1s: small sphere centered on origin. Top-right 2s: larger sphere with internal radial node (drawn as a ring). Bottom-left 2p_z: dumbbell shape along the z-axis with positive lobe blue, negative lobe orange. Bottom-right 3d_z²: dumbbell with equatorial torus. All panels show the z-axis explicitly; common scale.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="06-the-hydrogen-atom" figure-number="05" figure-title="Orbital Isosurfaces" figure-slug="orbital-isosurfaces" figure-type="conceptual" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/06-the-hydrogen-atom-cajal.md"/></metadata>
+  <rect x="0" y="0" width="700" height="480" fill="#FFFFFF"/>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Hydrogen Orbital Shapes — 90% Probability Surfaces</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Blue lobe = ψ &gt; 0. Orange lobe = ψ &lt; 0. Where signs meet, ψ = 0 (a node).</text>
+
+  <!-- Panel borders -->
+  <rect x="40" y="80" width="320" height="180" fill="none" stroke="#bbb" stroke-width="0.5"/>
+  <rect x="360" y="80" width="320" height="180" fill="none" stroke="#bbb" stroke-width="0.5"/>
+  <rect x="40" y="260" width="320" height="180" fill="none" stroke="#bbb" stroke-width="0.5"/>
+  <rect x="360" y="260" width="320" height="180" fill="none" stroke="#bbb" stroke-width="0.5"/>
+
+  <!-- ===== Panel 1: 1s ===== -->
+  <text x="200" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">1s   (n=1, ℓ=0, m=0)</text>
+  <!-- z-axis -->
+  <line x1="200" y1="120" x2="200" y2="240" stroke="#aaa" stroke-width="0.5"/>
+  <text x="208" y="124" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">z</text>
+  <circle cx="200" cy="180" r="32" fill="#56B4E9" fill-opacity="0.45" stroke="#0072B2" stroke-width="1"/>
+
+  <!-- ===== Panel 2: 2s ===== -->
+  <text x="520" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">2s   (n=2, ℓ=0, m=0)</text>
+  <line x1="520" y1="120" x2="520" y2="240" stroke="#aaa" stroke-width="0.5"/>
+  <text x="528" y="124" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">z</text>
+  <!-- Outer larger lobe -->
+  <circle cx="520" cy="180" r="58" fill="#56B4E9" fill-opacity="0.30" stroke="#0072B2" stroke-width="1"/>
+  <!-- Inner sign-flipped lobe -->
+  <circle cx="520" cy="180" r="22" fill="#E69F00" fill-opacity="0.45" stroke="#C8860E" stroke-width="1"/>
+  <!-- Node hint -->
+  <circle cx="520" cy="180" r="36" fill="none" stroke="#000" stroke-width="0.4" stroke-dasharray="3 2"/>
+
+  <!-- ===== Panel 3: 2p_z ===== -->
+  <text x="200" y="280" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">2p_z   (n=2, ℓ=1, m=0)</text>
+  <line x1="200" y1="300" x2="200" y2="420" stroke="#aaa" stroke-width="0.5"/>
+  <text x="208" y="304" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">z</text>
+  <!-- Top lobe -->
+  <ellipse cx="200" cy="335" rx="28" ry="40" fill="#56B4E9" fill-opacity="0.45" stroke="#0072B2" stroke-width="1"/>
+  <!-- Bottom lobe sign-flipped -->
+  <ellipse cx="200" cy="395" rx="28" ry="40" fill="#E69F00" fill-opacity="0.45" stroke="#C8860E" stroke-width="1"/>
+  <!-- Equatorial node (horizontal dashed) -->
+  <line x1="155" y1="365" x2="245" y2="365" stroke="#000" stroke-width="0.4" stroke-dasharray="3 2"/>
+
+  <!-- ===== Panel 4: 3d_z² ===== -->
+  <text x="520" y="280" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">3d_z²   (n=3, ℓ=2, m=0)</text>
+  <line x1="520" y1="300" x2="520" y2="420" stroke="#aaa" stroke-width="0.5"/>
+  <text x="528" y="304" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">z</text>
+  <!-- Top dumbbell lobe -->
+  <ellipse cx="520" cy="325" rx="22" ry="32" fill="#56B4E9" fill-opacity="0.45" stroke="#0072B2" stroke-width="1"/>
+  <!-- Bottom dumbbell lobe -->
+  <ellipse cx="520" cy="405" rx="22" ry="32" fill="#56B4E9" fill-opacity="0.45" stroke="#0072B2" stroke-width="1"/>
+  <!-- Equatorial torus -->
+  <ellipse cx="520" cy="365" rx="60" ry="14" fill="#E69F00" fill-opacity="0.35" stroke="#C8860E" stroke-width="1"/>
+
+  <text x="370" y="468" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">An orbital is not an orbit. It is the static shape of "where the electron probably is."</text>
 </svg>

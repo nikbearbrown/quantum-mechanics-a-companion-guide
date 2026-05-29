@@ -1,25 +1,73 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Energy-level diagram showing level repulsion </title>
-  <desc id="desc">energy-level diagram showing level repulsion — two unperturbed levels (dashed) close in energy, with arrows showing the lower level pushed down and up</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
+<!--
+  Level Repulsion — Avoided Crossing
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 09-approximation-methods · Figure: 01
+-->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Level Repulsion — Avoided Crossing under Perturbation</title>
+  <desc>Plot of energy versus perturbation strength λ. Two dashed gray reference lines (unperturbed levels) would cross at λ_c. Solid curves (the actual eigenvalues) — vermillion above, blue below — bend away from each other near λ_c without crossing. Minimum gap at λ_c labeled 2|⟨a|H'|b⟩|. Push arrows on either side show upper-up and lower-down repulsion.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="09-approximation-methods" figure-number="01" figure-title="Level Repulsion" figure-slug="level-repulsion" figure-type="conceptual" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/09-approximation-methods-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Energy-level diagram showing level repulsion </text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">energy-level diagram showing level repulsion — two unperturbed levels (dashed) close in energy, with arrows showing the lower level pushed down and up</text>
-  <rect x="64" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="144" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">ENERGY-LEVEL</text>
-  <circle cx="144" cy="204" r="28" fill="#6B3520"/>
-  <text x="144" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="258" y="116" width="160" height="180" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="338" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">DIAGRAM</text>
-  <circle cx="338" cy="204" r="36" fill="#C8102E"/>
-  <text x="338" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="452" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="532" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">SHOWING</text>
-  <circle cx="532" cy="204" r="44" fill="#1A3A5C"/>
-  <text x="532" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <text x="350" y="340" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Panels translate the chapter prompt into comparable visual states.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Avoided Crossing — Levels Repel Where They Would Otherwise Cross</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Off-diagonal matrix element opens a gap of 2|⟨a|H'|b⟩| — the closer the unperturbed levels, the bigger the repulsion's effect.</text>
+
+  <!-- Axes -->
+  <line x1="100" y1="380" x2="660" y2="380" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="100" y1="100" x2="100" y2="380" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="668" y="384" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">λ</text>
+  <text x="92" y="98" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">E</text>
+
+  <!-- Unperturbed reference lines (dashed) — would cross at x=380 -->
+  <line x1="100" y1="320" x2="660" y2="160" stroke="#aaa" stroke-width="0.8" stroke-dasharray="6 4"/>
+  <line x1="100" y1="160" x2="660" y2="320" stroke="#aaa" stroke-width="0.8" stroke-dasharray="6 4"/>
+
+  <!-- Avoided crossing curves — actual eigenvalues -->
+  <!-- Upper (vermillion): starts at upper-left of upper reference, ends at upper-right -->
+  <path d="M 100 160 C 220 200 320 220 380 220 C 440 220 540 200 660 160" stroke="#D55E00" stroke-width="2.4" fill="none"/>
+  <!-- Wait, this is wrong topology. Let me redo: lower reference starts at (100, 320) goes up to (660, 160). Upper ref starts at (100, 160) goes down to (660, 320). They cross at (380, 240). -->
+  <!-- Upper eigenvalue: at left, follows the lower reference (since lower-ref is lower energy on the left); at right, follows upper reference. NO: upper eigenvalue is always above the lower. At λ=0, the upper eigenvalue ≈ upper unperturbed = 160 (top). As λ grows, upper eigenvalue follows the higher of the two, smoothly bending. -->
+  <!-- Properly: upper eigenvalue is the upper envelope, lower eigenvalue is the lower envelope, with gap 2|H'| at center. -->
+  <!-- Upper: starts at 160 (top), bends down to ~225 at center, goes back down to 160 (right). NO: at large λ, upper eig ≈ upper unperturbed which is now at y=320 (since lines crossed). -->
+  <!-- Actually as λ grows: the two reference lines cross. The eigenvalues never cross. So eigenvalue₁ tracks lower ref on left, then upper ref on right (smooth transition through crossing region). -->
+
+  <!-- Clear: lower eigenvalue (blue) — starts at min of two refs at λ=0 (which is y=320, since 320 > 160 means lower y is higher energy in SVG; SVG y inverted). -->
+  <!-- Let me reconsider with SVG y-axis. SVG y=160 is HIGHER on screen (lower y = higher on screen). Energy axis: let upper energy = lower y. -->
+  <!-- Upper reference: (100, 160) → (660, 320). On screen: starts high-left, ends low-right. -->
+  <!-- Lower reference: (100, 320) → (660, 160). On screen: starts low-left, ends high-right. -->
+  <!-- They cross at (380, 240). -->
+  <!-- True eigenvalues never cross. Upper eigenvalue (vermillion, on screen always above the crossing): -->
+  <!--   - On left (λ small): follows upper ref → at (100, 160) -->
+  <!--   - On right (λ large): follows... wait, which ref is "upper" on the right? After crossing, lower ref is now higher on screen (y=160 at right is lower y, hence higher energy). -->
+  <!--   - So vermillion (upper eigenvalue) ends at (660, 160), tracking the lower ref on the right. -->
+  <!--   - In between, it bends down to about (380, 215) — i.e., gap-distance above the crossing -->
+  <!-- Blue (lower eigenvalue): -->
+  <!--   - On left: at (100, 320), follows lower ref -->
+  <!--   - On right: at (660, 320), follows upper ref (which has become the lower one) -->
+  <!--   - In between, it bends up to about (380, 265) — gap-distance below the crossing -->
+
+  <!-- Redo path (overwrite) -->
+
+  <!-- Upper eigenvalue (vermillion) -->
+  <path d="M 100 160 C 220 170 330 200 380 215 C 430 200 540 170 660 160" stroke="#D55E00" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+
+  <!-- Lower eigenvalue (blue) -->
+  <path d="M 100 320 C 220 310 330 280 380 265 C 430 280 540 310 660 320" stroke="#0072B2" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+
+  <!-- Gap markers at center -->
+  <line x1="380" y1="215" x2="380" y2="265" stroke="#C8860E" stroke-width="1.5"/>
+  <line x1="375" y1="215" x2="385" y2="215" stroke="#C8860E" stroke-width="1.5"/>
+  <line x1="375" y1="265" x2="385" y2="265" stroke="#C8860E" stroke-width="1.5"/>
+  <text x="395" y="245" font-family="'JetBrains Mono', monospace" font-size="10" fill="#C8860E">2|⟨a|H'|b⟩|</text>
+
+  <!-- Push arrows -->
+  <text x="280" y="125" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">↑ pushed up</text>
+  <text x="280" y="370" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">↓ pushed down</text>
+
+  <!-- Legend -->
+  <rect x="500" y="350" width="160" height="50" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
+  <line x1="510" y1="365" x2="540" y2="365" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3 2"/>
+  <text x="545" y="369" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">unperturbed</text>
+  <line x1="510" y1="385" x2="540" y2="385" stroke="#0072B2" stroke-width="2.4"/>
+  <text x="545" y="389" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">eigenvalues</text>
+
+  <text x="380" y="395" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Near-degenerate levels never quite touch — coupling lifts them apart.</text>
 </svg>

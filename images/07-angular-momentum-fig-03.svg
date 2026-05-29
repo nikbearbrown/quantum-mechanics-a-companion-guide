@@ -1,32 +1,53 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Two-particle singlet measurement schematic </title>
-  <desc id="desc">two-particle singlet measurement schematic — source in center emitting two particles in opposite directions, each particle heading toward a Stern–Gerl</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
+<!--
+  Two-Particle Singlet Measurement — EPR-Bell Setup
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 07-angular-momentum · Figure: 03
+-->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Singlet State |0,0⟩ — Two Spins, Two Detectors, Anti-Correlated Outcomes</title>
+  <desc>Schematic source in center labeled |0,0⟩. Two particles flying outward to left and right detectors. Each detector has an axis-orientation arrow. Detector outcomes shown as ±ℏ/2 spots. Side-table annotation: aligned axes → always opposite outcomes; axes at angle θ → cos²(θ/2) probability of opposite outcomes.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="07-angular-momentum" figure-number="03" figure-title="Singlet Measurement" figure-slug="singlet-measurement" figure-type="application" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/07-angular-momentum-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Two-particle singlet measurement schematic </text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">two-particle singlet measurement schematic — source in center emitting two particles in opposite directions, each particle heading toward a Stern–Gerl</text>
-  <rect x="64" y="92" width="572" height="252" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="0.75"/>
-  <line x1="64" y1="344" x2="636" y2="344" stroke="#2a1a0e" stroke-width="1"/>
-  <line x1="64" y1="92" x2="64" y2="344" stroke="#2a1a0e" stroke-width="1"/>
-  <line x1="64" y1="232" x2="636" y2="232" stroke="#D4D4D4" stroke-width="0.75" stroke-dasharray="4 3"/>
-  <rect x="88" y="132.4" width="64" height="201.6" fill="#C8102E"/>
-  <text x="120" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">A</text>
-  <text x="120" y="124.4" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">72</text>
-  <rect x="194" y="180" width="64" height="154" fill="#6B3520"/>
-  <text x="226" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">B</text>
-  <text x="226" y="172" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">55</text>
-  <rect x="300" y="210.8" width="64" height="123.19999999999999" fill="#6B3520"/>
-  <text x="332" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">C</text>
-  <text x="332" y="202.8" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">44</text>
-  <rect x="406" y="247.2" width="64" height="86.8" fill="#6B3520"/>
-  <text x="438" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">D</text>
-  <text x="438" y="239.2" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">31</text>
-  <rect x="512" y="283.6" width="64" height="50.4" fill="#6B3520"/>
-  <text x="544" y="356" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">E</text>
-  <text x="544" y="275.6" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#2a1a0e">18</text>
-  <text x="64" y="382" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Values are illustrative, structured from the chapter prompt.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Two-Particle Singlet — |0, 0⟩ = (|↑↓⟩ − |↓↑⟩)/√2</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">When detectors are aligned, outcomes are always opposite. Off-axis: probability of opposite outcomes = cos²(θ/2).</text>
+
+  <!-- Source -->
+  <circle cx="350" cy="200" r="18" fill="#2a1a0e"/>
+  <text x="350" y="244" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">|0, 0⟩</text>
+  <text x="350" y="258" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#545454">singlet source</text>
+
+  <!-- Particle paths -->
+  <line x1="332" y1="200" x2="160" y2="200" stroke="#56B4E9" stroke-width="2"/>
+  <polygon points="160,200 168,196 168,204" fill="#56B4E9"/>
+  <line x1="368" y1="200" x2="540" y2="200" stroke="#56B4E9" stroke-width="2"/>
+  <polygon points="540,200 532,196 532,204" fill="#56B4E9"/>
+
+  <!-- Left detector -->
+  <rect x="100" y="170" width="60" height="60" fill="none" stroke="#D55E00" stroke-width="1.5"/>
+  <text x="130" y="160" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D55E00">Alice (n̂_A)</text>
+  <!-- Axis arrow -->
+  <line x1="130" y1="220" x2="130" y2="180" stroke="#D55E00" stroke-width="1.2"/>
+  <polygon points="130,180 127,184 133,184" fill="#D55E00"/>
+  <!-- Outcomes -->
+  <circle cx="115" cy="248" r="3" fill="#D55E00"/>
+  <text x="120" y="252" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">+ℏ/2</text>
+  <circle cx="115" cy="266" r="3" fill="#D55E00"/>
+  <text x="120" y="270" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">−ℏ/2</text>
+
+  <!-- Right detector -->
+  <rect x="540" y="170" width="60" height="60" fill="none" stroke="#009E73" stroke-width="1.5"/>
+  <text x="570" y="160" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#009E73">Bob (n̂_B)</text>
+  <line x1="570" y1="220" x2="570" y2="180" stroke="#009E73" stroke-width="1.2"/>
+  <polygon points="570,180 567,184 573,184" fill="#009E73"/>
+  <circle cx="555" cy="248" r="3" fill="#009E73"/>
+  <text x="560" y="252" font-family="'JetBrains Mono', monospace" font-size="9" fill="#009E73">+ℏ/2</text>
+  <circle cx="555" cy="266" r="3" fill="#009E73"/>
+  <text x="560" y="270" font-family="'JetBrains Mono', monospace" font-size="9" fill="#009E73">−ℏ/2</text>
+
+  <!-- Annotation table -->
+  <rect x="100" y="310" width="500" height="60" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
+  <text x="350" y="328" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">if n̂_A = n̂_B  →  outcomes always opposite (perfect anti-correlation)</text>
+  <text x="350" y="346" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">if angle θ between them →  P(opposite outcomes) = cos²(θ/2)</text>
+  <text x="350" y="362" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">Ch 10 develops the Bell inequalities from this correlation pattern.</text>
+
+  <text x="350" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Knowledge of one side is knowledge of the other — instantly, without signaling.</text>
 </svg>

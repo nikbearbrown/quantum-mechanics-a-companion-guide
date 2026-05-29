@@ -1,25 +1,54 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Anatomy of the time-dependent Schrödinger equation </title>
-  <desc id="desc">annotated anatomy of the time-dependent Schrödinger equation — label each term: left side "i ℏ ∂ψ/∂t" annotated as "energy × ψ (time derivative side)"</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
+<!--
+  Schrödinger vs. Diffusion — Why the i Matters
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 03-the-schrodinger-equation · Figure: 01
+-->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Schrödinger Evolution vs. Diffusion — The Role of i</title>
+  <desc>Two side-by-side panels: left shows Schrödinger evolution as three Gaussian curves (Blue) spreading over time while preserving the coherent packet shape; right shows diffusion equation as three Gaussian curves (Vermillion) spreading and decaying in amplitude irreversibly. Same initial Gaussian in both. Y-axis at zero, identical x-axis range.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="03-the-schrodinger-equation" figure-number="01" figure-title="Schrödinger vs. Diffusion" figure-slug="schrodinger-vs-diffusion" figure-type="comparison" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/03-the-schrodinger-equation-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">Anatomy of the time-dependent Schrödinger equation </text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">annotated anatomy of the time-dependent Schrödinger equation — label each term: left side "i ℏ ∂ψ/∂t" annotated as "energy × ψ (time derivative side)"</text>
-  <rect x="64" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="144" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">ANATOMY</text>
-  <circle cx="144" cy="204" r="28" fill="#6B3520"/>
-  <text x="144" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="258" y="116" width="160" height="180" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="338" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">OF</text>
-  <circle cx="338" cy="204" r="36" fill="#C8102E"/>
-  <text x="338" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="452" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="532" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">THE</text>
-  <circle cx="532" cy="204" r="44" fill="#1A3A5C"/>
-  <text x="532" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <text x="350" y="340" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Panels translate the chapter prompt into comparable visual states.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Schrödinger Spreads Coherently — Diffusion Smooths Irreversibly</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">The factor of i in iℏ∂ψ/∂t makes time evolution unitary (norm-preserving). Without i, the same operator decays.</text>
+
+  <!-- Panel divider -->
+  <line x1="350" y1="80" x2="350" y2="380" stroke="#000000" stroke-width="0.5"/>
+
+  <!-- Left panel: Schrödinger (Blue) -->
+  <text x="180" y="98" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">Schrödinger: iℏ ∂ψ/∂t = Ĥψ</text>
+  <line x1="60" y1="340" x2="340" y2="340" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="60" y1="120" x2="60" y2="340" stroke="#2a1a0e" stroke-width="1"/>
+
+  <!-- Three Gaussian curves: tall narrow, medium, wide -->
+  <!-- t=0 sharp -->
+  <path d="M 80 340 Q 180 -80 280 340" stroke="#0072B2" stroke-width="1.2" fill="none" stroke-dasharray="2 2"/>
+  <!-- t=t1 wider, same area -->
+  <path d="M 80 340 Q 110 280 140 220 Q 180 130 220 220 Q 250 280 280 340" stroke="#0072B2" stroke-width="1.6" fill="none"/>
+  <!-- t=t2 widest -->
+  <path d="M 70 340 Q 130 290 180 250 Q 230 290 290 340" stroke="#0072B2" stroke-width="2" fill="none"/>
+
+  <text x="285" y="178" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">t=0</text>
+  <text x="240" y="220" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">t=t₁</text>
+  <text x="290" y="260" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">t=t₂</text>
+
+  <text x="180" y="368" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">|ψ|² spreads — total area conserved</text>
+
+  <!-- Right panel: Diffusion (Vermillion) -->
+  <text x="525" y="98" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#D55E00">Diffusion: ∂u/∂t = D ∂²u/∂x²</text>
+  <line x1="400" y1="340" x2="680" y2="340" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="400" y1="120" x2="400" y2="340" stroke="#2a1a0e" stroke-width="1"/>
+
+  <!-- t=0 sharp same as left -->
+  <path d="M 420 340 Q 520 -80 620 340" stroke="#D55E00" stroke-width="1.2" fill="none" stroke-dasharray="2 2"/>
+  <!-- t=t1 lower, wider -->
+  <path d="M 420 340 Q 470 250 520 200 Q 570 250 620 340" stroke="#D55E00" stroke-width="1.6" fill="none"/>
+  <!-- t=t2 much lower, much wider -->
+  <path d="M 410 340 Q 480 310 520 295 Q 570 310 630 340" stroke="#D55E00" stroke-width="2" fill="none"/>
+
+  <text x="625" y="178" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">t=0</text>
+  <text x="580" y="220" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">t=t₁</text>
+  <text x="630" y="310" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">t=t₂</text>
+
+  <text x="525" y="368" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">u decays — area shrinks irreversibly</text>
+
+  <text x="350" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Drop the i, and reversible quantum mechanics becomes classical heat flow.</text>
 </svg>

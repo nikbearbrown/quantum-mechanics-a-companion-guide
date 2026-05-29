@@ -1,25 +1,105 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">The Madelung diagonal-filling diagram </title>
-  <desc id="desc">the Madelung diagonal-filling diagram — the classic n vs ℓ grid with diagonals of constant n+ℓ drawn through the (n,ℓ) grid points; arrows following t</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
-  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">The Madelung diagonal-filling diagram </text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">the Madelung diagonal-filling diagram — the classic n vs ℓ grid with diagonals of constant n+ℓ drawn through the (n,ℓ) grid points; arrows following t</text>
-  <rect x="64" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="144" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">THE</text>
-  <circle cx="144" cy="204" r="28" fill="#6B3520"/>
-  <text x="144" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="258" y="116" width="160" height="180" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="338" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">MADELUNG</text>
-  <circle cx="338" cy="204" r="36" fill="#C8102E"/>
-  <text x="338" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="452" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="532" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">DIAGONAL-FILLING</text>
-  <circle cx="532" cy="204" r="44" fill="#1A3A5C"/>
-  <text x="532" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <text x="350" y="340" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Panels translate the chapter prompt into comparable visual states.</text>
+<!--
+  Madelung Diagonal-Filling Rule
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 08-identical-particles · Figure: 04
+-->
+<svg viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Madelung Rule — Diagonal Filling by Increasing (n + ℓ)</title>
+  <desc>Grid diagram with n=1..6 as rows and ℓ ∈ {s, p, d, f} as columns. Orbital labels (1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 4f, 5s, 5p, 5d, 6s, 6p) in cells. Orange diagonal arrows trace the standard filling order: 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="08-identical-particles" figure-number="04" figure-title="Madelung Filling Rule" figure-slug="madelung-filling" figure-type="reference" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/08-identical-particles-cajal.md"/></metadata>
+  <rect x="0" y="0" width="700" height="480" fill="#FFFFFF"/>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Madelung Rule — Fill Orbitals by Diagonals of Constant (n + ℓ)</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Within each diagonal, fill by smaller n first. The whole pattern is a consequence of effective nuclear charge.</text>
+
+  <!-- Column headers -->
+  <g font-family="'JetBrains Mono', monospace" font-size="12" fill="#2a1a0e" text-anchor="middle">
+    <text x="180" y="100">s (ℓ=0)</text>
+    <text x="300" y="100">p (ℓ=1)</text>
+    <text x="420" y="100">d (ℓ=2)</text>
+    <text x="540" y="100">f (ℓ=3)</text>
+  </g>
+
+  <!-- Row labels and cells -->
+  <g font-family="'JetBrains Mono', monospace" font-size="12" fill="#2a1a0e" text-anchor="middle">
+    <!-- n=1 -->
+    <text x="100" y="138" text-anchor="end">n=1</text>
+    <rect x="130" y="120" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="180" y="146">1s</text>
+
+    <!-- n=2 -->
+    <text x="100" y="188" text-anchor="end">n=2</text>
+    <rect x="130" y="170" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="180" y="196">2s</text>
+    <rect x="250" y="170" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="300" y="196">2p</text>
+
+    <!-- n=3 -->
+    <text x="100" y="238" text-anchor="end">n=3</text>
+    <rect x="130" y="220" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="180" y="246">3s</text>
+    <rect x="250" y="220" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="300" y="246">3p</text>
+    <rect x="370" y="220" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="420" y="246">3d</text>
+
+    <!-- n=4 -->
+    <text x="100" y="288" text-anchor="end">n=4</text>
+    <rect x="130" y="270" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="180" y="296">4s</text>
+    <rect x="250" y="270" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="300" y="296">4p</text>
+    <rect x="370" y="270" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="420" y="296">4d</text>
+    <rect x="490" y="270" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="540" y="296">4f</text>
+
+    <!-- n=5 -->
+    <text x="100" y="338" text-anchor="end">n=5</text>
+    <rect x="130" y="320" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="180" y="346">5s</text>
+    <rect x="250" y="320" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="300" y="346">5p</text>
+    <rect x="370" y="320" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="420" y="346">5d</text>
+
+    <!-- n=6 -->
+    <text x="100" y="388" text-anchor="end">n=6</text>
+    <rect x="130" y="370" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="180" y="396">6s</text>
+    <rect x="250" y="370" width="100" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.7"/>
+    <text x="300" y="396">6p</text>
+  </g>
+
+  <!-- Diagonal filling arrows (orange) -->
+  <g stroke="#E69F00" stroke-width="1.4" fill="none">
+    <!-- 1s -> 2s -->
+    <line x1="180" y1="160" x2="180" y2="170"/>
+    <!-- 2s -> 2p -->
+    <line x1="230" y1="190" x2="250" y2="190"/>
+    <!-- 2p -> 3s (diagonal) -->
+    <line x1="280" y1="210" x2="180" y2="220"/>
+    <!-- 3s -> 3p -->
+    <line x1="230" y1="240" x2="250" y2="240"/>
+    <!-- 3p -> 4s (diagonal) -->
+    <line x1="280" y1="260" x2="180" y2="270"/>
+    <!-- 4s -> 3d (diagonal) -->
+    <line x1="230" y1="290" x2="370" y2="240"/>
+    <!-- 3d -> 4p -->
+    <line x1="470" y1="240" x2="280" y2="290"/>
+    <!-- 4p -> 5s -->
+    <line x1="280" y1="290" x2="180" y2="320"/>
+    <!-- 5s -> 4d -->
+    <line x1="230" y1="340" x2="370" y2="290"/>
+    <!-- 4d -> 5p -->
+    <line x1="470" y1="290" x2="280" y2="340"/>
+    <!-- 5p -> 6s -->
+    <line x1="280" y1="340" x2="180" y2="370"/>
+    <!-- 6s -> 4f -->
+    <line x1="230" y1="390" x2="490" y2="290"/>
+    <!-- 4f -> 5d -->
+    <line x1="590" y1="290" x2="370" y2="340"/>
+    <!-- 5d -> 6p -->
+    <line x1="470" y1="340" x2="280" y2="390"/>
+  </g>
+
+  <text x="350" y="450" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Quantum statistics, Coulomb energy, and one filling rule — three centuries of chemistry.</text>
 </svg>

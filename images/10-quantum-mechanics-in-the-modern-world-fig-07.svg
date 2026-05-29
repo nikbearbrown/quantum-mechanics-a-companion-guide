@@ -1,25 +1,75 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">STM cross-section diagram </title>
-  <desc id="desc">The atom's height changes by 1 Å. The tunneling current changes by a factor of 7. That factor is why STM sees atoms.</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/>
-    </marker>
-  </defs>
+<!--
+  STM Cross-Section — Tunneling Current vs Distance
+  Book: Quantum Mechanics — A Companion Guide · Chapter: 10-quantum-mechanics-in-the-modern-world · Figure: 07
+-->
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+  <title id="fig-title">Scanning Tunneling Microscope — 1 Å Height Change → 7x Current Change</title>
+  <desc>Cross-section schematic on left: STM tip apex (single atom) with vacuum gap d ≈ few Å above conducting surface with several atoms. Vermillion arrow shows tunneling current between tip and nearest surface atom. Right inset: log plot of I versus d showing exponential I ∝ e^(−2κd) with κ ≈ 1 Å⁻¹.</desc>
+  <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="10-quantum-mechanics-in-the-modern-world" figure-number="07" figure-title="STM Tunneling" figure-slug="stm-tunneling" figure-type="application" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/10-quantum-mechanics-in-the-modern-world-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="42" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#2a1a0e">STM cross-section diagram </text>
-  <text x="32" y="62" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="10" fill="#545454">The atom's height changes by 1 Å. The tunneling current changes by a factor of 7. That factor is why STM sees atoms.</text>
-  <rect x="64" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="144" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">STM</text>
-  <circle cx="144" cy="204" r="28" fill="#6B3520"/>
-  <text x="144" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="258" y="116" width="160" height="180" fill="#F5EFE8" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="338" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">CROSS-SECTION</text>
-  <circle cx="338" cy="204" r="36" fill="#C8102E"/>
-  <text x="338" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <rect x="452" y="116" width="160" height="180" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1"/>
-  <text x="532" y="148" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="10" letter-spacing="0.08em" fill="#545454">DIAGRAM</text>
-  <circle cx="532" cy="204" r="44" fill="#1A3A5C"/>
-  <text x="532" y="266" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">evidence view</text>
-  <text x="350" y="340" text-anchor="middle" font-family="'EB Garamond', Georgia, 'Times New Roman', serif" font-size="11" fill="#2a1a0e">Panels translate the chapter prompt into comparable visual states.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">STM — Exponential Tunneling Gives Atomic Resolution</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Binnig &amp; Rohrer 1981. The current depends so sensitively on distance that the tip "sees" individual atoms.</text>
+
+  <!-- Left panel: cross-section schematic -->
+  <text x="180" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">cross-section</text>
+
+  <!-- Tip body (triangular wedge) -->
+  <polygon points="120,120 240,120 200,200 160,200" fill="#bbbbbb" stroke="#000" stroke-width="0.8"/>
+  <text x="180" y="160" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#000000">tip</text>
+
+  <!-- Tip apex (single atom) -->
+  <circle cx="180" cy="220" r="9" fill="#888" stroke="#000" stroke-width="0.6"/>
+
+  <!-- Vacuum gap label -->
+  <line x1="220" y1="220" x2="220" y2="270" stroke="#C8860E" stroke-width="0.8"/>
+  <line x1="215" y1="220" x2="225" y2="220" stroke="#C8860E" stroke-width="0.8"/>
+  <line x1="215" y1="270" x2="225" y2="270" stroke="#C8860E" stroke-width="0.8"/>
+  <text x="230" y="248" font-family="'JetBrains Mono', monospace" font-size="10" fill="#C8860E">d ≈ 5 Å</text>
+
+  <!-- Surface atoms -->
+  <g fill="#888" stroke="#000" stroke-width="0.5">
+    <circle cx="80" cy="285" r="14"/>
+    <circle cx="120" cy="285" r="14"/>
+    <circle cx="160" cy="285" r="14"/>
+    <circle cx="200" cy="285" r="14"/>
+    <circle cx="240" cy="285" r="14"/>
+    <circle cx="280" cy="285" r="14"/>
+  </g>
+  <!-- Surface bulk -->
+  <rect x="65" y="295" width="225" height="40" fill="#999" stroke="#000" stroke-width="0.5"/>
+  <text x="180" y="345" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">conducting surface</text>
+
+  <!-- Tunneling current arrow -->
+  <line x1="180" y1="229" x2="200" y2="276" stroke="#D55E00" stroke-width="2"/>
+  <polygon points="200,276 192,272 198,266" fill="#D55E00"/>
+  <text x="100" y="240" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">I_tunnel</text>
+
+  <!-- Right panel: exponential I vs d -->
+  <text x="500" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">I(d) ∝ e^(−2κd) — log scale</text>
+  <line x1="380" y1="320" x2="640" y2="320" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="380" y1="120" x2="380" y2="320" stroke="#2a1a0e" stroke-width="1"/>
+  <text x="648" y="324" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">d (Å)</text>
+  <text x="372" y="118" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">log I</text>
+
+  <!-- Exponential curve (straight line on log plot) -->
+  <line x1="395" y1="135" x2="630" y2="305" stroke="#009E73" stroke-width="2.4"/>
+
+  <!-- Annotation: 1 Å step → factor 7 -->
+  <line x1="450" y1="320" x2="450" y2="190" stroke="#aaa" stroke-width="0.4" stroke-dasharray="2 2"/>
+  <line x1="490" y1="320" x2="490" y2="220" stroke="#aaa" stroke-width="0.4" stroke-dasharray="2 2"/>
+  <line x1="450" y1="190" x2="490" y2="190" stroke="#D55E00" stroke-width="1.2"/>
+  <line x1="450" y1="220" x2="490" y2="220" stroke="#D55E00" stroke-width="1.2"/>
+  <text x="500" y="208" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">Δd = 1 Å</text>
+  <text x="500" y="222" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">ΔI / I ≈ 7</text>
+
+  <!-- x ticks -->
+  <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454" text-anchor="middle">
+    <text x="450" y="338">4</text>
+    <text x="490" y="338">5</text>
+    <text x="530" y="338">6</text>
+    <text x="570" y="338">7</text>
+    <text x="610" y="338">8</text>
+  </g>
+
+  <text x="370" y="392" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Tunneling — once a quantum curiosity, now an imaging instrument.</text>
 </svg>
