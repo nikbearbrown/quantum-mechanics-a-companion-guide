@@ -1,0 +1,13 @@
+{
+  "name": "physics-astronomy",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Physics +1: Astronomy",
+  "scripts": {
+    "svg-to-png": "node SCRIPTS/svg-to-png.mjs"
+  },
+  "dependencies": {
+    "glob": "^10.0.0",
+    "sharp": "^0.33.5"
+  }
+}
