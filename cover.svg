@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2560" width="1600" height="2560" preserveAspectRatio="xMidYMid meet" shape-rendering="geometricPrecision">
+  <g id="background"><rect x="0" y="0" width="1600" height="2560" fill="#2B2B2B"/></g>
+  <g id="symbol-fragments" transform="rotate(-6, 800, 850)">
+    <polygon points="226,357 114,289 177,192 258,101 353,209 345,302" fill="#F5F0E8"/>
+    <polygon points="546,366 481,339 459,296 463,218 548,195 607,267 622,346" fill="#F5F0E8"/>
+    <polygon points="795,374 706,322 679,261 746,179 833,173 867,216 932,269 871,352" fill="#F5F0E8"/>
+    <polygon points="358,565 292,653 200,586 135,488 241,408 375,454" fill="#F5F0E8"/>
+    <polygon points="569,631 482,622 442,555 492,483 558,484 608,515 630,582" fill="#F5C518"/>
+    <polygon points="817,636 745,646 668,586 696,522 749,489 829,463 897,537 899,600" fill="#F5F0E8"/>
+    <polygon points="178,880 214,769 307,736 373,787 373,869 279,907" fill="#F5F0E8"/>
+    <polygon points="486,814 480,729 498,644 609,692 676,760 678,844 553,876" fill="#F5F0E8"/>
+    <polygon points="879,900 791,883 695,863 731,768 725,682 860,683 904,741 954,835" fill="#F5F0E8"/>
+  </g>
+  <g id="title-letterforms">
+    <text x="120" y="1370" font-family="Arial Black, Arial, sans-serif" font-size="170" font-weight="900" letter-spacing="0" fill="#F5F0E8">QUANTUM</text>
+    <text x="120" y="1545" font-family="Arial Black, Arial, sans-serif" font-size="170" font-weight="900" letter-spacing="0" fill="#F5C518" textLength="1300" lengthAdjust="spacingAndGlyphs">MECHANICS</text>
+    <text x="120" y="1720" font-family="Arial Black, Arial, sans-serif" font-size="170" font-weight="900" letter-spacing="0" fill="#F5F0E8">A</text>
+    <text x="120" y="1895" font-family="Arial Black, Arial, sans-serif" font-size="170" font-weight="900" letter-spacing="0" fill="#F5F0E8" textLength="1300" lengthAdjust="spacingAndGlyphs">COMPANION</text>
+    <text x="120" y="2070" font-family="Arial Black, Arial, sans-serif" font-size="170" font-weight="900" letter-spacing="0" fill="#F5F0E8">GUIDE</text>
+  </g>
+</svg>
