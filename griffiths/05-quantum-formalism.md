@@ -2,9 +2,9 @@
 
 ## TL;DR
 
-- Two students sit in a library with two papers.
-- The chapter moves through The five postulates, The uncertainty principle: what Robertson actually proved, Compatible observables and commutators, The measurement problem: what is actually unsettled, and related ideas.
-- Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
+- Five postulates, two of them about uncertainty, one of them genuinely contested.
+- The five postulates assembled cleanly, the Robertson bound derived from scratch, compatible observables and commutators, and an honest account of the measurement problem.
+- Read it for the argument, the vocabulary, and the judgment it asks of you.
 
 *Four Postulates Are Settled. One Is Not. The Difference Matters.*
 
@@ -12,19 +12,19 @@
 
 Two students sit in a library with two papers. The first is Werner Heisenberg's 1927 paper in *Zeitschrift für Physik* — the one with the gamma-ray microscope thought experiment. The second is Howard P. Robertson's two-page note in *Physical Review*, 1929, titled simply "The Uncertainty Principle."
 
-The first student says: uncertainty is about measurement. To find an electron's position, you bounce a photon off it. The photon kicks the electron and disturbs its momentum. That is the principle. Their popular-physics book says essentially the same thing with a balloon: to find a balloon in the dark you have to bump into it, and bumping moves it. That is what $\Delta x\,\Delta p \gtrsim \hbar$ means.
+The first student says: uncertainty is about measurement. To find an electron's position, you bounce a photon off it. The photon kicks the electron and disturbs its momentum. That is the principle. The popular-physics book on the table says much the same thing with a balloon: to find a balloon in the dark you have to bump into it, and bumping moves it. That, supposedly, is what $\Delta x\,\Delta p \gtrsim \hbar$ means.
 
 The second student says: read Robertson. The inequality is a property of the *state*. There is no measurement in the proof. The state itself has a width in position and a width in momentum, and the product of those widths is bounded below by $\hbar/2$. Nobody had to look at the particle. The balloon analogy gets the right answer for the wrong reason.
 
-Both students are partially right. Heisenberg's microscope describes a real physical effect — now formalized as measurement-disturbance uncertainty by Masanao Ozawa in 2003. The Robertson bound is a *different* statement about state preparation. They are related but not identical, and conflating them is exactly the mistake the balloon analogy reproduces. The argument the students are having is the productive one — the one that ends with two different inequalities and one precise statement about what the principle actually says.
+Both students are partly right. Heisenberg's microscope describes a real physical effect — now formalized as measurement-disturbance uncertainty by Masanao Ozawa in 2003. The Robertson bound is a *different* statement, about state preparation. The two are related but not identical, and conflating them is exactly the error the balloon analogy reproduces. The argument the students are having is the productive one — the one that ends with two distinct inequalities and one precise statement about what the principle actually says.
 
-This chapter does three things: assembles the five postulates of quantum mechanics cleanly, derives the Robertson bound from scratch, and then tells the truth about the measurement problem — which is that working physicists do not agree about it, and that pretending otherwise would be dishonest.
+This chapter does three things: it assembles the five postulates of quantum mechanics cleanly, derives the Robertson bound from scratch, and then tells the truth about the measurement problem — which is that working physicists do not agree about it, and that pretending otherwise would be dishonest.
 
 ---
 
 ## The five postulates
 
-A theory is not its applications. It is the small set of statements from which the applications follow. Quantum mechanics has five postulates. Here they are, with the physical requirement each one enforces stated alongside.
+A theory is not its applications. It is the small set of statements the applications follow from. Quantum mechanics has five postulates. Here they are, each paired with the physical requirement it enforces.
 
 **Postulate 1 (State).** Every isolated quantum system is associated with a complex Hilbert space $\mathcal{H}$. A pure state is a normalized vector $|\psi\rangle \in \mathcal{H}$, defined up to a global phase: $|\psi\rangle$ and $e^{i\alpha}|\psi\rangle$ represent the same physical state.
 
@@ -58,7 +58,7 @@ requires $\hat{U}^\dagger\hat{U} = \hat{1}$. Unitarity is the algebraic encoding
 | 4 | Collapse | After outcome $a_n$, the state is $|a_n\rangle$. | Repeat measurements give the same outcome. |
 | 5 | Time evolution | Between measurements, states evolve by the Schrödinger equation. | Norm and total probability are conserved. |
 
-One structural observation that matters: Postulates 1, 2, 3, and 5 are uncontroversial among working physicists. Every interpretation of quantum mechanics uses them unchanged. Postulate 4 is where the interpretations diverge. Copenhagen accepts collapse as a postulate. Many-Worlds denies collapse happens at all. Bohmian mechanics replaces it with a deterministic guidance equation. The mathematics is the same across all these views; the story about what the mathematics is describing is not. Hold that structure in mind from here on — four settled postulates, one contested postulate, and a century of literature trying to figure out what to do about the contested one.
+One structural point matters above the rest: Postulates 1, 2, 3, and 5 are uncontroversial among working physicists. Every interpretation of quantum mechanics uses them unchanged. Postulate 4 is where the interpretations split. Copenhagen accepts collapse as a postulate. Many-Worlds denies that collapse happens at all. Bohmian mechanics replaces it with a deterministic guidance equation. The mathematics is the same across all these views; the story about what the mathematics describes is not. Hold that structure in mind from here on — four settled postulates, one contested postulate, and a century of literature trying to decide what to do about the contested one.
 
 ---
 
@@ -66,13 +66,13 @@ One structural observation that matters: Postulates 1, 2, 3, and 5 are uncontrov
 
 Here is the correction the students in the library were working toward.
 
-The balloon analogy captures Heisenberg's 1927 physical intuition: measuring position with precision $\Delta x$ requires a photon of wavelength $\lambda \lesssim \Delta x$, that photon carries momentum $\sim h/\Delta x$, the scattering transfers some of that to the electron, so $\Delta p \gtrsim h/\Delta x$, and the product $\Delta x\,\Delta p \gtrsim h$. The intuition is correct. But it is a story about what *one measurement does to a subsequent one*. The uncertainty is about measurement disturbance.
+The balloon analogy captures Heisenberg's 1927 physical intuition: measuring position with precision $\Delta x$ requires a photon of wavelength $\lambda \lesssim \Delta x$, that photon carries momentum $\sim h/\Delta x$, the scattering transfers some of that to the electron, so $\Delta p \gtrsim h/\Delta x$, and the product $\Delta x\,\Delta p \gtrsim h$. The intuition is correct. But it is a story about what *one measurement does to a subsequent one*. This uncertainty is about measurement disturbance.
 
-Robertson's 1929 paper proved a theorem — not a thought experiment, a theorem — that is about the state itself, before any measurement. For any two Hermitian operators $\hat{A}$ and $\hat{B}$ and any state $|\psi\rangle$:
+Robertson's 1929 paper proved a theorem — not a thought experiment, a theorem — about the state itself, before any measurement. For any two Hermitian operators $\hat{A}$ and $\hat{B}$ and any state $|\psi\rangle$:
 
 $$\sigma_A\,\sigma_B \;\geq\; \tfrac{1}{2}\bigl|\langle[\hat{A}, \hat{B}]\rangle\bigr|$$
 
-where $\sigma_A^2 = \langle\hat{A}^2\rangle - \langle\hat{A}\rangle^2$ is the variance of $A$ in state $|\psi\rangle$, and $[\hat{A}, \hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A}$ is the commutator. The derivation is short enough to do here. It uses nothing beyond linear algebra on a Hilbert space.
+where $\sigma_A^2 = \langle\hat{A}^2\rangle - \langle\hat{A}\rangle^2$ is the variance of $A$ in state $|\psi\rangle$, and $[\hat{A}, \hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A}$ is the commutator. The derivation is short enough to do here, and it uses nothing beyond linear algebra on a Hilbert space.
 
 Define the shifted operators
 
@@ -90,7 +90,7 @@ so $\sigma_A^2\sigma_B^2 \geq |\langle\psi|\hat{A}'\hat{B}'|\psi\rangle|^2$. For
 
 $$\sigma_A^2\sigma_B^2 \;\geq\; \bigl(\text{Im}\,\langle\psi|\hat{A}'\hat{B}'|\psi\rangle\bigr)^2.$$
 
-Now the imaginary part. For any complex number $z$, $\text{Im}\,z = (z - \overline{z})/(2i)$. The conjugate of $\langle\psi|\hat{A}'\hat{B}'|\psi\rangle$ is $\langle\psi|\hat{B}'^\dagger\hat{A}'^\dagger|\psi\rangle = \langle\psi|\hat{B}'\hat{A}'|\psi\rangle$ (shifted operators are still Hermitian). So
+Now the imaginary part. For any complex number $z$, $\text{Im}\,z = (z - \overline{z})/(2i)$. The conjugate of $\langle\psi|\hat{A}'\hat{B}'|\psi\rangle$ is $\langle\psi|\hat{B}'^\dagger\hat{A}'^\dagger|\psi\rangle = \langle\psi|\hat{B}'\hat{A}'|\psi\rangle$ (the shifted operators are still Hermitian). So
 
 $$\text{Im}\,\langle\psi|\hat{A}'\hat{B}'|\psi\rangle = \frac{1}{2i}\bigl(\langle\psi|\hat{A}'\hat{B}'|\psi\rangle - \langle\psi|\hat{B}'\hat{A}'|\psi\rangle\bigr) = \frac{1}{2i}\langle\psi|[\hat{A}', \hat{B}']|\psi\rangle.$$
 
@@ -113,11 +113,11 @@ Schrödinger in 1930 strengthened this by keeping both the real and imaginary pa
 
 $$\sigma_A^2\sigma_B^2 \;\geq\; \left(\tfrac{1}{2}\langle\{\hat{A}', \hat{B}'\}\rangle\right)^2 + \left(\tfrac{1}{2i}\langle[\hat{A}, \hat{B}]\rangle\right)^2$$
 
-where $\{\hat{A}', \hat{B}'\} = \hat{A}'\hat{B}' + \hat{B}'\hat{A}'$ is the anticommutator of the shifted operators (its expectation is twice the covariance). When the covariance is zero, Schrödinger's bound collapses to Robertson's. When it is not, Schrödinger's is tighter. The derivation is the same — just stop before throwing away the real part.
+where $\{\hat{A}', \hat{B}'\} = \hat{A}'\hat{B}' + \hat{B}'\hat{A}'$ is the anticommutator of the shifted operators (its expectation is twice the covariance). When the covariance is zero, Schrödinger's bound collapses to Robertson's. When it is not, Schrödinger's is tighter. The derivation is identical — you simply stop before throwing away the real part.
 
-Now the balloon analogy correction, stated precisely. The Robertson bound is a statement about the state $|\psi\rangle$. It says: there is no quantum state for which $\sigma_A$ and $\sigma_B$ are simultaneously smaller than the right-hand side. That bound holds before anyone measures anything. There is no apparatus in the inequality. There is no photon, no kick, no bump in the dark. The uncertainty is intrinsic to the state, derived from the algebra of non-commuting operators on a Hilbert space.
+Now the balloon correction, stated precisely. The Robertson bound is a statement about the state $|\psi\rangle$. It says: there is no quantum state for which $\sigma_A$ and $\sigma_B$ are simultaneously smaller than the right-hand side. That bound holds before anyone measures anything. There is no apparatus in the inequality. No photon, no kick, no bump in the dark. The uncertainty is intrinsic to the state, derived from the algebra of non-commuting operators on a Hilbert space.
 
-The balloon analogy gets the order-of-magnitude answer right and is faithful to Heisenberg's 1927 pedagogical motivation. But it gives a wrong picture of what the inequality is. A student trained on the balloon will conflate state preparation with measurement disturbance — which is exactly the conflation physicists worked out of the theory by 1930. Masanao Ozawa, in 2003, formalized the measurement-disturbance version into its own separate inequality, one that mixes the state uncertainty with the apparatus noise and the disturbance the apparatus inflicts on subsequent measurements. Experimental tests (Erhart et al., *Nature Physics*, 2012) confirmed Ozawa's version and showed that the measurement-disturbance product can be made *smaller* than the naive Heisenberg microscope suggests. The Robertson bound is preparation uncertainty. Ozawa's is measurement-disturbance uncertainty. They are related but not the same inequality, and the balloon never told you there were two.
+The balloon gets the order-of-magnitude answer right and is faithful to Heisenberg's 1927 pedagogical motivation. But it gives a wrong picture of what the inequality is. A student trained on the balloon will conflate state preparation with measurement disturbance — exactly the conflation physicists worked out of the theory by 1930. Masanao Ozawa, in 2003, formalized the measurement-disturbance version into its own separate inequality, one that mixes the state uncertainty with the apparatus noise and the disturbance the apparatus inflicts on subsequent measurements. Experimental tests (Erhart et al., *Nature Physics*, 2012) confirmed Ozawa's version and showed that the measurement-disturbance product can be made *smaller* than the naive Heisenberg microscope suggests. The Robertson bound is preparation uncertainty; Ozawa's is measurement-disturbance uncertainty. They are related but not the same inequality, and the balloon never told you there were two.
 
 | paper | year | type of uncertainty | what varies | mathematical form |
 | --- | --- | --- | --- | --- |
@@ -130,7 +130,7 @@ The balloon analogy gets the order-of-magnitude answer right and is faithful to 
 
 $$\psi_0(x) = \left(\frac{m\omega}{\pi\hbar}\right)^{1/4}\exp\!\left(-\frac{m\omega x^2}{2\hbar}\right).$$
 
-Computing $\sigma_x$ and $\sigma_p$ directly: the Gaussian $e^{-\alpha x^2/2}$ with $\alpha = m\omega/\hbar$ gives
+Compute $\sigma_x$ and $\sigma_p$ directly: the Gaussian $e^{-\alpha x^2/2}$ with $\alpha = m\omega/\hbar$ gives
 
 $$\sigma_x^2 = \langle x^2\rangle = \frac{1}{2\alpha} = \frac{\hbar}{2m\omega}, \qquad \sigma_p^2 = \langle p^2\rangle = \frac{\hbar^2\alpha}{2} = \frac{\hbar m\omega}{2}.$$
 
@@ -138,17 +138,17 @@ The product:
 
 $$\sigma_x\,\sigma_p = \sqrt{\frac{\hbar}{2m\omega}}\cdot\sqrt{\frac{\hbar m\omega}{2}} = \frac{\hbar}{2}.$$
 
-Exactly the floor. The ground state achieves equality in the Robertson bound — it is a minimum-uncertainty state. For the $n$-th excited state, the same computation (using ladder operators to evaluate $\langle\hat{x}^2\rangle$ and $\langle\hat{p}^2\rangle$) gives $\sigma_x\sigma_p = (n + 1/2)\hbar$, which exceeds $\hbar/2$ for all $n \geq 1$. Only the ground state saturates.
+Exactly the floor. The ground state achieves equality in the Robertson bound — it is a minimum-uncertainty state. For the $n$-th excited state the same computation (using ladder operators to evaluate $\langle\hat{x}^2\rangle$ and $\langle\hat{p}^2\rangle$) gives $\sigma_x\sigma_p = (n + 1/2)\hbar$, which exceeds $\hbar/2$ for every $n \geq 1$. Only the ground state saturates.
 
-The zero-point energy and the saturation of the Robertson bound are the same fact, seen from two angles. The state's product-of-widths floor and the state's energy floor are two faces of one constraint: a confined quantum state cannot have zero kinetic energy and cannot be simultaneously sharp in $x$ and $p$. These are not two separate properties of the harmonic oscillator. They are one property.
+The zero-point energy and the saturation of the Robertson bound are the same fact seen from two angles. The state's product-of-widths floor and the state's energy floor are two faces of one constraint: a confined quantum state cannot have zero kinetic energy and cannot be simultaneously sharp in $x$ and $p$. These are not two separate properties of the harmonic oscillator. They are one property.
 
 ---
 
 ## Compatible observables and commutators
 
-The Robertson bound says what happens when operators do not commute. The natural next question is: what happens when they do?
+The Robertson bound says what happens when operators do not commute. The obvious next question is: what happens when they do?
 
-Two Hermitian operators $\hat{A}$ and $\hat{B}$ are compatible if $[\hat{A}, \hat{B}] = 0$. The Robertson bound then gives $\sigma_A\sigma_B \geq 0$, which is trivially satisfied — there is no joint-uncertainty floor. More than that: compatible operators admit a common eigenbasis. There exists a basis $\{|n\rangle\}$ such that every $|n\rangle$ is simultaneously an eigenstate of both $\hat{A}$ and $\hat{B}$, labeled by both eigenvalues $(a_n, b_n)$. The state can be sharp in both observables simultaneously, because the measurements of $A$ and $B$ do not interfere with each other.
+Two Hermitian operators $\hat{A}$ and $\hat{B}$ are compatible if $[\hat{A}, \hat{B}] = 0$. The Robertson bound then gives $\sigma_A\sigma_B \geq 0$, trivially satisfied — no joint-uncertainty floor. More than that: compatible operators admit a common eigenbasis. There exists a basis $\{|n\rangle\}$ in which every $|n\rangle$ is simultaneously an eigenstate of both $\hat{A}$ and $\hat{B}$, labeled by both eigenvalues $(a_n, b_n)$. The state can be sharp in both observables at once, because the measurements of $A$ and $B$ do not interfere.
 
 Some examples. $[\hat{x}, \hat{p}_y] = 0$: position along one axis and momentum along a perpendicular axis are compatible. $[\hat{x}, \hat{p}_x] = i\hbar$: position and momentum along the same axis are incompatible. $[\hat{L}_x, \hat{L}_y] = i\hbar\hat{L}_z$ (Chapter 7): components of angular momentum along different axes are incompatible. $[\hat{L}^2, \hat{L}_z] = 0$: the squared magnitude of angular momentum and one component are compatible.
 
@@ -156,27 +156,27 @@ That last pair matters because it explains why hydrogen orbitals are labeled the
 
 A CSCO is a maximal set of mutually commuting Hermitian operators whose joint eigenvalues uniquely identify every state in the eigenbasis. For hydrogen the CSCO is $\{\hat{H}, \hat{L}^2, \hat{L}_z, \hat{S}_z\}$, yielding the labels $(n, \ell, m, m_s)$. The periodic table's quantum numbers are the CSCO's joint eigenvalues. The reason there are exactly these labels, arranged this way, is that this is the largest set of operators that all commute.
 
-There is a connection to conservation laws that is worth naming. In the Heisenberg picture (where operators evolve and states stay fixed), the time derivative of any observable $\hat{O}$ with no explicit time dependence is
+There is a connection to conservation laws worth naming. In the Heisenberg picture (operators evolve, states stay fixed), the time derivative of any observable $\hat{O}$ with no explicit time dependence is
 
 $$\frac{d\hat{O}}{dt} = \frac{i}{\hbar}[\hat{H}, \hat{O}].$$
 
-If $[\hat{H}, \hat{O}] = 0$, then $d\hat{O}/dt = 0$ — the observable is a constant of the motion, conserved. Operators that commute with the Hamiltonian are conserved quantities. The connection between symmetry, commuting operators, and conservation laws runs from here all the way through Chapters 6 and 7. The CSCO structure is the quantum version of that connection.
+If $[\hat{H}, \hat{O}] = 0$, then $d\hat{O}/dt = 0$ — the observable is a constant of the motion, conserved. Operators that commute with the Hamiltonian are conserved quantities. The thread connecting symmetry, commuting operators, and conservation laws runs from here straight through Chapters 6 and 7. The CSCO structure is the quantum version of that connection.
 
-One misconception to correct before moving on. Non-commuting does not mean unmeasurable. You can measure $\hat{x}$ and then measure $\hat{p}$ in sequence. Each measurement is well-defined individually. What you cannot do is prepare a state that is simultaneously sharp in both, because the Robertson bound forbids it. The cost of sequential measurement is that the second disturbs the first: after measuring $\hat{x}$ and obtaining $x_0$, the state is (approximately) $|x_0\rangle$, which is completely uncertain in $p$. Measuring $\hat{p}$ then collapses to some $|p_0\rangle$, which is completely uncertain in $x$. Re-measuring $\hat{x}$ gives a random result. Non-commuting observables have no simultaneous values. That is the statement.
+One misconception to correct before moving on. Non-commuting does not mean unmeasurable. You can measure $\hat{x}$ and then measure $\hat{p}$ in sequence; each measurement is well-defined on its own. What you cannot do is prepare a state simultaneously sharp in both, because the Robertson bound forbids it. The cost of sequential measurement is that the second disturbs the first: after measuring $\hat{x}$ and getting $x_0$, the state is (approximately) $|x_0\rangle$, completely uncertain in $p$. Measuring $\hat{p}$ then collapses to some $|p_0\rangle$, completely uncertain in $x$. Re-measure $\hat{x}$ and you get a random result. Non-commuting observables have no simultaneous values. That is the statement.
 
 ---
 
 ## The measurement problem: what is actually unsettled
 
-Here the chapter must be honest. The previous sections — postulates, Robertson bound, commutators — are well-settled. The content below is not. The distinction matters, and the chapter refuses to paper over it.
+Here the chapter has to be honest. The previous sections — postulates, Robertson bound, commutators — are well-settled. What follows is not. The distinction matters, and the chapter refuses to paper over it.
 
-Postulate 4 says that upon measurement, the state collapses to the corresponding eigenstate. The problem is that a measurement is itself a physical interaction between a quantum system and a physical apparatus. The apparatus is made of atoms, which are quantum. So why is the apparatus described classically? Why are there two laws of evolution — unitary Schrödinger evolution between measurements, discontinuous collapse during them — with the switching rule being "when a measurement occurs"? And what counts as a measurement?
+Postulate 4 says that upon measurement the state collapses to the corresponding eigenstate. The trouble is that a measurement is itself a physical interaction between a quantum system and a physical apparatus. The apparatus is made of atoms, which are quantum. So why is the apparatus described classically? Why are there two laws of evolution — unitary Schrödinger evolution between measurements, discontinuous collapse during them — with the switch being "when a measurement occurs"? And what counts as a measurement?
 
-John Bell, writing in *Physics World* in 1990 in a piece titled "Against 'Measurement'": a fundamental theory should not have the word "measurement" in its postulates. The apparatus is made of quantum constituents; it should evolve by the same dynamics as the system. If collapse is real, it should follow from the dynamics, not be inserted by hand. Bell wrote that sixty-two years after Schrödinger, the field deserved an exact formulation. As of now it does not have one that physicists agree on.
+John Bell, writing in *Physics World* in 1990 in a piece titled "Against 'Measurement'": a fundamental theory should not have the word "measurement" in its postulates. The apparatus is made of quantum constituents; it should evolve by the same dynamics as the system. If collapse is real, it should follow from the dynamics, not be inserted by hand. Bell wrote that sixty-two years after Schrödinger, arguing the field deserved an exact formulation. As of now it does not have one that physicists agree on.
 
 The live interpretations diverge here. The chapter names them; it does not adjudicate.
 
-**Copenhagen** (Bohr, Heisenberg, circa 1927). Quantum systems are described by $|\psi\rangle$; the apparatus is described classically; collapse is a postulate. This is the textbook version, the one working physicists default to for calculation. Its strength is operational clarity. Its weakness is the unspecified quantum-classical boundary and the unspecified definition of "measurement."
+**Copenhagen** (Bohr, Heisenberg, circa 1927). Quantum systems are described by $|\psi\rangle$; the apparatus is described classically; collapse is a postulate. This is the textbook version, the one working physicists default to for calculation. Strength: operational clarity. Weakness: the unspecified quantum-classical boundary and the unspecified definition of "measurement."
 
 **Many-Worlds / Everett** (Hugh Everett III, *Reviews of Modern Physics*, 1957). There is no collapse. The combined system-plus-apparatus-plus-observer evolves unitarily; what looks like collapse is the observer becoming correlated with one branch of a larger superposition. All outcomes occur in different branches. Strength: removes the postulate Bell objected to. Weakness: probabilities now refer to branches — what does it mean to assign probability $|\langle a_n|\psi\rangle|^2$ to outcome $a_n$ when all outcomes occur somewhere? Decision-theoretic derivations (Deutsch 1999, Wallace 2010) attempt an answer; critics dispute whether the derivation is circular.
 
@@ -184,7 +184,7 @@ The live interpretations diverge here. The chapter names them; it does not adjud
 
 **QBism** (Caves, Fuchs, Schack, circa 2002). The wave function is the agent's degree of belief about future measurement outcomes. The Born rule is a normative rule for updating those beliefs. Collapse is a Bayesian update. Strength: the measurement problem dissolves because $|\psi\rangle$ was never a physical thing in the first place. Weakness: many physicists find the anti-realist reading of $|\psi\rangle$ unacceptable — it seems to say that quantum mechanics is not about the world but about what we should believe about the world.
 
-**Dynamical collapse models** (Ghirardi, Rimini, Weber, 1986; Continuous Spontaneous Localization, Pearle 1989). The Schrödinger equation is modified by a small nonlinear stochastic term that causes spontaneous localization at a rate proportional to mass. For a single particle, the modification is negligible. For a macroscopic object, the collective effect forces the system into a definite classical state. Collapse is now a real physical process, not a postulate. Strength: testable — the models predict small deviations from standard quantum mechanics. Weakness: no positive experimental signal has yet appeared. Cantilever and matter-wave experiments have been tightening upper bounds on the GRW/CSL parameters without confirming the models.
+**Dynamical collapse models** (Ghirardi, Rimini, Weber, 1986; Continuous Spontaneous Localization, Pearle 1989). The Schrödinger equation is modified by a small nonlinear stochastic term that causes spontaneous localization at a rate proportional to mass. For a single particle the modification is negligible. For a macroscopic object the collective effect forces the system into a definite classical state. Collapse is now a real physical process, not a postulate. Strength: testable — the models predict small deviations from standard quantum mechanics. Weakness: no positive experimental signal has yet appeared. Cantilever and matter-wave experiments have been tightening upper bounds on the GRW/CSL parameters without confirming the models.
 
 **Decoherence** (Zurek and others, circa 1970s onward). Not strictly an interpretation — a mechanism. Interaction with the environment rapidly suppresses interference between macroscopically distinct states, producing apparent classical behavior. Decoherence explains why you do not see superpositions of a live cat and a dead cat. It does not explain which specific outcome you observe — it eliminates the off-diagonal coherences but leaves the diagonal terms, and the question of which diagonal term you got is exactly the measurement problem restated. Decoherence is part of the answer every interpretation must incorporate. It is not a complete answer by itself.
 
@@ -197,21 +197,21 @@ The live interpretations diverge here. The chapter names them; it does not adjud
 | Dynamical collapse | Stochastic physical localization | A physical state subject to modified dynamics | Testable deviations from standard QM | No confirmed signal |
 | Decoherence | Environmental suppression of interference | Standard quantum state of system plus environment | Explains classical-looking records | Does not select a single outcome |
 
-In 2013, Maximilian Schlosshauer, Johannes Kofler, and Anton Zeilinger surveyed 33 physicists at a specialist foundations conference. The most popular position was Copenhagen-flavored (around 42%), followed by information-based or QBism-adjacent views (around 24%), then Many-Worlds (around 18%), with smaller minorities for Bohm, collapse models, and others. The sample is small and self-selected — these were foundations specialists, not a random draw of physicists — but the headline is robust: *there is no consensus*. Working physicists disagree about what their own most successful theory is describing.
+In 2013, Maximilian Schlosshauer, Johannes Kofler, and Anton Zeilinger surveyed 33 physicists at a specialist foundations conference. The most popular position was Copenhagen-flavored (around 42%), then information-based or QBism-adjacent views (around 24%), then Many-Worlds (around 18%), with smaller minorities for Bohm, collapse models, and others. The sample is small and self-selected — these were foundations specialists, not a random draw of physicists — but the headline is robust: *there is no consensus*. Working physicists disagree about what their own most successful theory is describing.
 
-One misconception the chapter corrects explicitly: "the observer's consciousness causes wave function collapse." This is the von Neumann–Wigner interpretation, sketched by Wigner in a 1961 essay and largely abandoned even by him afterward. The 2013 survey found essentially no support for it. The pop-science framing of "the observer creates reality" trades on this idea and should be pushed back on. There is a genuine measurement problem; consciousness is not the mainstream answer; decoherence is the mainstream mechanism for the quantum-to-classical transition; the interpretive disagreement is about whether decoherence plus something — and which something — closes the problem.
+One misconception the chapter corrects explicitly: "the observer's consciousness causes wave function collapse." This is the von Neumann–Wigner interpretation, sketched by Wigner in a 1961 essay and largely abandoned even by him afterward. The 2013 survey found essentially no support for it. The pop-science framing of "the observer creates reality" trades on this idea and deserves to be pushed back on. There is a genuine measurement problem; consciousness is not the mainstream answer; decoherence is the mainstream mechanism for the quantum-to-classical transition; the interpretive disagreement is about whether decoherence plus something — and which something — closes the problem.
 
-One recent result that sharpened the debate. Daniela Frauchiger and Renato Renner, writing in *Nature Communications* in 2018, constructed a thought experiment in which different observers, each reasoning consistently within quantum mechanics, reach contradictory conclusions about a measurement outcome. Every interpretation resolves the apparent paradox by giving up a different assumption: Copenhagen by restricting which observers count, Many-Worlds by clarifying what "outcome" means across branches. Vilasini and Renner's 2024 follow-up ([*Nature Communications* 15, 7155](https://doi.org/10.1038/s41467-024-47170-2)) examined which assumption each interpretation must drop. The point is not that any interpretation failed — each survives by making its choice explicit. The point is that the choice is forced. The foundations are still under active construction.
+One recent result sharpened the debate. Daniela Frauchiger and Renato Renner, writing in *Nature Communications* in 2018, constructed a thought experiment in which different observers, each reasoning consistently within quantum mechanics, reach contradictory conclusions about a measurement outcome. Every interpretation resolves the apparent paradox by giving up a different assumption: Copenhagen by restricting which observers count, Many-Worlds by clarifying what "outcome" means across branches. Vilasini and Renner's 2024 follow-up ([*Nature Communications* 15, 7155](https://doi.org/10.1038/s41467-024-47170-2)) examined which assumption each interpretation must drop. The point is not that any interpretation failed — each survives by making its choice explicit. The point is that the choice is forced. The foundations are still under active construction.
 
 ---
 
 ## Where the postulates stand
 
-Let me state the situation clearly at the end, because it is the kind of clarity that textbooks sometimes sacrifice for tidiness.
+Let me state the situation cleanly at the end, because it is the kind of clarity textbooks sometimes trade away for tidiness.
 
 The five postulates work. They predict experimental outcomes to many decimal places across every domain where they have been tested. Postulates 1, 2, 3, and 5 are not in serious dispute. Every computation in this course rests on them, and there is no credible challenge to any of them from experiment. Postulate 4 — collapse — has a well-defined mathematical content that all physicists use and no physicist seriously proposes discarding. What is in dispute is what it *means*, what it *describes*, and whether it should be derivable from the other four rather than postulated separately.
 
-A working physicist can compute with all five postulates without committing to an interpretation. The calculation is interpretation-independent; the prediction is the same under Copenhagen, Many-Worlds, Bohm, and QBism. The interpretation question matters for what we think the theory is *about* — whether the wave function describes reality, our beliefs, a branching multiverse, or a pilot field. That question is open. The chapter that ends here does not pretend it is closed, because it is not.
+A working physicist can compute with all five postulates without committing to an interpretation. The calculation is interpretation-independent; the prediction is the same under Copenhagen, Many-Worlds, Bohm, and QBism. The interpretation question matters for what we take the theory to be *about* — whether the wave function describes reality, our beliefs, a branching multiverse, or a pilot field. That question is open. The chapter that ends here does not pretend it is closed, because it is not.
 
 ---
 

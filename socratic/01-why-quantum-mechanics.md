@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-- The Theory a Universe Built by Breaking Every Prediction Classical Physics Made.
+- Before reading on, ask yourself: what would it take to overturn a theory everyone agrees is finished? The answer is what built quantum mechanics — a universe that broke every prediction classical physics made.
 - The chapter moves through The first confrontation: infinite energy in a box, The second confrontation: a threshold that shouldn't exist, The third confrontation: the wrong color comes back, The fourth confrontation: the electron as a wave, and related ideas.
 - Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
 
@@ -10,31 +10,31 @@
 
 ---
 
-Here is a remarkable thing. By 1900, the best physicists in the world believed the subject was essentially finished. Newton had mechanics. Maxwell had electrodynamics. Boltzmann had statistical mechanics. Clausius had thermodynamics. The laws were known; what remained was filling in decimal places.
+Here is a question to sit with before any equation appears. Suppose the four greatest theories ever assembled — mechanics, electrodynamics, statistical mechanics, thermodynamics — all agree, and all the world's best physicists tell you the subject is essentially complete, with only decimal places left to fill in. What, realistically, could go wrong? By 1900 that was the consensus: Newton had mechanics, Maxwell had electrodynamics, Boltzmann had statistical mechanics, Clausius had thermodynamics. The laws were known.
 <!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/01-why-quantum-mechanics-assertions.md -->
 
-The decimal places turned out to be a different universe.
+Most people, asked what could be lurking in the decimal places, predict a small correction — a refinement, a tidier constant. That's the natural guess, and it's exactly wrong. The decimal places turned out to be a different universe.
 
-The trouble was not philosophical. It was quantitative. Classical physics — those four pillars together — made specific, testable predictions about how matter and light should behave. When experimentalists pushed into new regimes — very short wavelengths, very weak beams, very precise spectroscopy — the predictions didn't just fail a little. They gave infinities where experiments gave finite peaks. They gave continuous threshold behavior where experiments gave sharp cutoffs. They had no language at all for results that were reproducible, sharp, and wholly unlike anything the theory anticipated.
+Why should you trust that claim rather than the consensus of 1900? Because the trouble was not philosophical — it was quantitative, and quantitative trouble cannot be argued away. Classical physics — those four pillars together — made specific, testable predictions about how matter and light should behave. Now ask: where would such a theory be most likely to break? Push it into regimes nobody had reached before — very short wavelengths, very weak beams, very precise spectroscopy. The predictions there didn't fail a little. They gave infinities where experiments gave finite peaks. They gave continuous threshold behavior where experiments gave sharp cutoffs. They had no language at all for results that were reproducible, sharp, and wholly unlike anything the theory anticipated.
 
-Five experiments, spread across roughly a quarter century, did the damage. I want to walk through each one and show you the math it forced — not as history, but as a series of confrontations between a beautiful theory and an unwilling universe.
+Five experiments, spread across roughly a quarter century, did the damage. As you read each one, try to predict what classical physics says before you see what nature said — the gap between the two is the whole lesson. I want to walk through each one and show you the math it forced, not as history, but as a series of confrontations between a beautiful theory and an unwilling universe.
 
 ---
 
 ## The first confrontation: infinite energy in a box
 
-Start with something simple: a metal box, hollow, walls held at a fixed temperature. The walls glow. They emit electromagnetic radiation, and that radiation bounces around inside, reaching thermal equilibrium with the walls. The question is: how is the energy distributed among the different frequencies?
+Start with something simple, and predict the answer before you read on: a metal box, hollow, walls held at a fixed temperature. The walls glow, emit electromagnetic radiation, and that radiation reaches thermal equilibrium with the walls. How is the energy distributed among the different frequencies? Where, would you guess, does most of the energy end up?
 
-Classical statistical mechanics has a clean answer. Each electromagnetic mode in the cavity — and there are infinitely many, because you can have modes of arbitrarily high frequency — gets, on average, energy $k_B T$ by the equipartition theorem. Count the modes in a frequency interval $[\nu, \nu + d\nu]$. There are $8\pi\nu^2/c^3$ of them per unit volume. Multiply by $k_B T$:
+Classical statistical mechanics gives a clean answer, and it is worth following its logic exactly, because the logic is sound and the conclusion is a disaster. Each electromagnetic mode in the cavity — and there are infinitely many, because you can have modes of arbitrarily high frequency — gets, on average, energy $k_B T$ by the equipartition theorem. Count the modes in a frequency interval $[\nu, \nu + d\nu]$. There are $8\pi\nu^2/c^3$ of them per unit volume. Multiply by $k_B T$:
 
 $$\rho_{\text{RJ}}(\nu, T) = \frac{8\pi \nu^2}{c^3} k_B T.$$
 
 ![Plot of Rayleigh–Jeans vs](../images/01-why-quantum-mechanics-fig-01.png)
 *Figure 1.1 — Plot of Rayleigh–Jeans vs*
 
-This rises without bound as frequency increases. The total energy, $\int_0^\infty \rho_{\text{RJ}} \, d\nu$, diverges. A box at room temperature should contain infinite energy in its short-wavelength modes. This is what Paul Ehrenfest later called the "ultraviolet catastrophe."
+Now look at what that formula does as frequency climbs. It rises without bound. The total energy, $\int_0^\infty \rho_{\text{RJ}} \, d\nu$, diverges. So the honest classical prediction is that a box at room temperature should contain infinite energy in its short-wavelength modes. Does that bother you? It should — and it bothered physicists enough to earn a name: what Paul Ehrenfest later called the "ultraviolet catastrophe."
 
-Experimentalists at the Physikalisch-Technische Reichsanstalt in Berlin — Otto Lummer and Ernst Pringsheim — were measuring blackbody spectra with extraordinary precision through the late 1890s. Their measurements showed a finite peak at a characteristic frequency, followed by an exponential fall-off at high frequencies. There was no catastrophe in nature. There was just a shape, and the shape needed explaining.
+So which is wrong, the theory or the box? Experimentalists at the Physikalisch-Technische Reichsanstalt in Berlin — Otto Lummer and Ernst Pringsheim — settled it by measuring blackbody spectra with extraordinary precision through the late 1890s. Their measurements showed a finite peak at a characteristic frequency, followed by an exponential fall-off at high frequencies. There was no catastrophe in nature. There was just a shape, and the shape needed explaining.
 
 Max Planck presented his fit on 14 December 1900. The Planck distribution is:
 
@@ -42,7 +42,7 @@ $$\rho(\nu, T) = \frac{8\pi h \nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_B T} - 1}.$$
 
 The constant $h$ he fitted to the data: $6.55 \times 10^{-27}$ erg·s, within 1% of today's value $h = 6.626 \times 10^{-34}$ J·s.
 
-Here is how he got it. Suppose the oscillators in the cavity walls — the atoms that are absorbing and re-emitting radiation — cannot exchange energy continuously with the field. Suppose instead they can only exchange energy in discrete chunks of size $h\nu$: multiples of a quantum of energy. Then the average thermal energy of an oscillator at frequency $\nu$ is not $k_B T$ (equipartition) but:
+What single assumption could turn the diverging classical formula into this finite one? Here is the one Planck made. Suppose the oscillators in the cavity walls — the atoms that are absorbing and re-emitting radiation — cannot exchange energy continuously with the field. Suppose instead they can only exchange energy in discrete chunks of size $h\nu$: multiples of a quantum of energy. Then the average thermal energy of an oscillator at frequency $\nu$ is not $k_B T$ (equipartition) but:
 
 $$\langle E \rangle = \frac{\sum_{n=0}^{\infty} n h\nu \, e^{-n h\nu/k_B T}}{\sum_{n=0}^{\infty} e^{-n h\nu/k_B T}}.$$
 
@@ -50,28 +50,30 @@ Let $x = e^{-h\nu/k_B T}$. The numerator is $h\nu \sum n x^n = h\nu \cdot x/(1-x
 
 $$\langle E \rangle = \frac{h\nu}{e^{h\nu/k_B T} - 1}.$$
 
-At low frequencies, $h\nu \ll k_B T$, and $e^{h\nu/k_B T} - 1 \approx h\nu/k_B T$, so $\langle E \rangle \to k_B T$ — equipartition is recovered. At high frequencies, $h\nu \gg k_B T$, and $\langle E \rangle \to h\nu \, e^{-h\nu/k_B T}$ — exponentially suppressed. The catastrophe is gone. Multiply by the mode-counting density $8\pi\nu^2/c^3$ (classical, unchanged) and you get Planck's distribution.
+Now check the limits, because a formula you trust is one whose limits you've checked yourself. At low frequencies, $h\nu \ll k_B T$, and $e^{h\nu/k_B T} - 1 \approx h\nu/k_B T$, so $\langle E \rangle \to k_B T$ — equipartition is recovered. At high frequencies, $h\nu \gg k_B T$, and $\langle E \rangle \to h\nu \, e^{-h\nu/k_B T}$ — exponentially suppressed. The catastrophe is gone. Multiply by the mode-counting density $8\pi\nu^2/c^3$ (classical, unchanged) and you get Planck's distribution.
 
-One thing to get right before moving on: Planck did not quantize light. He quantized the energy *exchange* between the cavity walls and the radiation field. The radiation itself, in his 1900 picture, was still a continuous electromagnetic wave. The discrete packets lived in the walls, not in the field. Einstein's paper five years later is what put the packets in the field.
+One thing to get right before moving on, and it is the thing most readers get wrong: did Planck quantize light? Most say yes — and that's almost right, in that quantization entered physics here, but the location of the quantization is not where you'd guess. Planck quantized the energy *exchange* between the cavity walls and the radiation field. The radiation itself, in his 1900 picture, was still a continuous electromagnetic wave. The discrete packets lived in the walls, not in the field. Einstein's paper five years later is what put the packets in the field.
 
 ---
 
 ## The second confrontation: a threshold that shouldn't exist
 
-Shine light on a clean metal surface. Electrons come off. This was known. What Philipp Lenard reported in 1902 was the part that shouldn't happen: the kinetic energy of the ejected electrons depended on the *frequency* of the light, not on its *intensity*. A very bright red beam — enormous power delivered per unit area — produced no electrons at all from certain metals. A dim ultraviolet beam produced electrons immediately.
+Shine light on a clean metal surface and electrons come off. That much was known. Now make a prediction before reading further: to get *more energetic* electrons, do you turn up the brightness or change the color of the light? Almost everyone says brightness — more power, more energy, more violent ejection. Hold that prediction.
 
-Classical wave theory says intensity should matter. A brighter wave delivers more energy per unit time. An electron tied to the metal surface should be able to accumulate enough energy to escape, given a long enough wait. The wait never comes. The threshold is sharp. The classical picture fails on three counts simultaneously: wrong variable (frequency, not intensity), wrong threshold behavior (sharp cutoff, not gradual), wrong scaling (kinetic energy linear in frequency above threshold, not in intensity).
+What Philipp Lenard reported in 1902 contradicts it. The kinetic energy of the ejected electrons depended on the *frequency* of the light, not on its *intensity*. A very bright red beam — enormous power delivered per unit area — produced no electrons at all from certain metals. A dim ultraviolet beam produced electrons immediately.
 
-Einstein's 1905 paper proposed that light itself arrives in indivisible energy packets — photons — each carrying energy $E = h\nu$. An electron bound to the metal with binding energy $\phi$ (the work function, a property of the metal) absorbs one photon. If $h\nu > \phi$, the electron escapes with kinetic energy:
+Now you can see exactly where the classical picture breaks. Classical wave theory says intensity should matter: a brighter wave delivers more energy per unit time, so an electron tied to the metal surface should be able to accumulate enough energy to escape, given a long enough wait. The wait never comes. The threshold is sharp. The classical picture fails on three counts simultaneously: wrong variable (frequency, not intensity), wrong threshold behavior (sharp cutoff, not gradual), wrong scaling (kinetic energy linear in frequency above threshold, not in intensity).
+
+What kind of object would deliver energy in a way that depends on color, not brightness, and that either works or doesn't with no waiting? Einstein's 1905 paper proposed the answer: light itself arrives in indivisible energy packets — photons — each carrying energy $E = h\nu$. An electron bound to the metal with binding energy $\phi$ (the work function, a property of the metal) absorbs one photon. If $h\nu > \phi$, the electron escapes with kinetic energy:
 
 $$K_{\max} = h\nu - \phi.$$
 
-Below the threshold frequency $\nu_0 = \phi/h$, no electrons emerge regardless of intensity. Above it, intensity controls how many electrons emerge per second; frequency controls how much energy each one has.
+Below the threshold frequency $\nu_0 = \phi/h$, no electrons emerge regardless of intensity. Above it, intensity controls how many electrons emerge per second; frequency controls how much energy each one has. Notice how this resolves all three failures at once: brightness sets the *number* of packets, color sets the *energy* of each.
 
 ![Stopping potential V_s vs](../images/01-why-quantum-mechanics-fig-02.png)
 *Figure 1.2 — Stopping potential V_s vs*
 
-Robert Millikan spent four years (1912–1916) trying to disprove this. He measured the stopping potential $V_s$ — the retarding voltage that just halts the most energetic electrons, so $eV_s = K_{\max}$ — as a function of frequency. The slope, by Einstein's equation, is $h/e$. Millikan measured $h = 6.57 \times 10^{-27}$ erg·s. That's within 0.5% of Planck's blackbody value from a completely different experiment. He published his result with the concession that the photoelectric equation worked despite his conviction that the underlying hypothesis was "untenable."
+Could you disprove this if you tried? Robert Millikan spent four years (1912–1916) trying. He measured the stopping potential $V_s$ — the retarding voltage that just halts the most energetic electrons, so $eV_s = K_{\max}$ — as a function of frequency. The slope, by Einstein's equation, is $h/e$. Millikan measured $h = 6.57 \times 10^{-27}$ erg·s. That's within 0.5% of Planck's blackbody value from a completely different experiment. He published his result with the concession that the photoelectric equation worked despite his conviction that the underlying hypothesis was "untenable."
 
 **A worked example.** Sodium has work function $\phi \approx 2.36$ eV (NIST clean-surface value; see references). The threshold wavelength is:
 
@@ -89,7 +91,7 @@ The lesson: one photon, one electron. Energy arrives in indivisible packets, the
 
 ## The third confrontation: the wrong color comes back
 
-In 1923, Arthur Holly Compton at Washington University scattered X-rays off graphite and measured the wavelength of the scattered radiation as a function of angle. The classical prediction — Thomson scattering — says the electron oscillates at the driving frequency and re-radiates at the *same* frequency. No wavelength shift. Just a redistribution in angle.
+Here is a prediction worth committing to before the data: bounce X-rays off a block of graphite, and the scattered X-rays come back at — what color? The classical answer is precise. In 1923, Arthur Holly Compton at Washington University ran exactly this experiment and measured the wavelength of the scattered radiation as a function of angle. The classical prediction — Thomson scattering — says the electron oscillates at the driving frequency and re-radiates at the *same* frequency. No wavelength shift. Just a redistribution in angle. So the prediction is: same color out as in.
 
 Compton found a shift. The scattered X-rays came out longer in wavelength than the incident X-rays, by an amount that depended only on the angle $\theta$:
 
@@ -97,7 +99,7 @@ $$\Delta\lambda = \lambda' - \lambda = \frac{h}{m_e c}(1 - \cos\theta).$$
 
 The combination $h/m_e c = 2.426 \times 10^{-12}$ m is called the Compton wavelength of the electron. The shifts are small — picometers — but unmistakable and perfectly reproducible.
 
-The derivation is the cleanest piece of math in this chapter. Treat the photon as a relativistic particle with energy $E_\gamma = h\nu$ and momentum $p_\gamma = h/\lambda$. The electron is initially at rest. Write conservation of energy and conservation of momentum (two components), then eliminate the electron's recoil angle.
+Where does that shift come from? If you stop treating the X-ray as a wave that shakes the electron, and start treating it as a particle that collides with the electron, the answer falls out of conservation laws alone — the cleanest piece of math in this chapter. Treat the photon as a relativistic particle with energy $E_\gamma = h\nu$ and momentum $p_\gamma = h/\lambda$. The electron is initially at rest. Write conservation of energy and conservation of momentum (two components), then eliminate the electron's recoil angle.
 
 ![Compton scattering geometry ](../images/01-why-quantum-mechanics-fig-03.png)
 *Figure 1.3 — Compton scattering geometry *
@@ -135,7 +137,7 @@ The lesson: the photon carries momentum $h/\lambda$. Planck had quantized energy
 
 ## The fourth confrontation: the electron as a wave
 
-If light, conventionally a wave, turned out to behave like a particle, the symmetric question presents itself: does matter, conventionally made of particles, behave like a wave?
+By now a symmetry should be nagging at you. If light — conventionally a wave — turns out to behave like a particle, what is the obvious question to ask next? Turn the statement around: does matter, conventionally made of particles, behave like a wave? If you found that question inevitable, you are thinking exactly as de Broglie did.
 
 Louis de Broglie's 1924 doctoral thesis at the University of Paris said yes. He proposed that a particle with momentum $p$ has an associated wavelength:
 
@@ -143,7 +145,7 @@ $$\lambda = \frac{h}{p}.$$
 
 The same relation as for the photon, now applied to matter.
 
-The numerical consequences are instructive. A 1 kg cricket ball at 1 m/s has $\lambda = 6.6 \times 10^{-34}$ m — twenty orders of magnitude smaller than a proton. No experiment in the universe could detect this. An electron accelerated through 54 V, on the other hand, has a kinetic energy of 54 eV and a de Broglie wavelength of roughly 0.17 nm, comparable to the spacing between planes in a crystal lattice. So an electron beam aimed at a crystal should diffract, just as X-rays do.
+If matter is wavy, why has no one ever seen a baseball diffract? Before dismissing the idea, check the numbers — the answer is hiding in the size of $h$. A 1 kg cricket ball at 1 m/s has $\lambda = 6.6 \times 10^{-34}$ m — twenty orders of magnitude smaller than a proton. No experiment in the universe could detect this. An electron accelerated through 54 V, on the other hand, has a kinetic energy of 54 eV and a de Broglie wavelength of roughly 0.17 nm, comparable to the spacing between planes in a crystal lattice. So the wave is real but only shows itself when the wavelength is comparable to something around it — and for an electron, a crystal lattice is exactly that something. An electron beam aimed at a crystal should diffract, just as X-rays do.
 
 Clinton Davisson and Lester Germer at Bell Labs found this in 1927. They scattered 54 eV electrons off a nickel crystal and saw a sharp diffraction peak at the angle Bragg's condition predicts.
 
@@ -158,7 +160,7 @@ $$\lambda = \frac{h}{p} = \frac{6.626 \times 10^{-34}}{3.97 \times 10^{-24}} \ap
 Nickel's (111) surface plane spacing is $d = 0.215$ nm. The surface diffraction condition gives $\lambda = d\sin\phi$, so $\sin\phi = 0.167/0.215 = 0.777$, $\phi = 51°$. They measured 50°. Agreement to within one degree.
 <!-- FACT-CHECK FLAG: UNVERIFIED — see factchecks/01-why-quantum-mechanics-assertions.md -->
 
-The single-electron version was done as a continuous buildup by Akira Tonomura's group at Hitachi in 1989. Electrons arrived one at a time, each registering as a point on the detector. Accumulated over hours, the points formed a diffraction pattern. A single electron, with no other electrons present to interact with, produced interference. There is no classical reading of this. The electron "interferes with itself" in a way that has no analog in Newtonian language.
+Now here is the experiment that should genuinely disturb you. What if you send the electrons through one at a time, so that no electron ever meets another? The single-electron version was done as a continuous buildup by Akira Tonomura's group at Hitachi in 1989. Electrons arrived one at a time, each registering as a point on the detector. Accumulated over hours, the points formed a diffraction pattern. A single electron, with no other electrons present to interact with, produced interference. Ask yourself what is left to interfere with — and notice there is no classical reading of this. The electron "interferes with itself" in a way that has no analog in Newtonian language.
 
 ![Tonomura buildup sequence ](../images/01-why-quantum-mechanics-fig-04.png)
 *Figure 1.4 — Tonomura buildup sequence *
@@ -169,26 +171,26 @@ The lesson: matter has wave properties, and those properties are not about the p
 
 ## The fifth confrontation: energy levels are real
 
-In 1914, James Franck and Gustav Hertz accelerated electrons through mercury vapor and measured the current reaching a collector as a function of accelerating voltage. The current rose steadily, then dropped sharply at 4.9 V. It rose again, then dropped at 9.8 V. And again at 14.7 V. Regular dips, spaced exactly 4.9 V apart.
+One more prediction before the data. Fire electrons through mercury vapor, slowly turning up the accelerating voltage, and watch the current reaching a collector. If atoms could absorb any amount of energy in a collision, the current should climb smoothly with voltage. So: smooth, or not? In 1914, James Franck and Gustav Hertz ran exactly this. The current rose steadily, then dropped sharply at 4.9 V. It rose again, then dropped at 9.8 V. And again at 14.7 V. Regular dips, spaced exactly 4.9 V apart. Smooth was the wrong guess.
 
-The interpretation: an electron with kinetic energy below 4.9 eV bounces off mercury atoms elastically, losing no energy, and reaches the collector. At 4.9 eV the electron can give that exact amount to the mercury atom, exciting it from its ground state to its first excited state. The electron then lacks enough energy to reach the collector against the retarding field — hence the drop. More voltage, and the electron regains enough energy to reach the collector, until it has 9.8 eV and can excite two mercury atoms in succession.
+What would produce dips at one fixed, repeated energy? The interpretation: an electron with kinetic energy below 4.9 eV bounces off mercury atoms elastically, losing no energy, and reaches the collector. At 4.9 eV the electron can give that exact amount to the mercury atom, exciting it from its ground state to its first excited state. The electron then lacks enough energy to reach the collector against the retarding field — hence the drop. More voltage, and the electron regains enough energy to reach the collector, until it has 9.8 eV and can excite two mercury atoms in succession. The spacing repeats because the atom accepts only that one quantized amount, over and over.
 
 ![Franck–Hertz current vs](../images/01-why-quantum-mechanics-fig-05.png)
 *Figure 1.5 — Franck–Hertz current vs*
 
-If this interpretation is right, the excited mercury atoms decay back to their ground state by emitting photons, and those photons should have energy 4.9 eV. The wavelength:
+If that interpretation is right, it makes a second, independent prediction you can check — can you see what it is? The excited mercury atoms must decay back to their ground state by emitting photons, and those photons should carry energy 4.9 eV. The wavelength:
 
 $$\lambda = \frac{hc}{E} = \frac{1240 \, \text{eV·nm}}{4.9 \, \text{eV}} \approx 253 \, \text{nm}.$$
 
 Franck and Hertz built a spectroscope and observed a sharp emission line at 253.7 nm whenever the accelerating voltage exceeded 4.9 V. Two completely independent probes — electron stopping voltage and photon wavelength — gave the same energy for the same atomic transition. The energy levels are real.
 
-This is the direct evidence for discrete internal energy structure in atoms. Spectroscopy — the Balmer series, the Lyman series — was already known, but spectroscopy is indirect: you see emitted photons and back-infer the levels. Franck–Hertz is direct. You watch the electron lose exactly 4.9 eV in a collision, and then you watch the photon come out at exactly the predicted wavelength.
+Why does this matter more than spectroscopy, which already showed sharp lines? Because spectroscopy is indirect: you see emitted photons and back-infer the levels. The Balmer series, the Lyman series — already known, all indirect. Franck–Hertz is direct. You watch the electron lose exactly 4.9 eV in a collision, and then you watch the photon come out at exactly the predicted wavelength.
 
 ---
 
 ## What the five experiments require
 
-After 1927, any theory that wanted to replace classical physics had to accommodate five specific, quantitative facts:
+Step back and ask the engineer's question: if you had to build a replacement for classical physics from scratch, what non-negotiable facts would it have to reproduce? After 1927, any such theory had to accommodate five specific, quantitative ones:
 
 1. Energy exchange between matter and the radiation field happens in discrete units of $h\nu$ (Planck, 1900).
 2. The electromagnetic field carries energy in indivisible packets of $h\nu$ (Einstein, 1905).
@@ -204,11 +206,11 @@ After 1927, any theory that wanted to replace classical physics had to accommoda
 | Matter waves | 1924-1927 | Electrons are particles with no diffraction wavelength | Electron beams diffract from crystals | $\lambda=h/p$ |
 | Franck-Hertz | 1914 | Collisions transfer arbitrary energies | Mercury atoms absorb discrete 4.9 eV packets | $\Delta E=h\nu$ |
 
-Three structural requirements follow from these. The new theory needs a *probabilistic* account of measurement: you cannot predict where a single electron in a diffraction experiment lands; you can predict only the long-run distribution. It needs *wave-equation structure*: to handle interference and de Broglie wavelengths. And it needs *eigenvalue structure*: to handle discrete energy levels.
+Now read those five facts as a list of demands on the new theory, and three structural requirements fall out. Can you spot them before reading on? First, the theory needs a *probabilistic* account of measurement: you cannot predict where a single electron in a diffraction experiment lands; you can predict only the long-run distribution. Second, it needs *wave-equation structure*, to handle interference and de Broglie wavelengths. Third, it needs *eigenvalue structure*, to handle discrete energy levels.
 
 The next chapters build those structures. The mathematics required is the theory of operators on complex vector spaces, and the wave equation that governs how quantum amplitudes evolve in time. The five experiments above are the constraints. What follows is the theory built to meet them.
 
-Before you go on, notice something. Planck's constant $h$ appears in all five relations. The Compton shift, the de Broglie wavelength, the photoelectric threshold, the Planck distribution — all of them have $h$ in them, and in every case it is the same $h$, $6.626 \times 10^{-34}$ J·s, extracted from independent experiments with completely different setups. That's not a coincidence. That's a constant of nature, setting the scale at which classical descriptions fail. When you want to understand *why* quantum mechanics looks the way it does, start there: it is the theory forced by the existence of this one number and its appearance in every one of these five confrontations.
+Before you go on, look back across the five relations and ask what they have in common. Planck's constant $h$ appears in all of them. The Compton shift, the de Broglie wavelength, the photoelectric threshold, the Planck distribution — every one has $h$ in it, and in every case it is the same $h$, $6.626 \times 10^{-34}$ J·s, extracted from independent experiments with completely different setups. Is that a coincidence? It cannot be. It is a constant of nature, setting the scale at which classical descriptions fail. So when you want to understand *why* quantum mechanics looks the way it does, start there: it is the theory forced by the existence of this one number and its appearance in every one of these five confrontations.
 
 ---
 

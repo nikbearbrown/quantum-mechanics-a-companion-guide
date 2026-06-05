@@ -35,14 +35,10 @@ Operators that commute with $\hat{H}$ can be simultaneously diagonalized with it
 
 Nature then makes one more choice that quantum mechanics itself does not derive: it picks one of the two options for each particle species, permanently. Electrons, protons, neutrons, and all other half-integer-spin particles are *fermions* — their multi-particle wave functions are antisymmetric under exchange. Photons, Higgs bosons, and all other integer-spin particles are *bosons* — their wave functions are symmetric. The connection between spin and statistics is not a postulate of non-relativistic quantum mechanics but a theorem — Pauli's spin-statistics theorem, proved in 1940 [Pauli, *Physical Review* 58, 716–722](https://doi.org/10.1103/PhysRev.58.716) — that requires relativistic quantum field theory to derive. Inside non-relativistic QM, the anti/symmetric assignment is postulated. You should know the deeper theorem exists and that it requires tools we have not yet built.
 
-| Item | Meaning |
-| --- | --- |
-| spin type (half-integer | integer |
-| exchange symmetry (antisymmetric | symmetric |
-| example particles (electron, proton, neutron | photon, Higgs, ⁴He atom |
-| statistical distribution (Fermi-Dirac | Bose-Einstein |
-| key consequence (Pauli exclusion, shell structure | Bose-Einstein condensation, laser coherence |
-| makes the dichotomy scannable before the chapter elaborates each side | A concrete checkpoint for applying the chapter concept. |
+| particle family | spin | exchange symmetry | examples | statistical behavior | key consequence |
+| --- | --- | --- | --- | --- | --- |
+| Fermions | half-integer | antisymmetric | electron, proton, neutron | Fermi-Dirac | Pauli exclusion and shell structure |
+| Bosons | integer | symmetric | photon, Higgs, $^4$He atom | Bose-Einstein | condensation and coherent fields |
 
 One note on what this postulate applies to: it is not limited to electrons that are nearby. Two electrons at opposite ends of the galaxy are still identical, and in principle the wave function across all electrons in the universe is antisymmetric under the exchange of any pair. In practice, exchange effects between electrons in distant atoms are negligible because the overlap integral between their localized orbitals is exponentially small with distance. The antisymmetry holds globally; it only *matters* locally.
 

@@ -3,7 +3,7 @@
 
 ## TL;DR
 
-- The language quantum mechanics is written in, and why no simpler language works.
+- Before you accept that quantum mechanics needs strange mathematics, ask: could a simpler language do the job? Walk one experiment to its end and you'll find it can't — this is the language the theory is written in, and why no simpler one works.
 - The chapter moves through The arithmetic of complex numbers, Vector spaces and inner products, Dirac notation, Operators and eigenvalues, and related ideas.
 - Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
 
@@ -11,17 +11,17 @@
 
 ---
 
-There is a single experiment that forces the whole mathematical structure on you. Not because physicists decided to make things complicated — because the experiment *insists*, and you either follow where it leads or you stop doing physics.
+Suppose someone told you that one experiment, all by itself, forces an entire mathematical apparatus — complex numbers, Hilbert spaces, Hermitian operators — onto physics. Would you believe them? Most students assume the math is a choice physicists made for convenience and could unmake if they wanted. That's almost the right instinct, in that the math should answer to something — but the something is not convenience. The experiment *insists*, and you either follow where it leads or you stop doing physics.
 
-Run electrons, one at a time, through two slits. Each electron lands somewhere on the screen behind. After ten thousand electrons, a pattern appears: bright bands where many landed, dark bands where almost none did. The bands are interference fringes — the same pattern you get when water waves pass through two gaps.
+Watch it insist. Run electrons, one at a time, through two slits. Each electron lands somewhere on the screen behind. After ten thousand electrons, a pattern appears: bright bands where many landed, dark bands where almost none did. The bands are interference fringes — the same pattern you get when water waves pass through two gaps.
 
-But these are electrons. Single electrons. There is no other electron for each one to interfere *with*. Whatever is interfering is the electron interfering with itself.
+But stop and ask: these are electrons, single electrons. There is no other electron for each one to interfere *with*. So what is interfering? The electron is interfering with itself.
 
-Now here is the thing that forces the math. To get those dark bands, you need the contributions from the two slits to *cancel*. Not add to something small — cancel. If the two contributions are $\psi_1$ and $\psi_2$, and you add them as $\psi_1 + \psi_2$, and then you compute intensity as $|\psi_1 + \psi_2|^2$, you can get cancellation when $\psi_1 = -\psi_2$. Fine. But you need not just cancellation at one angle — you need alternating bright and dark bands across the whole screen. The contributions need to vary smoothly in sign and magnitude as the angle changes. They need a continuously varying *phase*.
+Now here is the move that forces the math, and it is worth predicting the answer before reading on: to make a *dark* band, what do the two contributions from the two slits have to do? Not add to something small — they have to *cancel*. If the two contributions are $\psi_1$ and $\psi_2$, and you add them as $\psi_1 + \psi_2$, and then you compute intensity as $|\psi_1 + \psi_2|^2$, you can get cancellation when $\psi_1 = -\psi_2$. Fine. But you need not just cancellation at one angle — you need alternating bright and dark bands across the whole screen. So the contributions need to vary smoothly in sign and magnitude as the angle changes. They need a continuously varying *phase*.
 
-Things with a continuously varying phase look like $e^{i\varphi}$. And $e^{i\varphi}$ requires $i = \sqrt{-1}$. Which requires complex numbers.
+And what kind of object has a continuously varying phase? Things that look like $e^{i\varphi}$. And $e^{i\varphi}$ requires $i = \sqrt{-1}$. Which requires complex numbers.
 
-This is not a convenient choice. The experiment doesn't give you an alternative.
+So the complex numbers are not a convenient choice. The experiment doesn't give you an alternative.
 
 ![Double-slit experiment diagram with single-electron sequential buildup ](../images/02-mathematical-foundations-fig-01.png)
 *Figure 2.1 — Double-slit experiment diagram with single-electron sequential buildup *
@@ -36,7 +36,7 @@ $$|z| = \sqrt{z^{*} z} = \sqrt{a^2 + b^2}.$$
 
 That is a non-negative real number. You can think of $a$ and $b$ as coordinates in a plane — the "complex plane" — where the real axis goes left-right and the imaginary axis goes up-down. The modulus is the distance from the origin.
 
-Euler's formula is the fact that makes complex numbers useful in physics:
+If you had to pick a single fact about complex numbers that makes them indispensable to physics, which would it be? Here is the candidate — Euler's formula:
 
 $$e^{i\theta} = \cos\theta + i\sin\theta.$$
 
@@ -51,7 +51,7 @@ The three facts you will use over and over:
 - $e^{i\theta_1} \cdot e^{i\theta_2} = e^{i(\theta_1 + \theta_2)}$. Phases add when complex numbers multiply.
 - $(z_1 z_2)^{*} = z_1^{*} z_2^{*}$. Conjugation distributes over multiplication.
 
-Now back to the double slit. Label the two slits. The amplitude arriving at the screen from slit 1 is $\psi_1$; from slit 2, $\psi_2$. The rule of quantum mechanics — we will state it precisely in Unit 3, but use it here — is that you *add the amplitudes* and then *square the modulus* to get intensity. The total amplitude is $\psi = \psi_1 + \psi_2$, and the intensity is $|\psi|^2$.
+Now return to the double slit and let the arithmetic settle the question raised above. Label the two slits. The amplitude arriving at the screen from slit 1 is $\psi_1$; from slit 2, $\psi_2$. The rule of quantum mechanics — we will state it precisely in Unit 3, but use it here — is that you *add the amplitudes* and then *square the modulus* to get intensity. The total amplitude is $\psi = \psi_1 + \psi_2$, and the intensity is $|\psi|^2$.
 
 Take a specific simple case: one slit is a distance $r$ from the screen point, the other is a distance $r + d\sin\theta$ away. Assign equal magnitudes $1/\sqrt{2}$ and phases determined by path length:
 
@@ -67,12 +67,12 @@ Using $1 + \cos x = 2\cos^2(x/2)$:
 
 $$|\psi|^2 = 2\cos^2\!\left(\frac{kd\sin\theta}{2}\right).$$
 
-Maxima where $d\sin\theta = n\lambda$; zeros where $d\sin\theta = (n + 1/2)\lambda$. Bright and dark bands, exactly as observed. The complex exponentials made this calculation work in four lines. Try it with real numbers: the cross term is $2\psi_1\psi_2$, a fixed sign, no oscillation. No dark bands. No double slit experiment.
+Maxima where $d\sin\theta = n\lambda$; zeros where $d\sin\theta = (n + 1/2)\lambda$. Bright and dark bands, exactly as observed. The complex exponentials made this calculation work in four lines. Now do the test that settles whether the complex numbers were load-bearing: try it with real numbers. The cross term is $2\psi_1\psi_2$, a fixed sign, no oscillation. No dark bands. No double slit experiment.
 
 ![Plot of |ψ|² = 2cos²(kd sinθ / 2)](../images/02-mathematical-foundations-fig-03.png)
 *Figure 2.3 — Plot of |ψ|² = 2cos²(kd sinθ / 2)*
 
-Stueckelberg showed in 1960 that you can reformulate quantum mechanics with real numbers if you double the dimension of every space — one extra real dimension to replace each complex one. What you cannot do is reformulate it with real numbers *in the same dimension*. And Renou and collaborators published an experiment in 2021 that directly tested a whole class of real-amplitude reformulations using Bell inequalities — and ruled them out [Renou et al., *Nature* 600, 625–629 (2021), *verify pagination*]. The complex numbers are not a convention. They are measured.
+But here a skeptic should push back: couldn't a clever enough mathematician rebuild all of this with real numbers and avoid $i$ entirely? Partly — and the precise boundary of that "partly" is the whole answer. Stueckelberg showed in 1960 that you can reformulate quantum mechanics with real numbers if you double the dimension of every space — one extra real dimension to replace each complex one. What you cannot do is reformulate it with real numbers *in the same dimension*. And Renou and collaborators published an experiment in 2021 that directly tested a whole class of real-amplitude reformulations using Bell inequalities — and ruled them out [Renou et al., *Nature* 600, 625–629 (2021), *verify pagination*]. The complex numbers are not a convention. They are measured.
 
 ---
 
@@ -80,7 +80,7 @@ Stueckelberg showed in 1960 that you can reformulate quantum mechanics with real
 
 A *vector space* over $\mathbb{C}$ is a set of objects — we will call them states and write them $|\psi\rangle$ — with two operations: you can add any two of them ($|\psi\rangle + |\phi\rangle$), and you can multiply any one by a complex number ($\alpha|\psi\rangle$). These operations satisfy the usual rules: addition is commutative and associative, scalar multiplication distributes. The simplest example is $\mathbb{C}^n$, columns of $n$ complex numbers.
 
-An *inner product* is a way to measure the "angle" between two states. It is a map $\langle\cdot|\cdot\rangle: V \times V \to \mathbb{C}$ satisfying three conditions:
+Now ask: in ordinary geometry you can ask how aligned two vectors are — what plays that role for quantum states? An *inner product* is a way to measure the "angle" between two states. It is a map $\langle\cdot|\cdot\rangle: V \times V \to \mathbb{C}$ satisfying three conditions:
 
 1. **Conjugate symmetry:** $\langle\phi|\psi\rangle = \langle\psi|\phi\rangle^{*}$.
 2. **Linear in the second slot:** $\langle\phi|\alpha\psi + \beta\chi\rangle = \alpha\langle\phi|\psi\rangle + \beta\langle\phi|\chi\rangle$.
@@ -104,7 +104,7 @@ Same idea, integral instead of sum.
 
 ## Dirac notation
 
-P. A. M. Dirac introduced the bra-ket notation in 1939 [Dirac, *Math. Proc. Cambridge Phil. Soc.* 35, 416–418]. It looks like decoration. It is not. It packages four operations into a notation clean enough that calculations that would take a page in indexed components take three lines.
+When you first meet $|\psi\rangle$ and $\langle\psi|$, what do you suspect — substance or decoration? P. A. M. Dirac introduced the bra-ket notation in 1939 [Dirac, *Math. Proc. Cambridge Phil. Soc.* 35, 416–418], and it looks like decoration. It is not. It packages four operations into a notation clean enough that calculations that would take a page in indexed components take three lines. Watch which four operations it hides.
 
 **Ket.** $|\psi\rangle$ is the state vector. In $\mathbb{C}^n$, think of it as a column.
 
@@ -121,19 +121,19 @@ P. A. M. Dirac introduced the bra-ket notation in 1939 [Dirac, *Math. Proc. Camb
 | inner product | $\langle\phi|\psi\rangle$ | complex number | $\phi_1^*\alpha+\phi_2^*\beta$ |
 | outer product | $|\psi\rangle\langle\phi|$ | operator | $\begin{pmatrix}\alpha\phi_1^* & \alpha\phi_2^*\\ \beta\phi_1^* & \beta\phi_2^*\end{pmatrix}$ |
 
-Two identities anchor everything that follows. The first is the *completeness relation*. Take any orthonormal basis $\{|n\rangle\}$ of the space — a set of mutually orthogonal unit vectors that spans the whole space, meaning $\langle m|n\rangle = \delta_{mn}$ and every state can be expanded in them. Then:
+Two identities anchor everything that follows. The first is the *completeness relation*. Before reading the formula, ask what it should say: if you sum up the outer products of every basis vector with itself, what operator should you get? Take any orthonormal basis $\{|n\rangle\}$ of the space — a set of mutually orthogonal unit vectors that spans the whole space, meaning $\langle m|n\rangle = \delta_{mn}$ and every state can be expanded in them. Then:
 
 $$\sum_n |n\rangle\langle n| = \hat{I}.$$
 
 Why? Take any $|\psi\rangle$. Expand it as $|\psi\rangle = \sum_n c_n|n\rangle$ where $c_n = \langle n|\psi\rangle$. Then $\sum_n |n\rangle\langle n|\psi\rangle = \sum_n c_n|n\rangle = |\psi\rangle$. The operator $\sum_n|n\rangle\langle n|$ acts as the identity. "Inserting the identity" — writing $\hat{I} = \sum_n|n\rangle\langle n|$ between two other operators — is the single most common calculational maneuver in quantum mechanics.
 
-The second identity: the wave function $\psi(x)$ is the *position-basis component* of the abstract state $|\psi\rangle$. There exist generalized position eigenstates $|x\rangle$ (not normalizable; they live in an extended sense outside $L^2(\mathbb{R})$, but they are useful) with $\langle x|x'\rangle = \delta(x - x')$, and
+The second identity answers a question you may not have known to ask: what is the relationship between the abstract ket $|\psi\rangle$ and the familiar wave function $\psi(x)$? They are the same object, written twice. The wave function $\psi(x)$ is the *position-basis component* of the abstract state $|\psi\rangle$. There exist generalized position eigenstates $|x\rangle$ (not normalizable; they live in an extended sense outside $L^2(\mathbb{R})$, but they are useful) with $\langle x|x'\rangle = \delta(x - x')$, and
 
 $$\int dx\,|x\rangle\langle x| = \hat{I}, \qquad \langle x|\psi\rangle = \psi(x).$$
 
 So $|\psi\rangle = \int dx\,\psi(x)|x\rangle$ — the wave function is the expansion coefficients of $|\psi\rangle$ in the position basis. Abstract Dirac notation and concrete wave-function notation are the same object written two ways. Insert $\int dx|x\rangle\langle x|$ to move from one to the other.
 
-The single most common student error: computing a matrix element $\langle\phi|\hat{A}|\psi\rangle$ by writing $\phi$'s components as a row *without conjugating them*. The result is wrong — complex when it should be real, typically. Always conjugate when you turn a ket into a bra. If you get a complex expectation value for what you believe is an observable, look for the missing conjugation first.
+One error costs more students more points than any other here — can you guess what it is before reading on? It is computing a matrix element $\langle\phi|\hat{A}|\psi\rangle$ by writing $\phi$'s components as a row *without conjugating them*. The result is wrong — complex when it should be real, typically. Always conjugate when you turn a ket into a bra. So if you get a complex expectation value for what you believe is an observable, look for the missing conjugation first.
 
 ---
 
@@ -147,7 +147,7 @@ $$\hat{A}|a\rangle = a|a\rangle.$$
 
 A vector $|a\rangle$ that the operator leaves pointing in the same direction, scaled by a complex number $a$. The eigenvalues come from the characteristic polynomial $\det(\hat{A} - a\hat{I}) = 0$.
 
-Now here is where Hermitian operators become the central object. An operator is *Hermitian* if $\hat{A}^\dagger = \hat{A}$, where $\hat{A}^\dagger$ is defined by the requirement that $\langle\phi|\hat{A}\psi\rangle = \langle\hat{A}^\dagger\phi|\psi\rangle$ for all $|\phi\rangle$, $|\psi\rangle$. In matrix form, $\hat{A}^\dagger$ is the conjugate transpose: $(A^\dagger)_{ij} = A_{ji}^{*}$. Hermitian means $A_{ij} = A_{ji}^{*}$.
+Now ask the question that selects one special class of operator out of all the rest: which operators are fit to represent something you can actually measure? Measurement outcomes are real numbers, and distinct outcomes must be distinguishable — what does that demand of the operator? An operator is *Hermitian* if $\hat{A}^\dagger = \hat{A}$, where $\hat{A}^\dagger$ is defined by the requirement that $\langle\phi|\hat{A}\psi\rangle = \langle\hat{A}^\dagger\phi|\psi\rangle$ for all $|\phi\rangle$, $|\psi\rangle$. In matrix form, $\hat{A}^\dagger$ is the conjugate transpose: $(A^\dagger)_{ij} = A_{ji}^{*}$. Hermitian means $A_{ij} = A_{ji}^{*}$.
 
 The *spectral theorem* for Hermitian operators says three things:
 
@@ -161,13 +161,13 @@ $$\langle a|\hat{A}|a\rangle = a\langle a|a\rangle.$$
 
 But also $\langle a|\hat{A}|a\rangle = \langle \hat{A}a|a\rangle = \langle a|a\rangle\, a^{*}$. So $a\langle a|a\rangle = a^{*}\langle a|a\rangle$. Since $\langle a|a\rangle > 0$, we get $a = a^{*}$, so $a$ is real.
 
-These three properties are why every observable in quantum mechanics is a Hermitian operator: real eigenvalues because measurement outcomes are real numbers; orthogonal eigenstates because distinct outcomes correspond to distinguishable results; a complete eigenbasis because the measurement must have *some* outcome with probability 1.
+Now match each property back to the demand that produced it. These three properties are why every observable in quantum mechanics is a Hermitian operator: real eigenvalues because measurement outcomes are real numbers; orthogonal eigenstates because distinct outcomes correspond to distinguishable results; a complete eigenbasis because the measurement must have *some* outcome with probability 1.
 
 ---
 
 ## The three Pauli matrices
 
-The spin-1/2 system is the cleanest possible quantum system: two-dimensional Hilbert space $\mathbb{C}^2$, three Hermitian observables, all the essential features visible in $2 \times 2$ matrix arithmetic.
+If you wanted the smallest possible quantum system in which every essential feature still shows up, how small could you go? The spin-1/2 system is the answer: two-dimensional Hilbert space $\mathbb{C}^2$, three Hermitian observables, all the essential features visible in $2 \times 2$ matrix arithmetic.
 
 The three Pauli matrices are the spin observables along the $x$, $y$, and $z$ axes:
 
@@ -189,13 +189,13 @@ For $\sigma_y$: same eigenvalues. For $\lambda = +1$, the equation $(\sigma_y - 
 
 $$|+_y\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix} = \frac{1}{\sqrt{2}}(|\!\uparrow\rangle + i|\!\downarrow\rangle), \qquad |-_y\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -i \end{pmatrix} = \frac{1}{\sqrt{2}}(|\!\uparrow\rangle - i|\!\downarrow\rangle).$$
 
-That $i$ in the component of $|+_y\rangle$ is the whole point. There is no real-coefficient basis that diagonalizes $\sigma_y$. Try to write a real $2\times 2$ symmetric matrix with eigenvalues $\pm 1$ that is physically equivalent to $\sigma_y$ — you cannot, because the chirality of $\sigma_y$ is encoded in the complex structure. $\sigma_y$ is the place in the introductory course where you cannot look at the $i$ and tell yourself it is just notation.
+Look hard at that $i$ in the component of $|+_y\rangle$ and ask whether you could ever make it go away by a clever choice of real coordinates. You cannot, and that is the whole point. There is no real-coefficient basis that diagonalizes $\sigma_y$. Try to write a real $2\times 2$ symmetric matrix with eigenvalues $\pm 1$ that is physically equivalent to $\sigma_y$ — you cannot, because the chirality of $\sigma_y$ is encoded in the complex structure. $\sigma_y$ is the place in the introductory course where you cannot look at the $i$ and tell yourself it is just notation.
 
-Now consider what it means for measurements to be non-commuting. Start with the state $|\!\uparrow\rangle$. Apply $\sigma_x$:
+Now here is a prediction to commit to. Take a particle you *know* is spin-up along $z$. Measure its spin along $x$. What do you get? Most people expect a definite answer — surely a known state has a known spin in every direction. Watch what the arithmetic says. Start with the state $|\!\uparrow\rangle$. Apply $\sigma_x$:
 
 $$\sigma_x|\!\uparrow\rangle = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 0 \\ 1 \end{pmatrix} = |\!\downarrow\rangle.$$
 
-The spin-$z$-up state is not a spin-$x$ eigenstate; acting with $\sigma_x$ takes it to the orthogonal state. To find the measurement probabilities, expand $|\!\uparrow\rangle$ in the $\sigma_x$ eigenbasis. Inverting the relations above: $|\!\uparrow\rangle = (1/\sqrt{2})(|+_x\rangle + |-_x\rangle)$. The probability of measuring $\sigma_x = +1$ in the state $|\!\uparrow\rangle$ is $|\langle +_x|\!\uparrow\rangle|^2 = |1/\sqrt{2}|^2 = 1/2$. Fifty-fifty. A particle known to be spin-up along $z$ is completely undetermined along $x$. That is the Stern–Gerlach experiment, written in basis-change arithmetic.
+The spin-$z$-up state is not a spin-$x$ eigenstate; acting with $\sigma_x$ takes it to the orthogonal state. To find the measurement probabilities, expand $|\!\uparrow\rangle$ in the $\sigma_x$ eigenbasis. Inverting the relations above: $|\!\uparrow\rangle = (1/\sqrt{2})(|+_x\rangle + |-_x\rangle)$. The probability of measuring $\sigma_x = +1$ in the state $|\!\uparrow\rangle$ is $|\langle +_x|\!\uparrow\rangle|^2 = |1/\sqrt{2}|^2 = 1/2$. Fifty-fifty. So a particle known to be spin-up along $z$ is completely undetermined along $x$ — not a flaw in your measurement, a fact about the state. That is the Stern–Gerlach experiment, written in basis-change arithmetic.
 
 ![Stern-Gerlach apparatus diagram showing sequential measurements ](../images/02-mathematical-foundations-fig-04.png)
 *Figure 2.4 — Stern-Gerlach apparatus diagram showing sequential measurements *
@@ -204,7 +204,7 @@ The spin-$z$-up state is not a spin-$x$ eigenstate; acting with $\sigma_x$ takes
 
 ## Hermitian operators in infinite dimensions: checking $\hat{p}$
 
-The momentum operator in the position representation is $\hat{p} = -i\hbar\,d/dx$. Let us verify it is Hermitian on the space of square-integrable functions vanishing at infinity.
+We claimed observables are Hermitian. The momentum operator is $\hat{p} = -i\hbar\,d/dx$ — but is it actually Hermitian? Don't take it on faith; check it on the space of square-integrable functions vanishing at infinity, and watch what makes the check work.
 
 We need to confirm $\langle\phi|\hat{p}\psi\rangle = \langle\hat{p}\phi|\psi\rangle$, i.e.,
 
@@ -222,7 +222,7 @@ Multiply both sides by $-i\hbar$:
 
 $$-i\hbar\int\phi^{*}\frac{d\psi}{dx}\,dx = +i\hbar\int\frac{d\phi^{*}}{dx}\psi\,dx. \checkmark$$
 
-Two things to notice. First: the $-i$ in $\hat{p} = -i\hbar\,d/dx$ is load-bearing. Without it, $d/dx$ is *anti-Hermitian* ($\hat{A}^\dagger = -\hat{A}$) by the same argument; the $-i$ rotates anti-Hermitian to Hermitian. Every basic QM operator carries these factors of $i$ for exactly this reason. Second: the proof used the boundary conditions. On a finite interval with states that don't vanish at the endpoints, the boundary term does not necessarily vanish, and $\hat{p}$ may not be Hermitian on that domain. The domain is part of the definition of the operator. In infinite dimensions, *Hermitian* and *self-adjoint* are not the same thing — a Hermitian operator might have eigenstates but lack a complete eigenbasis, or fail to admit a unique unambiguous extension to its full domain. Griffiths' footnotes acknowledge this; Reed and Simon *Methods of Modern Mathematical Physics* Vol. 2 is the reference for when it matters. It will matter again in Unit 4 when half-line problems first appear.
+Two things to notice, and each is worth pausing on. First, ask what would happen to the proof if you dropped the $-i$ and used $d/dx$ alone. The $-i$ in $\hat{p} = -i\hbar\,d/dx$ is load-bearing: without it, $d/dx$ is *anti-Hermitian* ($\hat{A}^\dagger = -\hat{A}$) by the same argument; the $-i$ rotates anti-Hermitian to Hermitian. Every basic QM operator carries these factors of $i$ for exactly this reason. Second, notice the proof leaned on the boundary conditions — so what happens when they fail? On a finite interval with states that don't vanish at the endpoints, the boundary term does not necessarily vanish, and $\hat{p}$ may not be Hermitian on that domain. The domain is part of the definition of the operator. In infinite dimensions, *Hermitian* and *self-adjoint* are not the same thing — a Hermitian operator might have eigenstates but lack a complete eigenbasis, or fail to admit a unique unambiguous extension to its full domain. Griffiths' footnotes acknowledge this; Reed and Simon *Methods of Modern Mathematical Physics* Vol. 2 is the reference for when it matters. It will matter again in Unit 4 when half-line problems first appear.
 
 ![Integration-by-parts steps for the momentum Hermiticity proof ](../images/02-mathematical-foundations-fig-05.png)
 *Figure 2.5 — Integration-by-parts steps for the momentum Hermiticity proof *
@@ -231,7 +231,7 @@ Two things to notice. First: the $-i$ in $\hat{p} = -i\hbar\,d/dx$ is load-beari
 
 ## What the formalism looks like in one picture
 
-Quantum states are vectors in a complex Hilbert space. Observables are Hermitian operators on that space. The eigenvalues of an observable are the possible measurement outcomes. A state $|\psi\rangle$ expanded in the eigenbasis of $\hat{A}$ as $|\psi\rangle = \sum_n c_n|a_n\rangle$ has probability $|c_n|^2$ of yielding outcome $a_n$. The expectation value is
+You have now met five pieces. Before reading the synthesis, try to assemble them yourself: states, observables, eigenvalues, probabilities — how do they fit into one machine? Here is the assembly. Quantum states are vectors in a complex Hilbert space. Observables are Hermitian operators on that space. The eigenvalues of an observable are the possible measurement outcomes. A state $|\psi\rangle$ expanded in the eigenbasis of $\hat{A}$ as $|\psi\rangle = \sum_n c_n|a_n\rangle$ has probability $|c_n|^2$ of yielding outcome $a_n$. The expectation value is
 
 $$\langle\hat{A}\rangle = \langle\psi|\hat{A}|\psi\rangle = \sum_n a_n|c_n|^2.$$
 

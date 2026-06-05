@@ -3,18 +3,18 @@
 ## TL;DR
 
 - Five Tools for the Problems Schrödinger Couldn't Solve.
-- The chapter moves through Time-independent perturbation theory, Degenerate perturbation theory, The variational principle, The WKB approximation, and related ideas.
+- We move through time-independent perturbation theory, degenerate perturbation theory, the variational principle, and the WKB approximation.
 - Read it for the main argument, the vocabulary it introduces, and the practical judgment it asks you to develop.
 
 *Five Tools for the Problems Schrödinger Couldn't Solve.*
 
 ---
 
-Here is the uncomfortable truth about the quantum mechanics curriculum. Every problem you have solved so far — the infinite square well, the harmonic oscillator, the hydrogen atom — has an exact closed-form solution. You might reasonably conclude that quantum mechanics is a subject where you write down the Schrödinger equation and solve it. That conclusion is wrong.
+It is worth stating plainly something the quantum mechanics curriculum can easily hide. Every problem we have solved so far — the infinite square well, the harmonic oscillator, the hydrogen atom — has an exact closed-form solution. From that pattern, it would be reasonable to conclude that quantum mechanics is a subject in which you write down the Schrödinger equation and solve it. That conclusion is not correct.
 
-The list of exactly-solvable quantum problems is short. Helium — three particles, one more Coulomb interaction than hydrogen — is already not on it. Real atoms beyond hydrogen, real molecules, interacting electrons in a solid, the vast majority of perturbations to any clean system: none of these admit closed-form eigenstates. Schrödinger published his equation in 1926 and solved the hydrogen atom that year. He did not solve helium in any closed form. Nobody has.
+The list of exactly-solvable quantum problems is short. Helium — three particles, just one more Coulomb interaction than hydrogen — is already not on it. Real atoms beyond hydrogen, real molecules, interacting electrons in a solid, and the vast majority of perturbations to any clean system: none of these admit closed-form eigenstates. Schrödinger published his equation in 1926 and solved the hydrogen atom that same year. He did not solve helium in any closed form. Nobody has.
 
-What Egil Hylleraas published in 1929 was something different: a *variational* calculation. Pick a trial wave function with a few adjustable parameters. Compute the expectation value of the Hamiltonian as a function of those parameters. Minimize. With six parameters, Hylleraas reproduced the experimental ground-state energy of helium to four significant figures. The wave function was approximate. The number was right. This is the working mode of practical quantum mechanics: an approximate wave function that gives the right energy is good enough to build the next decade of physics on.
+What Egil Hylleraas published in 1929 was something different: a *variational* calculation. You pick a trial wave function with a few adjustable parameters, compute the expectation value of the Hamiltonian as a function of those parameters, and minimize. With six parameters, Hylleraas reproduced the experimental ground-state energy of helium to four significant figures. The wave function was approximate, but the number was right. This is the working mode of practical quantum mechanics: an approximate wave function that gives the right energy is good enough to build the next decade of physics on.
 
 This chapter develops five such methods and explains what each one is for.
 
@@ -22,7 +22,7 @@ This chapter develops five such methods and explains what each one is for.
 
 ## Time-independent perturbation theory
 
-The setup: an exactly-solvable Hamiltonian $\hat{H}_0$ with known eigenstates $|n^{(0)}\rangle$ and energies $E_n^{(0)}$, and a small correction $\hat{H}'$ that you want to treat as a perturbation. The full Hamiltonian is $\hat{H} = \hat{H}_0 + \lambda\hat{H}'$, where $\lambda$ is a bookkeeping parameter you will set to 1 at the end. The assumption is that the exact energies and states can be expanded in powers of $\lambda$:
+Here is the setup. We have an exactly-solvable Hamiltonian $\hat{H}_0$ with known eigenstates $|n^{(0)}\rangle$ and energies $E_n^{(0)}$, plus a small correction $\hat{H}'$ that we want to treat as a perturbation. The full Hamiltonian is $\hat{H} = \hat{H}_0 + \lambda\hat{H}'$, where $\lambda$ is a bookkeeping parameter we will set to 1 at the end. We assume that the exact energies and states can be expanded in powers of $\lambda$:
 
 $$|n\rangle = |n^{(0)}\rangle + \lambda|n^{(1)}\rangle + \lambda^2|n^{(2)}\rangle + \cdots, \qquad E_n = E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \cdots.$$
 
@@ -32,52 +32,52 @@ The $\lambda^0$ equation is just the unperturbed problem. The $\lambda^1$ equati
 
 $$\hat{H}_0|n^{(1)}\rangle + \hat{H}'|n^{(0)}\rangle = E_n^{(0)}|n^{(1)}\rangle + E_n^{(1)}|n^{(0)}\rangle.$$
 
-Project onto $\langle n^{(0)}|$ from the left. The first and third terms cancel because $\langle n^{(0)}|\hat{H}_0 = E_n^{(0)}\langle n^{(0)}|$, and $\langle n^{(0)}|n^{(0)}\rangle = 1$. What remains is the **first-order energy correction**:
+We project onto $\langle n^{(0)}|$ from the left. The first and third terms cancel because $\langle n^{(0)}|\hat{H}_0 = E_n^{(0)}\langle n^{(0)}|$ and $\langle n^{(0)}|n^{(0)}\rangle = 1$. What remains is the **first-order energy correction**:
 
 $$\boxed{E_n^{(1)} = \langle n^{(0)} | \hat{H}' | n^{(0)} \rangle.}$$
 
-Sandwich the perturbation between the unperturbed state and read off the shift. Simple, but it tells you immediately whether a perturbation changes the energy at all — and sometimes it does not.
+We sandwich the perturbation between the unperturbed state and read off the shift. It is simple, but it tells us right away whether a perturbation changes the energy at all — and sometimes it does not.
 
-For example: the first-order Stark effect on the hydrogen ground state. The perturbation is $\hat{H}' = e\hat{z}\mathcal{E}$ for an electric field $\mathcal{E}$ along $z$. The correction is
+Consider, for example, the first-order Stark effect on the hydrogen ground state. The perturbation is $\hat{H}' = e\hat{z}\mathcal{E}$ for an electric field $\mathcal{E}$ along $z$. The correction is
 
 $$E_{1s}^{(1)} = e\mathcal{E}\int|\psi_{1s}|^2 z\,d^3r = 0,$$
 
-because $|\psi_{1s}|^2$ is spherically symmetric and $z$ is an odd function of position. The integral of an odd times an even over all space is zero. Hydrogen in the ground state has no first-order Stark effect. The effect shows up at second order — the electric field mixes $|1s\rangle$ with excited states that *do* carry a nonzero $\langle z\rangle$, and second-order perturbation theory captures that mixing.
+because $|\psi_{1s}|^2$ is spherically symmetric and $z$ is an odd function of position. The integral of an odd function times an even one over all space is zero. So hydrogen in the ground state has no first-order Stark effect. The effect appears at second order instead — the electric field mixes $|1s\rangle$ with excited states that *do* carry a nonzero $\langle z\rangle$, and second-order perturbation theory captures that mixing.
 
-For the first-order **state** correction, project the same $\lambda^1$ equation onto $\langle m^{(0)}|$ for $m \neq n$:
+For the first-order **state** correction, we project the same $\lambda^1$ equation onto $\langle m^{(0)}|$ for $m \neq n$:
 
 $$|n^{(1)}\rangle = \sum_{m \neq n}\frac{\langle m^{(0)} | \hat{H}' | n^{(0)}\rangle}{E_n^{(0)} - E_m^{(0)}} |m^{(0)}\rangle.$$
 
-The state mixes in contributions from every other unperturbed state, weighted by the off-diagonal matrix element of $\hat{H}'$ and divided by the energy gap. The smaller the gap, the larger the mixing — and the more suspicious you should be about convergence.
+The state mixes in contributions from every other unperturbed state, each weighted by the off-diagonal matrix element of $\hat{H}'$ and divided by the energy gap. The smaller the gap, the larger the mixing — and the more cautious we should be about whether the expansion converges.
 
 The **second-order energy correction** is
 
 $$E_n^{(2)} = \sum_{m \neq n}\frac{|\langle m^{(0)} | \hat{H}' | n^{(0)}\rangle|^2}{E_n^{(0)} - E_m^{(0)}}.$$
 
-For the ground state, every denominator $E_0^{(0)} - E_m^{(0)}$ is negative and every numerator is non-negative, so $E_0^{(2)} \leq 0$ always. The second-order correction to the ground-state energy is always non-positive. This is *level repulsion*: a perturbation pushes the ground state down and excited states up, more strongly the closer the levels are. The effect runs through band-structure physics, nuclear physics, and quantum chemistry wherever two levels come near each other and avoid crossing.
+For the ground state, every denominator $E_0^{(0)} - E_m^{(0)}$ is negative and every numerator is non-negative, so $E_0^{(2)} \leq 0$ always. The second-order correction to the ground-state energy is always non-positive. This is *level repulsion*: a perturbation pushes the ground state down and excited states up, and it does so more strongly the closer the levels lie. The effect runs through band-structure physics, nuclear physics, and quantum chemistry wherever two levels approach each other and avoid crossing.
 
 ![Energy-level diagram showing level repulsion ](../images/09-approximation-methods-fig-01.png)
 *Figure 9.1 — Energy-level diagram showing level repulsion *
 
-One thing to say explicitly about convergence: the perturbation series often does not converge in the usual sense. Freeman Dyson argued in 1952 that QED perturbation theory must be an asymptotic series with zero radius of convergence. The physical reason: if you flip the sign of the electric charge from $+e$ to $-e$, electrons would attract each other and the vacuum would be unstable. So the series cannot be analytic at the origin in the coupling constant, and the radius of convergence is zero. The series diverges if you sum it term by term — but the first few terms give excellent numerical results anyway, because the series is *asymptotically* accurate near the expansion point. Perturbation theory is useful precisely because the first few terms are accurate, not because the series converges.
+One point about convergence deserves to be stated explicitly: the perturbation series often does not converge in the usual sense. Freeman Dyson argued in 1952 that QED perturbation theory must be an asymptotic series with zero radius of convergence. The physical reason is this: if you flip the sign of the electric charge from $+e$ to $-e$, electrons would attract each other and the vacuum would be unstable. So the series cannot be analytic at the origin in the coupling constant, and the radius of convergence is zero. Summing the series term by term makes it diverge — yet the first few terms give excellent numerical results anyway, because the series is *asymptotically* accurate near the expansion point. Perturbation theory is useful precisely because those first few terms are accurate, not because the full series converges.
 
 ---
 
 ## Degenerate perturbation theory
 
-When two or more unperturbed states share the same energy, the first-order state-correction denominator $E_n^{(0)} - E_m^{(0)}$ goes to zero and the formula above diverges. The fix is conceptually simple: choose the *right* basis within the degenerate subspace before applying the perturbation.
+When two or more unperturbed states share the same energy, the first-order state-correction denominator $E_n^{(0)} - E_m^{(0)}$ goes to zero and the formula above blows up. The remedy is conceptually simple: choose the *right* basis within the degenerate subspace before applying the perturbation.
 
-Restrict $\hat{H}'$ to the degenerate subspace and diagonalize the resulting matrix. The eigenvalues are the first-order energy corrections; the eigenvectors are the "good" zeroth-order states. For a two-fold degeneracy with states $|a^{(0)}\rangle$ and $|b^{(0)}\rangle$, the matrix is
+We restrict $\hat{H}'$ to the degenerate subspace and diagonalize the resulting matrix. The eigenvalues are the first-order energy corrections; the eigenvectors are the "good" zeroth-order states. For a two-fold degeneracy with states $|a^{(0)}\rangle$ and $|b^{(0)}\rangle$, the matrix is
 
 $$W = \begin{pmatrix} \langle a^{(0)} | \hat{H}' | a^{(0)} \rangle & \langle a^{(0)} | \hat{H}' | b^{(0)} \rangle \\ \langle b^{(0)} | \hat{H}' | a^{(0)} \rangle & \langle b^{(0)} | \hat{H}' | b^{(0)} \rangle \end{pmatrix}.$$
 
-The conceptual content: the unperturbed degeneracy did not pick out a preferred basis. The perturbation breaks the tie and reveals which basis was the right one all along.
+The conceptual content is this: the unperturbed degeneracy did not single out any preferred basis. The perturbation breaks the tie and reveals which basis was the right one all along.
 
 A clean example is the linear Stark effect on hydrogen $n=2$. The four degenerate states are $|2s\rangle, |2p_x\rangle, |2p_y\rangle, |2p_z\rangle$, all at the same energy. The perturbation $\hat{H}' = e\hat{z}\mathcal{E}$ has matrix elements that vanish by parity except between $|2s\rangle$ and $|2p_z\rangle$ (the dipole operator $z$ connects states of opposite parity, and $|2s\rangle$ is even while $|2p_z\rangle$ is odd). The two-by-two block in the $\{|2s\rangle, |2p_z\rangle\}$ subspace is
 
 $$W = \begin{pmatrix} 0 & -3e\mathcal{E} a_0 \\ -3e\mathcal{E} a_0 & 0 \end{pmatrix},$$
 
-with eigenvalues $\pm 3e\mathcal{E} a_0$. The $|2p_x\rangle$ and $|2p_y\rangle$ states are untouched — no matrix elements connect them to anything. So the $n=2$ manifold of hydrogen splits *linearly* with the electric field: two outer states shifted by $\pm 3e\mathcal{E} a_0$, two inner states unshifted. This is the linear Stark effect. It occurs because the accidental degeneracy of $|2s\rangle$ and $|2p_z\rangle$ in hydrogen allows the perturbation to mix them at first order in a way that produces a net dipole moment.
+with eigenvalues $\pm 3e\mathcal{E} a_0$. The $|2p_x\rangle$ and $|2p_y\rangle$ states are untouched — no matrix elements connect them to anything. So the $n=2$ manifold of hydrogen splits *linearly* with the electric field: two outer states shifted by $\pm 3e\mathcal{E} a_0$, two inner states unshifted. This is the linear Stark effect. It happens because the accidental degeneracy of $|2s\rangle$ and $|2p_z\rangle$ in hydrogen lets the perturbation mix them at first order in a way that produces a net dipole moment.
 
 ![Hydrogen n=2 energy-level splitting diagram ](../images/09-approximation-methods-fig-02.png)
 *Figure 9.2 — Hydrogen n=2 energy-level splitting diagram *
@@ -90,17 +90,17 @@ Perturbation theory needs a small parameter. The variational method does not. Fo
 
 $$\boxed{\langle\psi_{\text{trial}} | \hat{H} | \psi_{\text{trial}}\rangle \geq E_{\text{ground}}.}$$
 
-The proof is two lines. Expand $|\psi_{\text{trial}}\rangle = \sum_n c_n|n\rangle$ in the energy eigenbasis (which we do not know, but it exists). Then $\langle\hat{H}\rangle = \sum_n |c_n|^2 E_n \geq E_{\text{ground}} \sum_n |c_n|^2 = E_{\text{ground}}$. Equality holds only when all the weight is on the ground state.
+The proof takes two lines. Expand $|\psi_{\text{trial}}\rangle = \sum_n c_n|n\rangle$ in the energy eigenbasis (which we do not know, but which exists). Then $\langle\hat{H}\rangle = \sum_n |c_n|^2 E_n \geq E_{\text{ground}} \sum_n |c_n|^2 = E_{\text{ground}}$. Equality holds only when all the weight sits on the ground state.
 
-Three virtues of the method. First, no expansion parameter is needed — you can apply it to helium without pretending the electron-electron repulsion is small. Second, the bound is one-sided: you can never *overestimate* the ground-state energy. Third, the energy error is second order in the deviation of $|\psi_{\text{trial}}\rangle$ from the true ground state — so even a mediocre trial state gives a good energy estimate.
+The method has three virtues. First, no expansion parameter is needed — we can apply it to helium without pretending that the electron-electron repulsion is small. Second, the bound is one-sided: we can never *overestimate* the ground-state energy. Third, the energy error is second order in the deviation of $|\psi_{\text{trial}}\rangle$ from the true ground state — so even a mediocre trial state yields a good energy estimate.
 
-The helium calculation illustrates all three. The trial state is a product of two hydrogen-like $1s$ orbitals but with an adjustable effective nuclear charge $Z^{*}$:
+The helium calculation puts all three on display. The trial state is a product of two hydrogen-like $1s$ orbitals, but with an adjustable effective nuclear charge $Z^{*}$:
 
 $$\psi_{\text{trial}}(\mathbf{r}_1, \mathbf{r}_2) = \frac{(Z^{*})^3}{\pi a_0^3}\, e^{-Z^{*}(r_1 + r_2)/a_0}.$$
 
-The idea: each electron partially screens the nucleus from the other, so the effective charge each electron sees is less than the bare $Z = 2$. In atomic units (where energies are in Hartrees, $1\ \text{Hartree} = 27.2\ \text{eV}$), compute $\langle\hat{H}\rangle$ in three pieces. Kinetic energy: $(Z^{*})^2$ (two electrons, each contributing $(Z^{*})^2/2$). Electron-nucleus attraction: $-2ZZ^{*}$ (each electron in a $Z^{*}$ orbital has $\langle 1/r\rangle = Z^{*}$, and the true nuclear charge is $Z$). Electron-electron repulsion: $(5/8)Z^{*}$ (a standard Coulomb integral for two $1s$ orbitals with charge $Z^{*}$).
+The idea is that each electron partially screens the nucleus from the other, so the effective charge each electron sees is less than the bare $Z = 2$. In atomic units (where energies are in Hartrees, $1\ \text{Hartree} = 27.2\ \text{eV}$), we compute $\langle\hat{H}\rangle$ in three pieces. Kinetic energy: $(Z^{*})^2$ (two electrons, each contributing $(Z^{*})^2/2$). Electron-nucleus attraction: $-2ZZ^{*}$ (each electron in a $Z^{*}$ orbital has $\langle 1/r\rangle = Z^{*}$, and the true nuclear charge is $Z$). Electron-electron repulsion: $(5/8)Z^{*}$ (a standard Coulomb integral for two $1s$ orbitals with charge $Z^{*}$).
 
-Combining:
+Combining these:
 
 $$\langle\hat{H}\rangle(Z^{*}) = (Z^{*})^2 - 2ZZ^{*} + \frac{5}{8}Z^{*}.$$
 
@@ -112,50 +112,50 @@ For helium, $Z = 2$, so $Z^{*} = 27/16 \approx 1.69$. The variational ground-sta
 
 $$E_{\text{var}} = -(Z^{*})^2 = -(27/16)^2 \approx -2.848\ \text{Hartree} \approx -77.5\ \text{eV}.$$
 
-The experimental value is $-79.0$ eV. The one-parameter variational result is within 2% — and it has a clear physical story: each electron sees an effective nuclear charge of about 1.69 because the other electron screens 5/16 of the bare charge of 2.
+The experimental value is $-79.0$ eV. The one-parameter variational result lands within 2% — and it carries a clear physical story: each electron sees an effective nuclear charge of about 1.69 because the other electron screens 5/16 of the bare charge of 2.
 
 ![⟨H⟩(Z*) vs Z* for helium ](../images/09-approximation-methods-fig-03.png)
 *Figure 9.3 — ⟨H⟩(Z*) vs Z* for helium *
 
-One thing to be careful about: the variational method gives you the ground-state *energy* reliably, not necessarily the ground-state *wave function* for other purposes. The energy converges much faster than the wave function, so variational energies are accurate to many decimal places in modern quantum chemistry while observables that depend sensitively on the wave function — like the charge density at the nucleus — require more care.
+There is one thing to be careful about. The variational method gives us the ground-state *energy* reliably, but not necessarily the ground-state *wave function* for every other purpose. The energy converges much faster than the wave function, so variational energies are accurate to many decimal places in modern quantum chemistry, while observables that depend sensitively on the wave function — like the charge density at the nucleus — require more care.
 
 ---
 
 ## The WKB approximation
 
-The WKB approximation is the leading term in an expansion of the Schrödinger equation in powers of $\hbar$. The physical idea: when the potential varies slowly compared to the local de Broglie wavelength, the wave function locally looks like a plane wave, and you can carry the local momentum along with you as the wave propagates.
+The WKB approximation is the leading term in an expansion of the Schrödinger equation in powers of $\hbar$. The physical idea is this: when the potential varies slowly compared to the local de Broglie wavelength, the wave function locally looks like a plane wave, and we can carry the local momentum along with us as the wave propagates.
 
-In the classically allowed region where $E > V(x)$, define the local classical momentum $p(x) = \sqrt{2m(E-V(x))}$. The WKB wave function is
+In the classically allowed region where $E > V(x)$, we define the local classical momentum $p(x) = \sqrt{2m(E-V(x))}$. The WKB wave function is
 
 $$\psi(x) \approx \frac{C}{\sqrt{p(x)}}\,\exp\!\left(\pm\frac{i}{\hbar}\int p(x')\,dx'\right).$$
 
-In the classically forbidden region where $E < V(x)$, $p(x)$ becomes imaginary; the wave function decays exponentially instead of oscillating. The approximation is valid when $|d\lambda/dx| \ll 1$ — when the de Broglie wavelength $\lambda = h/p$ changes slowly compared to itself.
+In the classically forbidden region where $E < V(x)$, $p(x)$ becomes imaginary; the wave function decays exponentially instead of oscillating. The approximation is valid when $|d\lambda/dx| \ll 1$ — that is, when the de Broglie wavelength $\lambda = h/p$ changes slowly compared to itself.
 
-**Tunneling.** For a barrier from $x=a$ to $x=b$ with $E < V(x)$ throughout, the transmission probability is
+**Tunneling.** For a barrier running from $x=a$ to $x=b$ with $E < V(x)$ throughout, the transmission probability is
 
 $$T \approx \exp\!\left(-\frac{2}{\hbar}\int_a^b \sqrt{2m(V(x)-E)}\,dx\right).$$
 
-The integral inside the exponential is the action across the barrier. The exponential dependence on this integral means small changes in barrier shape produce enormous changes in transmission probability. Alpha-decay half-lives across the periodic table span 24 orders of magnitude — from microseconds for some polonium isotopes to billions of years for thorium — for alpha-particle energies that differ by only a factor of two. That entire range comes from modest changes fed into an exponential. George Gamow in 1928 derived the empirical Geiger-Nuttall law from exactly this WKB tunneling formula applied to the Coulomb barrier around a nucleus. One page of physics explained what had been mysterious since 1911.
+The integral inside the exponential is the action across the barrier. Because the transmission depends exponentially on this integral, small changes in barrier shape produce enormous changes in transmission probability. Alpha-decay half-lives across the periodic table span 24 orders of magnitude — from microseconds for some polonium isotopes to billions of years for thorium — for alpha-particle energies that differ by only a factor of two. That entire range comes from modest changes fed into an exponential. George Gamow in 1928 derived the empirical Geiger-Nuttall law from exactly this WKB tunneling formula applied to the Coulomb barrier around a nucleus. One page of physics explained what had been mysterious since 1911.
 
 **Bohr-Sommerfeld quantization.** For a particle bound between classical turning points $a$ and $b$, the WKB quantization condition is
 
 $$\oint p(x)\,dx = 2\int_a^b p(x)\,dx = \left(n + \tfrac{1}{2}\right)\cdot 2\pi\hbar.$$
 
-The $+1/2$ is the Maslov index. It arises from matching the WKB solution to an Airy function at each turning point, where the potential is locally linear and the approximation must be patched. Two turning points, two matchings, a total phase contribution of $\pi/2$ — hence $(n+1/2)$ rather than the $n$ that Bohr's 1913 rule naively predicted. Applied to the harmonic oscillator, this recovers the exact spectrum $E_n = (n+1/2)\hbar\omega$.
+The $+1/2$ is the Maslov index. It arises from matching the WKB solution to an Airy function at each turning point, where the potential is locally linear and the approximation has to be patched. Two turning points, two matchings, a total phase contribution of $\pi/2$ — hence $(n+1/2)$ rather than the $n$ that Bohr's 1913 rule naively predicted. Applied to the harmonic oscillator, this recovers the exact spectrum $E_n = (n+1/2)\hbar\omega$.
 
 ---
 
 ## Time-dependent perturbation theory and Fermi's golden rule
 
-Now the perturbation has a clock. $\hat{H}'(t)$ depends on time; you turn it on at $t=0$; the system starts in eigenstate $|i\rangle$ of the unperturbed Hamiltonian. You want the probability of finding it in a different eigenstate $|f\rangle$ at time $t$.
+Now the perturbation has a clock. $\hat{H}'(t)$ depends on time; we turn it on at $t=0$; the system starts in eigenstate $|i\rangle$ of the unperturbed Hamiltonian. We want the probability of finding it in a different eigenstate $|f\rangle$ at time $t$.
 
-Write the evolving state as $|\psi(t)\rangle = \sum_n c_n(t) e^{-iE_n t/\hbar} |n\rangle$, with $c_n(0) = \delta_{ni}$. Project the Schrödinger equation onto $\langle f|$:
+We write the evolving state as $|\psi(t)\rangle = \sum_n c_n(t) e^{-iE_n t/\hbar} |n\rangle$, with $c_n(0) = \delta_{ni}$. Projecting the Schrödinger equation onto $\langle f|$:
 
 $$i\hbar\,\dot{c}_f(t) = \sum_n \langle f|\hat{H}'(t)|n\rangle\,e^{i\omega_{fn}t}\,c_n(t),$$
 
 where $\omega_{fn} = (E_f - E_n)/\hbar$. This is exact — an infinite set of coupled equations.
 
-First-order perturbation theory: approximate $c_n(t) \approx \delta_{ni}$ on the right-hand side, keeping only the initial state. Then:
+In first-order perturbation theory, we approximate $c_n(t) \approx \delta_{ni}$ on the right-hand side, keeping only the initial state. Then:
 
 $$i\hbar\,\dot{c}_f^{(1)}(t) = \langle f|\hat{H}'(t)|i\rangle\,e^{i\omega_{fi}t}.$$
 
@@ -165,11 +165,11 @@ $$c_f^{(1)}(t) = \frac{1}{i\hbar}\int_0^t \langle f|\hat{H}'(t')|i\rangle\,e^{i\
 
 The squared amplitude $|c_f^{(1)}(t)|^2$ is the transition probability to first order.
 
-Now specialize to a sinusoidal perturbation $\hat{H}'(t) = \hat{V}(e^{i\omega t} + e^{-i\omega t})$ for $t > 0$. Near resonance ($\omega \approx \omega_{fi}$), the $e^{i(\omega_{fi}-\omega)t'}$ term dominates after integration and the other averages away. The transition probability becomes
+Now we specialize to a sinusoidal perturbation $\hat{H}'(t) = \hat{V}(e^{i\omega t} + e^{-i\omega t})$ for $t > 0$. Near resonance ($\omega \approx \omega_{fi}$), the $e^{i(\omega_{fi}-\omega)t'}$ term dominates after integration while the other averages away. The transition probability becomes
 
 $$|c_f^{(1)}(t)|^2 = \frac{|\langle f|\hat{V}|i\rangle|^2}{\hbar^2}\cdot\frac{4\sin^2\!\left[(\omega_{fi}-\omega)t/2\right]}{(\omega_{fi}-\omega)^2}.$$
 
-This is the central result. Let $\Omega = \omega_{fi} - \omega$ be the detuning from resonance. The shape of the transition probability as a function of $\Omega$ is a squared sinc function — peaked at $\Omega = 0$, width $\sim 1/t$, peak height $\sim t^2$. As $t \to \infty$, the peak becomes infinitely narrow and tall, approaching a delta function: in the distributional sense,
+This is the central result. Let $\Omega = \omega_{fi} - \omega$ be the detuning from resonance. As a function of $\Omega$, the transition probability is a squared sinc function — peaked at $\Omega = 0$, of width $\sim 1/t$, with peak height $\sim t^2$. As $t \to \infty$, the peak grows infinitely narrow and tall, approaching a delta function: in the distributional sense,
 
 $$\frac{\sin^2(\Omega t/2)}{\Omega^2} \to \frac{\pi t}{2}\,\delta(\Omega).$$
 
@@ -180,39 +180,39 @@ Substitute and simplify:
 
 $$|c_f^{(1)}(t)|^2 \to \frac{2\pi t}{\hbar^2}\,|\langle f|\hat{V}|i\rangle|^2\,\delta(\omega_{fi}-\omega).$$
 
-The probability grows linearly in time — the hallmark of a constant transition rate. The rate per unit time is the coefficient:
+The probability grows linearly in time — the signature of a constant transition rate. The rate per unit time is the coefficient:
 
 $$W_{i\to f} = \frac{2\pi}{\hbar}\,|\langle f|\hat{V}|i\rangle|^2\,\delta(E_f - E_i - \hbar\omega).$$
 
-In most applications the final state is part of a continuum with density of states $\rho(E_f)$. Integrate over final states; the delta function picks out $E_f = E_i + \hbar\omega$:
+In most applications the final state belongs to a continuum with density of states $\rho(E_f)$. We integrate over final states; the delta function picks out $E_f = E_i + \hbar\omega$:
 
 $$\boxed{W_{i\to f} = \frac{2\pi}{\hbar}\,|\langle f|\hat{H}'|i\rangle|^2\,\rho(E_f).}$$
 
-This is **Fermi's golden rule**. Dirac derived it in 1927. Fermi named it "Golden Rule No. 2" in his lecture notes. The misattribution stuck.
+This is **Fermi's golden rule**. Dirac derived it in 1927. Fermi named it "Golden Rule No. 2" in his lecture notes, and the misattribution stuck.
 
-It is worth pausing on what this formula contains. The matrix element $|\langle f|\hat{H}'|i\rangle|^2$ encodes the *coupling* between initial and final states — how strongly the perturbation connects them. The density of states $\rho(E_f)$ encodes how many final states are available at the resonance energy. The product gives the rate. A large coupling and a sparse final-state continuum can give the same rate as a weak coupling into a dense one.
+It is worth pausing on what this formula contains. The matrix element $|\langle f|\hat{H}'|i\rangle|^2$ encodes the *coupling* between initial and final states — how strongly the perturbation connects them. The density of states $\rho(E_f)$ encodes how many final states are available at the resonance energy. The product gives the rate. A large coupling into a sparse final-state continuum can give the same rate as a weak coupling into a dense one.
 
-Applications: spontaneous emission (Einstein $A$ coefficients come directly from this formula with the radiation field providing the continuum), beta decay (Fermi's original use case, where the emitted electron and neutrino form the continuum), photoionization, Raman scattering, neutron capture cross sections, LED efficiency, photovoltaic quantum yield. Anywhere a quantum system transitions from a discrete state into a continuum under a time-dependent perturbation, the golden rule supplies the rate.
+The applications are everywhere: spontaneous emission (the Einstein $A$ coefficients come directly from this formula, with the radiation field supplying the continuum), beta decay (Fermi's original use case, where the emitted electron and neutrino form the continuum), photoionization, Raman scattering, neutron capture cross sections, LED efficiency, photovoltaic quantum yield. Anywhere a quantum system transitions from a discrete state into a continuum under a time-dependent perturbation, the golden rule supplies the rate.
 
-The rule has three conditions that must be satisfied simultaneously, and they pull in opposite directions. The *long-time* condition requires $t \gg 1/\omega_{fi}$ for the delta-function approximation to hold. The *first-order* condition requires $|c_f^{(1)}|^2 \ll 1$, so that replacing $c_n(t) \approx \delta_{ni}$ on the right-hand side is valid. And the *continuum* condition requires that final states be densely packed at $E_f = E_i + \hbar\omega$ — the formula does not apply to transitions between discrete bound states, where you get Rabi oscillations instead of a steady rate. The tension between the first two conditions — long time is needed for one but forbidden by the other — means the golden rule applies in a specific intermediate-time window, and recognizing that window is part of using it correctly.
+The rule rests on three conditions that must hold simultaneously, and they pull in opposite directions. The *long-time* condition requires $t \gg 1/\omega_{fi}$ for the delta-function approximation to hold. The *first-order* condition requires $|c_f^{(1)}|^2 \ll 1$, so that replacing $c_n(t) \approx \delta_{ni}$ on the right-hand side stays valid. And the *continuum* condition requires that final states be densely packed at $E_f = E_i + \hbar\omega$ — the formula does not apply to transitions between discrete bound states, where we get Rabi oscillations instead of a steady rate. The tension between the first two conditions — long time is needed for one but forbidden by the other — means the golden rule applies in a specific intermediate-time window, and recognizing that window is part of using it correctly.
 
 ---
 
 ## Five methods, five jobs
 
-Let me say what each method is actually for.
+Let us say what each method is actually for.
 
 **Non-degenerate perturbation theory** is for any system with a small correction to an exactly-solvable Hamiltonian and non-degenerate unperturbed levels. Hydrogen fine structure (relativistic correction, spin-orbit coupling, Darwin term) is the canonical example. Each correction is of order $\alpha^2$ times the binding energy — about $10^{-4}$ eV — and first-order perturbation theory gets the leading-order contribution right.
 
-**Degenerate perturbation theory** is the same idea but for degenerate levels, where you must first choose the right basis by diagonalizing the perturbation within the degenerate subspace. The linear Stark effect, the splitting of hydrogen $n=2$ in a magnetic field, and level repulsion near band crossings are all its business.
+**Degenerate perturbation theory** is the same idea but for degenerate levels, where we must first choose the right basis by diagonalizing the perturbation within the degenerate subspace. The linear Stark effect, the splitting of hydrogen $n=2$ in a magnetic field, and level repulsion near band crossings are all its business.
 
-**The variational principle** is for ground-state energies when you have no small parameter. Helium is the prototype. Modern quantum chemistry runs the same idea on molecules with thousands of parameters in the trial function, using computers to minimize. The Hartree-Fock method, density functional theory, and variational quantum eigensolvers on quantum hardware are all descendants of the same two-line proof.
+**The variational principle** is for ground-state energies when we have no small parameter. Helium is the prototype. Modern quantum chemistry runs the same idea on molecules with thousands of parameters in the trial function, using computers to do the minimization. The Hartree-Fock method, density functional theory, and variational quantum eigensolvers on quantum hardware are all descendants of the same two-line proof.
 
 **WKB** is for slowly-varying potentials where semi-classical reasoning applies. Tunneling probabilities and quantization conditions in smooth potentials are its natural domain. It fails near classical turning points (which is why the Maslov correction exists) and for rapidly varying potentials.
 
 **Time-dependent perturbation theory / Fermi's golden rule** is for transitions driven by a time-dependent perturbation into a continuum. This is the formula that powers Chapter 10 — spontaneous emission, scattering rates, and everything built on the interaction between atoms and the radiation field. Learn it once and apply it everywhere.
 
-The deeper unity: all five methods are approximations to the same Schrödinger equation under different conditions. Perturbation theory expands in a small parameter. The variational method constrains the search to a family of trial states. WKB expands in $\hbar$. Time-dependent perturbation theory expands in the coupling strength and takes a specific limit. What determines which method to use is not what the textbook chapter is titled — it is what the physical problem is actually asking.
+The deeper unity is that all five methods are approximations to the same Schrödinger equation under different conditions. Perturbation theory expands in a small parameter. The variational method constrains the search to a family of trial states. WKB expands in $\hbar$. Time-dependent perturbation theory expands in the coupling strength and takes a specific limit. What determines which method to use is not what the textbook chapter is titled — it is what the physical problem is actually asking.
 
 | method | when to use it | what it requires | what it gives you | canonical example |
 | --- | --- | --- | --- | --- |

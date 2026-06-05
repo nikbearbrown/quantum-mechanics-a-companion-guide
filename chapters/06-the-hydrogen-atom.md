@@ -155,14 +155,12 @@ $$\sum_{\ell=0}^{n-1}(2\ell+1) = n^2 \quad\text{(without spin)}, \qquad 2n^2 \qu
 
 The $n^2$ factor is a direct consequence of the $\mathrm{SO}(4)$ degeneracy. The shell at $n=1$ holds 2 electrons; at $n=2$, 8; at $n=3$, 18. These are the row capacities of the periodic table, imposed by quantum mechanics and Pauli, not by chemistry.
 
-| n | ℓ values | spectroscopic label | m_ℓ range | number of orbitals |
-| --- | --- | --- | --- | --- |
-| n=1 (1s only | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
-| n=2 (2s, 2p with m_ℓ=−1,0,+1 | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
-| n=3 (3s, 3p, 3d | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
-| columns: n, ℓ values, spectroscopic label, m_ℓ range, number of orbitals, states including spin, running total | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
-| highlight how the 2n² pattern emerges | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
-| note that all states in a given row have identical energy E_n due to SO(4) degeneracy | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. | A concrete checkpoint for applying the chapter concept. |
+| $n$ | $\ell$ values | spectroscopic labels | $m_\ell$ values | orbitals | states with spin |
+| --- | --- | --- | --- | ---: | ---: |
+| 1 | 0 | 1s | 0 | 1 | 2 |
+| 2 | 0, 1 | 2s, 2p | 0; -1, 0, +1 | 4 | 8 |
+| 3 | 0, 1, 2 | 3s, 3p, 3d | 0; -1, 0, +1; -2, -1, 0, +1, +2 | 9 | 18 |
+| 4 | 0, 1, 2, 3 | 4s, 4p, 4d, 4f | $m_\ell=-\ell,\ldots,+\ell$ | 16 | 32 |
 
 One name correction for what follows: the word "orbital" does not mean "orbit." An orbital — the spherical $s$ cloud, the dumbbell $p$, the four-lobed $d$ — is an isocontour of $|\psi_{n\ell m}|^2$, usually drawn at the surface that encloses 90% of the probability. It describes where the electron is *likely to be found if measured*. It does not describe what the electron is doing between measurements. There is no between-measurements story that quantum mechanics tells. The orbital shape is everything; the trajectory is nothing.
 
@@ -184,15 +182,15 @@ Historical note worth making: Stern and Gerlach in 1922 did not interpret their 
 
 What is spin? It is intrinsic angular momentum. Every electron carries angular momentum of magnitude $\sqrt{s(s+1)}\hbar = (\sqrt{3}/2)\hbar$ with $s = 1/2$, full stop. It is not angular momentum from motion through space. It is a property the electron has the way it has charge or mass. The Dirac equation — the relativistic version of the Schrödinger equation — produces spin automatically: if you demand a quantum wave equation be Lorentz-invariant, spin-1/2 falls out as an algebraic necessity. [Dirac 1928, *Proceedings of the Royal Society A* 117, 610–624](https://doi.org/10.1098/rspa.1928.0023). You do not have to put spin in; you cannot keep it out.
 
-The common alternative explanation — the electron is a tiny spinning ball — can be killed with one calculation. Suppose the electron is a small sphere of radius $r_e$ rotating about its axis. For the angular momentum to equal $\hbar/2$, the equatorial speed would need to be
+The common alternative explanation — the electron is a tiny spinning ball — can be killed with one calculation. Suppose the electron is a uniform solid sphere of radius $r_e$ rotating about its axis. For a solid sphere, $I = \frac{2}{5}m_er_e^2$, so for the angular momentum to equal $\hbar/2$, the equatorial speed would need to be
 
-$$v = \frac{\hbar/2}{m_e r_e}.$$
+$$v = \omega r_e = \frac{Lr_e}{I} = \frac{5\hbar}{4m_e r_e}.$$
 
 The classical electron radius — estimated by setting the electron's rest-mass energy equal to its electrostatic self-energy — is $r_e \approx 2.82 \times 10^{-15}$ m. Plugging in:
 
-$$v \approx \frac{1.055\times10^{-34}/2}{(9.11\times10^{-31})(2.82\times10^{-15})} \approx 2.0 \times 10^{10}\,\text{m/s}.$$
+$$v \approx \frac{5(1.055\times10^{-34})}{4(9.11\times10^{-31})(2.82\times10^{-15})} \approx 5.1 \times 10^{10}\,\text{m/s}.$$
 
-That is roughly seventy times the speed of light. If the electron is smaller than $r_e$ — and experiment constrains it to be pointlike down to at least $10^{-18}$ m — the required speed becomes astronomically larger. The classical spinning-ball picture is not just imprecise. It is geometrically impossible.
+That is roughly 170 times the speed of light, matching the solid-sphere estimate used in the reference spin chapter. If the electron is smaller than $r_e$ — and experiment constrains it to be pointlike down to at least $10^{-18}$ m — the required speed becomes astronomically larger. The classical spinning-ball picture is not just imprecise. It is geometrically impossible.
 
 The picture survives in introductory texts because it is convenient shorthand. The calculation above should be sufficient to retire it.
 
@@ -236,3 +234,4 @@ The $\mathrm{SO}(4)$ symmetry of the Coulomb potential — the hidden symmetry t
 8. Pohl, R. et al. "The size of the proton." *Nature* 466, 213–216 (2010). https://doi.org/10.1038/nature09250
 9. Bezginov, N. et al. "A measurement of the atomic hydrogen Lamb shift and the proton charge radius." *Science* 365, 1007–1012 (2019). https://doi.org/10.1126/science.aau7807
 10. NIST CODATA 2018: Rydberg constant, Bohr radius. https://physics.nist.gov/cuu/Constants/
+11. *Physics Quantum Mechanics Scrap*, Chapter 6, "Spin," reference chapter in `physics-quantum-mechanics-scrap/pantry` and `chapters`, solid-sphere spinning-electron estimate.
