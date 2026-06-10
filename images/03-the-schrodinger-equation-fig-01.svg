@@ -22,31 +22,35 @@
   <!-- t=0 sharp -->
   <path d="M 80 340 Q 180 -80 280 340" stroke="#0072B2" stroke-width="1.2" fill="none" stroke-dasharray="2 2"/>
   <!-- t=t1 wider, same area -->
+  <path d="M 80 340 Q 110 280 140 220 Q 180 130 220 220 Q 250 280 280 340 Z" fill="#0072B2" fill-opacity="0.08" stroke="none"/>
   <path d="M 80 340 Q 110 280 140 220 Q 180 130 220 220 Q 250 280 280 340" stroke="#0072B2" stroke-width="1.6" fill="none"/>
   <!-- t=t2 widest -->
-  <path d="M 70 340 Q 130 290 180 250 Q 230 290 290 340" stroke="#0072B2" stroke-width="2" fill="none"/>
+  <path d="M 70 340 Q 130 270 180 205 Q 230 270 290 340 Z" fill="#0072B2" fill-opacity="0.08" stroke="none"/>
+  <path d="M 70 340 Q 130 270 180 205 Q 230 270 290 340" stroke="#0072B2" stroke-width="2" fill="none"/>
 
-  <text x="285" y="178" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">t=0</text>
-  <text x="240" y="220" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">t=t₁</text>
-  <text x="290" y="260" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">t=t₂</text>
+  <text x="150" y="120" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">t=0</text>
+  <text x="228" y="210" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">t=t₁</text>
+  <text x="295" y="255" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">t=t₂</text>
 
-  <text x="180" y="368" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">|ψ|² spreads — total area conserved</text>
+  <text x="180" y="368" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">|ψ|<tspan baseline-shift="super" font-size="8">2</tspan> spreads — total area conserved</text>
 
   <!-- Right panel: Diffusion (Vermillion) -->
-  <text x="525" y="98" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#D55E00">Diffusion: ∂u/∂t = D ∂²u/∂x²</text>
+  <text x="525" y="98" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#D55E00">Diffusion: ∂u/∂t = D ∂<tspan baseline-shift="super" font-size="8">2</tspan>u/∂x<tspan baseline-shift="super" font-size="8">2</tspan></text>
   <line x1="400" y1="340" x2="680" y2="340" stroke="#2a1a0e" stroke-width="1"/>
   <line x1="400" y1="120" x2="400" y2="340" stroke="#2a1a0e" stroke-width="1"/>
 
   <!-- t=0 sharp same as left -->
   <path d="M 420 340 Q 520 -80 620 340" stroke="#D55E00" stroke-width="1.2" fill="none" stroke-dasharray="2 2"/>
   <!-- t=t1 lower, wider -->
+  <path d="M 420 340 Q 470 250 520 200 Q 570 250 620 340 Z" fill="#D55E00" fill-opacity="0.08" stroke="none"/>
   <path d="M 420 340 Q 470 250 520 200 Q 570 250 620 340" stroke="#D55E00" stroke-width="1.6" fill="none"/>
   <!-- t=t2 much lower, much wider -->
+  <path d="M 410 340 Q 480 310 520 295 Q 570 310 630 340 Z" fill="#D55E00" fill-opacity="0.08" stroke="none"/>
   <path d="M 410 340 Q 480 310 520 295 Q 570 310 630 340" stroke="#D55E00" stroke-width="2" fill="none"/>
 
-  <text x="625" y="178" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">t=0</text>
-  <text x="580" y="220" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">t=t₁</text>
-  <text x="630" y="310" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">t=t₂</text>
+  <text x="490" y="120" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">t=0</text>
+  <text x="575" y="210" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">t=t₁</text>
+  <text x="635" y="300" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">t=t₂</text>
 
   <text x="525" y="368" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">u decays — area shrinks irreversibly</text>
 

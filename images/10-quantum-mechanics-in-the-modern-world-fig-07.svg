@@ -42,10 +42,10 @@
   <!-- Tunneling current arrow -->
   <line x1="180" y1="229" x2="200" y2="276" stroke="#D55E00" stroke-width="2"/>
   <polygon points="200,276 192,272 198,266" fill="#D55E00"/>
-  <text x="100" y="240" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">I_tunnel</text>
+  <text x="100" y="240" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">I<tspan baseline-shift="sub" font-size="7">tunnel</tspan></text>
 
   <!-- Right panel: exponential I vs d -->
-  <text x="500" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">I(d) ∝ e^(−2κd) — log scale</text>
+  <text x="500" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">I(d) ∝ e<tspan baseline-shift="super" font-size="7">−2κd</tspan> — log scale</text>
   <line x1="380" y1="320" x2="640" y2="320" stroke="#2a1a0e" stroke-width="1"/>
   <line x1="380" y1="120" x2="380" y2="320" stroke="#2a1a0e" stroke-width="1"/>
   <text x="648" y="324" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">d (Å)</text>

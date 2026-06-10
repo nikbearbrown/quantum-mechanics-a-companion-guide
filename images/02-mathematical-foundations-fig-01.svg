@@ -24,18 +24,21 @@
   <line x1="200" y1="270" x2="200" y2="360" stroke="#2a1a0e" stroke-width="3"/>
 
   <!-- Fan-out wave arcs from each slit -->
-  <g stroke="#56B4E9" stroke-width="0.5" fill="none">
+  <g stroke="#56B4E9" stroke-width="0.8" fill="none">
     <circle cx="200" cy="220" r="40"/>
     <circle cx="200" cy="220" r="80"/>
     <circle cx="200" cy="220" r="120"/>
+    <circle cx="200" cy="220" r="160"/>
     <circle cx="200" cy="260" r="40"/>
     <circle cx="200" cy="260" r="80"/>
     <circle cx="200" cy="260" r="120"/>
+    <circle cx="200" cy="260" r="160"/>
   </g>
 
   <!-- Detector screen -->
   <line x1="360" y1="120" x2="360" y2="360" stroke="#2a1a0e" stroke-width="3"/>
-  <text x="350" y="100" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">detector screen</text>
+  <text x="386" y="84" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">detector screen</text>
+  <line x1="360" y1="120" x2="372" y2="90" stroke="#2a1a0e" stroke-width="0.5"/>
 
   <!-- Vertical divider -->
   <line x1="390" y1="80" x2="390" y2="380" stroke="#aaa" stroke-width="0.5" stroke-dasharray="3 2"/>
@@ -53,13 +56,13 @@
   <text x="530" y="194" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">~100 dots: clustering</text>
   <g fill="#0072B2">
     <!-- vertical band hints -->
-    <circle cx="438" cy="220" r="1.2"/><circle cx="440" cy="240" r="1.2"/><circle cx="436" cy="260" r="1.2"/>
-    <circle cx="470" cy="230" r="1.2"/><circle cx="468" cy="250" r="1.2"/><circle cx="472" cy="270" r="1.2"/>
-    <circle cx="500" cy="220" r="1.2"/><circle cx="502" cy="240" r="1.2"/><circle cx="498" cy="260" r="1.2"/>
-    <circle cx="530" cy="230" r="1.2"/><circle cx="532" cy="250" r="1.2"/><circle cx="528" cy="270" r="1.2"/>
-    <circle cx="560" cy="220" r="1.2"/><circle cx="562" cy="240" r="1.2"/><circle cx="558" cy="260" r="1.2"/>
-    <circle cx="590" cy="230" r="1.2"/><circle cx="592" cy="250" r="1.2"/><circle cx="588" cy="270" r="1.2"/>
-    <circle cx="620" cy="220" r="1.2"/><circle cx="622" cy="240" r="1.2"/><circle cx="618" cy="260" r="1.2"/>
+    <circle cx="431" cy="220" r="1.2"/><circle cx="433" cy="240" r="1.2"/><circle cx="429" cy="260" r="1.2"/>
+    <circle cx="461" cy="230" r="1.2"/><circle cx="459" cy="250" r="1.2"/><circle cx="463" cy="270" r="1.2"/>
+    <circle cx="491" cy="220" r="1.2"/><circle cx="493" cy="240" r="1.2"/><circle cx="489" cy="260" r="1.2"/>
+    <circle cx="521" cy="230" r="1.2"/><circle cx="523" cy="250" r="1.2"/><circle cx="519" cy="270" r="1.2"/>
+    <circle cx="551" cy="220" r="1.2"/><circle cx="553" cy="240" r="1.2"/><circle cx="549" cy="260" r="1.2"/>
+    <circle cx="581" cy="230" r="1.2"/><circle cx="583" cy="250" r="1.2"/><circle cx="579" cy="270" r="1.2"/>
+    <circle cx="611" cy="220" r="1.2"/><circle cx="613" cy="240" r="1.2"/><circle cx="609" cy="260" r="1.2"/>
   </g>
 
   <!-- Inset 3: sharp fringes -->
@@ -76,5 +79,5 @@
     <rect x="638" y="310" width="6" height="62"/>
   </g>
 
-  <text x="350" y="412" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">The pattern lives in the statistics. Each electron only knows whether it arrives.</text>
+  <text x="350" y="440" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">The pattern lives in the statistics. Each electron only knows whether it arrives.</text>
 </svg>

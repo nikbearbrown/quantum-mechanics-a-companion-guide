@@ -21,31 +21,6 @@
   <line x1="100" y1="160" x2="660" y2="320" stroke="#aaa" stroke-width="0.8" stroke-dasharray="6 4"/>
 
   <!-- Avoided crossing curves — actual eigenvalues -->
-  <!-- Upper (vermillion): starts at upper-left of upper reference, ends at upper-right -->
-  <path d="M 100 160 C 220 200 320 220 380 220 C 440 220 540 200 660 160" stroke="#D55E00" stroke-width="2.4" fill="none"/>
-  <!-- Wait, this is wrong topology. Let me redo: lower reference starts at (100, 320) goes up to (660, 160). Upper ref starts at (100, 160) goes down to (660, 320). They cross at (380, 240). -->
-  <!-- Upper eigenvalue: at left, follows the lower reference (since lower-ref is lower energy on the left); at right, follows upper reference. NO: upper eigenvalue is always above the lower. At λ=0, the upper eigenvalue ≈ upper unperturbed = 160 (top). As λ grows, upper eigenvalue follows the higher of the two, smoothly bending. -->
-  <!-- Properly: upper eigenvalue is the upper envelope, lower eigenvalue is the lower envelope, with gap 2|H'| at center. -->
-  <!-- Upper: starts at 160 (top), bends down to ~225 at center, goes back down to 160 (right). NO: at large λ, upper eig ≈ upper unperturbed which is now at y=320 (since lines crossed). -->
-  <!-- Actually as λ grows: the two reference lines cross. The eigenvalues never cross. So eigenvalue₁ tracks lower ref on left, then upper ref on right (smooth transition through crossing region). -->
-
-  <!-- Clear: lower eigenvalue (blue) — starts at min of two refs at λ=0 (which is y=320, since 320 > 160 means lower y is higher energy in SVG; SVG y inverted). -->
-  <!-- Let me reconsider with SVG y-axis. SVG y=160 is HIGHER on screen (lower y = higher on screen). Energy axis: let upper energy = lower y. -->
-  <!-- Upper reference: (100, 160) → (660, 320). On screen: starts high-left, ends low-right. -->
-  <!-- Lower reference: (100, 320) → (660, 160). On screen: starts low-left, ends high-right. -->
-  <!-- They cross at (380, 240). -->
-  <!-- True eigenvalues never cross. Upper eigenvalue (vermillion, on screen always above the crossing): -->
-  <!--   - On left (λ small): follows upper ref → at (100, 160) -->
-  <!--   - On right (λ large): follows... wait, which ref is "upper" on the right? After crossing, lower ref is now higher on screen (y=160 at right is lower y, hence higher energy). -->
-  <!--   - So vermillion (upper eigenvalue) ends at (660, 160), tracking the lower ref on the right. -->
-  <!--   - In between, it bends down to about (380, 215) — i.e., gap-distance above the crossing -->
-  <!-- Blue (lower eigenvalue): -->
-  <!--   - On left: at (100, 320), follows lower ref -->
-  <!--   - On right: at (660, 320), follows upper ref (which has become the lower one) -->
-  <!--   - In between, it bends up to about (380, 265) — gap-distance below the crossing -->
-
-  <!-- Redo path (overwrite) -->
-
   <!-- Upper eigenvalue (vermillion) -->
   <path d="M 100 160 C 220 170 330 200 380 215 C 430 200 540 170 660 160" stroke="#D55E00" stroke-width="2.4" fill="none" stroke-linecap="round"/>
 
@@ -63,11 +38,11 @@
   <text x="280" y="370" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">↓ pushed down</text>
 
   <!-- Legend -->
-  <rect x="500" y="350" width="160" height="50" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
-  <line x1="510" y1="365" x2="540" y2="365" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3 2"/>
-  <text x="545" y="369" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">unperturbed</text>
-  <line x1="510" y1="385" x2="540" y2="385" stroke="#0072B2" stroke-width="2.4"/>
-  <text x="545" y="389" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">eigenvalues</text>
+  <rect x="500" y="326" width="160" height="50" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
+  <line x1="510" y1="341" x2="540" y2="341" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3 2"/>
+  <text x="545" y="345" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">unperturbed</text>
+  <line x1="510" y1="361" x2="540" y2="361" stroke="#0072B2" stroke-width="2.4"/>
+  <text x="545" y="365" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">eigenvalues</text>
 
   <text x="380" y="395" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Near-degenerate levels never quite touch — coupling lifts them apart.</text>
 </svg>

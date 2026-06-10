@@ -25,7 +25,7 @@
   <text x="280" y="368" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#C8860E">ν₀</text>
 
   <!-- Line: dashed below threshold (extension), solid above with slope h/e -->
-  <line x1="100" y1="450" x2="280" y2="340" stroke="#0072B2" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="160" y1="418" x2="280" y2="340" stroke="#0072B2" stroke-width="2" stroke-dasharray="4 3"/>
   <line x1="280" y1="340" x2="620" y2="120" stroke="#0072B2" stroke-width="2.5"/>
 
   <!-- Bracket below x-axis for forbidden region -->

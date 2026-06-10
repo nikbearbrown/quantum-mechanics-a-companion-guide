@@ -13,23 +13,23 @@
   <line x1="100" y1="340" x2="660" y2="340" stroke="#2a1a0e" stroke-width="1"/>
   <line x1="100" y1="100" x2="100" y2="340" stroke="#2a1a0e" stroke-width="1"/>
   <text x="60" y="220" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454" transform="rotate(-90 60 220)">collector current I</text>
-  <text x="370" y="360" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454">accelerating voltage V (volts)</text>
+  <text x="370" y="378" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454">accelerating voltage V (volts)</text>
 
-  <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454" text-anchor="middle">
-    <text x="100" y="356">0</text>
-    <text x="232" y="356">4.9</text>
-    <text x="364" y="356">9.8</text>
-    <text x="496" y="356">14.7</text>
-    <text x="628" y="356">19.6</text>
+  <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e" text-anchor="middle">
+    <text x="100" y="361">0</text>
+    <text x="232" y="361">4.9</text>
+    <text x="364" y="361">9.8</text>
+    <text x="496" y="361">14.7</text>
+    <text x="628" y="361">19.6</text>
   </g>
 
   <!-- Current curve: rises, dips at 4.9, 9.8, 14.7, with rising overall envelope -->
-  <path d="M 100 320 Q 160 250 220 220 Q 232 215 244 290 Q 280 200 350 180 Q 364 175 378 250 Q 420 165 490 145 Q 496 140 510 220 Q 560 130 660 110" stroke="#0072B2" stroke-width="2.5" fill="none"/>
+  <path d="M 100 322 Q 180 245 232 290 Q 290 205 364 256 Q 430 165 496 222 Q 575 125 660 110" stroke="#0072B2" stroke-width="2.5" fill="none"/>
 
   <!-- Dip markers (orange triangles below x-axis) -->
-  <polygon points="232,350 226,358 238,358" fill="#E69F00"/>
-  <polygon points="364,350 358,358 370,358" fill="#E69F00"/>
-  <polygon points="496,350 490,358 502,358" fill="#E69F00"/>
+  <polygon points="232,342 227,348 237,348" fill="#E69F00"/>
+  <polygon points="364,342 359,348 369,348" fill="#E69F00"/>
+  <polygon points="496,342 491,348 501,348" fill="#E69F00"/>
 
   <!-- Vertical reference lines at dips -->
   <line x1="232" y1="100" x2="232" y2="340" stroke="#aaa" stroke-width="0.5" stroke-dasharray="3 2"/>
@@ -46,5 +46,5 @@
   <text x="500" y="174" font-family="'JetBrains Mono', monospace" font-size="10" fill="#0072B2">Hg first excited state</text>
   <text x="500" y="190" font-family="'JetBrains Mono', monospace" font-size="10" fill="#0072B2">at 4.9 eV above ground</text>
 
-  <text x="370" y="396" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">"The Bohr model, observed directly." — Franck &amp; Hertz, 1925 Nobel.</text>
+  <text x="370" y="396" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Franck &amp; Hertz, 1925 Nobel.</text>
 </svg>

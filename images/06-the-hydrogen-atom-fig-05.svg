@@ -35,7 +35,7 @@
   <circle cx="520" cy="180" r="36" fill="none" stroke="#000" stroke-width="0.4" stroke-dasharray="3 2"/>
 
   <!-- ===== Panel 3: 2p_z ===== -->
-  <text x="200" y="280" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">2p_z   (n=2, ℓ=1, m=0)</text>
+  <text x="200" y="280" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">2p<tspan baseline-shift="sub" font-size="7">z</tspan>   (n=2, ℓ=1, m=0)</text>
   <line x1="200" y1="300" x2="200" y2="420" stroke="#aaa" stroke-width="0.5"/>
   <text x="208" y="304" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">z</text>
   <!-- Top lobe -->
@@ -46,15 +46,15 @@
   <line x1="155" y1="365" x2="245" y2="365" stroke="#000" stroke-width="0.4" stroke-dasharray="3 2"/>
 
   <!-- ===== Panel 4: 3d_z² ===== -->
-  <text x="520" y="280" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">3d_z²   (n=3, ℓ=2, m=0)</text>
+  <text x="520" y="280" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">3d<tspan baseline-shift="sub" font-size="7">z</tspan><tspan baseline-shift="super" font-size="7">2</tspan>   (n=3, ℓ=2, m=0)</text>
   <line x1="520" y1="300" x2="520" y2="420" stroke="#aaa" stroke-width="0.5"/>
   <text x="528" y="304" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">z</text>
   <!-- Top dumbbell lobe -->
-  <ellipse cx="520" cy="325" rx="22" ry="32" fill="#56B4E9" fill-opacity="0.45" stroke="#0072B2" stroke-width="1"/>
+  <ellipse cx="520" cy="320" rx="26" ry="40" fill="#56B4E9" fill-opacity="0.45" stroke="#0072B2" stroke-width="1"/>
   <!-- Bottom dumbbell lobe -->
-  <ellipse cx="520" cy="405" rx="22" ry="32" fill="#56B4E9" fill-opacity="0.45" stroke="#0072B2" stroke-width="1"/>
+  <ellipse cx="520" cy="410" rx="26" ry="40" fill="#56B4E9" fill-opacity="0.45" stroke="#0072B2" stroke-width="1"/>
   <!-- Equatorial torus -->
-  <ellipse cx="520" cy="365" rx="60" ry="14" fill="#E69F00" fill-opacity="0.35" stroke="#C8860E" stroke-width="1"/>
+  <ellipse cx="520" cy="365" rx="66" ry="15" fill="#E69F00" fill-opacity="0.35" stroke="#C8860E" stroke-width="1"/>
 
   <text x="370" y="468" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">An orbital is not an orbit. It is the static shape of "where the electron probably is."</text>
 </svg>

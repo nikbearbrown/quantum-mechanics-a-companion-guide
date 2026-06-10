@@ -2,17 +2,17 @@
   Compton Scattering Geometry
   Book: Quantum Mechanics — A Companion Guide · Chapter: 01-why-quantum-mechanics · Figure: 03
 -->
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+<svg viewBox="0 0 700 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
   <title id="fig-title">Compton Scattering — Incident Photon, Scattered Photon at θ, Recoil at φ</title>
   <desc>Single scattering event at a vertex where an initially-at-rest electron sits. Incident photon enters horizontally from the left, scattered photon departs at angle θ above the axis, recoiling electron departs at angle φ below. Energy and momentum conservation tie the three vectors.</desc>
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="01-why-quantum-mechanics" figure-number="03" figure-title="Compton Geometry" figure-slug="compton-geometry" figure-type="conceptual" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/01-why-quantum-mechanics-cajal.md"/></metadata>
-  <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="700" height="440" fill="#FFFFFF"/>
   <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Compton Scattering — Photon Kinematics, 1923</text>
-  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Photons carry momentum p = h/λ. Scattering shifts the wavelength by Δλ = (h/m_ec)(1 − cos θ).</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Photons carry momentum p = h/λ. Scattering shifts the wavelength by Δλ = (h/m<tspan baseline-shift="sub" font-size="8">e</tspan>c)(1 − cos θ).</text>
 
   <!-- Vertex (electron at rest, before collision) -->
   <circle cx="280" cy="240" r="6" fill="#2a1a0e"/>
-  <text x="280" y="266" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">e⁻ (at rest)</text>
+  <text x="248" y="262" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">e⁻ (at rest)</text>
 
   <!-- Incident photon: horizontal arrow from left to vertex -->
   <line x1="80" y1="240" x2="270" y2="240" stroke="#0072B2" stroke-width="3"/>
@@ -20,32 +20,32 @@
   <text x="100" y="226" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">incident γ (λ)</text>
 
   <!-- Scattered photon: upward right at angle θ -->
-  <line x1="288" y1="234" x2="490" y2="130" stroke="#56B4E9" stroke-width="2.5"/>
+  <line x1="288" y1="240" x2="490" y2="130" stroke="#56B4E9" stroke-width="2.5"/>
   <polygon points="490,130 482,131 484,138" fill="#56B4E9"/>
   <text x="498" y="128" font-family="'JetBrains Mono', monospace" font-size="11" fill="#56B4E9">scattered γ' (λ')</text>
 
-  <!-- Recoiling electron: downward right at angle φ -->
-  <line x1="288" y1="248" x2="500" y2="350" stroke="#D55E00" stroke-width="2.5"/>
-  <polygon points="500,350 492,348 494,341" fill="#D55E00"/>
-  <text x="510" y="356" font-family="'JetBrains Mono', monospace" font-size="11" fill="#D55E00">recoil e⁻</text>
 
   <!-- Angle θ arc -->
-  <path d="M 320 240 A 40 40 0 0 0 308 213" stroke="#2a1a0e" stroke-width="0.75" fill="none"/>
-  <text x="316" y="222" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">θ</text>
+  <path d="M 338 240 A 50 50 0 0 0 332 216" stroke="#2a1a0e" stroke-width="0.75" fill="none"/>
+  <text x="345" y="225" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">θ</text>
 
   <!-- Angle φ arc -->
-  <path d="M 320 240 A 40 40 0 0 1 312 264" stroke="#2a1a0e" stroke-width="0.75" fill="none"/>
-  <text x="316" y="270" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">φ</text>
+  <path d="M 338 240 A 50 50 0 0 1 333 262" stroke="#2a1a0e" stroke-width="0.75" fill="none"/>
+  <text x="352" y="255" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">φ</text>
 
   <!-- Reference horizontal line -->
   <line x1="288" y1="240" x2="500" y2="240" stroke="#aaa" stroke-width="0.5" stroke-dasharray="3 2"/>
 
   <!-- Conservation laws panel -->
-  <rect x="40" y="316" width="620" height="60" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
-  <text x="350" y="336" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">conservation laws</text>
-  <text x="60" y="358" font-family="'JetBrains Mono', monospace" font-size="10" fill="#0072B2">E: hc/λ + m_e c² = hc/λ' + γ m_e c²</text>
-  <text x="370" y="358" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D55E00">Δλ = (h/m_e c)(1 − cos θ)</text>
-  <text x="60" y="372" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">vector p conservation across the vertex</text>
+  <rect x="40" y="350" width="620" height="58" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
+  <text x="350" y="370" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">conservation laws</text>
+  <text x="60" y="390" font-family="'JetBrains Mono', monospace" font-size="10" fill="#0072B2">E: hν + m<tspan baseline-shift="sub" font-size="7">e</tspan>c<tspan baseline-shift="super" font-size="7">2</tspan> = hν′ + γm<tspan baseline-shift="sub" font-size="7">e</tspan>c<tspan baseline-shift="super" font-size="7">2</tspan></text>
+  <text x="370" y="390" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D55E00">Δλ = (h/m<tspan baseline-shift="sub" font-size="7">e</tspan>c)(1 − cos θ)</text>
+  <text x="60" y="403" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">vector p conservation across the vertex</text>
 
-  <text x="350" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">A photon behaving as a billiard ball. Compton 1923 — the particle picture confirmed.</text>
+  <!-- Recoiling electron: same length as scattered photon, drawn on top of panel -->
+  <line x1="288" y1="240" x2="492" y2="346" stroke="#D55E00" stroke-width="2.5"/>
+  <polygon points="492,346 480,345 484,337" fill="#D55E00"/>
+  <text x="504" y="340" font-family="'JetBrains Mono', monospace" font-size="11" fill="#D55E00">recoil e⁻</text>
+  <text x="350" y="428" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">A photon behaving as a billiard ball. Compton 1923 — the particle picture confirmed.</text>
 </svg>

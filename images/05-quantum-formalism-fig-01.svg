@@ -8,7 +8,7 @@
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="05-quantum-formalism" figure-number="01" figure-title="Robertson Proof Structure" figure-slug="robertson-proof-structure" figure-type="conceptual" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/05-quantum-formalism-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="460" fill="#FFFFFF"/>
   <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Robertson's Uncertainty Inequality — Five Logical Steps</text>
-  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">σ_A · σ_B ≥ ½ |⟨[A, B]⟩|. The whole derivation is Cauchy–Schwarz applied to two carefully chosen vectors.</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">σ<tspan baseline-shift="sub" font-size="8">A</tspan> · σ<tspan baseline-shift="sub" font-size="8">B</tspan> ≥ ½ |⟨[A, B]⟩|. The whole derivation is Cauchy–Schwarz applied to two carefully chosen vectors.</text>
 
   <!-- Step 1 -->
   <rect x="220" y="90" width="260" height="50" fill="#FFFFFF" stroke="#aaa" stroke-width="1.2" rx="4"/>
@@ -37,7 +37,7 @@
   <!-- Step 4 with branch -->
   <rect x="220" y="300" width="260" height="50" fill="#FFFFFF" stroke="#aaa" stroke-width="1.2" rx="4"/>
   <text x="350" y="321" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">step 4</text>
-  <text x="350" y="338" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">discard real part — keep imaginary part</text>
+  <text x="350" y="338" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">use |z|<tspan baseline-shift="super" font-size="8">2</tspan> ≥ (Im z)<tspan baseline-shift="super" font-size="8">2</tspan> — keep imaginary part</text>
 
   <!-- Branch -->
   <line x1="480" y1="325" x2="540" y2="325" stroke="#56B4E9" stroke-width="0.8" stroke-dasharray="3 2"/>

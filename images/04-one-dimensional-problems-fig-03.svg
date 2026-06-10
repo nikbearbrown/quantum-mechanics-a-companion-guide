@@ -20,25 +20,25 @@
   <text x="377" y="78" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">E</text>
 
   <!-- n=0 energy level: at y=350; turning points where parabola crosses (narrow band) -->
-  <line x1="305" y1="350" x2="435" y2="350" stroke="#2a1a0e" stroke-width="0.8"/>
+  <line x1="260" y1="350" x2="480" y2="350" stroke="#2a1a0e" stroke-width="0.8"/>
   <text x="288" y="354" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">½ℏω</text>
   <!-- ψ₀ Gaussian centered, on this baseline -->
-  <path d="M 305 350 Q 370 280 435 350" stroke="#0072B2" stroke-width="1.8" fill="none"/>
+  <path d="M 260 350 Q 370 280 480 350" stroke="#0072B2" stroke-width="1.8" fill="none"/>
 
   <!-- n=1 at y=290 -->
-  <line x1="278" y1="290" x2="462" y2="290" stroke="#2a1a0e" stroke-width="0.8"/>
+  <line x1="207" y1="290" x2="533" y2="290" stroke="#2a1a0e" stroke-width="0.8"/>
   <text x="270" y="294" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">3/2 ℏω</text>
-  <path d="M 278 290 Q 320 230 370 290 Q 420 350 462 290" stroke="#0072B2" stroke-width="1.8" fill="none"/>
+  <path d="M 207 290 Q 290 230 370 290 Q 450 350 533 290" stroke="#0072B2" stroke-width="1.8" fill="none"/>
 
   <!-- n=2 at y=230 -->
-  <line x1="252" y1="230" x2="488" y2="230" stroke="#2a1a0e" stroke-width="0.8"/>
+  <line x1="167" y1="230" x2="573" y2="230" stroke="#2a1a0e" stroke-width="0.8"/>
   <text x="245" y="234" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">5/2 ℏω</text>
-  <path d="M 252 230 Q 290 170 330 230 Q 370 290 410 230 Q 450 170 488 230" stroke="#0072B2" stroke-width="1.8" fill="none"/>
+  <path d="M 167 230 Q 235 170 300 230 Q 370 290 440 230 Q 505 170 573 230" stroke="#0072B2" stroke-width="1.8" fill="none"/>
 
   <!-- n=3 at y=170 -->
-  <line x1="225" y1="170" x2="515" y2="170" stroke="#2a1a0e" stroke-width="0.8"/>
+  <line x1="134" y1="170" x2="606" y2="170" stroke="#2a1a0e" stroke-width="0.8"/>
   <text x="218" y="174" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">7/2 ℏω</text>
-  <path d="M 225 170 Q 260 110 295 170 Q 330 230 370 170 Q 410 110 445 170 Q 480 230 515 170" stroke="#0072B2" stroke-width="1.8" fill="none"/>
+  <path d="M 134 170 Q 193 110 252 170 Q 311 230 370 170 Q 429 110 488 170 Q 547 230 606 170" stroke="#0072B2" stroke-width="1.8" fill="none"/>
 
   <text x="370" y="448" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Ground state never sits at zero. Zero-point motion is the price of confinement.</text>
 </svg>

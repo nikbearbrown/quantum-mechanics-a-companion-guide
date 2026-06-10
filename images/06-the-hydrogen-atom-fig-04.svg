@@ -7,7 +7,7 @@
   <desc>Radial probability density P(r) versus r/a₀. Sky-blue curve peaked at r = a₀ then falling. Vermillion vertical line at r=a₀ labeled "most probable: a₀"; second vermillion vertical line at r=3a₀/2 labeled "average: 3a₀/2". Light gray tail-shading from a₀ to 5a₀ shows the asymmetry that pulls the mean to the right of the mode.</desc>
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="06-the-hydrogen-atom" figure-number="04" figure-title="1s Radial Probability Density" figure-slug="1s-radial-probability" figure-type="quantitative" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/06-the-hydrogen-atom-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">P(r) = 4r²/a₀³ · e^(−2r/a₀) — Peak at a₀, Mean at 3a₀/2</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">P(r) = 4r<tspan baseline-shift="super" font-size="7">2</tspan>/a₀<tspan baseline-shift="super" font-size="7">3</tspan> · e<tspan baseline-shift="super" font-size="7">−2r/a₀</tspan> — Peak at a₀, Mean at 3a₀/2</text>
   <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">The orbit picture requires both markers to be at the same place. They are not.</text>
 
   <!-- Axes -->
@@ -39,5 +39,5 @@
   <line x1="268" y1="340" x2="268" y2="100" stroke="#D55E00" stroke-width="1.8" stroke-dasharray="5 3"/>
   <text x="272" y="136" font-family="'JetBrains Mono', monospace" font-size="11" fill="#D55E00">average: 3a₀/2</text>
 
-  <text x="370" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">The r² Jacobian punishes small radii and rewards large ones. Mode ≠ mean.</text>
+  <text x="370" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">The r<tspan baseline-shift="super" font-size="8">2</tspan> Jacobian punishes small radii and rewards large ones. Mode ≠ mean.</text>
 </svg>

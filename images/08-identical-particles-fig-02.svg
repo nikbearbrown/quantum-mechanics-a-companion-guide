@@ -26,7 +26,7 @@
   <rect x="50" y="120" width="180" height="180" fill="#56B4E9" fill-opacity="0.5" stroke="#000" stroke-width="1"/>
   <!-- diagonal -->
   <line x1="50" y1="300" x2="230" y2="120" stroke="#000" stroke-width="0.6" stroke-dasharray="4 3"/>
-  <text x="120" y="318" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">|ψ₁(x₁)ψ₂(x₂)|²</text>
+  <text x="120" y="318" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">|ψ₁(x₁)ψ₂(x₂)|<tspan baseline-shift="super" font-size="7">2</tspan></text>
   <text x="120" y="332" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">uniform product</text>
 
   <!-- ===== Panel B: fermions (exchange hole) ===== -->
@@ -38,19 +38,19 @@
     <line x1="290" y1="300" x2="470" y2="120" stroke="#FFFFFF" stroke-width="12" stroke-opacity="0.95"/>
   </g>
   <line x1="290" y1="300" x2="470" y2="120" stroke="#000" stroke-width="0.6" stroke-dasharray="4 3"/>
-  <text x="360" y="318" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">|ψ_A|²  — exchange hole</text>
+  <text x="360" y="318" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">|ψ<tspan baseline-shift="sub" font-size="7">A</tspan>|<tspan baseline-shift="super" font-size="7">2</tspan>  — exchange hole</text>
   <text x="360" y="332" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">ψ = 0 along x₁ = x₂</text>
 
   <!-- ===== Panel C: bosons (bunching) ===== -->
   <text x="600" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">bosons (symmetric)</text>
-  <rect x="530" y="120" width="180" height="180" fill="#56B4E9" fill-opacity="0.25" stroke="#000" stroke-width="1"/>
+  <rect x="530" y="120" width="170" height="180" fill="#56B4E9" fill-opacity="0.25" stroke="#000" stroke-width="1"/>
   <!-- diagonal enhancement — bright band -->
   <g>
-    <line x1="530" y1="300" x2="710" y2="120" stroke="#0072B2" stroke-width="22" stroke-opacity="0.45"/>
-    <line x1="530" y1="300" x2="710" y2="120" stroke="#0072B2" stroke-width="12" stroke-opacity="0.7"/>
+    <line x1="530" y1="300" x2="700" y2="120" stroke="#0072B2" stroke-width="22" stroke-opacity="0.45"/>
+    <line x1="530" y1="300" x2="700" y2="120" stroke="#0072B2" stroke-width="12" stroke-opacity="0.7"/>
   </g>
-  <line x1="530" y1="300" x2="710" y2="120" stroke="#000" stroke-width="0.6" stroke-dasharray="4 3"/>
-  <text x="600" y="318" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">|ψ_S|²  — bunching</text>
+  <line x1="530" y1="300" x2="700" y2="120" stroke="#000" stroke-width="0.6" stroke-dasharray="4 3"/>
+  <text x="600" y="318" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">|ψ<tspan baseline-shift="sub" font-size="7">S</tspan>|<tspan baseline-shift="super" font-size="7">2</tspan>  — bunching</text>
   <text x="600" y="332" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">enhanced along x₁ = x₂</text>
 
   <!-- Axis labels -->

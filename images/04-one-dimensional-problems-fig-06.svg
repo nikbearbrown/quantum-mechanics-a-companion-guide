@@ -2,12 +2,12 @@
   Geiger-Nuttall Plot — Quantum Theory's Quantitative Triumph
   Book: Quantum Mechanics — A Companion Guide · Chapter: 04-one-dimensional-problems · Figure: 06
 -->
-<svg viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
+<svg viewBox="0 0 700 485" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-title">
   <title id="fig-title">Geiger-Nuttall — log(half-life) vs 1/√E Across 24 Orders of Magnitude</title>
   <desc>Scatter plot: vertical axis log₁₀(half-life in seconds) from −6 to +24, horizontal axis 1/√E with E in MeV. About 10 alpha-emitting nuclei plotted as blue dots along a straight-line trend. Labeled examples at endpoints: Po-212 at lower-left (microseconds), U-238 and Th-232 at upper-right (billions of years).</desc>
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="04-one-dimensional-problems" figure-number="06" figure-title="Geiger-Nuttall Plot" figure-slug="geiger-nuttall-plot" figure-type="quantitative" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/04-one-dimensional-problems-cajal.md"/></metadata>
-  <rect x="0" y="0" width="700" height="460" fill="#FFFFFF"/>
-  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Gamow's Triumph — A Straight Line Across 30 Powers of Ten</text>
+  <rect x="0" y="0" width="700" height="485" fill="#FFFFFF"/>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Gamow's Triumph — A Straight Line Across 24 Orders of Magnitude</text>
   <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">log τ ∝ 1/√E. Tunneling probability is exponentially sensitive to barrier penetration depth.</text>
 
   <!-- Axes -->
@@ -18,12 +18,12 @@
 
   <!-- Y-axis tick labels -->
   <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454" text-anchor="end">
-    <text x="94" y="100">25</text>
-    <text x="94" y="160">20</text>
-    <text x="94" y="220">10</text>
-    <text x="94" y="280">0</text>
-    <text x="94" y="340">−5</text>
-    <text x="94" y="400">−10</text>
+    <text x="94" y="100">24</text>
+    <text x="94" y="160">18</text>
+    <text x="94" y="220">12</text>
+    <text x="94" y="280">6</text>
+    <text x="94" y="340">0</text>
+    <text x="94" y="400">−6</text>
   </g>
   <g stroke="#2a1a0e" stroke-width="0.5">
     <line x1="96" y1="100" x2="100" y2="100"/>
@@ -51,7 +51,7 @@
 
   <!-- Endpoint annotations -->
   <text x="160" y="392" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">Po-212 (0.3 μs)</text>
-  <text x="570" y="105" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2" text-anchor="end">U-238 (4.5 Gyr)</text>
+  <text x="595" y="105" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2" text-anchor="end">Th-232 (14 Gyr)</text>
 
   <!-- Range annotation -->
   <text x="380" y="468" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">A factor of 2 in energy, a factor of 10²⁴ in half-life — tunneling's signature.</text>

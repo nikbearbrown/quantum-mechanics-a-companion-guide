@@ -22,7 +22,7 @@
   <text x="170" y="266" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FFFFFF">(overlap)</text>
   <!-- Fermi level dashed inside band -->
   <line x1="115" y1="220" x2="225" y2="220" stroke="#D55E00" stroke-width="1.2" stroke-dasharray="4 3"/>
-  <text x="230" y="223" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">E_F</text>
+  <text x="230" y="223" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">E<tspan baseline-shift="sub" font-size="7">F</tspan></text>
   <text x="170" y="324" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">Cu, Al, Au</text>
 
   <!-- ============ Panel B: Insulator ============ -->
@@ -37,7 +37,7 @@
   <text x="370" y="174" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">empty CB</text>
   <!-- Fermi in middle of gap -->
   <line x1="315" y1="230" x2="425" y2="230" stroke="#D55E00" stroke-width="1.2" stroke-dasharray="4 3"/>
-  <text x="430" y="233" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">E_F</text>
+  <text x="430" y="233" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">E<tspan baseline-shift="sub" font-size="7">F</tspan></text>
   <text x="370" y="350" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">diamond, SiO₂</text>
 
   <!-- ============ Panel C: Semiconductor ============ -->
@@ -47,13 +47,13 @@
   <text x="630" y="225" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">~1 eV gap</text>
   <text x="630" y="237" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">Si 1.12</text>
   <text x="630" y="249" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">GaAs 1.43</text>
-  <rect x="520" y="200" width="100" height="40" fill="#56B4E9" fill-opacity="0.35" stroke="#000" stroke-width="0.5"/>
-  <text x="570" y="225" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">CB</text>
-  <line x1="515" y1="220" x2="625" y2="220" stroke="#D55E00" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <rect x="520" y="188" width="100" height="40" fill="#56B4E9" fill-opacity="0.35" stroke="#000" stroke-width="0.5"/>
+  <text x="570" y="213" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">CB</text>
+  <line x1="515" y1="234" x2="625" y2="234" stroke="#D55E00" stroke-width="1.2" stroke-dasharray="4 3"/>
   <text x="570" y="350" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">Si, Ge, GaAs</text>
 
   <!-- k_BT scale bar -->
   <rect x="100" y="390" width="540" height="50" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
-  <text x="350" y="412" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">at T = 300 K, k_BT ≈ 0.025 eV — too small to bridge insulator gaps, ~50x smaller than Si gap</text>
+  <text x="350" y="412" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">at T = 300 K, k<tspan baseline-shift="sub" font-size="7">B</tspan>T ≈ 0.025 eV — too small to bridge insulator gaps, ~50x smaller than Si gap</text>
   <text x="350" y="432" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="10" fill="#C8102E" font-style="italic">A gap a billion times the wavelength of red light decides whether a material conducts.</text>
 </svg>

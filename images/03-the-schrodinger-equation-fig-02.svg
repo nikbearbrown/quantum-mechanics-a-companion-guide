@@ -7,7 +7,7 @@
   <desc>Probability density |ψ₁|² = (2/L)sin²(πx/L) over [0, L] — a single hump centered at x=L/2. The region [0, L/4] is shaded orange to highlight the left-quarter calculation P = 1/4 − 1/(2π) ≈ 0.091. Vertical dashed reference lines at L/4, L/2. Well walls at x=0 and x=L.</desc>
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="03-the-schrodinger-equation" figure-number="02" figure-title="Ground-State Probability Density" figure-slug="ground-state-probability-density" figure-type="quantitative" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/03-the-schrodinger-equation-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">|ψ₁(x)|² = (2/L) sin²(πx/L) — Ground State of the Infinite Well</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">|ψ₁(x)|<tspan baseline-shift="super" font-size="9">2</tspan> = (2/L) sin<tspan baseline-shift="super" font-size="9">2</tspan>(πx/L) — Ground State of the Infinite Well</text>
   <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">The shaded quarter has probability 1/4 − 1/(2π) ≈ 0.091 — not 0.25, because the wave function is small there.</text>
 
   <line x1="100" y1="340" x2="620" y2="340" stroke="#2a1a0e" stroke-width="1"/>
@@ -18,10 +18,10 @@
   <line x1="620" y1="340" x2="620" y2="80" stroke="#000000" stroke-width="2.5"/>
 
   <!-- Shaded left quarter [0, L/4] under the curve -->
-  <path d="M 100 340 L 230 340 L 230 290 Q 165 200 100 340 Z" fill="#E69F00" fill-opacity="0.25" stroke="none"/>
+  <path d="M 100 340 Q 165 250 230 205 L 230 340 Z" fill="#E69F00" fill-opacity="0.25" stroke="none"/>
 
   <!-- sin² curve over [100, 620] = [0, L] — max at center x=360, h_max about 240 px above baseline -->
-  <path d="M 100 340 Q 360 -180 620 340" stroke="#0072B2" stroke-width="2.2" fill="none"/>
+  <path d="M 100 340 Q 360 -130 620 340" stroke="#0072B2" stroke-width="2.2" fill="none"/>
 
   <!-- Reference lines -->
   <line x1="230" y1="340" x2="230" y2="80" stroke="#2a1a0e" stroke-width="0.5" stroke-dasharray="4 3"/>
@@ -40,7 +40,7 @@
   <text x="92" y="344" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">0</text>
 
   <!-- Annotation for shaded region -->
-  <text x="165" y="380" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#C8860E">P = 0.091</text>
+  <text x="165" y="315" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#C8860E">P = 0.091</text>
 
   <text x="370" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Classical intuition says 25 percent. Quantum amplitude says nine.</text>
 </svg>

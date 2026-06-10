@@ -24,7 +24,7 @@
 
   <!-- Point z in upper right -->
   <circle cx="500" cy="130" r="6" fill="#0072B2"/>
-  <text x="510" y="124" font-family="'JetBrains Mono', monospace" font-size="12" fill="#0072B2">z = re^iθ</text>
+  <text x="510" y="124" font-family="'JetBrains Mono', monospace" font-size="12" fill="#0072B2">z = re<tspan baseline-shift="super" font-size="8">iθ</tspan></text>
 
   <!-- Modulus line origin to z -->
   <line x1="350" y1="220" x2="500" y2="130" stroke="#0072B2" stroke-width="2"/>
@@ -35,21 +35,21 @@
   <line x1="350" y1="130" x2="500" y2="130" stroke="#2a1a0e" stroke-width="0.5" stroke-dasharray="4 3"/>
 
   <!-- Real part 'a' label -->
-  <text x="425" y="240" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">a (real)</text>
+  <text x="425" y="212" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">a (real)</text>
   <text x="340" y="180" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">b (imag)</text>
 
   <!-- Angle arc -->
-  <path d="M 390 220 A 40 40 0 0 0 376 196" stroke="#2a1a0e" stroke-width="1" fill="none"/>
+  <path d="M 390 220 A 40 40 0 0 0 384 199" stroke="#2a1a0e" stroke-width="1" fill="none"/>
   <text x="392" y="208" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">θ</text>
 
   <!-- Conjugate z* mirrored -->
   <circle cx="500" cy="310" r="6" fill="#D55E00"/>
-  <text x="510" y="316" font-family="'JetBrains Mono', monospace" font-size="12" fill="#D55E00">z* = re^(−iθ)</text>
+  <text x="510" y="316" font-family="'JetBrains Mono', monospace" font-size="12" fill="#D55E00">z* = re<tspan baseline-shift="super" font-size="8">−iθ</tspan></text>
   <line x1="350" y1="220" x2="500" y2="310" stroke="#D55E00" stroke-width="1.5" stroke-dasharray="4 3"/>
 
   <!-- Bottom equation summary -->
   <rect x="40" y="372" width="620" height="40" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
   <text x="60" y="394" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">z = a + bi</text>
-  <text x="200" y="394" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">|z|² = z·z* = a² + b² = r²</text>
+  <text x="200" y="394" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">|z|<tspan baseline-shift="super" font-size="7">2</tspan> = z·z* = a<tspan baseline-shift="super" font-size="7">2</tspan> + b<tspan baseline-shift="super" font-size="7">2</tspan> = r<tspan baseline-shift="super" font-size="7">2</tspan></text>
   <text x="440" y="394" font-family="'JetBrains Mono', monospace" font-size="11" fill="#D55E00">z* = a − bi</text>
 </svg>

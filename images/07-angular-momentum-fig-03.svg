@@ -8,7 +8,7 @@
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="07-angular-momentum" figure-number="03" figure-title="Singlet Measurement" figure-slug="singlet-measurement" figure-type="application" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/07-angular-momentum-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
   <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Two-Particle Singlet — |0, 0⟩ = (|↑↓⟩ − |↓↑⟩)/√2</text>
-  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">When detectors are aligned, outcomes are always opposite. Off-axis: probability of opposite outcomes = cos²(θ/2).</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">When detectors are aligned, outcomes are always opposite. Off-axis: probability of opposite outcomes = cos<tspan baseline-shift="super" font-size="8">2</tspan>(θ/2).</text>
 
   <!-- Source -->
   <circle cx="350" cy="200" r="18" fill="#2a1a0e"/>
@@ -23,7 +23,7 @@
 
   <!-- Left detector -->
   <rect x="100" y="170" width="60" height="60" fill="none" stroke="#D55E00" stroke-width="1.5"/>
-  <text x="130" y="160" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D55E00">Alice (n̂_A)</text>
+  <text x="130" y="160" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D55E00">Alice (n̂<tspan baseline-shift="sub" font-size="7">A</tspan>)</text>
   <!-- Axis arrow -->
   <line x1="130" y1="220" x2="130" y2="180" stroke="#D55E00" stroke-width="1.2"/>
   <polygon points="130,180 127,184 133,184" fill="#D55E00"/>
@@ -35,9 +35,11 @@
 
   <!-- Right detector -->
   <rect x="540" y="170" width="60" height="60" fill="none" stroke="#009E73" stroke-width="1.5"/>
-  <text x="570" y="160" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#009E73">Bob (n̂_B)</text>
-  <line x1="570" y1="220" x2="570" y2="180" stroke="#009E73" stroke-width="1.2"/>
-  <polygon points="570,180 567,184 573,184" fill="#009E73"/>
+  <text x="570" y="160" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#009E73">Bob (n̂<tspan baseline-shift="sub" font-size="7">B</tspan>)</text>
+  <line x1="570" y1="220" x2="590" y2="185" stroke="#009E73" stroke-width="1.2"/>
+  <polygon points="590,185 585,187 589,191" fill="#009E73"/>
+  <path d="M 570 188 A 32 32 0 0 1 583 196" stroke="#545454" stroke-width="0.8" fill="none"/>
+  <text x="584" y="180" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">θ</text>
   <circle cx="555" cy="248" r="3" fill="#009E73"/>
   <text x="560" y="252" font-family="'JetBrains Mono', monospace" font-size="9" fill="#009E73">+ℏ/2</text>
   <circle cx="555" cy="266" r="3" fill="#009E73"/>
@@ -45,8 +47,8 @@
 
   <!-- Annotation table -->
   <rect x="100" y="310" width="500" height="60" fill="#FFFFFF" stroke="#aaa" stroke-width="0.5"/>
-  <text x="350" y="328" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">if n̂_A = n̂_B  →  outcomes always opposite (perfect anti-correlation)</text>
-  <text x="350" y="346" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">if angle θ between them →  P(opposite outcomes) = cos²(θ/2)</text>
+  <text x="350" y="328" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">if n̂<tspan baseline-shift="sub" font-size="7">A</tspan> = n̂<tspan baseline-shift="sub" font-size="7">B</tspan>  →  outcomes always opposite (perfect anti-correlation)</text>
+  <text x="350" y="346" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#2a1a0e">if angle θ between them →  P(opposite outcomes) = cos<tspan baseline-shift="super" font-size="8">2</tspan>(θ/2)</text>
   <text x="350" y="362" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">Ch 10 develops the Bell inequalities from this correlation pattern.</text>
 
   <text x="350" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Knowledge of one side is knowledge of the other — instantly, without signaling.</text>
