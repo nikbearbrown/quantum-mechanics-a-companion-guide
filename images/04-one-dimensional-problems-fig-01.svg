@@ -7,7 +7,7 @@
   <desc>Four vertically stacked panels showing ψ_n(x) for n=1, 2, 3, 4 over the well interval [0, L]. Each curve has n half-wavelengths between the walls (n−1 interior nodes). Walls at x=0, x=L marked black; dashed horizontal baseline in each panel; vertical dashed lines mark interior nodes.</desc>
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="04-one-dimensional-problems" figure-number="01" figure-title="Infinite Square Well Eigenfunctions" figure-slug="infinite-well-eigenfunctions" figure-type="conceptual" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/04-one-dimensional-problems-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="480" fill="#FFFFFF"/>
-  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Standing Waves in a Box — ψ_n(x) = √(2/L) sin(n π x / L)</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Standing Waves in a Box — ψ<tspan baseline-shift="sub" font-size="8">n</tspan>(x) = √(2/L) sin(n π x / L)</text>
   <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Each eigenstate has exactly n half-wavelengths between the walls — n−1 interior nodes where ψ = 0.</text>
 
   <!-- ===== n=1 ===== -->
@@ -15,7 +15,7 @@
   <line x1="80" y1="115" x2="660" y2="115" stroke="#bbb" stroke-width="0.5" stroke-dasharray="3 2"/>
   <line x1="80" y1="80" x2="80" y2="150" stroke="#000000" stroke-width="2"/>
   <line x1="660" y1="80" x2="660" y2="150" stroke="#000000" stroke-width="2"/>
-  <path d="M 80 115 Q 370 0 660 115" stroke="#0072B2" stroke-width="2" fill="none"/>
+  <path d="M 80 115 Q 370 65 660 115" stroke="#0072B2" stroke-width="2" fill="none"/>
 
   <!-- ===== n=2 ===== -->
   <text x="40" y="182" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">n=2</text>
@@ -23,7 +23,7 @@
   <line x1="80" y1="170" x2="80" y2="240" stroke="#000000" stroke-width="2"/>
   <line x1="660" y1="170" x2="660" y2="240" stroke="#000000" stroke-width="2"/>
   <line x1="370" y1="170" x2="370" y2="240" stroke="#2a1a0e" stroke-width="0.5" stroke-dasharray="3 2"/>
-  <path d="M 80 205 Q 225 130 370 205 Q 515 280 660 205" stroke="#0072B2" stroke-width="2" fill="none"/>
+  <path d="M 80 205 Q 225 155 370 205 Q 515 255 660 205" stroke="#0072B2" stroke-width="2" fill="none"/>
 
   <!-- ===== n=3 ===== -->
   <text x="40" y="272" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">n=3</text>
@@ -32,7 +32,7 @@
   <line x1="660" y1="260" x2="660" y2="330" stroke="#000000" stroke-width="2"/>
   <line x1="273" y1="260" x2="273" y2="330" stroke="#2a1a0e" stroke-width="0.5" stroke-dasharray="3 2"/>
   <line x1="467" y1="260" x2="467" y2="330" stroke="#2a1a0e" stroke-width="0.5" stroke-dasharray="3 2"/>
-  <path d="M 80 295 Q 176 230 273 295 Q 370 360 467 295 Q 564 230 660 295" stroke="#0072B2" stroke-width="2" fill="none"/>
+  <path d="M 80 295 Q 176 250 273 295 Q 370 340 467 295 Q 564 250 660 295" stroke="#0072B2" stroke-width="2" fill="none"/>
 
   <!-- ===== n=4 ===== -->
   <text x="40" y="362" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">n=4</text>
@@ -42,7 +42,7 @@
   <line x1="225" y1="350" x2="225" y2="420" stroke="#2a1a0e" stroke-width="0.5" stroke-dasharray="3 2"/>
   <line x1="370" y1="350" x2="370" y2="420" stroke="#2a1a0e" stroke-width="0.5" stroke-dasharray="3 2"/>
   <line x1="515" y1="350" x2="515" y2="420" stroke="#2a1a0e" stroke-width="0.5" stroke-dasharray="3 2"/>
-  <path d="M 80 385 Q 152 335 225 385 Q 297 435 370 385 Q 442 335 515 385 Q 587 435 660 385" stroke="#0072B2" stroke-width="2" fill="none"/>
+  <path d="M 80 385 Q 152 345 225 385 Q 297 425 370 385 Q 442 345 515 385 Q 587 425 660 385" stroke="#0072B2" stroke-width="2" fill="none"/>
 
   <text x="80" y="442" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">x = 0</text>
   <text x="660" y="442" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">x = L</text>

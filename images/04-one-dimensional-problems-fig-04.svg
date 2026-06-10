@@ -35,7 +35,7 @@
   <!-- left tail: exponential decay from y=220 (at x=245) to y near baseline far left -->
   <path d="M 100 220 C 160 220 200 195 245 145" stroke="#0072B2" stroke-width="2" fill="none"/>
   <!-- inside: cosine-like, peak inverted — from (245, 145) up over to (495, 145) -->
-  <path d="M 245 145 Q 370 350 495 145" stroke="#0072B2" stroke-width="2" fill="none"/>
+  <path d="M 245 145 Q 370 60 495 145" stroke="#0072B2" stroke-width="2" fill="none"/>
   <!-- right tail -->
   <path d="M 495 145 C 540 195 580 220 640 220" stroke="#0072B2" stroke-width="2" fill="none"/>
 

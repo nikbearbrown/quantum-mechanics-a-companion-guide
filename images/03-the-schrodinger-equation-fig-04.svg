@@ -26,7 +26,7 @@
   <path d="M 220 200 A 45 45 0 0 0 205 167" stroke="#000000" stroke-width="0.8" fill="none"/>
   <polygon points="205,167 199,168 204,162" fill="#000000"/>
 
-  <text x="175" y="338" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">|ψ|² over time</text>
+  <text x="175" y="338" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">|ψ|<tspan baseline-shift="super" font-size="8">2</tspan> over time</text>
   <line x1="80" y1="395" x2="270" y2="395" stroke="#2a1a0e" stroke-width="0.8"/>
   <line x1="80" y1="345" x2="80" y2="395" stroke="#2a1a0e" stroke-width="0.8"/>
   <line x1="80" y1="370" x2="270" y2="370" stroke="#56B4E9" stroke-width="2.5"/>
@@ -48,11 +48,12 @@
 
   <line x1="525" y1="200" x2="520" y2="115" stroke="#CC79A7" stroke-width="2.5"/>
   <polygon points="520,115 514,121 524,122" fill="#CC79A7"/>
-  <text x="535" y="120" font-family="'JetBrains Mono', monospace" font-size="9" fill="#CC79A7">sum</text>
+  <text x="548" y="118" font-family="'JetBrains Mono', monospace" font-size="9" fill="#CC79A7">sum</text>
 
-  <text x="525" y="338" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">|ψ|² over time</text>
+  <text x="525" y="338" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">|ψ|<tspan baseline-shift="super" font-size="8">2</tspan> over time</text>
   <line x1="430" y1="395" x2="620" y2="395" stroke="#2a1a0e" stroke-width="0.8"/>
   <line x1="430" y1="345" x2="430" y2="395" stroke="#2a1a0e" stroke-width="0.8"/>
+  <line x1="430" y1="370" x2="620" y2="370" stroke="#aaa" stroke-width="0.5" stroke-dasharray="3 2"/>
   <path d="M 430 370 Q 446 350 462 370 T 494 370 T 526 370 T 558 370 T 590 370 T 620 370" stroke="#CC79A7" stroke-width="2.5" fill="none"/>
   <text x="525" y="418" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#CC79A7">oscillates at ω₂ − ω₁</text>
 

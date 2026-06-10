@@ -37,8 +37,8 @@
   <text x="178" y="218" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#009E73">j(a) in</text>
 
   <!-- Current arrow leaving at b (vermillion) -->
-  <line x1="505" y1="230" x2="600" y2="230" stroke="#D55E00" stroke-width="2"/>
-  <polygon points="600,230 592,226 592,234" fill="#D55E00"/>
+  <line x1="505" y1="230" x2="620" y2="230" stroke="#D55E00" stroke-width="2.6"/>
+  <polygon points="620,230 612,226 612,234" fill="#D55E00"/>
   <text x="552" y="218" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#D55E00">j(b) out</text>
 
   <!-- Rate of change arrow above region (down arrow means dρ/dt < 0 when j(b) > j(a)) -->

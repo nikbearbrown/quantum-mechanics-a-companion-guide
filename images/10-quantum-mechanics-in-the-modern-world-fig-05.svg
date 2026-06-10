@@ -24,7 +24,7 @@
   <!-- Classical GNFS — steep curve -->
   <path d="M 100 360 C 150 340 200 280 250 220 C 280 175 320 145 340 130" stroke="#D55E00" stroke-width="2.4" fill="none"/>
   <text x="280" y="170" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">classical GNFS</text>
-  <text x="280" y="183" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">≈ exp(n^(1/3))</text>
+  <text x="280" y="183" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">≈ exp(n<tspan baseline-shift="super" font-size="7">(1/3)</tspan>)</text>
 
   <!-- Shor — shallow polynomial -->
   <path d="M 100 370 C 150 365 200 355 250 345 C 300 335 340 320 340 318" stroke="#009E73" stroke-width="2.4" fill="none"/>

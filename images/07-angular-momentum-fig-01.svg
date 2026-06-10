@@ -39,20 +39,21 @@
 
   <!-- ===== ℓ=2 column ===== -->
   <text x="570" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" fill="#2a1a0e">ℓ = 2</text>
-  <line x1="520" y1="135" x2="620" y2="135" stroke="#0072B2" stroke-width="2.5"/>
-  <line x1="520" y1="200" x2="620" y2="200" stroke="#0072B2" stroke-width="2.5"/>
+  <line x1="520" y1="140" x2="620" y2="140" stroke="#0072B2" stroke-width="2.5"/>
+  <line x1="520" y1="205" x2="620" y2="205" stroke="#0072B2" stroke-width="2.5"/>
   <line x1="520" y1="270" x2="620" y2="270" stroke="#0072B2" stroke-width="2.5"/>
-  <line x1="520" y1="340" x2="620" y2="340" stroke="#0072B2" stroke-width="2.5"/>
-  <line x1="520" y1="405" x2="620" y2="405" stroke="#0072B2" stroke-width="2.5"/>
-  <text x="630" y="139" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">+2</text>
-  <text x="630" y="204" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">+1</text>
+  <line x1="520" y1="335" x2="620" y2="335" stroke="#0072B2" stroke-width="2.5"/>
+  <line x1="520" y1="400" x2="620" y2="400" stroke="#0072B2" stroke-width="2.5"/>
+  <text x="630" y="144" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">+2</text>
+  <text x="630" y="209" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">+1</text>
   <text x="630" y="274" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">0</text>
-  <text x="630" y="344" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">−1</text>
-  <text x="630" y="409" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">−2</text>
+  <text x="630" y="339" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">−1</text>
+  <text x="630" y="404" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">−2</text>
 
   <!-- Boundary annotations -->
-  <text x="150" y="430" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">L₊|ℓ,+ℓ⟩ = 0</text>
-  <text x="350" y="430" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">L₋|ℓ,−ℓ⟩ = 0 (each ladder)</text>
+  <text x="570" y="129" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">L₊|ℓ,+ℓ⟩ = 0</text>
+  <text x="570" y="421" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">L₋|ℓ,−ℓ⟩ = 0</text>
+  <text x="350" y="430" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454">(boundary conditions hold for every ladder)</text>
 
   <text x="370" y="450" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">No infinite ladder. The algebra refuses to let m exceed |ℓ|.</text>
 </svg>

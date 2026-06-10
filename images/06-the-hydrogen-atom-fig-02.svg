@@ -7,26 +7,26 @@
   <desc>Plot of V_eff(r) versus r/a₀. Blue ℓ=0 curve is pure Coulomb (attractive, diverges to −∞ at r=0). Vermillion ℓ=1 curve adds centrifugal term ℏ²ℓ(ℓ+1)/(2m_e r²) producing inner barrier rising to +∞ at r=0, minimum at finite r, then approaching Coulomb. Dashed horizontal at E₁ = −13.6 eV marks the ground-state energy. Centrifugal barrier annotated.</desc>
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="06-the-hydrogen-atom" figure-number="02" figure-title="Effective Potential" figure-slug="effective-potential" figure-type="quantitative" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/06-the-hydrogen-atom-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">V_eff(r) = − e²/(4πε₀r) + ℏ²ℓ(ℓ+1)/(2m_e r²)</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">V<tspan baseline-shift="sub" font-size="7">eff</tspan>(r) = − e<tspan baseline-shift="super" font-size="7">2</tspan>/(4πε₀r) + ℏ<tspan baseline-shift="super" font-size="7">2</tspan>ℓ(ℓ+1)/(2m<tspan baseline-shift="sub" font-size="7">e</tspan> r<tspan baseline-shift="super" font-size="7">2</tspan>)</text>
   <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">ℓ > 0 states experience an inner centrifugal barrier — they cannot reach r = 0 even though Coulomb does.</text>
 
   <!-- Axes -->
   <line x1="100" y1="240" x2="660" y2="240" stroke="#2a1a0e" stroke-width="1"/>
   <line x1="100" y1="80" x2="100" y2="380" stroke="#2a1a0e" stroke-width="1"/>
   <text x="668" y="244" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">r / a₀</text>
-  <text x="92" y="78" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">V_eff (eV)</text>
+  <text x="92" y="78" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">V<tspan baseline-shift="sub" font-size="7">eff</tspan> (eV)</text>
 
   <!-- y-axis ticks -->
   <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454" text-anchor="end">
-    <text x="92" y="124">+10</text>
+    <text x="92" y="204">+10</text>
     <text x="92" y="244">0</text>
-    <text x="92" y="290">−13.6</text>
+    <text x="92" y="298">−13.6</text>
     <text x="92" y="364">−30</text>
   </g>
 
   <!-- Ground state energy line -->
-  <line x1="100" y1="290" x2="660" y2="290" stroke="#2a1a0e" stroke-width="0.8" stroke-dasharray="4 3"/>
-  <text x="668" y="294" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">E₁</text>
+  <line x1="100" y1="298" x2="660" y2="298" stroke="#2a1a0e" stroke-width="0.8" stroke-dasharray="4 3"/>
+  <text x="668" y="302" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2a1a0e">E₁</text>
 
   <!-- ℓ=0 Coulomb curve (blue): pure attractive 1/r -->
   <path d="M 110 380 C 130 380 145 350 160 320 C 180 290 200 270 240 252 C 290 244 360 240 660 240" stroke="#0072B2" stroke-width="2" fill="none"/>

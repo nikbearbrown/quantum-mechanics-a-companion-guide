@@ -8,7 +8,7 @@
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="09-approximation-methods" figure-number="03" figure-title="Variational Helium" figure-slug="variational-helium" figure-type="quantitative" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/09-approximation-methods-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
   <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">⟨H⟩(Z*) for Helium — Variational Minimum vs Experimental −79.0 eV</text>
-  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Trial wave function (e^(−Z*r₁)/a₀)(e^(−Z*r₂)/a₀). Minimize over Z*: get E_var = −77.5 eV; 2% above experiment.</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Trial wave function (e<tspan baseline-shift="super" font-size="8">−Z*r₁</tspan>/a₀)(e<tspan baseline-shift="super" font-size="8">−Z*r₂</tspan>/a₀). Minimize over Z*: get E<tspan baseline-shift="sub" font-size="7">var</tspan> = −77.5 eV; 2% above experiment.</text>
 
   <!-- Axes -->
   <line x1="100" y1="340" x2="660" y2="340" stroke="#2a1a0e" stroke-width="1"/>
@@ -28,22 +28,22 @@
   <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454" text-anchor="end">
     <text x="92" y="124">−60</text>
     <text x="92" y="200">−70</text>
-    <text x="92" y="270">−77.5</text>
-    <text x="92" y="290">−79.0</text>
+    <text x="92" y="257">−77.5</text>
+    <text x="92" y="268">−79.0</text>
   </g>
 
   <!-- Experimental reference line at y=290 -->
-  <line x1="100" y1="290" x2="660" y2="290" stroke="#009E73" stroke-width="1.2" stroke-dasharray="6 3"/>
-  <text x="668" y="294" font-family="'JetBrains Mono', monospace" font-size="9" fill="#009E73">exp</text>
+  <line x1="100" y1="268" x2="660" y2="268" stroke="#009E73" stroke-width="1.2" stroke-dasharray="6 3"/>
+  <text x="668" y="272" font-family="'JetBrains Mono', monospace" font-size="9" fill="#009E73">exp</text>
 
   <!-- Parabolic ⟨H⟩(Z*) curve, minimum at (305, 270) (Z*=27/16, E=-77.5) -->
   <!-- Z*=1: y ≈ 130; Z*=1.69: y ≈ 270 (min); Z*=2: y ≈ 200; Z*=2.5: y ≈ 130 (asymmetric, but for clarity use parabola) -->
-  <path d="M 100 130 Q 195 350 305 270 Q 430 220 660 130" stroke="#0072B2" stroke-width="2.4" fill="none"/>
+  <path d="M 100 130 Q 195 330 305 257 Q 430 210 660 130" stroke="#0072B2" stroke-width="2.4" fill="none"/>
 
   <!-- Min marker -->
-  <circle cx="305" cy="270" r="6" fill="#D55E00" stroke="#A04000" stroke-width="0.8"/>
-  <text x="312" y="265" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D55E00">Z* = 27/16 ≈ 1.69</text>
-  <text x="312" y="278" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D55E00">E_var = −77.5 eV</text>
+  <circle cx="305" cy="257" r="6" fill="#D55E00" stroke="#A04000" stroke-width="0.8"/>
+  <text x="312" y="252" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D55E00">Z* = 27/16 ≈ 1.69</text>
+  <text x="312" y="265" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D55E00">E<tspan baseline-shift="sub" font-size="7">var</tspan> = −77.5 eV</text>
 
   <!-- Z*=2 annotation -->
   <line x1="380" y1="340" x2="380" y2="200" stroke="#aaa" stroke-width="0.4" stroke-dasharray="2 2"/>

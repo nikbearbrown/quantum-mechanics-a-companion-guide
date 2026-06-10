@@ -7,8 +7,8 @@
   <desc>Four panels showing the angular shapes of spherical harmonics. Top-left Y_{0,0}: uniform sphere. Top-right Y_{1,0}: dumbbell along z-axis. Bottom-left Y_{1,+1}: donut (sin²θ) around z-axis. Bottom-right Y_{1,−1}: identical donut to Y_{1,+1} in |Y|². All panels show z-axis explicitly. Color intensity encodes |Y|² magnitude.</desc>
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="07-angular-momentum" figure-number="02" figure-title="Spherical Harmonics Angular Shapes" figure-slug="spherical-harmonics-shapes" figure-type="conceptual" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/07-angular-momentum-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="460" fill="#FFFFFF"/>
-  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">|Y_{ℓm}(θ, φ)|² — Angular Part Only (Compare with Ch 6's Full 3D Orbitals)</text>
-  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">m labels eigenvalues of L_z, so the z-axis is the special direction in each panel.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">|Y<tspan baseline-shift="sub" font-size="7">ℓm</tspan>(θ, φ)|<tspan baseline-shift="super" font-size="8">2</tspan> — Angular Part Only (Compare with Ch 6's Full 3D Orbitals)</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">m labels eigenvalues of L<tspan baseline-shift="sub" font-size="7">z</tspan>, so the z-axis is the special direction in each panel.</text>
 
   <!-- Panel borders -->
   <rect x="40" y="80" width="320" height="170" fill="none" stroke="#bbb" stroke-width="0.5"/>
@@ -17,20 +17,22 @@
   <rect x="360" y="250" width="320" height="170" fill="none" stroke="#bbb" stroke-width="0.5"/>
 
   <!-- ===== Y_{0,0} uniform sphere ===== -->
-  <text x="200" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">Y_{0,0}  (ℓ=0, m=0)</text>
+  <text x="200" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">Y<tspan baseline-shift="sub" font-size="7">0,0</tspan>  (ℓ=0, m=0)</text>
   <line x1="200" y1="115" x2="200" y2="235" stroke="#aaa" stroke-width="0.5"/>
   <text x="208" y="118" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">z</text>
   <circle cx="200" cy="175" r="42" fill="#56B4E9" fill-opacity="0.5" stroke="#0072B2" stroke-width="1"/>
 
   <!-- ===== Y_{1,0} dumbbell ===== -->
-  <text x="520" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">Y_{1,0}  (ℓ=1, m=0)</text>
+  <text x="520" y="100" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">Y<tspan baseline-shift="sub" font-size="7">1,0</tspan>  (ℓ=1, m=0)</text>
   <line x1="520" y1="115" x2="520" y2="235" stroke="#aaa" stroke-width="0.5"/>
   <text x="528" y="118" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">z</text>
-  <ellipse cx="520" cy="138" rx="22" ry="32" fill="#56B4E9" fill-opacity="0.55" stroke="#0072B2" stroke-width="1"/>
-  <ellipse cx="520" cy="212" rx="22" ry="32" fill="#56B4E9" fill-opacity="0.55" stroke="#0072B2" stroke-width="1"/>
+  <ellipse cx="520" cy="138" rx="22" ry="32" fill="#56B4E9" fill-opacity="0.40" stroke="#0072B2" stroke-width="1"/>
+  <ellipse cx="520" cy="150" rx="14" ry="20" fill="#56B4E9" fill-opacity="0.55" stroke="none"/>
+  <ellipse cx="520" cy="212" rx="22" ry="32" fill="#56B4E9" fill-opacity="0.40" stroke="#0072B2" stroke-width="1"/>
+  <ellipse cx="520" cy="200" rx="14" ry="20" fill="#56B4E9" fill-opacity="0.55" stroke="none"/>
 
   <!-- ===== Y_{1,+1} donut ===== -->
-  <text x="200" y="270" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">Y_{1,+1}  (ℓ=1, m=+1)</text>
+  <text x="200" y="270" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">Y<tspan baseline-shift="sub" font-size="7">1,+1</tspan>  (ℓ=1, m=+1)</text>
   <line x1="200" y1="290" x2="200" y2="410" stroke="#aaa" stroke-width="0.5"/>
   <text x="208" y="293" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">z</text>
   <!-- donut perpendicular to z -->
@@ -38,11 +40,11 @@
   <ellipse cx="200" cy="350" rx="20" ry="6" fill="#FFFFFF" stroke="#0072B2" stroke-width="1"/>
 
   <!-- ===== Y_{1,−1} donut (same |Y|²) ===== -->
-  <text x="520" y="270" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">Y_{1,−1}  (ℓ=1, m=−1)</text>
+  <text x="520" y="270" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0072B2">Y<tspan baseline-shift="sub" font-size="7">1,−1</tspan>  (ℓ=1, m=−1)</text>
   <line x1="520" y1="290" x2="520" y2="410" stroke="#aaa" stroke-width="0.5"/>
   <text x="528" y="293" font-family="'JetBrains Mono', monospace" font-size="9" fill="#aaa">z</text>
   <ellipse cx="520" cy="350" rx="65" ry="15" fill="#56B4E9" fill-opacity="0.45" stroke="#0072B2" stroke-width="1"/>
   <ellipse cx="520" cy="350" rx="20" ry="6" fill="#FFFFFF" stroke="#0072B2" stroke-width="1"/>
 
-  <text x="370" y="448" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">|Y_{1,+1}|² = |Y_{1,−1}|². The phase distinguishes them; the density does not.</text>
+  <text x="370" y="448" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">|Y<tspan baseline-shift="sub" font-size="7">1,+1</tspan>|<tspan baseline-shift="super" font-size="8">2</tspan> = |Y<tspan baseline-shift="sub" font-size="7">1,−1</tspan>|<tspan baseline-shift="super" font-size="8">2</tspan>. The phase distinguishes them; the density does not.</text>
 </svg>

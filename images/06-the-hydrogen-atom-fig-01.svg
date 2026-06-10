@@ -8,18 +8,19 @@
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="06-the-hydrogen-atom" figure-number="01" figure-title="Hydrogen Emission Spectrum" figure-slug="hydrogen-emission-spectrum" figure-type="quantitative" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/06-the-hydrogen-atom-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="380" fill="#FFFFFF"/>
   <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Hydrogen Visible Emission Lines — Balmer Series (n → 2)</text>
-  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Wavelengths 656, 486, 434, 410 nm. Predicted by Rydberg formula 1/λ = R(1/4 − 1/n²); derived from Bohr 1913.</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Wavelengths 656, 486, 434, 410 nm. Predicted by Rydberg formula 1/λ = R(1/4 − 1/n<tspan baseline-shift="super" font-size="8">2</tspan>); derived from Bohr 1913.</text>
 
   <!-- Spectrum gradient background -->
   <defs>
     <linearGradient id="spec" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#5500AA"/>
-      <stop offset="15%" stop-color="#3300EE"/>
-      <stop offset="30%" stop-color="#00CCFF"/>
-      <stop offset="50%" stop-color="#00FF00"/>
-      <stop offset="70%" stop-color="#FFFF00"/>
-      <stop offset="85%" stop-color="#FF8800"/>
-      <stop offset="100%" stop-color="#EE0000"/>
+      <stop offset="0%" stop-color="#7A00B8"/>
+      <stop offset="13%" stop-color="#4400DD"/>
+      <stop offset="29%" stop-color="#00B7FF"/>
+      <stop offset="45%" stop-color="#00E000"/>
+      <stop offset="60%" stop-color="#BFFF00"/>
+      <stop offset="75%" stop-color="#FFE000"/>
+      <stop offset="88%" stop-color="#FF7000"/>
+      <stop offset="100%" stop-color="#D40000"/>
     </linearGradient>
   </defs>
   <rect x="80" y="120" width="560" height="100" fill="url(#spec)" stroke="#000" stroke-width="1"/>

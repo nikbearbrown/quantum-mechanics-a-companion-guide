@@ -7,14 +7,14 @@
   <desc>Three overlaid curves of sin²(Ωt/2)/Ω² versus Ω centered at zero. Sky-blue curve (small t) is broad and short; bluish-green (medium t) is medium; vermillion (large t) is narrow and tall. Peak height ∝ t², width ∝ 1/t, area ∝ t. Annotation that area → delta function as t → ∞.</desc>
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="09-approximation-methods" figure-number="04" figure-title="Sinc Squared to Delta" figure-slug="sinc-squared-delta" figure-type="quantitative" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/09-approximation-methods-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Long-Time Limit of |c(t)|² — sin²(Ωt/2)/Ω² → (π t/2) δ(Ω)</text>
-  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Peak height grows as t², width shrinks as 1/t — area stays linear in t. Fermi's golden rule emerges as the slope.</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Long-Time Limit of |c(t)|<tspan baseline-shift="super" font-size="8">2</tspan> — sin<tspan baseline-shift="super" font-size="8">2</tspan>(Ωt/2)/Ω<tspan baseline-shift="super" font-size="8">2</tspan> → (π t/2) δ(Ω)</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Peak height grows as t<tspan baseline-shift="super" font-size="8">2</tspan>, width shrinks as 1/t — area stays linear in t. Fermi's golden rule emerges as the slope.</text>
 
   <!-- Axes -->
   <line x1="100" y1="340" x2="660" y2="340" stroke="#2a1a0e" stroke-width="1"/>
   <line x1="380" y1="100" x2="380" y2="340" stroke="#2a1a0e" stroke-width="0.6"/>
   <text x="668" y="344" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">Ω</text>
-  <text x="380" y="92" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">|c(t)|² / t²</text>
+  <text x="380" y="92" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#2a1a0e">|c(t)|<tspan baseline-shift="super" font-size="8">2</tspan></text>
 
   <!-- Small t: broad short (sky blue) -->
   <path d="M 100 320 Q 200 290 280 270 Q 320 255 380 240 Q 440 255 480 270 Q 560 290 660 320" stroke="#56B4E9" stroke-width="2" fill="none"/>
@@ -37,9 +37,9 @@
   <text x="495" y="164" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D55E00">t = 4t₁  narrow, tall</text>
 
   <!-- Annotations -->
-  <text x="170" y="200" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">peak height ∝ t²</text>
+  <text x="170" y="200" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">peak height ∝ t<tspan baseline-shift="super" font-size="8">2</tspan></text>
   <text x="170" y="216" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">peak width ∝ 1/t</text>
   <text x="170" y="232" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">area ∝ t  →  δ-function</text>
 
-  <text x="370" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Only transitions to states with E_f ≈ E_i survive the limit — energy conservation, automatic.</text>
+  <text x="370" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Only transitions to states with E<tspan baseline-shift="sub" font-size="7">f</tspan> ≈ E<tspan baseline-shift="sub" font-size="7">i</tspan> survive the limit — energy conservation, automatic.</text>
 </svg>

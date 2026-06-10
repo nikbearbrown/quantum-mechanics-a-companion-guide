@@ -7,14 +7,14 @@
   <desc>Scatter plot of T_c (K, log scale) versus year (1911 to present). Conventional superconductors as blue circles (Hg, Nb, Nb3Ge). Cuprates as vermillion squares (LBCO, YBCO, HgBaCaCuO). Pressure-stabilized hydrides as orange triangles (H3S, LaH10). Horizontal dashed reference at 77 K (liquid nitrogen boiling point) crossed in 1987.</desc>
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="10-quantum-mechanics-in-the-modern-world" figure-number="06" figure-title="Superconductor Tc Timeline" figure-slug="superconductor-tc-timeline" figure-type="quantitative" priority="Important" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/10-quantum-mechanics-in-the-modern-world-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="460" fill="#FFFFFF"/>
-  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Superconductor T_c Records — 1911 to Present</text>
-  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Mercury at 4.2 K (Onnes 1911) → cuprates above LN₂ (1987) → hydride T_c ~ 250 K under 170 GPa (2019).</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">Superconductor T<tspan baseline-shift="sub" font-size="7">c</tspan> Records — 1911 to Present</text>
+  <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Mercury at 4.2 K (Onnes 1911) → cuprates above LN₂ (1987) → hydride T<tspan baseline-shift="sub" font-size="7">c</tspan> ~ 250 K under 170 GPa (2019).</text>
 
   <!-- Axes -->
   <line x1="100" y1="380" x2="660" y2="380" stroke="#2a1a0e" stroke-width="1"/>
   <line x1="100" y1="100" x2="100" y2="380" stroke="#2a1a0e" stroke-width="1"/>
   <text x="380" y="412" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454">year</text>
-  <text x="60" y="240" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454" transform="rotate(-90 60 240)">T_c (K, log)</text>
+  <text x="60" y="240" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#545454" transform="rotate(-90 60 240)">T<tspan baseline-shift="sub" font-size="7">c</tspan> (K, log)</text>
 
   <!-- Y-axis log ticks: 1, 10, 100, 1000 -->
   <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#545454" text-anchor="end">
@@ -34,8 +34,8 @@
   </g>
 
   <!-- LN2 reference line at T=77K. log(77)/log(1000) * 270 = (1.886/3) * 270 ≈ 170. y = 380 - 170 = 210 -->
-  <line x1="100" y1="222" x2="660" y2="222" stroke="#0072B2" stroke-width="0.8" stroke-dasharray="6 3"/>
-  <text x="665" y="226" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">77 K (LN₂)</text>
+  <line x1="100" y1="210" x2="660" y2="210" stroke="#0072B2" stroke-width="0.8" stroke-dasharray="6 3"/>
+  <text x="665" y="214" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">77 K (LN₂)</text>
 
   <!-- Data points (color/shape by family) -->
   <!-- Mapping year → x: x = 100 + (year-1911)/(2020-1911) * 560 -->
@@ -65,8 +65,9 @@
     <rect x="486" y="199" width="8" height="8"/>
     <rect x="517" y="185" width="8" height="8"/>
   </g>
-  <text x="495" y="193" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">YBCO (1987)</text>
-  <text x="528" y="183" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">HgBaCaCuO</text>
+  <text x="480" y="206" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">YBCO (1987)</text>
+  <text x="475" y="245" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">LBCO (1986)</text>
+  <text x="530" y="180" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">HgBaCaCuO</text>
 
   <!-- Hydrides (orange triangle) -->
   <g fill="#E69F00">
@@ -81,9 +82,9 @@
   <circle cx="145" cy="134" r="4" fill="#0072B2"/>
   <text x="155" y="138" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0072B2">conventional (BCS)</text>
   <rect x="142" y="148" width="6" height="6" fill="#D55E00"/>
-  <text x="155" y="156" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">cuprates (high-T_c)</text>
+  <text x="155" y="156" font-family="'JetBrains Mono', monospace" font-size="9" fill="#D55E00">cuprates (high-T<tspan baseline-shift="sub" font-size="7">c</tspan>)</text>
   <polygon points="145,170 140,162 150,162" fill="#E69F00"/>
   <text x="155" y="172" font-family="'JetBrains Mono', monospace" font-size="9" fill="#C8860E">hydrides (under pressure)</text>
 
-  <text x="370" y="442" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Room-T_c at ambient pressure remains the unfulfilled promise.</text>
+  <text x="370" y="442" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">Room-T<tspan baseline-shift="sub" font-size="7">c</tspan> at ambient pressure remains the unfulfilled promise.</text>
 </svg>

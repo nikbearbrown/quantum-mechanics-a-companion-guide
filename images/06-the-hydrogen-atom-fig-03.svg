@@ -7,7 +7,7 @@
   <desc>R₁₀(r) plotted as monotonically decreasing exponential from a peak at r=0 down toward zero around r=5a₀. Sky-blue curve; x-axis in units of a₀ from 0 to 5; smooth exponential decay.</desc>
   <metadata><cajal:figure xmlns:cajal="https://bearbrown.ai/cajal/1.0" book="Quantum Mechanics — A Companion Guide" book-slug="quantum-mechanics-a-companion-guide" chapter="06-the-hydrogen-atom" figure-number="03" figure-title="1s Radial Wave Function" figure-slug="1s-radial-wave-function" figure-type="quantitative" priority="Critical" author="Humanitarians AI" date-generated="2026-05-26" source-file="pantry/06-the-hydrogen-atom-cajal.md"/></metadata>
   <rect x="0" y="0" width="700" height="420" fill="#FFFFFF"/>
-  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">R₁₀(r) = (2 / a₀^(3/2)) e^(−r / a₀) — 1s Radial Wave Function</text>
+  <text x="32" y="36" font-family="'EB Garamond', Georgia, serif" font-size="14" fill="#2a1a0e">R₁₀(r) = (2 / a₀<tspan baseline-shift="super" font-size="7">3/2</tspan>) e<tspan baseline-shift="super" font-size="7">−r / a₀</tspan> — 1s Radial Wave Function</text>
   <text x="32" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#545454">Maximum at r = 0 and monotonically decreasing. Pair with the radial probability density (next figure).</text>
 
   <!-- Axes -->
@@ -37,7 +37,7 @@
 
   <!-- Y-axis tick for peak -->
   <line x1="96" y1="110" x2="104" y2="110" stroke="#2a1a0e" stroke-width="1"/>
-  <text x="92" y="114" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">2/a₀^(3/2)</text>
+  <text x="92" y="114" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#545454">2/a₀<tspan baseline-shift="super" font-size="7">3/2</tspan></text>
 
   <text x="370" y="402" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="11" fill="#C8102E" font-style="italic">R is biggest at the nucleus — yet the electron is rarely found there. Watch the next figure.</text>
 </svg>
