@@ -1,0 +1,50 @@
+<svg viewBox="0 0 620 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-hel d-hel">
+  <title id="t-hel">Hydrogen atom energy levels and spectral series transitions</title>
+  <desc id="d-hel">Energy levels of the hydrogen atom converging toward the ionization limit at zero energy, with energies En equal to minus 13.6 eV over n squared. Levels n equals 1 through 5 are drawn with the correct converging spacing. Downward arrows show the Lyman series to n equals 1 and the Balmer series to n equals 2. The n equals three to two Balmer transition is highlighted in red.</desc>
+  <metadata><provenance>CANDIDATE · CAJAL PALETTE · QM COMPANION GUIDE</provenance></metadata>
+  <defs>
+    <marker id="ar-hel" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/></marker>
+    <marker id="arR-hel" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#C8102E"/></marker>
+  </defs>
+  <rect x="0" y="0" width="620" height="440" fill="#FFFFFF"/>
+  <text x="310" y="28" text-anchor="middle" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">Hydrogen Atom: Energy Levels &amp; Transitions</text>
+
+  <rect x="90" y="50" width="430" height="340" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="54" y="220" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" transform="rotate(-90 54 220)">Energy (eV)</text>
+
+  <!-- ionization limit E=0 at top y=70 -->
+  <line x1="120" y1="70" x2="490" y2="70" stroke="#787878" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="498" y="74" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">E=0  (ionization)</text>
+
+  <!-- levels: n=1 deepest. Use -13.6/n^2 mapped: E=0 -> y70; -13.6 -> y360.  y = 70 + 290*(13.6+En)/13.6 ... simpler explicit -->
+  <!-- n=5: -0.54 eV -> y ~ 81 -->
+  <line x1="120" y1="82" x2="370" y2="82" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="378" y="86" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">n=5  −0.54</text>
+  <!-- n=4: -0.85 -> y ~ 88 -->
+  <line x1="120" y1="88" x2="370" y2="88" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="378" y="100" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">n=4  −0.85</text>
+  <!-- n=3: -1.51 -> y ~ 102 -->
+  <line x1="120" y1="105" x2="370" y2="105" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="378" y="118" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">n=3  −1.51</text>
+  <!-- n=2: -3.4 -> y ~ 142 -->
+  <line x1="120" y1="150" x2="370" y2="150" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="378" y="154" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">n=2  −3.40</text>
+  <!-- n=1: -13.6 -> y ~ 360 -->
+  <line x1="120" y1="360" x2="370" y2="360" stroke="#2a1a0e" stroke-width="2"/>
+  <text x="378" y="364" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">n=1  −13.60 (ground)</text>
+
+  <!-- Lyman series to n=1 (grey) -->
+  <line x1="150" y1="150" x2="150" y2="356" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#ar-hel)"/>
+  <line x1="170" y1="105" x2="170" y2="356" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#ar-hel)"/>
+  <text x="135" y="380" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Lyman (→n=1, UV)</text>
+
+  <!-- Balmer to n=2 : n=3->2 is RED -->
+  <line x1="280" y1="105" x2="280" y2="146" stroke="#C8102E" stroke-width="2.5" marker-end="url(#arR-hel)"/>
+  <text x="295" y="128" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#C8102E">Hα: n=3→2</text>
+  <!-- n=4->2 (grey) -->
+  <line x1="320" y1="88" x2="320" y2="146" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#ar-hel)"/>
+  <text x="300" y="200" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">Balmer (→n=2, visible)</text>
+
+  <text x="90" y="416" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">Eₙ = −13.6 eV / n²    — levels crowd together as n → ∞</text>
+  
+</svg>

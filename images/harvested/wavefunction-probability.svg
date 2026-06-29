@@ -1,0 +1,28 @@
+<svg viewBox="0 0 620 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-wf d-wf">
+  <title id="t-wf">Wavefunction and the Born rule: psi versus probability density |psi| squared</title>
+  <desc id="d-wf">Top panel shows a real-valued Gaussian wave packet psi(x) oscillating positive and negative in grey. Bottom panel shows its squared magnitude |psi|^2, a single non-negative hump, interpreted as the probability density of finding the particle. The shaded area equals the probability of locating the particle in that interval.</desc>
+  <metadata><provenance>CANDIDATE · CAJAL PALETTE · QM COMPANION GUIDE</provenance></metadata>
+  <rect x="0" y="0" width="620" height="420" fill="#FFFFFF"/>
+  <text x="310" y="28" text-anchor="middle" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">The Wavefunction and the Born Rule</text>
+
+  <!-- TOP: psi(x) -->
+  <rect x="70" y="48" width="480" height="150" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <line x1="70" y1="123" x2="550" y2="123" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="70" y1="48" x2="70" y2="198" stroke="#2a1a0e" stroke-width="1"/>
+  <!-- modulated oscillation, positive and negative -->
+  <path d="M80 123 C 130 123 150 90 180 92 C 210 94 215 150 250 150 C 285 150 290 70 320 68 C 350 66 355 160 390 158 C 420 156 430 110 460 116 C 490 120 510 123 540 123" fill="none" stroke="#787878" stroke-width="2"/>
+  <text x="84" y="66" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="13" fill="#2a1a0e">ψ(x)</text>
+  <text x="540" y="64" text-anchor="end" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">can be negative / complex</text>
+
+  <!-- BOTTOM: |psi|^2 -->
+  <rect x="70" y="228" width="480" height="150" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <line x1="70" y1="368" x2="550" y2="368" stroke="#2a1a0e" stroke-width="1.5"/>
+  <line x1="70" y1="228" x2="70" y2="368" stroke="#2a1a0e" stroke-width="1.5"/>
+  <!-- single non-negative hump, RED -->
+  <path d="M80 368 C 180 368 200 360 250 300 C 290 252 300 250 310 250 C 320 250 330 252 370 300 C 420 360 440 368 540 368 Z" fill="#2a1a0e" fill-opacity="0.18" stroke="#2a1a0e" stroke-width="2.5"/>
+  <text x="84" y="248" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="13" fill="#2a1a0e">|ψ(x)|²</text>
+  <text x="310" y="392" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">probability density — always ≥ 0,  shaded area = P(particle in interval)</text>
+
+  <text x="555" y="372" text-anchor="end" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">x →</text>
+  
+</svg>

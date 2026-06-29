@@ -1,0 +1,37 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-dn d-dn">
+  <title id="t-dn">Dirac bra-ket notation: the inner product schematic</title>
+  <desc id="d-dn">Dirac notation splits the inner product bracket into a bra, a row covector, and a ket, a column vector. A bra meeting a ket forms the complex scalar bracket, the inner product. The diagram shows the ket as a column, the bra as its conjugate-transpose row, and their meeting producing the scalar bracket, which is highlighted in red. The probability amplitude interpretation is noted.</desc>
+  <metadata><provenance>CANDIDATE · CAJAL PALETTE · QM COMPANION GUIDE</provenance></metadata>
+  <rect x="0" y="0" width="640" height="400" fill="#FFFFFF"/>
+  <text x="320" y="28" text-anchor="middle" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">Dirac Notation: The Inner Product</text>
+
+  <rect x="40" y="50" width="560" height="240" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+
+  <!-- KET as column vector -->
+  <text x="120" y="80" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#545454">KET — column vector</text>
+  <text x="120" y="104" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="14" fill="#2a1a0e">|ψ⟩</text>
+  <rect x="100" y="120" width="40" height="120" fill="none" stroke="#787878" stroke-width="1.5"/>
+  <g font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="12" fill="#2a1a0e" text-anchor="middle">
+    <text x="120" y="148">c₁</text><text x="120" y="176">c₂</text><text x="120" y="204">⋮</text><text x="120" y="232">cₙ</text>
+  </g>
+
+  <!-- BRA as row vector -->
+  <text x="320" y="80" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#545454">BRA — conjugate row</text>
+  <text x="320" y="104" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="14" fill="#2a1a0e">⟨φ| = |φ⟩†</text>
+  <rect x="250" y="150" width="140" height="40" fill="none" stroke="#787878" stroke-width="1.5"/>
+  <g font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="12" fill="#2a1a0e" text-anchor="middle">
+    <text x="270" y="174">d₁*</text><text x="300" y="174">d₂*</text><text x="330" y="174">⋯</text><text x="362" y="174">dₙ*</text>
+  </g>
+
+  <!-- BRACKET = scalar (RED) -->
+  <text x="500" y="80" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#C8102E">BRACKET — scalar</text>
+  <text x="500" y="170" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="22" fill="#C8102E">⟨φ|ψ⟩</text>
+  <text x="500" y="200" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="13" fill="#2a1a0e">= Σ dₙ* cₙ  ∈ ℂ</text>
+
+  <!-- combine annotation -->
+  <text x="320" y="260" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="13" fill="#545454">⟨ bra |  ·  | ket ⟩   →   ⟨ bra-ket ⟩</text>
+
+  <text x="40" y="324" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="12" fill="#2a1a0e">⟨φ|ψ⟩* = ⟨ψ|φ⟩      ⟨ψ|ψ⟩ = 1  (normalized)</text>
+  <text x="40" y="348" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">The bracket ⟨φ|ψ⟩ is the probability amplitude; |⟨φ|ψ⟩|² is the probability of finding |ψ⟩ in state |φ⟩ (Born rule).</text>
+  
+</svg>

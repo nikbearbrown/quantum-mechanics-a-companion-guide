@@ -4,7 +4,9 @@
   "type": "module",
   "description": "Physics +1: Astronomy",
   "scripts": {
-    "svg-to-png": "node SCRIPTS/svg-to-png.mjs"
+    "svg-to-png": "node SCRIPTS/svg-to-png.mjs",
+    "audit:format": "node scripts/svg-format-audit.mjs images",
+    "postsvg-to-png": "node scripts/svg-format-audit.mjs images"
   },
   "dependencies": {
     "glob": "^10.0.0",

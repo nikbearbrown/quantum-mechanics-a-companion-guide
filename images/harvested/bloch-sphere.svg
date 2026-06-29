@@ -1,0 +1,45 @@
+<svg viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-bl d-bl">
+  <title id="t-bl">Spin one-half and the Bloch sphere</title>
+  <desc id="d-bl">The Bloch sphere representing the state of a spin one-half qubit. The north pole is the spin-up state ket zero, the south pole is spin-down ket one. The equator carries equal superpositions. A general state is a point on the surface specified by polar angle theta and azimuthal angle phi. A representative state vector pointing into the upper hemisphere is emphasized.</desc>
+  <metadata><provenance>CANDIDATE · CAJAL PALETTE · QM COMPANION GUIDE</provenance></metadata>
+  <rect x="0" y="0" width="520" height="460" fill="#FFFFFF"/>
+  <text x="260" y="28" text-anchor="middle" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">Spin-½ and the Bloch Sphere</text>
+
+  <rect x="30" y="48" width="460" height="360" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+
+  <!-- sphere -->
+  <circle cx="250" cy="228" r="140" fill="none" stroke="#787878" stroke-width="1.5"/>
+  <!-- equator ellipse -->
+  <ellipse cx="250" cy="228" rx="140" ry="42" fill="none" stroke="#ADADAD" stroke-width="1" stroke-dasharray="5 4"/>
+  <!-- vertical meridian -->
+  <ellipse cx="250" cy="228" rx="42" ry="140" fill="none" stroke="#ADADAD" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- axes -->
+  <line x1="250" y1="228" x2="250" y2="78" stroke="#2a1a0e" stroke-width="1.5"/>
+  <line x1="250" y1="228" x2="250" y2="378" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="250" y1="228" x2="402" y2="228" stroke="#2a1a0e" stroke-width="1"/>
+  <line x1="250" y1="228" x2="150" y2="290" stroke="#2a1a0e" stroke-width="1"/>
+  <circle cx="250" cy="228" r="2.5" fill="#2a1a0e"/>
+
+  <!-- pole labels -->
+  <text x="250" y="70" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="13" fill="#2a1a0e">|0⟩ = |↑⟩</text>
+  <text x="250" y="396" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="13" fill="#2a1a0e">|1⟩ = |↓⟩</text>
+  <text x="410" y="232" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">x</text>
+  <text x="135" y="300" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">y</text>
+  <text x="258" y="92" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">z</text>
+
+  <!-- state vector (RED) into upper hemisphere -->
+  <line x1="250" y1="228" x2="345" y2="148" stroke="#2a1a0e" stroke-width="2.5"/>
+  <circle cx="345" cy="148" r="4" fill="#2a1a0e"/>
+  <text x="352" y="142" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="12" fill="#2a1a0e">|ψ⟩</text>
+
+  <!-- theta angle arc -->
+  <path d="M250 168 A 60 60 0 0 1 290 188" fill="none" stroke="#545454" stroke-width="1"/>
+  <text x="272" y="180" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">θ</text>
+  <!-- phi arc on equator -->
+  <path d="M290 228 A 40 12 0 0 1 268 240" fill="none" stroke="#545454" stroke-width="1"/>
+  <text x="296" y="246" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">φ</text>
+
+  <text x="30" y="430" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="12" fill="#2a1a0e">|ψ⟩ = cos(θ/2)|0⟩ + e^(iφ) sin(θ/2)|1⟩</text>
+  
+</svg>

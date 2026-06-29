@@ -1,0 +1,40 @@
+<svg viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-op d-op">
+  <title id="t-op">Operators and eigenvalues: the eigenvalue equation schematic</title>
+  <desc id="d-op">The eigenvalue equation A-hat acting on eigenstate ket-a returns the same state scaled by the real eigenvalue a. A box diagram shows an operator acting on an input state; for a general state the output points in a new direction, but for an eigenstate the output is parallel to the input, merely scaled. The eigenvalue a, the measured outcome, is emphasized.</desc>
+  <metadata><provenance>CANDIDATE · CAJAL PALETTE · QM COMPANION GUIDE</provenance></metadata>
+  <defs><marker id="ar-op" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/></marker>
+  <marker id="arR-op" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a1a0e"/></marker></defs>
+  <rect x="0" y="0" width="640" height="380" fill="#FFFFFF"/>
+  <text x="320" y="28" text-anchor="middle" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">Operators &amp; Eigenvalues</text>
+
+  <!-- The equation banner -->
+  <rect x="170" y="48" width="300" height="50" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="320" y="80" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="20" fill="#2a1a0e">Â |a⟩ = a |a⟩</text>
+
+  <!-- LEFT: general state, direction changes -->
+  <rect x="40" y="130" width="250" height="220" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="165" y="152" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#545454">GENERAL STATE |ψ⟩</text>
+  <circle cx="120" cy="265" r="2.5" fill="#2a1a0e"/>
+  <!-- input vector -->
+  <line x1="120" y1="265" x2="180" y2="200" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#ar-op)"/>
+  <text x="184" y="196" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="12" fill="#2a1a0e">|ψ⟩</text>
+  <!-- output vector different direction -->
+  <line x1="120" y1="265" x2="225" y2="245" stroke="#787878" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#ar-op)"/>
+  <text x="228" y="248" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="12" fill="#545454">Â|ψ⟩</text>
+  <text x="165" y="334" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">direction changes</text>
+
+  <!-- RIGHT: eigenstate, direction preserved -->
+  <rect x="350" y="130" width="250" height="220" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+  <text x="475" y="152" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#545454">EIGENSTATE |a⟩</text>
+  <circle cx="420" cy="300" r="2.5" fill="#2a1a0e"/>
+  <!-- input -->
+  <line x1="420" y1="300" x2="475" y2="240" stroke="#2a1a0e" stroke-width="1.5" marker-end="url(#ar-op)"/>
+  <text x="478" y="236" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="12" fill="#2a1a0e">|a⟩</text>
+  <!-- output same direction, longer, RED -->
+  <line x1="420" y1="300" x2="510" y2="202" stroke="#2a1a0e" stroke-width="2.5" marker-end="url(#arR-op)"/>
+  <text x="514" y="200" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="12" fill="#2a1a0e">a|a⟩</text>
+  <text x="475" y="334" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">same direction, scaled by a</text>
+
+  <text x="40" y="362" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454"><tspan x="40" dy="0">A Hermitian observable Â has real eigenvalues a — the only possible measurement</tspan><tspan x="40" dy="14">outcomes. Eigenstates are rescaled, not rotated.</tspan></text>
+  
+</svg>

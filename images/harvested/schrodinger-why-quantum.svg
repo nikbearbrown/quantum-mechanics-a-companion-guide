@@ -1,0 +1,33 @@
+<svg viewBox="0 0 620 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-whyq d-whyq">
+  <title id="t-whyq">Why quantum mechanics: blackbody spectrum, classical catastrophe versus Planck's law</title>
+  <desc id="d-whyq">Spectral radiance versus frequency. The classical Rayleigh–Jeans curve rises without bound at high frequency (the ultraviolet catastrophe), shown in grey. Planck's quantized curve, peaks and falls to zero, matching experiment. The disagreement at high frequency is what forced energy quantization.</desc>
+  <metadata><provenance>CANDIDATE · CAJAL PALETTE · QM COMPANION GUIDE</provenance></metadata>
+  <rect x="0" y="0" width="620" height="420" fill="#FFFFFF"/>
+  <text x="310" y="30" text-anchor="middle" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">Why Quantum Mechanics: The Ultraviolet Catastrophe</text>
+
+  <!-- plot region -->
+  <rect x="70" y="60" width="480" height="280" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+
+  <!-- axes -->
+  <line x1="70" y1="340" x2="550" y2="340" stroke="#2a1a0e" stroke-width="1.5"/>
+  <line x1="70" y1="340" x2="70" y2="60" stroke="#2a1a0e" stroke-width="1.5"/>
+  <text x="310" y="375" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Frequency ν  →</text>
+  <text x="28" y="200" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e" transform="rotate(-90 28 200)">Spectral radiance</text>
+
+  <!-- Classical Rayleigh-Jeans: rises as nu^2, runs off the top (grey) -->
+  <path d="M70 339 Q 230 320 330 250 Q 410 180 460 70" fill="none" stroke="#787878" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="470" y="80" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#545454">Classical</text>
+  <text x="470" y="96" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#545454">(Rayleigh–Jeans)</text>
+  <text x="470" y="112" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="11" fill="#545454">∝ ν²</text>
+
+  <!-- Planck law: peaks then falls to zero (RED accent — the resolution) -->
+  <path d="M70 339 Q 150 260 210 175 Q 250 120 300 130 Q 360 145 410 230 Q 460 305 540 336" fill="none" stroke="#2a1a0e" stroke-width="2.5"/>
+  <text x="300" y="105" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="12" fill="#2a1a0e">Planck (quantized): E = nhν</text>
+
+  <!-- annotate divergence region -->
+  <text x="500" y="160" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">classical curve</text>
+  <text x="500" y="174" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">diverges</text>
+
+  <text x="70" y="398" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454"><tspan x="70" dy="0">Classical physics predicts infinite radiance at high ν. Quantizing energy in</tspan><tspan x="70" dy="14">steps hν removes the catastrophe.</tspan></text>
+  
+</svg>

@@ -1,0 +1,40 @@
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-orb d-orb">
+  <title id="t-orb">Hydrogen orbital shapes: s, p, and d schematic</title>
+  <desc id="d-orb">Schematic angular shapes of hydrogen orbitals. The s orbital (l equals 0) is a single sphere. The p orbitals (l equals 1) are two-lobed dumbbells along the x, y, and z axes. The d orbitals (l equals 2) are four-lobed cloverleaf shapes. One representative p-orbital, the pz, is emphasized.</desc>
+  <metadata><provenance>CANDIDATE · CAJAL PALETTE · QM COMPANION GUIDE</provenance></metadata>
+  <rect x="0" y="0" width="640" height="360" fill="#FFFFFF"/>
+  <text x="320" y="28" text-anchor="middle" font-family="'EB Garamond','Garamond',Georgia,serif" font-size="16" fill="#2a1a0e">Hydrogen Orbital Shapes (angular part)</text>
+
+  <rect x="30" y="48" width="580" height="262" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1"/>
+
+  <!-- s orbital -->
+  <text x="120" y="78" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="12" fill="#2a1a0e">s  (ℓ=0)</text>
+  <circle cx="120" cy="160" r="46" fill="#ADADAD" fill-opacity="0.30" stroke="#787878" stroke-width="1.5"/>
+  <circle cx="120" cy="160" r="2" fill="#2a1a0e"/>
+  <text x="120" y="240" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">spherical, no node</text>
+
+  <!-- p orbital: dumbbell along vertical (pz) RED -->
+  <text x="320" y="78" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="12" fill="#2a1a0e">p  (ℓ=1)</text>
+  <!-- two lobes vertical, RED accent on pz -->
+  <path d="M320 160 C 290 122 290 90 320 90 C 350 90 350 122 320 160 Z" fill="#2a1a0e" fill-opacity="0.18" stroke="#2a1a0e" stroke-width="2"/>
+  <path d="M320 160 C 290 198 290 230 320 230 C 350 230 350 198 320 160 Z" fill="#2a1a0e" fill-opacity="0.18" stroke="#2a1a0e" stroke-width="2"/>
+  <!-- faint x lobes (grey) for px -->
+  <path d="M320 160 C 270 138 240 138 240 160 C 240 182 270 182 320 160 Z" fill="#ADADAD" fill-opacity="0.25" stroke="#787878" stroke-width="1.2"/>
+  <path d="M320 160 C 370 138 400 138 400 160 C 400 182 370 182 320 160 Z" fill="#ADADAD" fill-opacity="0.25" stroke="#787878" stroke-width="1.2"/>
+  <circle cx="320" cy="160" r="2" fill="#2a1a0e"/>
+  <text x="320" y="266" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#2a1a0e">two lobes, one nodal plane</text>
+
+  <!-- d orbital: cloverleaf -->
+  <text x="520" y="78" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Courier New',monospace" font-size="12" fill="#2a1a0e">d  (ℓ=2)</text>
+  <g stroke="#787878" stroke-width="1.5" fill="#ADADAD" fill-opacity="0.28">
+    <ellipse cx="520" cy="160" rx="20" ry="40" transform="rotate(45 520 160) translate(0 -34)"/>
+    <ellipse cx="520" cy="160" rx="20" ry="40" transform="rotate(45 520 160) translate(0 34)"/>
+    <ellipse cx="520" cy="160" rx="20" ry="40" transform="rotate(-45 520 160) translate(0 -34)"/>
+    <ellipse cx="520" cy="160" rx="20" ry="40" transform="rotate(-45 520 160) translate(0 34)"/>
+  </g>
+  <circle cx="520" cy="160" r="2" fill="#2a1a0e"/>
+  <text x="520" y="240" text-anchor="middle" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454">four lobes, two nodal planes</text>
+
+  <text x="30" y="328" font-family="'Inter',-apple-system,'Helvetica Neue',sans-serif" font-size="11" fill="#545454"><tspan x="30" dy="0">Angular momentum ℓ sets the shape; number of angular nodes = ℓ.</tspan><tspan x="30" dy="15">Shown schematically (probability lobes, not to scale).</tspan></text>
+  
+</svg>
